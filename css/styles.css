@@ -250,39 +250,7 @@ section h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Sponsors Section */
-.sponsor-levels {
-    margin-bottom: 40px;
-}
 
-.sponsor-level {
-    margin-bottom: 30px;
-}
-
-.sponsor-level h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.sponsor-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.sponsor-placeholder {
-    width: 200px;
-    height: 100px;
-    background-color: var(--light-bg);
-    border: 1px dashed var(--border-color);
-    border-radius: 4px;
-}
-
-.become-sponsor {
-    text-align: center;
-}
 
 /* Footer */
 footer {
