@@ -59,9 +59,10 @@ header {
     margin: 0 auto;
 }
 
-.logo h1 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+.logo-image {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
 }
 
 .main-nav {
