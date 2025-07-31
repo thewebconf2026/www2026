@@ -6,6 +6,7 @@
     <title>The Web Conference 2026 - Dubai, UAE</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/tab-menu.css">
+    <link rel="stylesheet" href="css/dropdown-menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -25,13 +26,71 @@
     <div class="tab-menu-container">
         <ul class="tab-menu">
             <li><a href="index.html" class="tab-home active">Home</a></li>
-            <li><a href="about.html" class="tab-about">About</a></li>
-            <li><a href="calls.html" class="tab-calls">Calls</a></li>
-            <li><a href="accepted.html" class="tab-accepted">Accepted</a></li>
-            <li><a href="program.html" class="tab-program">Program</a></li>
-            <li><a href="organization.html" class="tab-organization">Organization</a></li>
-            <li><a href="attending.html" class="tab-attending">Attending</a></li>
-            <li><a href="media.html" class="tab-media">Media</a></li>
+            <li>
+                <a href="about.html" class="tab-about has-dropdown">About</a>
+                <div class="dropdown">
+                    <a href="about.html">The Web Conference</a>
+                    <a href="about/logo.html">Logo</a>
+                    <a href="about/code-of-conduct.html">Code of Conduct</a>
+                    <a href="about/newsletters.html">Newsletters</a>
+                </div>
+            </li>
+            <li>
+                <a href="calls.html" class="tab-calls has-dropdown">Calls</a>
+                <div class="dropdown">
+                    <a href="calls/research-tracks.html">Research Tracks</a>
+                    <a href="calls/industry.html">Industry</a>
+                    <a href="calls/web4good.html">Web4Good</a>
+                    <a href="calls/workshops.html">Workshops</a>
+                    <a href="calls/tutorials.html">Tutorials</a>
+                    <a href="calls/short-papers.html">Short Papers</a>
+                    <a href="calls/demo.html">Demo</a>
+                    <a href="calls/resource.html">Resource</a>
+                    <a href="calls/health-day.html">Health Day</a>
+                    <a href="calls/history-of-the-web.html">History of the Web</a>
+                    <a href="calls/phd-symposium.html">PhD Symposium</a>
+                </div>
+            </li>
+            <li>
+                <a href="accepted.html" class="tab-accepted has-dropdown">Accepted</a>
+                <div class="dropdown">
+                    <a href="accepted/research-tracks.html">Research Tracks</a>
+                    <a href="accepted/industry.html">Industry</a>
+                    <a href="accepted/web4good.html">Web4Good</a>
+                    <a href="accepted/short-papers.html">Short Papers</a>
+                    <a href="accepted/demo.html">Demo</a>
+                    <a href="accepted/resource.html">Resource</a>
+                </div>
+            </li>
+            <li>
+                <a href="program.html" class="tab-program has-dropdown">Program</a>
+                <div class="dropdown">
+                    <a href="program/overview.html">Overview</a>
+                    <a href="program/full-schedule.html">Full Schedule</a>
+                    <a href="program/keynotes.html">Keynotes</a>
+                    <a href="program/workshops.html">Workshops</a>
+                    <a href="program/tutorials.html">Tutorials</a>
+                    <a href="program/awards.html">Awards</a>
+                    <a href="program/special-days.html">Special Days</a>
+                    <a href="program/social-events.html">Social Events</a>
+                    <a href="program/web4all.html">Web4All</a>
+                </div>
+            </li>
+            <li>
+                <a href="organization.html" class="tab-organization">Organization</a>
+            </li>
+            <li>
+                <a href="attending.html" class="tab-attending has-dropdown">Attending</a>
+                <div class="dropdown">
+                    <a href="attending/registration.html">Registration</a>
+                    <a href="attending/venue.html">Venue</a>
+                    <a href="attending/accommodation.html">Accommodation</a>
+                    <a href="attending/visa.html">Visa</a>
+                </div>
+            </li>
+            <li>
+                <a href="media.html" class="tab-media">Media</a>
+            </li>
         </ul>
     </div>
 
@@ -128,5 +187,32 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Add dropdown toggle functionality for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const tabMenu = document.querySelector('.tab-menu');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    tabMenu.classList.toggle('active');
+                });
+            }
+            
+            // For mobile: toggle dropdown on tap
+            if (window.innerWidth <= 768) {
+                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
+                
+                dropdownLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            this.parentNode.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
