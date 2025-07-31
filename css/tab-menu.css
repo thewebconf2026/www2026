@@ -1,0 +1,89 @@
+/* Tab Menu Styles - Based on WWW 2024 and WWW 2025 */
+.tab-menu-container {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.tab-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-menu li {
+    margin: 0 5px;
+}
+
+.tab-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    color: #333;
+}
+
+/* Tab colors - matching WWW 2024 */
+.tab-menu a.tab-about {
+    background-color: #f8d568;
+}
+
+.tab-menu a.tab-calls {
+    background-color: #e27fcb;
+}
+
+.tab-menu a.tab-accepted {
+    background-color: #68c5f8;
+}
+
+.tab-menu a.tab-program {
+    background-color: #5fb878;
+}
+
+.tab-menu a.tab-organization {
+    background-color: #9370db;
+}
+
+.tab-menu a.tab-attending {
+    background-color: #ff7f50;
+}
+
+.tab-menu a.tab-media {
+    background-color: #20b2aa;
+}
+
+.tab-menu a.tab-home {
+    background-color: #4169e1;
+    color: white;
+}
+
+/* Hover effects */
+.tab-menu a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Active tab */
+.tab-menu a.active {
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .tab-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tab-menu li {
+        margin: 5px;
+    }
+}
