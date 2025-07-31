@@ -1,0 +1,126 @@
+/* Header and Navigation Layout - Based on WWW2024 */
+header {
+    background-color: #f8f9fa;
+    padding: 8px 0;
+    width: 100%;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+}
+
+/* Main Navigation Container - Horizontal alignment with logo */
+.main-nav-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+/* Tab Menu Container - Now part of the header */
+.tab-menu-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.tab-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-menu li {
+    margin: 0 5px;
+}
+
+.tab-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    color: #333;
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .tab-menu-container {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    .tab-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tab-menu li {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .tab-menu-container {
+        display: none;
+    }
+    
+    .tab-menu-container.active {
+        display: block;
+    }
+    
+    .tab-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-menu li {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .tab-menu a {
+        width: 100%;
+        text-align: center;
+    }
+}
