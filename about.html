@@ -6,32 +6,12 @@
     <title>About - The Web Conference 2026</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/tab-menu.css">
+    <link rel="stylesheet" href="css/dropdown-menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-    </div>
-    
-    <div class="tab-menu-container">
-        <ul class="tab-menu">
-            <li><a href="index.html" class="tab-home">Home</a></li>
-            <li><a href="about.html" class="tab-about">About</a></li>
-            <li><a href="calls.html" class="tab-calls">Calls</a></li>
-            <li><a href="accepted.html" class="tab-accepted">Accepted</a></li>
-            <li><a href="program.html" class="tab-program">Program</a></li>
-            <li><a href="./organization.html" class="tab-organization has-dropdown">Organization</a>
-                <div class="dropdown">
-                    <a href="./organization/organizing-committee.html">Organizing Committee</a>
-                    <a href="./organization/senior-area-chairs.html">Senior Area Chairs</a>
-                    <a href="./organization/area-chairs.html">Area Chairs</a>
-                    <a href="./organization/reviewers-research-tracks.html">Reviewers of Research Tracks</a>
-                    <a href="./organization/reviewers-various-tracks.html">Reviewers of Various Tracks</a>
-                </div></li>
-            <li><a href="attending.html" class="tab-attending">Attending</a></li>
-            <li><a href="media.html" class="tab-media">Media</a></li>
-        </ul>
-    </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="images/tentative logo 2.png" alt="TheWebConf 2026" class="logo-image">
@@ -42,6 +22,84 @@
             </div>
         </div>
     </header>
+    
+    <div class="tab-menu-container">
+        <ul class="tab-menu">
+            <li><a href="index.html" class="tab-home">Home</a></li>
+            <li>
+                <a href="about.html" class="tab-about has-dropdown active">About</a>
+                <div class="dropdown">
+                    <a href="about.html">The Web Conference</a>
+                    <a href="about/logo.html">Logo</a>
+                    <a href="about/code-of-conduct.html">Code of Conduct</a>
+                    <a href="about/newsletters.html">Newsletters</a>
+                </div>
+            </li>
+            <li>
+                <a href="calls.html" class="tab-calls has-dropdown">Calls</a>
+                <div class="dropdown">
+                    <a href="calls/research-tracks.html">Research Tracks</a>
+                    <a href="calls/industry.html">Industry</a>
+                    <a href="calls/web4good.html">Web4Good</a>
+                    <a href="calls/workshops.html">Workshops</a>
+                    <a href="calls/tutorials.html">Tutorials</a>
+                    <a href="calls/short-papers.html">Short Papers</a>
+                    <a href="calls/demo.html">Demo</a>
+                    <a href="calls/resource.html">Resource</a>
+                    <a href="calls/health-day.html">Health Day</a>
+                    <a href="calls/history-of-the-web.html">History of the Web</a>
+                    <a href="calls/phd-symposium.html">PhD Symposium</a>
+                </div>
+            </li>
+            <li>
+                <a href="accepted.html" class="tab-accepted has-dropdown">Accepted</a>
+                <div class="dropdown">
+                    <a href="accepted/research-tracks.html">Research Tracks</a>
+                    <a href="accepted/industry.html">Industry</a>
+                    <a href="accepted/web4good.html">Web4Good</a>
+                    <a href="accepted/short-papers.html">Short Papers</a>
+                    <a href="accepted/demo.html">Demo</a>
+                    <a href="accepted/resource.html">Resource</a>
+                </div>
+            </li>
+            <li>
+                <a href="program.html" class="tab-program has-dropdown">Program</a>
+                <div class="dropdown">
+                    <a href="program/overview.html">Overview</a>
+                    <a href="program/full-schedule.html">Full Schedule</a>
+                    <a href="program/keynotes.html">Keynotes</a>
+                    <a href="program/workshops.html">Workshops</a>
+                    <a href="program/tutorials.html">Tutorials</a>
+                    <a href="program/awards.html">Awards</a>
+                    <a href="program/special-days.html">Special Days</a>
+                    <a href="program/social-events.html">Social Events</a>
+                    <a href="program/web4all.html">Web4All</a>
+                </div>
+            </li>
+            <li>
+                <a href="./organization.html" class="tab-organization has-dropdown">Organization</a>
+                <div class="dropdown">
+                    <a href="./organization/organizing-committee.html">Organizing Committee</a>
+                    <a href="./organization/senior-area-chairs.html">Senior Area Chairs</a>
+                    <a href="./organization/area-chairs.html">Area Chairs</a>
+                    <a href="./organization/reviewers-research-tracks.html">Reviewers of Research Tracks</a>
+                    <a href="./organization/reviewers-various-tracks.html">Reviewers of Various Tracks</a>
+                </div>
+            </li>
+            <li>
+                <a href="attending.html" class="tab-attending has-dropdown">Attending</a>
+                <div class="dropdown">
+                    <a href="attending/registration.html">Registration</a>
+                    <a href="attending/venue.html">Venue</a>
+                    <a href="attending/accommodation.html">Accommodation</a>
+                    <a href="attending/visa.html">Visa</a>
+                </div>
+            </li>
+            <li>
+                <a href="media.html" class="tab-media">Media</a>
+            </li>
+        </ul>
+    </div>
 
     <div class="page-header">
         <div class="container">
@@ -53,32 +111,15 @@
         <div class="container">
             <section class="about-section">
                 <h2>The Web Conference</h2>
-                <p>The Web Conference (formerly known as International World Wide Web Conference, abbreviated as WWW) is a yearly international academic conference on the topic of the future direction of the World Wide Web. This conference has been the premier venue to present and discuss progress in research, development, standards, and applications of the topics related to the Web.</p>
-                <p>The conference brings together researchers, developers, users, and commercial ventures—indeed all who are concerned with the Web and its evolution. The conference provides a forum for discussion about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture.</p>
-            </section>
-
-            <section class="about-section">
-                <h2>History</h2>
-                <p>The first conference of this series was held in 1994 at CERN in Geneva, where the Web was born. Since then, the conference has been held in various locations around the world, typically during April or May.</p>
-                <p>The conference is organized by the International World Wide Web Conferences Steering Committee (IW3C2), which oversees the conference series and selects the location and local organizing committee for each conference.</p>
-                <p>Over the years, The Web Conference has become the premier venue for researchers, academics, businesses, and standard bodies to come together and discuss the latest advancements in Web technologies and their impact on society and culture.</p>
+                <p>Since the invention of the World Wide Web in 1989, The Web Conference (formerly known as International World Wide Web Conference, abbreviated as WWW) is a yearly international academic conference on the topic of the future direction of the World Wide Web. This conference has been the premier venue to present and discuss progress in research, development, standards, and applications of the topics related to the Web.</p>
+                <p>Over the past three decades, The Web Conference has been the forum where some of the most fundamental Web technologies have been introduced, such as the Anatomy of a Large Scale Web Search Engine in 1998 prefiguring Google, the EigenTrust algorithm in 2003 and the YAGO knowledge base in 2007 (see also the Test of Time Award past recipients). The conference assembles scholars, researchers, policymakers, practitioners, and end-users with one unifying goal: to envision and create the future of the Web.</p>
             </section>
 
             <section class="about-section">
                 <h2>The Web Conference 2026</h2>
-                <p>The 2026 edition of The Web Conference will be held in Dubai, United Arab Emirates, from April 13-17, 2026. Dubai, with its cutting-edge infrastructure and position as a global hub for innovation and technology, provides an ideal setting for discussing the future of the Web.</p>
-                <ul class="important-dates-list">
-                    <li><strong>Abstract deadline:</strong> September 30, 2025</li>
-                    <li><strong>Full paper deadline:</strong> October 7, 2025</li>
-                    <li><strong>Rebuttal period:</strong> November 24 – December 1, 2025</li>
-                    <li><strong>Closed door discussion:</strong> December 1 – 10, 2025</li>
-                    <li><strong>Meta-reviews due by:</strong> December 10, 2025</li>
-                    <li><strong>Notification of acceptance:</strong> January 13, 2026</li>
-                    <li><strong>Camera ready:</strong> January 25, 2026</li>
-                    <li><strong>Conference:</strong> April 13 – 17, 2026</li>
-                </ul>
-                <p>The conference will feature a high-quality program including research sessions, posters and demonstrations, a PhD symposium for junior scholars, workshops, tutorials, a developers track for practitioners, as well as thought-provoking keynote speakers, panels, and special tracks.</p>
-                <p>The Web Conference 2026 aims to provide a forum for discussion about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture. The conference will bring together researchers, developers, users, and commercial ventures from around the world.</p>
+                <p>The 2026 ACM Web Conference will offer a high-quality program made of research sessions, posters and demonstrations, a PhD symposium for junior scholars, workshops, tutorials, a developers track for practitioners, as well as thought-provoking keynote speakers, panels, special tracks, and colocated special days.</p>
+                <p>The Web Conference 2026 will be held in Dubai, United Arab Emirates, from April 13-17, 2026. Dubai, with its cutting-edge infrastructure and position as a global hub for innovation and technology, provides an ideal setting for discussing the future of the Web.</p>
+                <p>We look forward to welcoming you to Dubai for an exciting and productive conference!</p>
             </section>
 
             <section class="about-section">
@@ -101,14 +142,17 @@
                 <h3>TheWebConf 2026</h3>
                 <p>April 13-17, 2026</p>
                 <p>Dubai, United Arab Emirates</p>
+                <div class="social-media">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    
-                    
                     <li><a href="calls.html">Calls</a></li>
                     <li><a href="program.html">Program</a></li>
                     <li><a href="attending.html">Attending</a></li>
@@ -117,11 +161,7 @@
             <div class="footer-column">
                 <h3>Contact</h3>
                 <p>Email: info@thewebconf2026.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <p style="margin-top: 20px; font-style: italic;">The Web Conference 2026 is organized by [Organizing Institution - TBD]</p>
             </div>
         </div>
         <div class="footer-bottom">
