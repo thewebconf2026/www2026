@@ -1,12 +1,16 @@
-/* Header Layout - Corrected to match WWW2024 exactly */
+/* Header Layout - Corrected to match WWW2024 exactly and positioned at TOP */
 
-/* Reset any existing header styles */
+/* CRITICAL: Ensure header is at the very top of the page */
 header {
     background-color: #f8f9fa;
     padding: 10px 0;
     width: 100%;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 1px solid #e0e0e0;
+    /* CRITICAL: Remove any margin that pushes header down */
+    margin: 0;
 }
 
 /* Main header container - centered with max-width */

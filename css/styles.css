@@ -9,16 +9,25 @@
     --font-family: 'Arial', sans-serif;
 }
 
+/* CRITICAL: Reset all margins and padding to ensure header is at top */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    /* Ensure no space above header */
 }
 
 .container {
@@ -41,13 +50,17 @@ img {
     height: auto;
 }
 
-/* Header Styles */
+/* Header Styles - MUST be at the very top */
 header {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+    /* Ensure header is at the very top with no margin */
+    margin: 0;
+    padding: 0;
 }
 
 .header-container {
