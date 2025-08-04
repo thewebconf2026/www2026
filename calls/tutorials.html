@@ -3,31 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - The Web Conference 2026</title>
+    <title>Call for Tutorials - The Web Conference 2026</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/tab-menu.css">
     <link rel="stylesheet" href="../css/dropdown-menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
+        .cfp-section {
+            margin-bottom: 30px;
         }
         
-        .coming-soon-container h2 {
-            font-size: 2.5em;
+        .cfp-section h2 {
+            color: #2c5aa0;
+            border-bottom: 2px solid #e91e63;
+            padding-bottom: 10px;
             margin-bottom: 20px;
-            color: #333;
         }
         
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
+        .cfp-section h3 {
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .important-dates {
+            background-color: #f8f9fa;
+            border-left: 4px solid #e91e63;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .important-dates h3 {
+            margin-top: 0;
+            color: #e91e63;
+        }
+        
+        .important-dates ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .important-dates li {
+            margin-bottom: 8px;
+        }
+        
+        .tutorial-types {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .tutorial-type {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .tutorial-type h4 {
+            color: #2c5aa0;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .submission-structure ol {
+            padding-left: 20px;
+        }
+        
+        .submission-structure li {
+            margin-bottom: 10px;
+        }
+        
+        .chairs-info {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .chairs-info h3 {
+            color: #2c5aa0;
+            margin-top: 0;
+        }
+        
+        .contact-info {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .tutorial-types {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -58,7 +129,7 @@
                 </div>
             </li>
             <li>
-                <a href="../calls.html" class="tab-calls has-dropdown">Calls</a>
+                <a href="../calls.html" class="tab-calls has-dropdown active">Calls</a>
                 <div class="dropdown">
                     <a href="../calls/research-tracks.html">Research Tracks</a>
                     <a href="../calls/industry.html">Industry</a>
@@ -123,17 +194,124 @@
         </ul>
     </div>
 
-    <section class="page-content">
+    <div class="page-header">
         <div class="container">
-            <h1>Tutorials Call</h1>
-            
-            <div class="coming-soon-container">
-                <h2>Coming Soon</h2>
-                <p>This page is currently under development. Content for Tutorials Call will be available soon.</p>
-                <p>Please check back later for updates.</p>
+            <h1>Call for Tutorials Proposals</h1>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="cfp-section">
+                <p>We invite proposals for tutorials to be held at The Web Conference 2026 (formerly known as WWW). The conference will take place in <strong>Dubai, United Arab Emirates (UAE), April 13-17, 2026</strong>.</p>
+                
+                <p>We welcome tutorial proposals on current and emerging topics related to the World Wide Web, broadly construed to include mobile and other Internet and online-enabled modes of interaction and communication (such as those covered by the research tracks).</p>
+                
+                <p>Tutorials are intended to provide a high-quality learning experience to conference attendees. It is expected that tutorials will address an audience with a varied range of interests and backgrounds: beginners, developers, designers, researchers, practitioners, users, lecturers, and representatives of governments and funding agencies who wish to learn new technologies.</p>
+            </div>
+
+            <div class="important-dates">
+                <h3><i class="fas fa-calendar-alt"></i> Important Dates</h3>
+                <ul>
+                    <li><strong>Proposal submission deadline:</strong> November 1, 2025</li>
+                    <li><strong>Notification:</strong> December 5, 2025</li>
+                    <li><strong>Online material due:</strong> April 1, 2026</li>
+                </ul>
+                <p><em>All submission deadlines are end-of-day in Anywhere on Earth (AoE) time zone.</em></p>
+                <p><strong>AUTHORS TAKE NOTE:</strong> The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work.</p>
+            </div>
+
+            <div class="cfp-section">
+                <h2>Tutorial Types</h2>
+                <p>Submissions should be for <strong>half-day tutorials (lasting 3 hours)</strong>. Two types of tutorials are welcome:</p>
+                
+                <div class="tutorial-types">
+                    <div class="tutorial-type">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> Lecture-style tutorials</h4>
+                        <p>These cover the state-of-the-art research, development, and applications in a specific area related to Web computing. They should stimulate and facilitate future work. Tutorials on interdisciplinary directions, bridging scientific research and applied communities, novel and fast-growing directions, and significant applications are highly encouraged.</p>
+                    </div>
+                    
+                    <div class="tutorial-type">
+                        <h4><i class="fas fa-laptop-code"></i> Hands-on tutorials</h4>
+                        <p>These offer in-depth, hands-on training on cutting-edge systems and tools relevant to The Web Conference community. These sessions are targeted at novice and moderately skilled users. The focus should be on providing hands-on experience, introducing the motivation behind the tools, associated fundamental concepts, working through examples, and demonstrating real-life applications. The tutorial should maintain a pace suitable for beginners, such as early-stage Ph.D. and master's students. Additionally, each hands-on tutorial must include at least 30 minutes for Q&A sessions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cfp-section">
+                <h2>Submission Guidelines</h2>
+                
+                <h3>Deadline</h3>
+                <p>The submission deadline is <strong>strict</strong> and no extensions, regardless of circumstances, will be allowed. Placeholder/dummy abstracts are forbidden.</p>
+                
+                <h3>Authorship</h3>
+                <p>The ACM has an authorship policy stating who can be considered an author in a submission as well as the use of generative AI tools. Authorship means accountability for the work. As such, Large Language Models (LLMs) (e.g., ChatGPT) cannot be considered authors. You can use LLMs to rephrase your text, but you are solely responsible for the text in your proposal.</p>
+                
+                <h3>Formatting Requirements</h3>
+                <p>Tutorial proposals must be written in English, in double-column format, and must adhere to the ACM template and format (also available in Overleaf). Word users may use the Word Interim Template. The recommended setting for LaTeX is:</p>
+                <code>\documentclass[sigconf, review]{acmart}</code>
+                <p>Submission must be as a single PDF file up to <strong>4 (four) pages in length, including references</strong>.</p>
+                
+                <h3>Anonymity</h3>
+                <p>The review process will be <strong>single-blind</strong>, i.e., a tutorial proposal must clearly name the contributors.</p>
+                
+                <h3>Submission Site</h3>
+                <p>Proposals must be submitted through the EasyChair system at <a href="https://easychair.org/my/conference?conf=www2026tracks" target="_blank">https://easychair.org/my/conference?conf=www2026tracks</a> (select the Tutorials track).</p>
+            </div>
+
+            <div class="cfp-section">
+                <h2>Structure</h2>
+                <p>Tutorial proposals should conform to the following structure:</p>
+                
+                <div class="submission-structure">
+                    <ol>
+                        <li><strong>General information:</strong> Title of the tutorial, contributors' names, affiliation, contact information, and brief bio.</li>
+                        <li><strong>Abstract:</strong> 1-2 paragraphs suitable for inclusion in the conference registration material.</li>
+                        <li><strong>Topic and relevance:</strong> A description of the tutorial topic, providing a sense of both the scope of it and depth within the scope, plus a statement on why the tutorial is important and timely, how it is relevant to the Web Conference, and why the presenters are qualified for a high-quality introduction of the proposed topic.</li>
+                        <li><strong>Type:</strong> Please indicate whether this will be a lecture-style or hands-on tutorial. In the case of the latter, please indicate the equipment needs for participants (e.g., pre-installed Jupyter notebook with specific packages).</li>
+                        <li><strong>Schedule:</strong> Detailed program of the tutorial, including a schedule listing the section and duration to be presented by each named contributor.</li>
+                        <li><strong>Audience:</strong> A description of the intended audience, prerequisite knowledge, and potential learning outcomes.</li>
+                        <li><strong>Previous editions:</strong> If the tutorial was given before, where and when was it presented? Please give details on the number of attendees, and how the proposed tutorial differs or builds on the previous ones. If possible, provide a link to the material of the previous version.</li>
+                        <li><strong>Tutorial materials:</strong> What materials will be provided to attendees of the tutorial? Are there any copyright issues?</li>
+                        <li><strong>Video teaser:</strong> A Video teaser, up to 3 minutes, is required at the time of submission. The video can be hosted on any video sharing platform (e.g., YouTube) or any file sharing service (e.g., WeTransfer, Dropbox) and the link to the video MUST be included in the proposal.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="cfp-section">
+                <h2>Reviewing Process</h2>
+                <p>The decision about acceptance or rejection of tutorial proposals will be made by the Tutorial Co-chairs, who may be supported by a small program committee and in consultation with the General and Program Committee Co-chairs, taking into account factors such as the timeliness of the topic, the topic fit with respect to The Web Conference 2026, the coverage of the topic in other tracks of the conference, the capacity of the venue, and the expertise of the presenters.</p>
+            </div>
+
+            <div class="cfp-section">
+                <h2>Publication and Registration Policies</h2>
+                
+                <h3>Publication</h3>
+                <p>Each accepted tutorial will have a tutorial summary included in the Companion Proceedings of the Web Conference 2026 (the exact length will be informed later). In addition, each tutorial is required to submit a brief pre-recorded video, which will appear on ACM Digital Library, along with the PDF.</p>
+                
+                <h3>Presentation</h3>
+                <p>Tutorial speakers are expected to be physically present. Virtual delivery is possible for those who genuinely face significant challenges in traveling to Dubai, but at least one presenter is expected to attend the conference in person. All contributors must adhere to the scheduled program outlined in the tutorial proposal. If a contributor is unable to present in person, they must provide a justification and obtain permission from the Tutorial Co-chairs.</p>
+                
+                <h3>Registration</h3>
+                <p>All presenters are required to register at the conference. In appreciation for the contribution, we will offer one complimentary two-day pass (for workshop and tutorial days only) for each half-day tutorial.</p>
+                
+                <h3>Equipment & Materials</h3>
+                <p>The standard equipment includes an LCD projector, a single projection screen and microphones. The tutorial presenter(s) will be responsible for making sure that the slides and any material needed for the tutorial are made available online in advance for attendees. For tutorials that introduce or use standards or software, the tutorial must be based on the latest version of the standards and/or software.</p>
+            </div>
+
+            <div class="chairs-info">
+                <h3><i class="fas fa-users"></i> Tutorial Co-Chairs</h3>
+                <ul>
+                    <li><strong>Ricardo Baeza-Yates</strong> - AI Institute at the Barcelona Supercomputing Center, Barcelona, Spain</li>
+                    <li><strong>David Carmel</strong> - Technology Innovation Institute (TII), Haifa, Israel</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Contact:</strong> <a href="https://thewebconf2026.github.io/www2026/calls/tutorials.html">https://thewebconf2026.github.io/www2026/calls/tutorials.html</a></p>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -141,6 +319,11 @@
                 <h3>TheWebConf 2026</h3>
                 <p>April 13-17, 2026</p>
                 <p>Dubai, United Arab Emirates</p>
+                <div class="social-media">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
             <div class="footer-column">
                 <h3>Quick Links</h3>
@@ -155,11 +338,7 @@
             <div class="footer-column">
                 <h3>Contact</h3>
                 <p>Email: info@thewebconf2026.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <p style="margin-top: 20px; font-style: italic;">The Web Conference 2026 is organized by [Organizing Institution - TBD]</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -202,3 +381,4 @@
     </script>
 </body>
 </html>
+
