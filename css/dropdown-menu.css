@@ -5,7 +5,7 @@
 
 .tab-menu li .dropdown {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 2px); /* Overlap by 2px to eliminate gap */
     left: 0;
     background-color: #fff;
     min-width: 200px;
