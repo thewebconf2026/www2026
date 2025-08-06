@@ -25,15 +25,14 @@
         <div class="container">
             <section class="call-section">
                 <h2>Call for Papers</h2>
-                <ul class="important-dates-list">
-                    <li><strong>Abstract deadline:</strong> September 30, 2025</li>
-                    <li><strong>Full paper deadline:</strong> October 7, 2025</li>
-                    <li><strong>Rebuttal period:</strong> November 24 – December 1, 2025</li>
-                    <li><strong>Closed door discussion:</strong> December 1 – 10, 2025</li>
-                    <li><strong>Meta-reviews due by:</strong> December 10, 2025</li>
-                    <li><strong>Notification of acceptance:</strong> January 13, 2026</li>
-                    <li><strong>Camera ready:</strong> January 25, 2026</li>
-                    <li><strong>Conference:</strong> April 13 – 17, 2026</li>
+                <ul class="important-dates-list" id="research-track-dates">
+                    <!-- Dates will be loaded dynamically from data/important-dates.json -->
+                    <li><strong>Abstract deadline:</strong> <span data-date="research_track.abstract_deadline">September 30, 2025</span></li>
+                    <li><strong>Full paper deadline:</strong> <span data-date="research_track.full_paper_deadline">October 7, 2025</span></li>
+                    <li><strong>Rebuttal period:</strong> <span data-date="research_track.rebuttal_period">November 24 – December 1, 2025</span></li>
+                    <li><strong>Notification of acceptance:</strong> <span data-date="research_track.notification">January 13, 2026</span></li>
+                    <li><strong>Camera ready:</strong> <span data-date="research_track.camera_ready">January 25, 2026</span></li>
+                    <li><strong>Conference:</strong> <span data-date="conference.start">April 13</span> – <span data-date="conference.end">17, 2026</span></li>
                 </ul>
             </section>
         </div>
@@ -74,5 +73,6 @@
     <script src="js/main.js"></script>
 
     <script src="js/header-loader.js"></script>
+    <script src="js/dates-loader.js"></script>
 </body>
 </html>

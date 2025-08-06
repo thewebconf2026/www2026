@@ -1,0 +1,127 @@
+{
+  "research_track": {
+    "abstract_deadline": {
+      "date": "September 30, 2025",
+      "description": "Research Track Abstract submission (compulsory for all papers)"
+    },
+    "full_paper_deadline": {
+      "date": "October 7, 2025", 
+      "description": "Research Track Full papers submission"
+    },
+    "rebuttal_period": {
+      "date": "November 24 – December 1, 2025",
+      "description": "Research Track Rebuttal"
+    },
+    "notification": {
+      "date": "January 13, 2026",
+      "description": "Research Track Notification"
+    },
+    "camera_ready": {
+      "date": "January 25, 2026",
+      "description": "Research Track camera-ready version due"
+    }
+  },
+  "tutorials": {
+    "submission_deadline": {
+      "date": "November 1, 2025",
+      "description": "Tutorials Proposal submission deadline"
+    },
+    "notification": {
+      "date": "December 5, 2025",
+      "description": "Tutorial Notification"
+    },
+    "materials_due": {
+      "date": "April 1, 2026",
+      "description": "Tutorial Online material due"
+    }
+  },
+  "special_tracks": {
+    "history_web_abstract": {
+      "date": "November 10, 2025",
+      "description": "Special Track History of the Web Abstract"
+    },
+    "history_web_full": {
+      "date": "November 17, 2025",
+      "description": "Special Track History of the Web Full paper"
+    },
+    "web4good_full": {
+      "date": "November 24, 2025",
+      "description": "Special Track Web4Good Full paper"
+    },
+    "notification": {
+      "date": "January 13, 2026",
+      "description": "Special Track notifications"
+    }
+  },
+  "industry": {
+    "abstract": {
+      "date": "November 17, 2025",
+      "description": "Industry Abstract"
+    },
+    "full_paper": {
+      "date": "November 24, 2025",
+      "description": "Industry Full paper"
+    },
+    "notification": {
+      "date": "January 13, 2026",
+      "description": "Industry Acceptance notification"
+    }
+  },
+  "workshops": {
+    "proposal_deadline": {
+      "date": "November 10, 2025",
+      "description": "Workshop Proposal submission deadline"
+    },
+    "proposal_notification": {
+      "date": "November 30, 2025",
+      "description": "Workshop notification"
+    },
+    "paper_submission": {
+      "date": "February 10, 2026",
+      "description": "Workshop paper submission deadline"
+    },
+    "paper_notification": {
+      "date": "March 10, 2026",
+      "description": "Workshop paper acceptance notification"
+    },
+    "camera_ready": {
+      "date": "March 17, 2026",
+      "description": "Workshop papers camera-ready version due"
+    }
+  },
+  "posters_demos": {
+    "submission": {
+      "date": "February 10, 2026",
+      "description": "Poster and Demo Papers submission"
+    },
+    "notification": {
+      "date": "March 10, 2026",
+      "description": "Poster and Demo Notification to authors"
+    },
+    "camera_ready": {
+      "date": "March 17, 2026",
+      "description": "Poster and Demo papers camera-ready version due"
+    }
+  },
+  "registration": {
+    "early_bird": {
+      "date": "March 20, 2026",
+      "description": "Early Bird Registration deadline"
+    },
+    "standard": {
+      "date": "April 10, 2026",
+      "description": "Standard Registration deadline"
+    }
+  },
+  "conference": {
+    "start": {
+      "date": "April 13, 2026",
+      "description": "Conference Starts"
+    },
+    "end": {
+      "date": "April 17, 2026",
+      "description": "Conference Ends"
+    }
+  }
+}
+
