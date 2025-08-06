@@ -92,6 +92,11 @@ header {
     color: white;
 }
 
+.tab-menu > li > a.tab-important-dates {
+    background-color: #ffc107;
+    color: white;
+}
+
 .tab-menu > li > a.tab-calls {
     background-color: #e91e63;
     color: white;
