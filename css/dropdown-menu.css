@@ -92,3 +92,63 @@
         display: block;
     }
 }
+
+
+/* Submenu styles for nested dropdowns (e.g., Special Tracks) */
+.tab-menu .dropdown .submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1001;
+    display: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tab-menu .dropdown a.has-submenu {
+    position: relative;
+}
+
+.tab-menu .dropdown a.has-submenu:hover + .submenu,
+.tab-menu .dropdown .submenu:hover {
+    display: block;
+}
+
+.tab-menu .submenu a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: normal;
+    border-radius: 0;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.tab-menu .submenu a:hover {
+    background-color: rgba(226, 127, 203, 0.2);
+}
+
+/* Mobile submenu styles */
+@media (max-width: 768px) {
+    .tab-menu .dropdown .submenu {
+        position: static;
+        box-shadow: none;
+        background-color: rgba(240, 240, 240, 0.9);
+        margin-left: 15px;
+        width: calc(100% - 15px);
+    }
+    
+    .tab-menu .dropdown a.has-submenu:hover + .submenu {
+        display: none; /* On mobile, we'll use JavaScript to toggle */
+    }
+    
+    .tab-menu .dropdown a.has-submenu.active + .submenu {
+        display: block;
+    }
+}
+
