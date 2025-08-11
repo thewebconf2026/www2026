@@ -28,7 +28,7 @@ class HeaderLoader {
         if (depth <= 1) {
             return './'; // Root level
         } else {
-            return '../'.repeat(depth - 1); // Subdirectory
+            return '../'; // Subdirectory - always one level up
         }
     }
 
