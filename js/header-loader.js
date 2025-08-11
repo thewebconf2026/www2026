@@ -25,10 +25,10 @@ class HeaderLoader {
         const path = window.location.pathname;
         const depth = (path.match(/\//g) || []).length - 1;
         
-        if (depth <= 1) {
-            return './'; // Root level
+        if (depth === 0) {
+            return './'; // Root level (no subdirectories)
         } else {
-            return '../'; // Subdirectory - always one level up
+            return '../'; // Any subdirectory level - always one level up
         }
     }
 

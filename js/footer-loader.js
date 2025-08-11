@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const pathDepth = (currentPath.match(/\//g) || []).length - 1;
         
         let relativePath = '';
-        if (pathDepth <= 1) {
-            // Root level (e.g., /index.html)
+        if (pathDepth === 0) {
+            // Root level (no subdirectories)
             relativePath = 'components/footer.html';
         } else {
-            // Subdirectory level (e.g., /calls/tutorials.html) - always one level up
+            // Any subdirectory level - always one level up
             relativePath = '../components/footer.html';
         }
         

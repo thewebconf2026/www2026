@@ -12,11 +12,11 @@ class DatesLoader {
             const pathDepth = (currentPath.match(/\//g) || []).length - 1;
             
             let relativePath = '';
-            if (pathDepth <= 1) {
-                // Root level (e.g., /index.html)
+            if (pathDepth === 0) {
+                // Root level (no subdirectories)
                 relativePath = 'data/important-dates.json';
             } else {
-                // Subdirectory level (e.g., /calls/tutorials.html) - always one level up
+                // Any subdirectory level - always one level up
                 relativePath = '../data/important-dates.json';
             }
 
