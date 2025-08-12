@@ -45,6 +45,27 @@ ul {
     list-style: none;
 }
 
+/* Allow bullet points for content lists */
+.page-content ul, 
+.call-section ul, 
+.submission-guidelines ul,
+.reviewing-process ul,
+.publication-policies ul,
+.scope ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.page-content ul li,
+.call-section ul li,
+.submission-guidelines ul li,
+.reviewing-process ul li,
+.publication-policies ul li,
+.scope ul li {
+    margin-bottom: 8px;
+}
+
 img {
     max-width: 100%;
     height: auto;
