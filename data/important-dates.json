@@ -54,17 +54,25 @@
     }
   },
   "industry": {
-    "abstract": {
-      "date": "November 17, 2025",
-      "description": "Industry Abstract"
+    "abstract_deadline": {
+      "date": "September 30, 2025",
+      "description": "Industry Track Abstract deadline"
     },
-    "full_paper": {
-      "date": "November 24, 2025",
-      "description": "Industry Full paper"
+    "full_paper_deadline": {
+      "date": "October 7, 2025",
+      "description": "Industry Track Full paper deadline"
+    },
+    "rebuttal_period": {
+      "date": "November 24 – December 1, 2025",
+      "description": "Industry Track Rebuttal period"
     },
     "notification": {
       "date": "January 13, 2026",
-      "description": "Industry Acceptance notification"
+      "description": "Industry Track Notification of acceptance"
+    },
+    "camera_ready": {
+      "date": "January 25, 2026",
+      "description": "Industry Track Camera ready"
     }
   },
   "workshops": {
