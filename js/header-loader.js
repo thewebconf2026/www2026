@@ -115,7 +115,7 @@ class HeaderLoader {
         // Fix logo image src
         const logoImg = header.querySelector('.logo img');
         if (logoImg) {
-            logoImg.src = this.basePath + 'images/tentative logo 2.png';
+            logoImg.src = this.basePath + 'images/www2026_logo.jpg';
         }
 
         // Fix all navigation links
