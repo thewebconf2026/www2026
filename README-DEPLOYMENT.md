@@ -1,95 +1,96 @@
-# WWW2026 网站自动部署配置
+# WWW2026 Website Automatic Deployment Configuration
 
-## 概述
+## Overview
 
-本仓库已配置了GitHub Actions自动部署功能，当您向`main`分支推送代码时，网站将自动更新。
+This repository is configured with GitHub Actions for automatic deployment. When you push code to the `main` branch, the website will be automatically updated.
 
-## 如何启用自动部署
+## How to Enable Automatic Deployment
 
-### 1. 启用GitHub Pages
+### 1. Enable GitHub Pages
 
-1. 进入您的GitHub仓库页面：`https://github.com/thewebconf2026/www2026`
-2. 点击 **Settings** 标签页
-3. 在左侧菜单中找到 **Pages** 选项
-4. 在 **Source** 部分，选择 **GitHub Actions**
-5. 点击 **Save** 保存设置
+1. Go to your GitHub repository page: `https://github.com/thewebconf2026/www2026`
+2. Click the **Settings** tab
+3. Find the **Pages** option in the left-hand menu
+4. In the **Source** section, select **GitHub Actions**
+5. Click **Save** to apply the settings
 
-### 2. 验证部署
+### 2. Verify Deployment
 
-启用GitHub Pages后，您的网站将在以下地址可访问：
+After enabling GitHub Pages, your website will be accessible at:
 - `https://thewebconf2026.github.io/www2026/`
 
-## 自动部署工作流程
+## Automatic Deployment Workflow
 
-1. **触发条件**：当您向`main`分支推送代码时
-2. **构建过程**：GitHub Actions会自动构建网站
-3. **部署过程**：构建完成后自动部署到GitHub Pages
+1. **Trigger Condition**: When you push code to the `main` branch
+2. **Build Process**: GitHub Actions will automatically build the website
+3. **Deployment Process**: Automatically deploys to GitHub Pages after the build is complete
 
-## 如何更新网站
+## How to Update the Website
 
-1. **直接在GitHub网页编辑**：
-   - 在GitHub仓库中找到要编辑的文件
-   - 点击文件名打开文件
-   - 点击编辑按钮（铅笔图标）
-   - 进行修改后，在页面底部填写提交信息
-   - 点击 **Commit changes** 提交
+1. **Edit directly on GitHub web interface**:
+   - Navigate to the file you want to edit in your GitHub repository
+   - Click the filename to open the file
+   - Click the edit button (pencil icon)
+   - Make your changes, then fill in the commit message at the bottom of the page
+   - Click **Commit changes** to submit
 
-2. **本地编辑后推送**：
+2. **Edit locally and push**:
    ```bash
-   # 克隆仓库（如果还没有）
+   # Clone the repository (if you haven\'t already)
    git clone https://github.com/thewebconf2026/www2026.git
    cd www2026
    
-   # 进行修改...
+   # Make your changes...
    
-   # 提交并推送
+   # Commit and push
    git add .
-   git commit -m "更新网站内容"
+   git commit -m "Update website content"
    git push origin main
    ```
 
-3. **自动部署**：
-   - 推送后，GitHub Actions会自动运行
-   - 您可以在仓库的 **Actions** 标签页查看部署进度
-   - 部署完成后，网站会自动更新
+3. **Automatic Deployment**:
+   - After pushing, GitHub Actions will run automatically
+   - You can view the deployment progress in the **Actions** tab of your repository
+   - Once deployed, the website will automatically update
 
-## 常见问题
+## Frequently Asked Questions
 
-### Q: 如何查看部署状态？
-A: 在GitHub仓库页面，点击 **Actions** 标签页，您可以看到所有的部署运行记录。
+### Q: How to check deployment status?
+A: On your GitHub repository page, click the **Actions** tab to see all deployment run records.
 
-### Q: 部署失败怎么办？
-A: 在 **Actions** 页面点击失败的运行记录，查看错误日志。常见问题包括：
-- HTML语法错误
-- 文件路径错误
-- 图片文件过大
+### Q: What if deployment fails?
+A: Click on the failed run record in the **Actions** page to view the error logs. Common issues include:
+- HTML syntax errors
+- Incorrect file paths
+- Overly large image files
 
-### Q: 网站更新需要多长时间？
-A: 通常在推送代码后2-5分钟内完成部署。
+### Q: How long does it take for the website to update?
+A: Deployment usually completes within 2-5 minutes after pushing code.
 
-## 文件结构说明
+## File Structure Explanation
 
 ```
 www2026/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml          # GitHub Actions部署配置
-├── css/                        # 样式文件
-├── js/                         # JavaScript文件
-├── images/                     # 图片资源
-├── data/                       # 数据文件
-├── index.html                  # 首页
-├── about.html                  # 关于页面
-├── calls.html                  # 征稿页面
-├── program.html                # 程序页面
-├── attending.html              # 参会页面
-└── README-DEPLOYMENT.md        # 本文档
+│       └── deploy.yml          # GitHub Actions deployment configuration
+├── css/                        # Stylesheet files
+├── js/                         # JavaScript files
+├── images/                     # Image assets
+├── data/                       # Data files
+├── index.html                  # Homepage
+├── about.html                  # About page
+├── calls.html                  # Calls page
+├── program.html                # Program page
+├── attending.html              # Attending page
+└── README-DEPLOYMENT.md        # This document
 ```
 
-## 技术支持
+## Technical Support
 
-如果您在使用过程中遇到问题，请：
-1. 检查GitHub Actions的运行日志
-2. 确认文件路径和语法正确
-3. 联系技术支持团队
+If you encounter any issues during use, please:
+1. Check the GitHub Actions run logs
+2. Confirm file paths and syntax are correct
+3. Contact the technical support team
+
 
