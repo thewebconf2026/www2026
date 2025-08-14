@@ -33,36 +33,36 @@
 
 /* Tab colors - matching WWW 2024 */
 .tab-menu a.tab-about {
-    background-color: #f8d568;
+    background-color: #fff;
 }
 
 .tab-menu a.tab-calls {
-    background-color: #e27fcb;
+    background-color: white;
 }
 
 .tab-menu a.tab-accepted {
-    background-color: #68c5f8;
+    background-color: white;
 }
 
 .tab-menu a.tab-program {
-    background-color: #5fb878;
+    background-color: white;
 }
 
 .tab-menu a.tab-organization {
-    background-color: #9370db;
+    background-color: white;
 }
 
 .tab-menu a.tab-attending {
-    background-color: #ff7f50;
+    background-color: white;
 }
 
 .tab-menu a.tab-media {
-    background-color: #20b2aa;
+    background-color: white;
 }
 
 .tab-menu a.tab-home {
-    background-color: #4169e1;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 /* Hover effects */
