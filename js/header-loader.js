@@ -14,8 +14,8 @@ class HeaderLoader {
      */
     getCurrentPage() {
         const path = window.location.pathname;
-        const page = path.split('/').pop() || 'index.html';
-        return page.replace('.html', '');
+        const page = path.split("/").pop() || "index.html";
+        return page.replace(".html", "");
     }
 
     /**
@@ -26,9 +26,9 @@ class HeaderLoader {
         const depth = (path.match(/\//g) || []).length - 1;
         
         if (depth === 0) {
-            return './'; // Root level (no subdirectories)
+            return "./"; // Root level (no subdirectories)
         } else {
-            return '../'; // Any subdirectory level - always one level up
+            return "../"; // Any subdirectory level - always one level up
         }
     }
 
@@ -37,7 +37,7 @@ class HeaderLoader {
      */
     async loadHeader() {
         try {
-            const headerPath = this.basePath + 'components/header.html';
+            const headerPath = this.basePath + "components/header.html";
             const response = await fetch(headerPath);
             
             if (!response.ok) {
@@ -47,7 +47,7 @@ class HeaderLoader {
             const headerHTML = await response.text();
             
             // Insert header into placeholder
-            const placeholder = document.getElementById('header-placeholder');
+            const placeholder = document.getElementById("header-placeholder");
             if (placeholder) {
                 placeholder.innerHTML = headerHTML;
                 
@@ -60,17 +60,18 @@ class HeaderLoader {
                 // Fix relative paths in header based on current location
                 this.fixRelativePaths();
                 
-                console.log('✅ Header loaded successfully');
+                console.log("✅ Header loaded successfully");
             } else {
-                console.error('❌ Header placeholder not found');
+                console.error("❌ Header placeholder not found");
             }
             
         } catch (error) {
-            console.error('❌ Error loading header:', error);
+            console.error("❌ Error loading header:", error);
             // Fallback: show a basic header message
-            const placeholder = document.getElementById('header-placeholder');
+            const placeholder = document.getElementById("header-placeholder");
             if (placeholder) {
-                placeholder.innerHTML = '<div style="padding: 20px; background: #f8f9fa; text-align: center;">Header loading...</div>';
+                placeholder.innerHTML = 
+                    "<div style=\"padding: 20px; background: #f8f9fa; text-align: center;\">Header loading...</div>";
             }
         }
     }
@@ -79,52 +80,63 @@ class HeaderLoader {
      * Set active navigation item based on current page
      */
     setActiveNavigation() {
-        // Remove all active classes
-        const navLinks = document.querySelectorAll('.tab-menu a');
-        navLinks.forEach(link => link.classList.remove('active'));
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll(".tab-menu a");
 
-        // Add active class to current page
-        const currentPageClass = `tab-${this.currentPage}`;
-        const activeLink = document.querySelector(`.${currentPageClass}`);
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            // Remove active class from parent dropdowns
+            let parentDropdown = link.closest("li");
+            if (parentDropdown && parentDropdown.querySelector(".has-dropdown")) {
+                parentDropdown.querySelector(".has-dropdown").classList.remove("active");
+            }
+        });
 
-        // Special cases for subdirectory pages
-        if (this.currentPage.includes('research-tracks') || 
-            this.currentPage.includes('industry') || 
-            this.currentPage.includes('tutorials')) {
-            const callsLink = document.querySelector('.tab-calls');
-            if (callsLink) callsLink.classList.add('active');
-        }
+        navLinks.forEach((link) => {
+            const linkHref = link.getAttribute("href");
+            if (linkHref) {
+                // Handle main navigation links
+                if (currentPath.endsWith(linkHref)) {
+                    link.classList.add("active");
+                }
+
+                // Handle dropdown links and highlight parent
+                if (link.closest(".dropdown")) {
+                    const parentLink = link.closest("li").querySelector(".has-dropdown");
+                    if (parentLink && currentPath.includes(linkHref)) {
+                        parentLink.classList.add("active");
+                    }
+                }
+            }
+        });
     }
 
     /**
      * Fix relative paths in header based on current page location
      */
     fixRelativePaths() {
-        const header = document.querySelector('header');
+        const header = document.querySelector("header");
         if (!header) return;
 
         // Fix logo link
-        const logoLink = header.querySelector('.logo a');
+        const logoLink = header.querySelector(".logo a");
         if (logoLink) {
-            logoLink.href = this.basePath + 'index.html';
+            logoLink.href = this.basePath + "index.html";
         }
 
         // Fix logo image src
-        const logoImg = header.querySelector('.logo img');
+        const logoImg = header.querySelector(".logo img");
         if (logoImg) {
-            logoImg.src = this.basePath + 'images/www2026_logo.jpg';
+            logoImg.src = this.basePath + "images/www2026_logo.jpg";
         }
 
         // Fix all navigation links
-        const navLinks = header.querySelectorAll('a[href]');
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && !href.startsWith('http') && !href.startsWith('#')) {
+        const navLinks = header.querySelectorAll("a[href]");
+        navLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (href && !href.startsWith("http") && !href.startsWith("#")) {
                 // Only fix relative paths, not absolute URLs or anchors
-                if (!href.startsWith('./') && !href.startsWith('../')) {
+                if (!href.startsWith("./") && !href.startsWith("../")) {
                     link.href = this.basePath + href;
                 }
             }
@@ -135,23 +147,24 @@ class HeaderLoader {
      * Initialize mobile menu functionality
      */
     initializeMobileMenu() {
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        const navContainer = document.querySelector('.main-nav-container');
+        const mobileToggle = document.querySelector(".mobile-menu-toggle");
+        const navContainer = document.querySelector(".main-nav-container");
         
         if (mobileToggle && navContainer) {
-            mobileToggle.addEventListener('click', () => {
-                navContainer.classList.toggle('active');
+            mobileToggle.addEventListener("click", () => {
+                navContainer.classList.toggle("active");
             });
         }
     }
 }
 
 // Auto-load header when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     const headerLoader = new HeaderLoader();
     headerLoader.loadHeader();
 });
 
 // Export for manual usage if needed
 window.HeaderLoader = HeaderLoader;
+
 
