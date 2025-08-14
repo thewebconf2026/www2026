@@ -2,14 +2,14 @@
 
 /* CRITICAL: Ensure header is at the very top of the page */
 header {
-    background-color: #f8f9fa;
+    background-color: var(--white);
     padding: 10px 0;
     width: 100% !important;
     position: sticky !important;
     top: 0 !important;
     left: 0 !important;
     z-index: 1000 !important;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--dark-grey);
     /* CRITICAL: Remove any margin that pushes header down */
     margin: 0 !important;
 }
@@ -76,55 +76,56 @@ header {
     font-size: 14px;
     border-radius: 4px;
     transition: all 0.3s ease;
-    color: #333;
+    color: var(--white);
     white-space: nowrap;
+    background-color: var(--purple);
 }
 
 /* Tab colors matching WWW2024 style */
 .tab-menu > li > a.tab-home,
 .tab-menu > li > a.tab-home.active {
-    background-color: #4285f4;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-about {
-    background-color: #ff9800;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-important-dates {
-    background-color: #ffc107;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-calls {
-    background-color: #e91e63;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-accepted {
-    background-color: #00bcd4;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-program {
-    background-color: #4caf50;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-organization {
-    background-color: #9c27b0;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-attending {
-    background-color: #ff5722;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 .tab-menu > li > a.tab-media {
-    background-color: #009688;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 /* Active state */
@@ -144,8 +145,8 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: var(--white);
+    border: 1px solid var(--dark-grey);
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -161,14 +162,15 @@ header {
 .dropdown a {
     display: block;
     padding: 10px 15px;
-    color: #333;
+    color: var(--dark-grey);
     text-decoration: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--dark-grey);
     font-size: 13px;
 }
 
 .dropdown a:hover {
-    background-color: #f8f9fa;
+    background-color: var(--dark-grey);
+    color: var(--white);
 }
 
 .dropdown a:last-child {
@@ -180,7 +182,7 @@ header {
     display: none;
     font-size: 24px;
     cursor: pointer;
-    color: #333;
+    color: var(--dark-grey);
     margin-left: 10px;
 }
 
@@ -211,8 +213,8 @@ header {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: white;
-        border-top: 1px solid #ddd;
+        background-color: var(--white);
+        border-top: 1px solid var(--dark-grey);
         display: none;
         z-index: 999;
     }
@@ -232,10 +234,6 @@ header {
         gap: 5px;
     }
     
-    .tab-menu li {
-        width: 100%;
-    }
-    
     .tab-menu > li > a {
         width: 100%;
         text-align: center;
@@ -250,7 +248,7 @@ header {
         box-shadow: none;
         border: none;
         margin-top: 5px;
-        background-color: #f8f9fa;
+        background-color: var(--dark-grey);
     }
     
     .tab-menu li.active .dropdown {
@@ -267,3 +265,4 @@ header {
         padding: 0 5px;
     }
 }
+
