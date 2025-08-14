@@ -67,71 +67,26 @@ header {
     margin: 0;
 }
 
-/* Tab menu links - styled like WWW2024 */
+/* Tab menu links - styled as text with purple border */
 .tab-menu > li > a {
     display: block;
     padding: 8px 16px;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 0;
     transition: all 0.3s ease;
-    color: var(--white);
+    color: var(--dark-grey);
     white-space: nowrap;
-    background-color: var(--purple);
+    background-color: transparent;
+    border-bottom: 2px solid var(--purple);
 }
 
-/* Tab colors matching WWW2024 style */
-.tab-menu > li > a.tab-home,
-.tab-menu > li > a.tab-home.active {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-about {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-important-dates {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-calls {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-accepted {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-program {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-organization {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-attending {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-.tab-menu > li > a.tab-media {
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-/* Active state */
+/* Active state with cyan border */
 .tab-menu > li > a.active {
-    opacity: 0.9;
-    transform: translateY(-1px);
+    border-bottom: 2px solid var(--cyan);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Hover effects */
