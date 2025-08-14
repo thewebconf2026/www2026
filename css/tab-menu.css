@@ -15,7 +15,7 @@
 }
 
 .tab-menu li {
-    margin: 0 5px;
+    margin: 0;
 }
 
 .tab-menu a {
@@ -87,3 +87,5 @@
         margin: 5px;
     }
 }
+
+
