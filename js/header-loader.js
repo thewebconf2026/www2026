@@ -107,6 +107,16 @@ class HeaderLoader {
                         parentLink.classList.add("active");
                     }
                 }
+
+                // Handle nested dropdown links and highlight parent
+                if (link.closest(".nested-dropdown-content")) {
+                    const parentNestedDropdown = link.closest(".nested-dropdown");
+                    if (parentNestedDropdown) {
+                        parentNestedDropdown.classList.add("active");
+                        const callsLink = document.querySelector(".tab-calls");
+                        if (callsLink) callsLink.classList.add("active");
+                    }
+                }
             }
         });
     }
