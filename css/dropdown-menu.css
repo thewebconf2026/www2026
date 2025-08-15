@@ -125,7 +125,8 @@
     overflow: hidden;
 }
 
-.nested-dropdown:hover .nested-dropdown-content {
+/* Fix: Ensure nested dropdown opens on hover */
+.nested-dropdown:hover > .nested-dropdown-content {
     display: block;
 }
 
@@ -155,7 +156,7 @@
         width: calc(100% - 15px);
     }
 
-    .nested-dropdown:hover .nested-dropdown-content {
+    .nested-dropdown:hover > .nested-dropdown-content {
         display: none; /* On mobile, we'll use JavaScript to toggle */
     }
 
