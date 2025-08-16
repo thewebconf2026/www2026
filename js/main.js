@@ -33,8 +33,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+        // Handle cases where linkPage might be a full path or just a file name
+        const linkFileName = linkPage.split('/').pop();
+
+        // Check if the current page matches the link's file name
+        if (linkFileName === currentPage || (currentPage === '' && linkFileName === 'index.html')) {
             link.classList.add('active');
+        } else if (link.classList.contains('has-dropdown')) {
+            // For dropdowns, check if any of its sub-items match the current page
+            const dropdownContent = link.nextElementSibling;
+            if (dropdownContent && dropdownContent.classList.contains('dropdown')) {
+                const subLinks = dropdownContent.querySelectorAll('a');
+                subLinks.forEach(subLink => {
+                    const subLinkFileName = subLink.getAttribute('href').split('/').pop();
+                    if (subLinkFileName === currentPage) {
+                        link.classList.add('active');
+                    }
+                });
+            }
         }
     });
 });
