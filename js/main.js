@@ -33,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
-        // Handle cases where linkPage might be a full path or just a file name
         const linkFileName = linkPage.split('/').pop();
+
+        // Remove active class from all links first to ensure only one is active
+        link.classList.remove('active');
 
         // Check if the current page matches the link's file name
         if (linkFileName === currentPage || (currentPage === '' && linkFileName === 'index.html')) {
