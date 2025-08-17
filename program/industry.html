@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competitions - The Web Conference 2026</title>
+    <title>Industry Track - The Web Conference 2026</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
     <link rel="stylesheet" href="../css/tab-menu.css">
+    <link rel="stylesheet" href="../css/dropdown-menu.css">
+    <link rel="stylesheet" href="../css/header-layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .coming-soon-container {
+            text-align: center;
+            padding: 50px 20px;
+            margin: 40px 0;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .coming-soon-container h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .coming-soon-container p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
         <div class="container">
-            <h1>Competitions</h1>
+            <h1>Industry Track</h1>
             
-            <p>Details about the competitions will be announced soon. Please check back later for updates.</p>
-            
+            <div class="coming-soon-container">
+                <h2>Coming Soon</h2>
+                <p>This page is currently under development. Content for Industry Track will be available soon.</p>
+                <p>Please check back later for updates.</p>
+            </div>
         </div>
     </section>
 
@@ -60,6 +86,34 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        // Add dropdown toggle functionality for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const tabMenu = document.querySelector('.tab-menu');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    tabMenu.classList.toggle('active');
+                });
+            }
+            
+            // For mobile: toggle dropdown on tap
+            if (window.innerWidth <= 768) {
+                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
+                
+                dropdownLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            this.parentNode.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
     <script src="../js/header-loader.js"></script>
 </body>
 </html>
