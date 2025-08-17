@@ -1,12 +1,17 @@
 /* Base Styles */
 :root {
-    --primary-color: #0056b3;
-    --secondary-color: #e91e63;
+    --primary-color: #1a1a1a;  /* Changed from blue to dark grey */
+    --secondary-color: #6a00ff;  /* Changed from red to purple */
     --text-color: #333;
     --light-bg: #f8f9fa;
     --dark-bg: #343a40;
     --border-color: #dee2e6;
     --font-family: 'Arial', sans-serif;
+    /* Brand colors */
+    --purple: #6a00ff;
+    --dark-grey: #1a1a1a;
+    --cyan: #00e5ff;
+    --white: #ffffff;
 }
 
 /* CRITICAL: Reset all margins and padding to ensure header is at top */
@@ -150,7 +155,7 @@ img {
 }
 
 .primary-btn:hover {
-    background-color: #004494;
+    background-color: var(--dark-grey);
 }
 
 .secondary-btn {
@@ -301,12 +306,12 @@ footer {
     display: inline-block;
     margin: 0 10px;
     font-size: 1.8rem;
-    color: #e91e63;
+    color: var(--purple);
     transition: color 0.3s, transform 0.3s;
 }
 
 .social-media a:hover {
-    color: #ff4081;
+    color: var(--cyan);
     transform: scale(1.1);
 }
 
