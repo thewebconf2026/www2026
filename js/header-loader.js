@@ -59,6 +59,7 @@ class HeaderLoader {
 
         // Fix relative paths in header based on current location
         this.fixRelativePaths();
+        this.setHeaderHeight();
 
         console.log("✅ Header loaded successfully");
       } else {
@@ -75,6 +76,27 @@ class HeaderLoader {
     }
   }
 
+  /**
+   * Set --header-height CSS variable dynamically
+   */
+  setHeaderHeight() {
+    const header = document.querySelector("header");
+    if (header) {
+      document.documentElement.style.setProperty(
+        "--header-height",
+        header.offsetHeight + "px"
+      );
+
+      // Optional: update on resize
+      window.addEventListener("resize", () => {
+        document.documentElement.style.setProperty(
+          "--header-height",
+          header.offsetHeight + "px"
+        );
+      });
+    }
+    console.log(header.offsetHeight);
+  }
   /**
    * Set active navigation item based on current page
    */
@@ -107,14 +129,14 @@ class HeaderLoader {
           if (parentLink) {
             // Exact match
             if (currentPath.endsWith(linkHref)) {
-                parentLink.classList.add("active");
+              parentLink.classList.add("active");
             }
             // Or if we're inside a subdirectory of the parent (e.g., "calls/")
             else if (linkHref.includes("/") && currentPath.includes(linkHref)) {
-                parentLink.classList.add("active");
+              parentLink.classList.add("active");
             }
-            }
-         }
+          }
+        }
 
         // Handle nested dropdown links and highlight parent
         if (link.closest(".nested-dropdown-content")) {

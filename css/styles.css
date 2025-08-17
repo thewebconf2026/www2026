@@ -85,9 +85,11 @@ img {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 150px 20px;
     position: relative;
-    min-height: 500px;
+    /* Instead of fixed padding + min-height */
+    min-height: calc(100vh - var(--header-height));
+    padding: 0 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +102,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background: var(--purple); /* purple with 40% opacity */
+    opacity: 0.35;
 }
 
 .hero-content {
