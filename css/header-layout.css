@@ -78,8 +78,38 @@ header {
     transition: all 0.3s ease;
     color: var(--dark-grey);
     white-space: nowrap;
-    background-color: transparent;
+    background-color: var(--white) !important;
     border-bottom: 2px solid var(--purple);
+}
+
+/* Ensure all tab classes have consistent white background */
+.tab-menu > li > a.tab-home,
+.tab-menu > li > a.tab-about,
+.tab-menu > li > a.tab-calls,
+.tab-menu > li > a.tab-accepted,
+.tab-menu > li > a.tab-program,
+.tab-menu > li > a.tab-organization,
+.tab-menu > li > a.tab-attending,
+.tab-menu > li > a.tab-media,
+.tab-menu > li > a.tab-important-dates {
+    background-color: var(--white) !important;
+    color: var(--dark-grey) !important;
+}
+
+/* Additional specificity to override any other rules */
+header .tab-menu > li > a,
+header .tab-menu > li > a.tab-home,
+header .tab-menu > li > a.tab-about,
+header .tab-menu > li > a.tab-calls,
+header .tab-menu > li > a.tab-accepted,
+header .tab-menu > li > a.tab-program,
+header .tab-menu > li > a.tab-organization,
+header .tab-menu > li > a.tab-attending,
+header .tab-menu > li > a.tab-media,
+header .tab-menu > li > a.tab-important-dates {
+    background-color: var(--white) !important;
+    background-image: none !important;
+    color: var(--dark-grey) !important;
 }
 
 /* Active state with cyan border */

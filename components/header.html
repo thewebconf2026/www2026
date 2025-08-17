@@ -6,6 +6,22 @@
             --cyan: #00e5ff;
             --white: #ffffff;
         }
+        
+        /* Force consistent navigation colors with maximum specificity */
+        .tab-menu > li > a,
+        .tab-menu > li > a.tab-home,
+        .tab-menu > li > a.tab-about,
+        .tab-menu > li > a.tab-calls,
+        .tab-menu > li > a.tab-accepted,
+        .tab-menu > li > a.tab-program,
+        .tab-menu > li > a.tab-organization,
+        .tab-menu > li > a.tab-attending,
+        .tab-menu > li > a.tab-media,
+        .tab-menu > li > a.tab-important-dates {
+            background-color: #ffffff !important;
+            background-image: none !important;
+            color: #1a1a1a !important;
+        }
     </style>
     <script src="../js/colors.js"></script>
     <div class="header-container">
