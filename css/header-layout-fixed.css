@@ -1,5 +1,10 @@
 /* Header Layout - Corrected to match WWW2024 exactly */
-
+:root {
+            --purple: #6a00ff;
+            --dark-grey: #1a1a1a;
+            --cyan: #00e5ff;
+            --white: #ffffff;
+        }
 /* Reset any existing header styles */
 header {
     background-color: #f8f9fa;
@@ -127,6 +132,8 @@ header {
 .tab-menu > li > a:hover {
     opacity: 0.8;
     transform: translateY(-1px);
+    background-color: color-mix(in srgb, var(--purple) 20%, transparent);
+
 }
 
 /* Dropdown styling */
@@ -146,6 +153,8 @@ header {
 
 .tab-menu li:hover .dropdown {
     display: block;
+        background-color: rgba(138, 43, 226, 0.2);
+
 }
 
 .dropdown a {
@@ -158,7 +167,7 @@ header {
 }
 
 .dropdown a:hover {
-    background-color: #f8f9fa;
+       background-color: rgba(138, 43, 226, 0.2);
 }
 
 .dropdown a:last-child {

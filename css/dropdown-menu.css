@@ -1,4 +1,10 @@
 /* Dropdown Menu Styles - Based on WWW 2024 */
+:root {
+            --purple: #6a00ff;
+            --dark-grey: #1a1a1a;
+            --cyan: #00e5ff;
+            --white: #ffffff;
+        }
 .tab-menu li {
     position: relative;
 }
@@ -28,43 +34,43 @@
     text-align: left;
     font-weight: normal;
     border-radius: 0;
-    background-color: transparent;
+    background-color: white;
     transition: background-color 0.3s;
 }
-
-.tab-menu .dropdown a:hover {
-    background-color: #f5f5f5;
+/* .tab-menu .dropdown a:hover {
+    background-color: rcolor-mix(in srgb, var(--purple) 20%, transparent);
     transform: none;
     box-shadow: none;
-}
+} */
 
 /* Dropdown colors - matching parent tab colors */
 .tab-menu li a.tab-about + .dropdown a:hover {
-    background-color: rgba(248, 213, 104, 0.2);
+      background-color: rgba(138, 43, 226, 0.2);
+
 }
 
 .tab-menu li a.tab-calls + .dropdown a:hover {
-    background-color: rgba(226, 127, 203, 0.2);
+        background-color: rgba(138, 43, 226, 0.2);
 }
 
 .tab-menu li a.tab-accepted + .dropdown a:hover {
-    background-color: rgba(104, 197, 248, 0.2);
+       background-color: rgba(138, 43, 226, 0.2);
 }
 
 .tab-menu li a.tab-program + .dropdown a:hover {
-    background-color: rgba(95, 184, 120, 0.2);
+        background-color: rgba(138, 43, 226, 0.2);
 }
 
 .tab-menu li a.tab-organization + .dropdown a:hover {
-    background-color: rgba(147, 112, 219, 0.2);
+        background-color: rgba(138, 43, 226, 0.2);
 }
 
 .tab-menu li a.tab-attending + .dropdown a:hover {
-    background-color: rgba(255, 127, 80, 0.2);
+       background-color: rgba(138, 43, 226, 0.2);
 }
 
 .tab-menu li a.tab-media + .dropdown a:hover {
-    background-color: rgba(32, 178, 170, 0.2);
+       background-color: rgba(138, 43, 226, 0.2);
 }
 
 /* Dropdown arrow indicator */

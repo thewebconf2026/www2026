@@ -95,7 +95,7 @@ class HeaderLoader {
         );
       });
     }
-    console.log(header.offsetHeight);
+    // console.log(header.offsetHeight);
   }
   /**
    * Set active navigation item based on current page
