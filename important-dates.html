@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +11,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .important-dates-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
+        }
+        
+        .page-title {
+            color: #6a00ff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .conference-info {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .conference-info h2 {
+            color: #6a00ff;
+            margin-bottom: 15px;
+        }
+        
+        .conference-dates {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-section {
+            margin-bottom: 40px;
+        }
+        
+        .timeline-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
         }
         
         .dates-section {
@@ -28,26 +71,224 @@
             padding-bottom: 10px;
         }
         
-        .date-item {
-            margin-bottom: 15px;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        .date-category {
+            margin-bottom: 30px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #6a00ff;
         }
         
-        .date-item:last-child {
-            border-bottom: none;
+        .date-category h3 {
+            color: #6a00ff;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #6a00ff;
+            padding-bottom: 5px;
+        }
+        
+        .date-item {
+            margin-bottom: 10px;
+            padding: 8px 0;
         }
         
         .date-value {
             font-weight: bold;
             color: #333;
-            margin-bottom: 5px;
+            display: inline-block;
+            min-width: 200px;
         }
         
         .date-description {
             color: #666;
-            margin-left: 20px;
+            margin-left: 10px;
         }
+        
+        .aoe-note {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 30px 0;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="important-dates-content">
+        <h1 class="page-title">Important Dates</h1>
+        
+        <div class="conference-info">
+            <div class="conference-dates">Conference: April 13 - 17, 2026</div>
+            <div class="conference-dates">Workshops/Tutorials/Co-located Web4All Conference: April 13 - 14, 2026</div>
+        </div>
+        
+        <div class="timeline-section">
+            <h2 style="color: #6a00ff; text-align: center; margin-bottom: 20px;">Timeline Overview</h2>
+            <img src="images/timeline-2026.png" alt="WWW2026 Important Dates Timeline" class="timeline-image">
+        </div>
+        
+        <div class="dates-section">
+            <div class="month-header">September 2025</div>
+            <div class="date-category">
+                <h3>Research & Industry Tracks Papers</h3>
+                <div class="date-item">
+                    <span class="date-value">September 30, 2025</span>
+                    <span class="date-description">Abstract submission</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dates-section">
+            <div class="month-header">October 2025</div>
+            <div class="date-category">
+                <h3>Research & Industry Tracks Papers</h3>
+                <div class="date-item">
+                    <span class="date-value">October 7, 2025</span>
+                    <span class="date-description">Paper submission</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dates-section">
+            <div class="month-header">November 2025</div>
+            <div class="date-category">
+                <h3>Tutorials</h3>
+                <div class="date-item">
+                    <span class="date-value">November 1, 2025</span>
+                    <span class="date-description">Proposal submission</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Workshops</h3>
+                <div class="date-item">
+                    <span class="date-value">November 3, 2025</span>
+                    <span class="date-description">Proposal submission</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Short Papers</h3>
+                <div class="date-item">
+                    <span class="date-value">November 10, 2025</span>
+                    <span class="date-description">Abstract submission</span>
+                </div>
+                <div class="date-item">
+                    <span class="date-value">November 17, 2025</span>
+                    <span class="date-description">Paper submission</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Workshops</h3>
+                <div class="date-item">
+                    <span class="date-value">November 17, 2025</span>
+                    <span class="date-description">Proposal notification</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Research & Industry Tracks Papers</h3>
+                <div class="date-item">
+                    <span class="date-value">November 24 - December 1, 2025</span>
+                    <span class="date-description">Rebuttal period</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dates-section">
+            <div class="month-header">December 2025</div>
+            <div class="date-category">
+                <h3>Tutorials</h3>
+                <div class="date-item">
+                    <span class="date-value">December 5, 2025</span>
+                    <span class="date-description">Proposal notification</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Workshops</h3>
+                <div class="date-item">
+                    <span class="date-value">December 18, 2025</span>
+                    <span class="date-description">Accepted workshop paper submission</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dates-section">
+            <div class="month-header">January 2026</div>
+            <div class="date-category">
+                <h3>Research & Industry Tracks Papers</h3>
+                <div class="date-item">
+                    <span class="date-value">January 13, 2026</span>
+                    <span class="date-description">Paper notification</span>
+                </div>
+                <div class="date-item">
+                    <span class="date-value">January 25, 2026</span>
+                    <span class="date-description">Camera ready</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Short Papers</h3>
+                <div class="date-item">
+                    <span class="date-value">January 13, 2026</span>
+                    <span class="date-description">Paper notification</span>
+                </div>
+                <div class="date-item">
+                    <span class="date-value">January 25, 2026</span>
+                    <span class="date-description">Camera ready</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Workshops</h3>
+                <div class="date-item">
+                    <span class="date-value">January 13, 2026</span>
+                    <span class="date-description">Accepted workshop paper notification</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dates-section">
+            <div class="month-header">February 2026</div>
+            <div class="date-category">
+                <h3>Workshops</h3>
+                <div class="date-item">
+                    <span class="date-value">February 2, 2026</span>
+                    <span class="date-description">Camera ready</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dates-section">
+            <div class="month-header">April 2026</div>
+            <div class="date-category">
+                <h3>Tutorials</h3>
+                <div class="date-item">
+                    <span class="date-value">April 1, 2026</span>
+                    <span class="date-description">Materials due</span>
+                </div>
+            </div>
+            <div class="date-category">
+                <h3>Conference</h3>
+                <div class="date-item">
+                    <span class="date-value">April 13 - 14, 2026</span>
+                    <span class="date-description">Workshops/Tutorials/Co-located Web4All Conference</span>
+                </div>
+                <div class="date-item">
+                    <span class="date-value">April 13 - 17, 2026</span>
+                    <span class="date-description">Main Conference</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="aoe-note">
+            All deadlines are 11:59 PM Anywhere on Earth (AoE) unless otherwise specified.
+        </div>
+    </main>
+    
+    <div id="footer-container"></div>
+    
+    <script src="js/header-loader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
         
         .date-description ul {
             margin: 5px 0;
