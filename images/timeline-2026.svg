@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1800" viewBox="0 0 1200 1800">
+  <style>
+    .title { font: 700 28px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif; fill: #111; }
+    .subtitle { font: 600 18px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif; fill: #222; }
+    .item { font: 600 16px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif; fill: #111; }
+    .date { font: 500 16px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif; fill: #444; }
+    .fine { font: 500 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif; fill: #555; }
+    .axis { stroke: #e6e6e9; stroke-width: 2; }
+    .dot { fill: #6a00ff; }
+    .bar { stroke: #6a00ff; stroke-width: 6; stroke-linecap: round; }
+    .pill { fill: #f6f2ff; stroke: #6a00ff; stroke-width: 1; }
+    .section { fill: #6a00ff; }
+    .rule { stroke: #e9e9ef; stroke-width: 1; }
+  </style>
+
+  <!-- Header -->
+  <text x="600" y="50" text-anchor="middle" class="title">WWW 2026 — Timeline & Important Dates</text>
+  <text x="600" y="78" text-anchor="middle" class="fine">All deadlines 11:59 PM Anywhere on Earth (AoE)</text>
+
+  <!-- Left column guideline -->
+  <line x1="350" y1="120" x2="350" y2="1740" class="axis" />
+  <!-- Right column guideline -->
+  <line x1="850" y1="120" x2="850" y2="1740" class="axis" />
+
+  <!-- Section: Conference & Co-located Events -->
+  <text x="100" y="130" class="subtitle">Conference & Co-located</text>
+  <line x1="80" y1="140" x2="1120" y2="140" class="rule" />
+
+  <!-- Conference -->
+  <circle cx="350" cy="180" r="6" class="dot" />
+  <text x="370" y="186" class="item">Conference</text>
+  <text x="850" y="186" class="date" text-anchor="end">April 13–17, 2026</text>
+
+  <!-- Workshops/Tutorials/Web4All -->
+  <circle cx="350" cy="220" r="6" class="dot" />
+  <text x="370" y="226" class="item">Workshops / Tutorials / Web4All</text>
+  <text x="850" y="226" class="date" text-anchor="end">April 13–14, 2026</text>
+
+  <!-- Section: Research & Industry Tracks -->
+  <text x="100" y="300" class="subtitle">Research &amp; Industry Tracks</text>
+  <line x1="80" y1="310" x2="1120" y2="310" class="rule" />
+
+  <circle cx="350" cy="350" r="6" class="dot" />
+  <text x="370" y="356" class="item">Abstract submission</text>
+  <text x="850" y="356" class="date" text-anchor="end">September 30, 2025</text>
+
+  <circle cx="350" cy="390" r="6" class="dot" />
+  <text x="370" y="396" class="item">Paper submission</text>
+  <text x="850" y="396" class="date" text-anchor="end">October 7, 2025</text>
+
+  <!-- Rebuttal bar -->
+  <circle cx="350" cy="430" r="6" class="dot" />
+  <text x="370" y="436" class="item">Rebuttal period</text>
+  <line x1="690" y1="430" x2="850" y2="430" class="bar" />
+  <text x="850" y="430" class="date" text-anchor="end">Nov 24 – Dec 1, 2025</text>
+
+  <circle cx="350" cy="470" r="6" class="dot" />
+  <text x="370" y="476" class="item">Paper notification</text>
+  <text x="850" y="476" class="date" text-anchor="end">January 13, 2026</text>
+
+  <circle cx="350" cy="510" r="6" class="dot" />
+  <text x="370" y="516" class="item">Camera ready</text>
+  <text x="850" y="516" class="date" text-anchor="end">January 25, 2026</text>
+
+  <!-- Section: Short Papers -->
+  <text x="100" y="590" class="subtitle">Short Papers</text>
+  <line x1="80" y1="600" x2="1120" y2="600" class="rule" />
+
+  <circle cx="350" cy="640" r="6" class="dot" />
+  <text x="370" y="646" class="item">Abstract submission</text>
+  <text x="850" y="646" class="date" text-anchor="end">November 10, 2025</text>
+
+  <circle cx="350" cy="680" r="6" class="dot" />
+  <text x="370" y="686" class="item">Paper submission</text>
+  <text x="850" y="686" class="date" text-anchor="end">November 17, 2025</text>
+
+  <circle cx="350" cy="720" r="6" class="dot" />
+  <text x="370" y="726" class="item">Paper notification</text>
+  <text x="850" y="726" class="date" text-anchor="end">January 13, 2026</text>
+
+  <circle cx="350" cy="760" r="6" class="dot" />
+  <text x="370" y="766" class="item">Camera ready</text>
+  <text x="850" y="766" class="date" text-anchor="end">January 25, 2026</text>
+
+  <!-- Section: Workshops -->
+  <text x="100" y="840" class="subtitle">Workshops</text>
+  <line x1="80" y1="850" x2="1120" y2="850" class="rule" />
+
+  <circle cx="350" cy="890" r="6" class="dot" />
+  <text x="370" y="896" class="item">Workshops date</text>
+  <text x="850" y="896" class="date" text-anchor="end">April 13–14, 2026</text>
+
+  <circle cx="350" cy="930" r="6" class="dot" />
+  <text x="370" y="936" class="item">Proposal submission</text>
+  <text x="850" y="936" class="date" text-anchor="end">November 3, 2025</text>
+
+  <circle cx="350" cy="970" r="6" class="dot" />
+  <text x="370" y="976" class="item">Proposal notification</text>
+  <text x="850" y="976" class="date" text-anchor="end">November 17, 2025</text>
+
+  <circle cx="350" cy="1010" r="6" class="dot" />
+  <text x="370" y="1016" class="item">Accepted workshop paper submission</text>
+  <text x="850" y="1016" class="date" text-anchor="end">December 18, 2025</text>
+
+  <circle cx="350" cy="1050" r="6" class="dot" />
+  <text x="370" y="1056" class="item">Accepted workshop paper notification</text>
+  <text x="850" y="1056" class="date" text-anchor="end">January 13, 2026</text>
+
+  <circle cx="350" cy="1090" r="6" class="dot" />
+  <text x="370" y="1096" class="item">Camera ready</text>
+  <text x="850" y="1096" class="date" text-anchor="end">February 2, 2026</text>
+
+  <!-- Section: Tutorials -->
+  <text x="100" y="1170" class="subtitle">Tutorials</text>
+  <line x1="80" y1="1180" x2="1120" y2="1180" class="rule" />
+
+  <circle cx="350" cy="1220" r="6" class="dot" />
+  <text x="370" y="1226" class="item">Proposal submission</text>
+  <text x="850" y="1226" class="date" text-anchor="end">November 1, 2025</text>
+
+  <circle cx="350" cy="1260" r="6" class="dot" />
+  <text x="370" y="1266" class="item">Proposal notification</text>
+  <text x="850" y="1266" class="date" text-anchor="end">December 5, 2025</text>
+
+  <circle cx="350" cy="1300" r="6" class="dot" />
+  <text x="370" y="1306" class="item">Materials due</text>
+  <text x="850" y="1306" class="date" text-anchor="end">April 1, 2026</text>
+
+  <!-- Footer note -->
+  <text x="600" y="1760" text-anchor="middle" class="fine">Brand color: #6a00ff — SVG scales crisply at any size.</text>
+</svg>
