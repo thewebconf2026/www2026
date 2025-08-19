@@ -19,7 +19,7 @@
     z-index: 1000;
     display: none;
     border-radius: 4px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .tab-menu li:hover .dropdown {

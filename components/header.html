@@ -1,71 +1,87 @@
 <header>
-    <style>
-        :root {
-            --purple: #6a00ff;
-            --dark-grey: #1a1a1a;
-            --cyan: #00e5ff;
-            --white: #ffffff;
-        }
-        
-        /* Force consistent navigation colors with maximum specificity */
-        .tab-menu > li > a,
-        .tab-menu > li > a.tab-home,
-        .tab-menu > li > a.tab-about,
-        .tab-menu > li > a.tab-calls,
-        .tab-menu > li > a.tab-accepted,
-        .tab-menu > li > a.tab-program,
-        .tab-menu > li > a.tab-organization,
-        .tab-menu > li > a.tab-attending,
-        .tab-menu > li > a.tab-media,
-        .tab-menu > li > a.tab-important-dates {
-            background-color: #ffffff !important;
-            background-image: none !important;
-            color: #1a1a1a !important;
-        }
-    </style>
-    <script src="../js/colors.js"></script>
-    <div class="header-container">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/www2026_logo.jpg" alt="TheWebConf 2026" class="logo-image">
-            </a>
-        </div>
-        <div class="mobile-menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="main-nav-container">
-            <div class="tab-menu-container">
-                <ul class="tab-menu">
-                    <li><a href="index.html" class="tab-home">Home</a></li>
-                    <li>
-                        <a href="about.html" class="tab-about has-dropdown">About</a>
-                        <div class="dropdown">
-                            <a href="about.html">The Web Conference</a>
-                            <a href="about/logo.html">Logo</a>
-                            <a href="about/code-of-conduct.html">Code of Conduct</a>
-                            <a href="about/newsletters.html">Newsletters</a>
-                        </div>
-                    </li>
-                    <li><a href="important-dates.html" class="tab-important-dates">Important Dates</a></li>
-                    <li>
-                        <a href="calls.html" class="tab-calls has-dropdown">Calls</a>
-                        <div class="dropdown">
-                            <a href="calls/research-tracks.html">Research Tracks</a>
-                            <a href="calls/short-papers.html">Short Papers</a>
-                            <a href="calls/industry.html">Industry</a>
-                            <a href="calls/tutorials.html">Tutorials</a>
-                            <a href="calls/workshops.html">Workshops</a>
-                            <a href="calls/phd-symposium.html">PhD Symposium</a>
-                            <div class="nested-dropdown">
-                                <a href="#" class="has-nested-dropdown">Special Tracks <i class="fas fa-chevron-right"></i></a>
-                                <div class="nested-dropdown-content">
-                                    <a href="calls/competitions.html">Competitions</a>
-                                    <a href="calls/web4good.html">Web4Good</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <!--
+  <style>
+    :root {
+      --purple: #6a00ff;
+      --dark-grey: #1a1a1a;
+      --cyan: #00e5ff;
+      --white: #ffffff;
+    }
+
+    /* Force consistent navigation colors with maximum specificity */
+    .tab-menu > li > a,
+    .tab-menu > li > a.tab-home,
+    .tab-menu > li > a.tab-about,
+    .tab-menu > li > a.tab-calls,
+    .tab-menu > li > a.tab-accepted,
+    .tab-menu > li > a.tab-program,
+    .tab-menu > li > a.tab-organization,
+    .tab-menu > li > a.tab-attending,
+    .tab-menu > li > a.tab-media,
+    .tab-menu > li > a.tab-important-dates {
+      background-color: #ffffff !important;
+      background-image: none !important;
+      color: #1a1a1a !important;
+    }
+  </style>
+  <script src="../js/colors.js"></script>
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img
+          src="images/www2026_logo.jpg"
+          alt="TheWebConf 2026"
+          class="logo-image"
+        />
+      </a>
+    </div>
+    <div class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="main-nav-container">
+      <div class="tab-menu-container">
+        <ul class="tab-menu">
+          <li><a href="index.html" class="tab-home">Home</a></li>
+          <li>
+            <a href="about.html" class="tab-about has-dropdown">About</a>
+            <div class="dropdown">
+              <a href="about.html">The Web Conference</a>
+              <a href="about/logo.html">Logo</a>
+              <a href="about/code-of-conduct.html">Code of Conduct</a>
+              <a href="about/newsletters.html">Newsletters</a>
+            </div>
+          </li>
+          <li>
+            <a href="important-dates.html" class="tab-important-dates"
+              >Important Dates</a
+            >
+          </li>
+          <li>
+            <a href="calls.html" class="tab-calls has-dropdown">Calls</a>
+            <div class="dropdown">
+              <a href="calls/research-tracks.html">Research Tracks</a>
+              <a href="calls/short-papers.html">Short Papers</a>
+              <a href="calls/industry.html">Industry</a>
+              <a href="calls/tutorials.html">Tutorials</a>
+              <a href="calls/workshops.html">Workshops</a>
+              <a href="calls/phd-symposium.html">PhD Symposium</a>
+              <div class="nested-dropdown">
+                <a href="#" class="has-nested-dropdown"
+                  >Special Tracks <i class="fas fa-chevron-right"></i
+                ></a>
+                <div class="nested-dropdown-content">
+                  <a href="calls/competitions.html">Competitions</a>
+                  <a href="calls/web4good.html">Web4Good</a>
+                </div>
+              </div>
+              <a
+                href="https://docs.google.com/document/d/11YXTrZB9DEbRf1caEPpBsJymTd2pUeKn-6ZiprEijPQ/edit?tab=t.0#heading=h.bxvvtgcm1wov"
+                target="_blank"
+                >Seoul Test of Time Award
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </li>
+          <!--
                     <li>
                         <a href="accepted.html" class="tab-accepted has-dropdown">Accepted</a>
                         <div class="dropdown">
@@ -77,44 +93,57 @@
                         </div>
                     </li>
                     -->
-                    <li>
-                        <a href="program.html" class="tab-program has-dropdown">Program</a>
-                        <div class="dropdown">
-                            <a href="program/overview.html">Overview</a>
-                            <a href="program/full-schedule.html">Full Schedule</a>
-                            <a href="program/keynotes.html">Keynotes</a>
-                            <a href="program/tutorials.html">Tutorials</a>
-                            <a href="program/workshops.html">Workshops</a>
-                            <a href="program/industry.html">Industry</a>
-                            <a href="program/demo.html">Demos</a>
-                            <a href="program/history-of-web.html">History of Web</a>
-                            <a href="program/social-events.html">Social Events</a>
-                            <a href="https://www.w4a.info/2026/" target="_blank">Web4All <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="organization.html" class="tab-organization has-dropdown">Organization</a>
-                        <div class="dropdown">
-                            <a href="organization/organizing-committee.html">Organizing Committee</a>
-                            <a href="organization/senior-area-chairs.html">Senior Area Chairs</a>
-                            <a href="organization/area-chairs.html">Area Chairs</a>
-                            <a href="organization/reviewers-research-tracks.html">Reviewers of Research Tracks</a>
-                            <a href="organization/reviewers-various-tracks.html">Reviewers of Various Tracks</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="attending.html" class="tab-attending has-dropdown">Attending</a>
-                        <div class="dropdown">
-                            <a href="attending/registration.html">Registration</a>
-                            <a href="attending/venue.html">Venue</a>
-                            <a href="attending/accommodation.html">Accommodation</a>
-                            <a href="attending/visa.html">Visa</a>
-                        </div>
-                    </li>
-                    <li><a href="media.html" class="tab-media">Media</a></li>
-                </ul>
+          <li>
+            <a href="program.html" class="tab-program has-dropdown">Program</a>
+            <div class="dropdown">
+              <a href="program/overview.html">Overview</a>
+              <a href="program/full-schedule.html">Full Schedule</a>
+              <a href="program/keynotes.html">Keynotes</a>
+              <a href="program/tutorials.html">Tutorials</a>
+              <a href="program/workshops.html">Workshops</a>
+              <a href="program/industry.html">Industry</a>
+              <a href="program/demo.html">Demos</a>
+              <a href="program/history-of-web.html">History of Web</a>
+              <a href="program/social-events.html">Social Events</a>
+              <a href="https://www.w4a.info/2026/" target="_blank"
+                >Web4All <i class="fas fa-external-link-alt"></i
+              ></a>
             </div>
-        </div>
+          </li>
+          <li>
+            <a href="organization.html" class="tab-organization has-dropdown"
+              >Organization</a
+            >
+            <div class="dropdown">
+              <a href="organization/organizing-committee.html"
+                >Organizing Committee</a
+              >
+              <a href="organization/senior-area-chairs.html"
+                >Senior Area Chairs</a
+              >
+              <a href="organization/area-chairs.html">Area Chairs</a>
+              <a href="organization/reviewers-research-tracks.html"
+                >Reviewers of Research Tracks</a
+              >
+              <a href="organization/reviewers-various-tracks.html"
+                >Reviewers of Various Tracks</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="attending.html" class="tab-attending has-dropdown"
+              >Attending</a
+            >
+            <div class="dropdown">
+              <a href="attending/registration.html">Registration</a>
+              <a href="attending/venue.html">Venue</a>
+              <a href="attending/accommodation.html">Accommodation</a>
+              <a href="attending/visa.html">Visa</a>
+            </div>
+          </li>
+          <li><a href="media.html" class="tab-media">Media</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
 </header>
-
