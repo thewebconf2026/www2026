@@ -19,7 +19,7 @@
     z-index: 1000;
     display: none;
     border-radius: 4px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .tab-menu li:hover .dropdown {
@@ -129,6 +129,7 @@
     display: none;
     border-radius: 4px;
     overflow: hidden;
+    z-index: 2000;
 }
 
 /* Fix: Ensure nested dropdown opens on hover */
