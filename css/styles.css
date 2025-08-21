@@ -183,7 +183,7 @@ section h2 {
     text-align: left;  /* Ensure left alignment */
     margin-bottom: 40px;
     color: var(--primary-color);
-    font-size: 2rem;  /* Match .page-content h2 size */
+    font-size: 1.5rem;  /* Match .page-content h2 size - 1.5rem (24px) */
 }
 
 .welcome p {
@@ -389,14 +389,14 @@ footer {
 .page-content h1 {
     color: var(--primary-color);
     margin-bottom: 20px;
-    font-size: 3rem;  /* Increased from 2.5rem to make it bigger than h2 */
+    font-size: 2rem;  /* Adjusted to 2rem (32px) - 2x normal text */
     text-align: left;
 }
 
 .page-content h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
-    font-size: 2rem;  /* Increased from 1.5rem but still smaller than h1 */
+    font-size: 1.5rem;  /* Adjusted to 1.5rem (24px) - 1.5x normal text */
     text-align: left;
 }
 
