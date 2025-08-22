@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-
-    <html lang="en">
-    
-      <head>
-    
-        <meta charset="UTF-8" />
-    
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-        <title>Research Tracks - The Web Conference 2026</title>
-    
-        <link rel="stylesheet" href="../css/styles.css" />
-    
-        <link rel="stylesheet" href="../css/tab-menu.css" />
-    
-        <link rel="stylesheet" href="../css/dropdown-menu.css" />
-    
-        <link rel="stylesheet" href="../css/header-layout.css" />
-    
-        <link
-    
-          rel="stylesheet"
-    
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    
-        />
-    
-        <style>
-    
-          /* Override highlight colors - only links should be purple */
-    
-          a {
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials - The Web Conference 2026</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tab-menu.css">
+    <link rel="stylesheet" href="../css/dropdown-menu.css">
+    <link rel="stylesheet" href="../css/header-layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .cfp-section {
+            margin-bottom: 30px;
+        }
+        
+        .cfp-section h2 {
+            color: #1a1a1a;
+            border-bottom: 2px solid #6a00ff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .cfp-section h3 {
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        .cfp-section p {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        .cfp-section code {
+            margin-left: 40px;
+            margin-right: 40px;
+            display: block;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .cfp-section ol {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        .cfp-section ul {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        .important-dates {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6a00ff;
+            padding: 20px;
+            margin: 40px 0;
+        }
+        
+        .important-dates h3 {
+            margin-top: 0;
             color: #6a00ff;
-    
-          }
-    
-    
-    
-          a:hover {
-    
-            color: #00e5ff;
-    
-          }
-
-          .tutorial-types {
+        }
+        
+        .important-dates ul {
+            margin: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .important-dates li {
+            margin-bottom: 8px;
+        }
+        
+        .tutorial-types {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
@@ -69,12 +101,44 @@
         .tutorial-type p {
             margin-left: 0;
         }
-    
-        </style>
-    
-      </head>
-    
-      <body>
+        
+        .submission-structure ol {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .submission-structure li {
+            margin-bottom: 10px;
+        }
+        
+        .chairs-info {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .chairs-info h3 {
+            color: #2c5aa0;
+            margin-top: 0;
+        }
+        
+        .contact-info {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .tutorial-types {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
@@ -82,7 +146,7 @@
         <div class="container">
             <h1>Call for Tutorials - The Web Conference 2026</h1>
             <div class="cfp-section">
-                <p>We invite proposals for tutorials to be held at The Web Conference 2026 (formerly known as WWW). The conference will take place in <b>Dubai, United Arab Emirates (UAE), April 13-17, 2026</b>.</p>
+                <p>We invite proposals for tutorials to be held at The Web Conference 2026 (formerly known as WWW). The conference will take place in <strong>Dubai, United Arab Emirates (UAE), April 13-17, 2026</strong>.</p>
                 
                 <p>We welcome tutorial proposals on current and emerging topics related to the World Wide Web, broadly construed to include mobile and other Internet and online-enabled modes of interaction and communication (such as those covered by the research tracks).</p>
                 
@@ -92,18 +156,18 @@
             <section class="important-dates">
                 <h2><i class="fas fa-calendar-alt"></i> Important Dates</h2>
                 <ul>
-                    <li><b>Proposal submission deadline:</b> November 1, 2025</li>
-                    <li><b>Notification:</b> December 5, 2025</li>
-                    <li><b>Materials due:</b> April 1, 2026</li>
+                    <li><strong>Proposal submission deadline:</strong> November 1, 2025</li>
+                    <li><strong>Notification:</strong> December 5, 2025</li>
+                    <li><strong>Materials due:</strong> April 1, 2026</li>
                 </ul>
                 <p><em>All submission deadlines are end-of-day in <a href="https://time.is/Anywhere_on_Earth" target="_blank">Anywhere on Earth (AoE)</a> time zone.</em></p>
+            </section>
 
+            <p><strong>AUTHORS TAKE NOTE:</strong> The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work.</p>
 
-            <p><b>AUTHORS TAKE NOTE:</b> The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work.</p>
-        </section>
             <div class="cfp-section">
                 <h2>Tutorial Types</h2>
-                <p style="margin-left: 40px;">Submissions should be for <b>half-day tutorials (lasting 3 hours)</b>. Two types of tutorials are welcome:</p>
+                <p style="margin-left: 40px;">Submissions should be for <strong>half-day tutorials (lasting 3 hours)</strong>. Two types of tutorials are welcome:</p>
                 
                 <div class="tutorial-types">
                     <div class="tutorial-type">
@@ -122,7 +186,7 @@
                 <h2>Submission Guidelines</h2>
                 
                 <h3>Deadline</h3>
-                <p>The submission deadline is <b>strict</b> and no extensions, regardless of circumstances, will be allowed. Placeholder/dummy abstracts are forbidden.</p>
+                <p>The submission deadline is <strong>strict</strong> and no extensions, regardless of circumstances, will be allowed. Placeholder/dummy abstracts are forbidden.</p>
                 
                 <h3>Authorship</h3>
                 <p>The ACM has an <a href="https://www.acm.org/publications/policies/new-acm-policy-on-authorship" target="_blank">authorship policy</a> stating who can be considered an author in a submission as well as the use of generative AI tools. Authorship means accountability for the work. As such, Large Language Models (LLMs) (e.g., ChatGPT) cannot be considered authors. You can use LLMs to rephrase your text, but you are solely responsible for the text in your proposal.</p>
@@ -130,10 +194,10 @@
                 <h3>Formatting Requirements</h3>
                 <p>Tutorial proposals must be written in English, in double-column format, and must adhere to the <a href="https://www.acm.org/publications/proceedings-template" target="_blank">ACM template and format</a> (also available in <a href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty" target="_blank">Overleaf</a>). Word users may use the Word Interim Template. The recommended setting for LaTeX is:</p>
                 <code>\documentclass[sigconf, review]{acmart}</code>
-                <p>Submission must be as a single PDF file up to <b>4 (four) pages in length, including references</b>.</p>
+                <p>Submission must be as a single PDF file up to <strong>4 (four) pages in length, including references</strong>.</p>
                 
                 <h3>Anonymity</h3>
-                <p>The review process will be <b>single-blind</b>, i.e., a tutorial proposal must clearly name the contributors.</p>
+                <p>The review process will be <strong>single-blind</strong>, i.e., a tutorial proposal must clearly name the contributors.</p>
                 
                 <h3>Submission Site</h3>
                 <p>Proposals must be submitted through the EasyChair system at <a href="https://easychair.org/my/conference?conf=www2026tracks" target="_blank">https://easychair.org/my/conference?conf=www2026tracks</a> (select the Tutorials track).</p>
@@ -145,23 +209,23 @@
                 
                 <div class="submission-structure">
                     <ol>
-                        <li><b>General information:</b> Title of the tutorial, contributors' names, affiliation, contact information, and brief bio.</li>
-                        <li><b>Abstract:</b> 1-2 paragraphs suitable for inclusion in the conference registration material.</li>
-                        <li><b>Topic and relevance:</b> A description of the tutorial topic, providing a sense of both the scope of it and depth within the scope, plus a statement on why the tutorial is important and timely, how it is relevant to the Web Conference, and why the presenters are qualified for a high-quality introduction of the proposed topic.</li>
-                        <li><b>Type:</b> Please indicate whether this will be a lecture-style or hands-on tutorial. In the case of the latter, please indicate the equipment needs for participants (e.g., pre-installed Jupyter notebook with specific packages).</li>
-                        <li><b>Schedule:</b> Detailed program of the tutorial, including a schedule listing the section and duration to be presented by each named contributor.</li>
-                        <li><b>Audience:</b> A description of the intended audience, prerequisite knowledge, and potential learning outcomes.</li>
-                        <li><b>Previous editions:</b> If the tutorial was given before, where and when was it presented? Please give details on the number of attendees, and how the proposed tutorial differs or builds on the previous ones. If possible, provide a link to the material of the previous version.</li>
-                        <li><b>Tutorial materials:</b> What materials will be provided to attendees of the tutorial? Are there any copyright issues?</li>
-                        <li><b>Video teaser:</b> A Video teaser, up to 3 minutes, is required at the time of submission. The video can be hosted on any video sharing platform (e.g., YouTube) or any file sharing service (e.g., WeTransfer, Dropbox) and the link to the video MUST be included in the proposal.</li>
+                        <li><strong>General information:</strong> Title of the tutorial, contributors' names, affiliation, contact information, and brief bio.</li>
+                        <li><strong>Abstract:</strong> 1-2 paragraphs suitable for inclusion in the conference registration material.</li>
+                        <li><strong>Topic and relevance:</strong> A description of the tutorial topic, providing a sense of both the scope of it and depth within the scope, plus a statement on why the tutorial is important and timely, how it is relevant to the Web Conference, and why the presenters are qualified for a high-quality introduction of the proposed topic.</li>
+                        <li><strong>Type:</strong> Please indicate whether this will be a lecture-style or hands-on tutorial. In the case of the latter, please indicate the equipment needs for participants (e.g., pre-installed Jupyter notebook with specific packages).</li>
+                        <li><strong>Schedule:</strong> Detailed program of the tutorial, including a schedule listing the section and duration to be presented by each named contributor.</li>
+                        <li><strong>Audience:</strong> A description of the intended audience, prerequisite knowledge, and potential learning outcomes.</li>
+                        <li><strong>Previous editions:</strong> If the tutorial was given before, where and when was it presented? Please give details on the number of attendees, and how the proposed tutorial differs or builds on the previous ones. If possible, provide a link to the material of the previous version.</li>
+                        <li><strong>Tutorial materials:</strong> What materials will be provided to attendees of the tutorial? Are there any copyright issues?</li>
+                        <li><strong>Video teaser:</strong> A Video teaser, up to 3 minutes, is required at the time of submission. The video can be hosted on any video sharing platform (e.g., YouTube) or any file sharing service (e.g., WeTransfer, Dropbox) and the link to the video MUST be included in the proposal.</li>
                     </ol>
                 </div>
             </div>
-        </br>
 
+            <div class="cfp-section">
                 <h2>Reviewing Process</h2>
                 <p>The decision about acceptance or rejection of tutorial proposals will be made by the Tutorial Co-chairs, who may be supported by a small program committee and in consultation with the General and Program Committee Co-chairs, taking into account factors such as the timeliness of the topic, the topic fit with respect to The Web Conference 2026, the coverage of the topic in other tracks of the conference, the capacity of the venue, and the expertise of the presenters.</p>
-
+            </div>
 
             <div class="cfp-section">
                 <h2>Publication and Registration Policies</h2>
@@ -179,16 +243,13 @@
                 <p>The standard equipment includes an LCD projector, a single projection screen and microphones. The tutorial presenter(s) will be responsible for making sure that the slides and any material needed for the tutorial are made available online in advance for attendees. For tutorials that introduce or use standards or software, the tutorial must be based on the latest version of the standards and/or software.</p>
             </div>
 
-            <section>   
             <h2>Tutorial Co-Chairs</h2>
+            <ul>
+                <li><strong>Ricardo Baeza-Yates</strong> - AI Institute at the Barcelona Supercomputing Center, Barcelona, Spain</li>
+                <li><strong>David Carmel</strong> - Technology Innovation Institute (TII), Haifa, Israel</li>
+            </ul>
 
-                <a>Ricardo Baeza-Yates</a> - AI Institute at the Barcelona Supercomputing Center, Barcelona, Spain
-                <br />
-                <a>David Carmel</a> - Technology Innovation Institute (TII), Haifa, Israel
-
-
-            <p><b>Contact:</b> <a href="mailto:tutorials-www2026@acm.org">tutorials-www2026@acm.org</a></p>
-            </section>   
+            <p><strong>Contact:</strong> <a href="mailto:tutorials-www2026@acm.org">tutorials-www2026@acm.org</a></p>
         </div>
     </div>
 
