@@ -1,85 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web4good - The Web Conference 2026</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/tab-menu.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web4Good - The Web Conference 2026</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-        
-        .coming-soon-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
-        }
+      /* Override highlight colors - only links should be purple */
+      a {
+        color: #6a00ff;
+      }
+
+      a:hover {
+        color: #00e5ff;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>Web4Good</h1>
-            
-            <p>Focusing on how web technologies can be leveraged to address societal challenges and create positive impact. This track welcomes research and applications that demonstrate the web's potential for social good, sustainability, and global development.</p>
-        </div>
+      <div class="container">
+        <h1>Call for Papers - Special Track on Web4Good</h1>
+
+        <p>
+          We invite contributions to the Special Track on Web4Good of the ACM Web Conference 2026.
+          The conference will take place in <strong>Dubai, United Arab Emirates, from April 13 to 17, 2026</strong>.
+        </p>
+        
+        <p>
+          Today's web and social media solutions often fail to address critical societal challenges related
+          to environmental sustainability, climate action, and vulnerable populations. The recent rise of
+          large language models (LLMs) and other GenAI applications introduces new risks, as their
+          computationally and energy-intensive training amplifies environmental impacts. Furthermore,
+          these systems are frequently trained on biased and uncontrolled datasets, posing significant
+          risks to vulnerable communities. This trend extends to GenAI agents and web agents, which
+          present both opportunities for positive change and new challenges, such as the potential for
+          misuse in spreading misinformation or automating bias at a massive scale.
+        </p>
+
+        <p>
+          In this context, we invite papers that research, design, develop, or apply web and social media
+          technologies to address these issues. We are particularly interested in contributions that focus
+          on fostering sustainable development, building healthy human societies, and supporting
+          vulnerable or marginalized communities.
+        </p>
+
+        <p>
+          The goal of this track is to bring together researchers and developers from academia, industry,
+          and civil society to present and debate methods for creating a web that is truly for the good of
+          all. We seek to achieve a web that is inclusive, non-discriminative, sustainable, ethical, and
+          open. Contributions should detail research results, tools, design techniques, and experiments
+          that are being developed to deal with these topics. We are especially interested in how web
+          technologies can contribute to the UN Sustainable Development Goals, and how GenAI agents
+          and web agents can be leveraged for humanitarian response, disaster recovery, and wildlife
+          protection. We also welcome submissions that explore how to develop new partnerships, such
+          as Data Collaboratives, to unlock data and data science capabilities for these societal
+          challenges.
+        </p>
+
+        <section class="important-dates">
+          <h2><i class="fas fa-calendar-alt"></i> Important Dates</h2>
+          <ul>
+            <li><b>Abstract Submission:</b> November 23, 2025</li>
+            <li><b>Paper Submission:</b> November 30, 2025</li>
+            <li><b>Notification:</b> January 13, 2026</li>
+            <li><b>Camera-ready:</b> January 25, 2026</li>
+          </ul>
+
+          <p>
+            <em
+              >All submission deadlines are end-of-day in
+              <a href="https://www.timeanddate.com/time/zones/aoe" target="_blank"
+                >Anywhere on Earth (AoE)</a>
+              time zone.</em>
+          </p>
+        </section>
+
+        <h2>Scope</h2>
+        <p>
+          We welcome any submissions that address the broad goals of this Special Track and look
+          forward to seeing the diverse ways in which authors will approach these themes. We especially
+          encourage submissions in the following areas:
+        </p>
+
+        <h3>Responsible Web AI and Algorithmic Fairness:</h3>
+        <ul>
+          <li>Biases and vulnerabilities of large language models (LLMs) and GenAI models and applications that present risks to online societal problems.</li>
+          <li>Safe and Responsible AI in Web, including transparency-aware algorithms for online civic engagement.</li>
+          <li>Models' interpretability supports better decision-making on the web.</li>
+          <li>Social bots, hate speech, misinformation, and disinformation on social media that may impact vulnerable populations.</li>
+        </ul>
+
+        <h3>Web Technologies for Societal Impact:</h3>
+        <ul>
+          <li>Contribution of web technologies to UN Sustainable Development Goals.</li>
+          <li>Impact of web platforms and algorithms on employment, the future of work, and health-related applications.</li>
+          <li>Web technologies for humanitarian response, disaster recovery, and wildlife protection.</li>
+          <li>Using Web3 and blockchain for transparent supply chains, ethical governance, and decentralized identity.</li>
+          <li>Applying immersive technologies (VR/AR/Metaverse) for education, and environmental awareness.</li>
+          <li>Leveraging computational social science on the web to study global challenges like disease spread and migration.</li>
+          <li>Designing web applications that promote digital well-being and mental health.</li>
+        </ul>
+
+        <h3>Data and Collaboration on the Web:</h3>
+        <ul>
+          <li>Datasets for vulnerable populations.</li>
+          <li>Replicability and transferability of models in vulnerable and data-poor contexts.</li>
+          <li>How to engage data owners and problem owners (e.g., industry and humanitarian agencies) through web and social media data.</li>
+        </ul>
+
+        <h2>Special Theme: Energy-Aware Web and AI Systems for Sustainability</h2>
+        <p>
+          The 2026 edition of Web4Good introduces a special focus on Energy-Aware Web and AI
+          Systems for Sustainability. As the web and AI ecosystems grow in scale, their environmental
+          footprint, driven by data centers, large model training, and pervasive digital services, poses
+          urgent challenges for sustainable development. This theme invites research on designing
+          energy-efficient algorithms, architectures, and infrastructures that minimize carbon impact while
+          maintaining accessibility, fairness, and inclusivity. We seek contributions that explore novel
+          methods to monitor, optimize, and reduce energy use across the web and AI lifecycle, from
+          responsible model training to sustainable deployment of GenAI agents and web platforms.
+        </p>
+
+        <h2>Submission Site</h2>
+        <p>
+          Submissions must be made through <a href="https://easychair.org/conferences/?conf=www2026" target="_blank">Easychair WWW2026-tracks instance</a> (select Special Track: Web4Good).
+        </p>
+
+        <h2>Submission Guidelines</h2>
+        
+        <p>
+          <b>Authorship.</b> The ACM has an
+          <a
+            href="https://www.acm.org/publications/policies/new-acm-policy-on-authorship"
+            target="_blank"
+            >authorship policy</a
+          >
+          stating who can be considered an author in a submission as well as the
+          use of generative AI tools. Every person named as the author of a
+          paper must have contributed substantially to the work described in the
+          paper and/or to the writing of the paper and must take responsibility
+          for the entire content of the paper.
+        </p>
+
+        <p>
+          <b>Maximum authorship.</b> The number of submissions allowed per
+          author is limited to 9 (nine) maximum. If more than 9 papers are submitted with the same
+          person listed as an author, the additional papers submitted after the
+          first 9 by submission id, will be desk-rejected. (Note that this is a total submission across all tracks, including the main track)
+        </p>
+
+        <p>
+          <b>Authorship changes.</b> The full list of authors, including the
+          ordering, must be finalized at the point of submission. There cannot
+          be any addition, removal, or reordering of authors after submission time. The only changes allowed are the correction of
+          spelling mistakes or a new affiliation.
+        </p>
+
+        <p>
+          <b>Formatting Requirements.</b> Submissions must be written in English, in
+          double-column format, and must adhere to the
+          <a href="#">ACM template and format</a> (also
+          <a href="#">available</a> in Overleaf). Word users may use the Word
+          Interim Template. The recommended setting for LaTeX is:
+        </p>
+        <p><code>\documentclass[sigconf, review]{acmart}.</code></p>
+        
+        <p>
+          For the special tracks, submissions are limited to 8 content pages, which should include all
+          figures and tables, but excluding supplementary material and references. In addition, you can
+          include 2 additional pages of supplementary material. The total number of pages with
+          supplementary material and references must not exceed 12 pages.
+        </p>
+
+        <p>
+          <b>Anonymity.</b> The review process will be double-blind. The
+          submitted document should omit any author names, affiliations, or
+          other identifying information. This may include, but is not restricted
+          to acknowledgments, self-citations, references to prior work by the
+          author(s), and so on. Please use the third-person to identify your own
+          prior work. You may explicitly refer in the paper to organizations
+          that provided datasets, hosted experiments, or deployed solutions and
+          tools.
+        </p>
+
+        <p>
+          <b>Originality and Concurrent Submissions.</b> Submissions must
+          present original work—this means that papers under review at or
+          published/accepted to any peer-reviewed conference/journal with
+          published proceedings cannot be submitted. Submissions that have been
+          previously presented orally, as posters or abstracts-only, or in
+          non-archival venues with no formal proceedings, including workshops or
+          PhD symposia without proceedings, are allowed. Authors may submit
+          anonymized work that is already available as a preprint (e.g., on
+          arXiv or SSRN) without citing it. The ACM has a strict
+          <a
+            href="https://www.acm.org/publications/policies/plagiarism-overview"
+            target="_blank"
+          >
+            policy against plagiarism, misrepresentation, and falsification</a
+          >
+          that applies to all publications.
+        </p>
+
+        <p>
+          <b>Ethical Use of Data and Informed Consent.</b> Authors are
+          encouraged to include a section on the ethical use of data and/or
+          informed consent of research subjects in their paper, when
+          appropriate. You and your co-authors are subject to all
+          <a
+            href="https://www.acm.org/publications/policies/toc"
+            target="_blank"
+            >ACM Publications Policies </a
+          >, including
+          <a
+            href="https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects"
+            target="_blank"
+            >ACM's Publications Policy
+          </a>
+          on Research Involving Human Participants and Subjects (posted in
+          2021). Please ensure all authors are familiar with these policies.
+        </p>
+
+        <p>
+          Please consult the regulations of your institution(s) indicating when
+          a review by an Institutional Ethics Review Board (IRB) is needed. Note that submitting your research for approval by such
+          may not always be sufficient. Even if such research has been approved by your IRB, the
+          program committee might raise additional concerns about the ethical implications of the work
+          and include these concerns in its review.
+        </p>
+
+        <p>
+          Submissions that do not follow these guidelines or do not view or
+          print properly, will be desk-rejected.
+        </p>
+
+        <h2>Publication and Presentation Policies</h2>
+
+        <p>
+          <b>Publication.</b> Each accepted paper will be included in the Proceedings of the Web Conference
+          2026. In addition, each paper is required to submit a brief pre-recorded video, which will appear
+          on ACM Digital Library, along with the PDF.
+        </p>
+
+        <p>
+          <b>Registration.</b> To be included in the proceedings, every accepted
+          paper must be covered by a distinct conference registration, e.g., two
+          papers require two registrations, even if they have overlapping
+          authors. This registration must be Full Conference (5-day) or Main
+          Conference (3-day) registration, at the standard (non-student)
+          in-person rate, payment of which must be completed by the camera-ready
+          deadline. This registration requirement applies universally,
+          regardless of attendance or presentation mode.
+        </p>
+
+        <p>
+          <b>Presentation.</b> Every accepted paper must be presented at the
+          conference. No-show papers may be withdrawn from the proceedings.
+        </p>
+
+        <h2>Web4Good Chairs</h2>
+        <ul>
+          <li>Jisun An (Indiana University at Bloomington, USA)</li>
+          <li>Tanmoy Chakraborty (Indian Institute of Technology Delhi, India)</li>
+          <li>Roy Ka-Wei Lee (Singapore University of Technology & Design, Singapore)</li>
+          <li>Usman Naseem (Macquarie University, Australia)</li>
+          <li>Daniela Paolotti (ISI Foundation, Italy)</li>
+        </ul>
+
+        <p><b>Contact:</b> <a href="mailto:web4good-www2026@acm.org">web4good-www2026@acm.org</a></p>
+
+      </div>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>TheWebConf 2026</h3>
-                <p>April 13-17, 2026</p>
-                <p>Dubai, United Arab Emirates</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../calls.html">Calls</a></li>
-                    <li><a href="../program.html">Program</a></li>
-                    <li><a href="../attending.html">Attending</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p>Email: gc-www2026@acm.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Web Conference. All rights reserved.</p>
-            <p>
-                <a href="https://www.acm.org/code-of-ethics" target="_blank">ACM Code of Ethics</a> | 
-                <a href="https://www.acm.org/about-acm/policy-against-harassment" target="_blank">ACM Policy Against Harassment</a> | 
-                <a href="../gdpr.html">GDPR Notice</a>
-            </p>
-        </div>
-    </footer>
+    <!-- Footer will be loaded here by JavaScript -->
+    <div id="footer-placeholder"></div>
 
     <script src="../js/main.js"></script>
     <script>
@@ -111,5 +314,6 @@
     </script>
 
     <script src="../js/header-loader.js"></script>
-</body>
+  </body>
 </html>
+
