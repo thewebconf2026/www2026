@@ -1,89 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workshops - The Web Conference 2026</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/tab-menu.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-        
-        .coming-soon-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
-        }
+      /* Override highlight colors - only links should be purple */
+      a {
+        color: #6a00ff;
+      }
+
+      a:hover {
+        color: #00e5ff;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>Workshops Call</h1>
-            
-            <div class="coming-soon-container">
-                <h2>Coming Soon</h2>
-                <p>This page is currently under development. Content for Workshops Call will be available soon.</p>
-                <p>Please check back later for updates.</p>
-            </div>
-        </div>
+      <div class="container">
+        <h1>Call for Workshops - The Web Conference 2026</h1>
+
+        <p>
+          We invite proposals for workshops to be held at The Web Conference 2026 (formerly known as
+          WWW). The conference will take place in <strong>Dubai, UAE, from 13 April to 17 April 2026</strong>, and
+          Workshops will take place over the first two days of the conference, from <strong>13 April to 14 April
+          2026</strong>.
+        </p>
+        
+        <p>
+          The Web Conference 2026 will feature a number of co-located workshops that are intended to
+          provide a forum for researchers and practitioners in Web technologies to discuss and exchange
+          positions on current and emergent Web topics. Workshop participants will be given the
+          opportunity to exchange ideas, learn cutting-edge science and technological advancements for
+          the Web, establish common ground in research areas or applied problems, and identify new
+          opportunities for collaboration and new directions for future work.
+        </p>
+
+        <p>
+          In addition to the traditional mini-conference format, we encourage innovative and interactive
+          workshop designs that promote engagement and creativity. Examples include, but are not
+          limited to:
+        </p>
+
+        <ul>
+          <li><strong>Speed-dating workshops</strong> – brief, timed conversations between pairs of participants to share and discuss research ideas or findings.</li>
+          <li><strong>Brainstorming and discussion-based formats</strong> – highly interactive sessions aimed at generating creative solutions, exchanging diverse perspectives, and exploring emerging challenges.</li>
+          <li><strong>Reading group sessions</strong> – focused discussions on seminal or influential papers, with the goal of deepening understanding, critiquing methodologies, and examining broader impacts.</li>
+        </ul>
+
+        <p>
+          We welcome proposals that experiment with novel structures and participation formats to
+          maximize interaction and innovation.
+        </p>
+
+        <section class="important-dates">
+          <h2><i class="fas fa-calendar-alt"></i> Important Dates</h2>
+          <ul>
+            <li><b>Workshop proposal submission:</b> October 20, 2025</li>
+            <li><b>Workshop proposal notification:</b> November 10, 2025</li>
+            <li><b>Workshop paper submission:</b> December 18, 2025</li>
+            <li><b>Workshop paper notification:</b> January 13, 2026</li>
+            <li><b>Workshop paper camera-ready:</b> February 2, 2026</li>
+            <li><b>Workshops:</b> April 13 - 14, 2026</li>
+          </ul>
+
+          <p>
+            <em
+              >All submission deadlines are end-of-day in
+              <a href="https://www.timeanddate.com/time/zones/aoe" target="_blank"
+                >Anywhere on Earth (AoE)</a>
+              time zone.</em>
+          </p>
+        </section>
+
+        <h2>Submission Site</h2>
+        <p>
+          Submissions must be made through the <a href="https://easychair.org/conferences/?conf=www2026" target="_blank">EasyChair WWW2026-tracks instance</a> (select the Workshops track).
+        </p>
+
+        <h2>Submission Guidelines</h2>
+        
+        <p>
+          <b>Formatting Requirements.</b> Workshop proposals must be written in English, in
+          double-column format, and must adhere to the
+          <a href="#">ACM template and format</a> (also
+          <a href="#">available</a> in Overleaf). Word users may use the Word
+          Interim Template. The recommended setting for LaTeX is:
+        </p>
+        <p><code>\documentclass[sigconf, review]{acmart}.</code></p>
+        
+        <p>
+          Submission must be as a single PDF file: 4 (four) pages in length, including references.
+        </p>
+
+        <h2>Structure</h2>
+        <p>Workshop proposals should conform the following structure:</p>
+        <ul>
+          <li>A concise title</li>
+          <li>The names, affiliations, and contact information of ALL organizers, as well as the individuals planning to attend in person.</li>
+          <li>Proposed duration of the workshop - half or full day</li>
+          <li>A statement of the workshop objectives</li>
+          <li>A brief description (draft outline) of the proposed workshop format, discussing the mix of events and activities such as paper presentations, invited talks, panels, hacking sessions, breakout sessions, or general discussion slots, and an approximate timeline (please be sure to allocate enough time for interaction between participants, not just for invited talks)</li>
+          <li>A two-paragraph description of the workshop topics and themes, discussing why this topic is relevant at this time</li>
+          <li>Explanation of why the proposed workshop is a good match for The Web Conference 2026</li>
+          <li>A tentative Program Committee list (with an indication of whether PC members have already been contacted and/or have expressed interest)</li>
+          <li>Please take into account inclusion and diversity criteria while listing the PC</li>
+          <li>A brief description of the diversity aspect including diversity of (i) invited speakers and (ii) organisers. Consider gender diversity, institutional diversity, nationality diversity, academia vs. industry vs. other professional backgrounds diversity, etc.</li>
+          <li>A brief description of the workshop audience and the expected number of submissions/participants (please be as specific as possible)</li>
+          <li>If the workshop was held before, please give details on the location and dates, number of participants, number of submissions, and number of accepted papers, and indicate how the proposed edition will differ from earlier editions</li>
+          <li>A short bio of the workshop organizers, including a description of their relevant qualifications and past experience in organizing workshops or research meetings</li>
+          <li>Poster session (if you plan a poster session, it is necessary to indicate the number of poster boards required)</li>
+        </ul>
+
+        <h2>Reviewing Process</h2>
+        <p>
+          The decision about acceptance or rejection of workshop proposals will be made by a small
+          program committee, the Workshop Chairs and in consultation with the General Chairs, taking
+          into account several factors including overall quality, the topic fit with respect to The Web
+          Conference 2026, the coverage of the topic in other tracks of the conference, the estimated
+          number of attendees for the workshop, a clear focus, and the venue capacity. Moreover, special
+          attention will be given to inclusion and diversity balance in the workshop PC composition and
+          the list of invited speakers. We also favour workshops that are genuine interactive events
+          (allocated time for panel discussion etc.) and not mini-conferences. Workshops with creative
+          structures and organizations that attract various types of contributions and ensure rich
+          interactions are welcomed.
+        </p>
+
+        <h2>Publication and Registration Policies</h2>
+
+        <p>
+          <b>Publication.</b> Each accepted workshop will have a summary included in the Companion
+          Proceedings of the Web Conference 2026.
+        </p>
+
+        <p>
+          <b>Registration.</b> At least one organizer commits to register and attend in person.
+        </p>
+
+        <h2>Organizational Details for Workshops</h2>
+        <p>
+          The organizers of accepted workshops will be responsible for their own review process and
+          publicity. They must maintain an up-to-date website for their workshop that will be referenced
+          from The Web Conference 2026 website. They are required to finalize all details and to provide
+          input for publicity. Accepted workshops will be scheduled so as to avoid conflicts with
+          conference sessions in similar or related areas.
+        </p>
+
+        <p>
+          Workshop organizers must inform the Workshop Chairs of the numbers of submissions and
+          acceptances as these numbers become available. Workshops with fewer than 15 expected
+          registrants may be merged with other workshops at the discretion of the conference organizers.
+        </p>
+
+        <p>
+          The workshop organization shall follow the same guidelines as the main conference in terms of
+          physical presence. The workshops are an in-person event. Authors of workshop papers should
+          attend the Web Conference 2026 in person. We also expect that the invited talks will be
+          delivered physically in the venue (in-person attendance). In exceptional circumstances, we will
+          allow each workshop for up to 25% virtual talks (the organizers must handle which speakers are
+          in-person, and who is exempt to present virtually).
+        </p>
+
+        <p>
+          Papers accepted by a workshop can be included in the Companion Proceedings of the Web
+          Conference 2026, subject to meeting the camera-ready timeline. Workshop papers that have
+          been previously published or are under review for another journal, conference or workshop
+          should not be considered for publication.
+        </p>
+
+        <h2>Workshops Co-Chairs</h2>
+        <ul>
+          <li>Danai Koutra (University of Michigan / Amazon)</li>
+          <li>Mohamed Reda Bouadjenek (Deakin University)</li>
+        </ul>
+
+        <p><b>Contact:</b> <a href="mailto:workshops-www2026@acm.org">workshops-www2026@acm.org</a></p>
+
+      </div>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>TheWebConf 2026</h3>
-                <p>April 13-17, 2026</p>
-                <p>Dubai, United Arab Emirates</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../calls.html">Calls</a></li>
-                    <li><a href="../program.html">Program</a></li>
-                    <li><a href="../attending.html">Attending</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p>Email: gc-www2026@acm.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Web Conference. All rights reserved.</p>
-            <p>
-                <a href="https://www.acm.org/code-of-ethics" target="_blank">ACM Code of Ethics</a> | 
-                <a href="https://www.acm.org/about-acm/policy-against-harassment" target="_blank">ACM Policy Against Harassment</a> | 
-                <a href="../gdpr.html">GDPR Notice</a>
-            </p>
-        </div>
-    </footer>
+    <!-- Footer will be loaded here by JavaScript -->
+    <div id="footer-placeholder"></div>
 
     <script src="../js/main.js"></script>
     <script>
@@ -115,5 +223,6 @@
     </script>
 
     <script src="../js/header-loader.js"></script>
-</body>
+  </body>
 </html>
+
