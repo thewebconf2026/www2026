@@ -18,7 +18,20 @@
         display: inline-block; /* shrink-wrap to photo size */
       }
       .affiliation {
-        padding-top: 60px;
+        /* padding-top: 60px; */
+      }
+
+      .website-chairs-advisors-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start; /* Align items to the top */
+        gap: 100px; /* Adjust gap as needed */
+      }
+      .best-seoul-student-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start; /* Align items to the top */
+        gap: 100px; /* Adjust gap as needed */
       }
 
       .committee-photo {
@@ -26,18 +39,14 @@
         width: 150px;
         height: 150px;
         object-fit: cover;
-        border-radius: 50% 50% 0 0; /* arch shape */
+        border-radius: 50%; /* make it a perfect circle */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow */
+        margin: 0 auto; /* center inside card */
       }
 
       .member-name {
-        position: absolute;
-        bottom: 10; /* stick to bottom of image */
-        left: 0;
-        width: 100%; /* match photo width */
+        margin-top: 10px; /* place name below the circle */
         text-align: center;
-        background-color: #6a00ff50;
-        padding: 6px 0;
-        border-radius: 0 0 8px 8px; /* rounded bottom corners */
         font-weight: bold;
       }
 
@@ -89,14 +98,69 @@
         min-height: 100vh;
         margin: 0;
       }
-      @media (max-width: 600px) {
+      /* Initial state: hidden and shifted down */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      /* When visible: shown and in place */
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 768px) {
+        /* Center the role titles on mobile */
+        .committee-role h2 {
+          text-align: center;
+        }
+
+        /* Make the flex container for chairs and advisors stack vertically */
+        .website-chairs-advisors-container {
+          flex-direction: column;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          align-items: center; /* Center the role sections */
+          gap: 0px;
+        }
+        .best-seoul-student-container {
+          flex-direction: column;
+          margin-top: 0;
+          margin-bottom: 0;
+          gap: 0px;
+          padding-top: 0;
+          padding-bottom: 0;
+          align-items: center; /* Center the role sections */
+        }
+
+        /* Make the members within each role stack vertically and center them */
         .committee-members {
           flex-direction: column;
-          align-items: center;
+          align-items: center; /* Center the cards vertically */
+          justify-content: center; /* Center the cards horizontally */
         }
 
         .committee-card {
           flex: 0 0 80%; /* take most of the width */
+          max-width: 300px; /* Optional: set a max-width for better appearance */
+        }
+        .website-chairs-advisors-container .committee-role {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .best-seoul-student-container {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+        .best-seoul-student-container .committee-role {
+          padding: 0 !important;
+          margin: 0 !important;
         }
       }
 
@@ -220,9 +284,15 @@
           {
             download: true,
             header: true,
-            complete: function (results) {
+            complete: async function (results) {
+              const loader = document.getElementById("loader");
               loader.style.display = "none";
-              renderCommittee(results.data);
+
+              // Wait for the async renderCommittee function to fully complete
+              await renderCommittee(results.data);
+
+              // Now that rendering is truly done, set up animations
+              setupScrollAnimations();
             },
           }
         );
@@ -236,6 +306,32 @@
             img.src = url;
           });
         }
+        function setupScrollAnimations() {
+          const elements = document.querySelectorAll(".animate-on-scroll");
+          if (elements.length === 0) {
+            console.warn(
+              "No elements found to animate. Make sure .animate-on-scroll class is applied."
+            );
+            return;
+          }
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  observer.unobserve(entry.target); // Animate only once
+                }
+              });
+            },
+            { threshold: 0.1 } // Trigger when 10% of the element is visible
+          );
+
+          elements.forEach((el) => observer.observe(el));
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          setupScrollAnimations();
+        });
 
         async function renderCommittee(data) {
           const container = document.getElementById("committee-container");
@@ -248,42 +344,46 @@
             return acc;
           }, {});
 
+          // New container for Website Chairs and Advisors
+          let chairsAdvisorsContainer = null;
+          let bestSeoulStudentCOntainer = null;
+
           for (const [role, members] of Object.entries(grouped)) {
             const roleSection = document.createElement("div");
             roleSection.className = "committee-role";
-            roleSection.innerHTML = `<h2>${role}</h2>`;
+            const memberCount = members.length;
+            let roleTitle = memberCount > 1 ? `${role}s` : role; // add 's' if more than 1
+            roleTitle =
+              roleTitle == "Special Track: Web4Goods"
+                ? "Special Track: Web4Good"
+                : roleTitle;
+            roleSection.innerHTML = `<h2>${roleTitle}</h2>`;
 
             const membersDiv = document.createElement("div");
             membersDiv.className = "committee-members";
 
             for (let i = 0; i < members.length; i++) {
               const m = members[i];
-              const rowIndex = data.indexOf(m); // Get the actual row index from the original data
-              // console.log(m, rowIndex);
+              const rowIndex = data.indexOf(m);
 
               const card = document.createElement("div");
-              card.className = "committee-card";
+              card.className = "committee-card  animate-on-scroll";
 
-              // Check if local image exists first
               const localImagePath = `../images/commitee/${rowIndex + 2}.jpg`;
               const imageExistsLocally = await imageExists(localImagePath);
 
               let photo;
               if (imageExistsLocally) {
-                // Use local image if it exists
                 photo = localImagePath;
               } else {
-                // Fall back to the link from CSV
                 photo =
                   m[
                     "Add comment in this cell with a link to profile picture  (external link or to file uploaded in subfolder Profile pictures)"
                   ];
 
                 if (!photo || photo.trim() === "") {
-                  // If no link provided, use a default placeholder
                   photo = "../images/commitee/dummy.png";
                 } else if (photo.includes("drive.google.com")) {
-                  // Convert Google Drive links to direct download
                   const match = photo.match(/\/d\/(.*?)\//);
                   if (match) {
                     photo = `https://drive.google.com/uc?export=download&id=${match[1]}`;
@@ -293,25 +393,43 @@
                 }
               }
 
-              const alias =
-                m[
-                  "Will have an alias xxx-www2026@acm.org mailing list on website"
-                ];
               card.innerHTML = `
-              <div class="photo-wrapper">
-                <img src="${photo}" alt="${m["First name"]} ${m["Last name"]}" class="committee-photo" onerror="this.src='../images/commitee/dummy.png'">
-                <div class="member-name">
-                  ${m["First name"]} ${m["Last name"]}
-                </div>
-              </div>
-              <p class="affiliation">${m["Affiliation"]}</p>
-            `;
-
+        <img src="${photo}" alt="${m["First name"]} ${m["Last name"]}" class="committee-photo" onerror="this.src='../images/commitee/dummy.png'">
+        <div class="member-name">
+          ${m["First name"]} ${m["Last name"]}
+        </div>
+        <p class="affiliation">${m["Affiliation"]}</p>
+      `;
               membersDiv.appendChild(card);
             }
 
             roleSection.appendChild(membersDiv);
-            container.appendChild(roleSection);
+            console.log(role);
+            // Check if the role is Website Chair or Website Advisor
+            if (role === "Website Chair" || role === "Website advisor") {
+              if (!chairsAdvisorsContainer) {
+                chairsAdvisorsContainer = document.createElement("div");
+                chairsAdvisorsContainer.className =
+                  "website-chairs-advisors-container";
+                container.appendChild(chairsAdvisorsContainer);
+              }
+              chairsAdvisorsContainer.appendChild(roleSection);
+            } else if (
+              role === "Best Paper Award Chair" ||
+              role === "Test of Time Award" ||
+              role == "Student Travel Award Chair"
+            ) {
+              if (!bestSeoulStudentCOntainer) {
+                bestSeoulStudentCOntainer = document.createElement("div");
+                bestSeoulStudentCOntainer.className =
+                  "best-seoul-student-container";
+                container.appendChild(bestSeoulStudentCOntainer);
+              }
+              bestSeoulStudentCOntainer.appendChild(roleSection);
+            } else {
+              // Append other roles directly to the main container
+              container.appendChild(roleSection);
+            }
           }
         }
       });
