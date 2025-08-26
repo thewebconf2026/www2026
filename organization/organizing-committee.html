@@ -1,119 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organizing Committee - The Web Conference 2026</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/tab-menu.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
+      .photo-wrapper {
+        position: relative;
+        display: inline-block; /* shrink-wrap to photo size */
+      }
+      .affiliation {
+        padding-top: 60px;
+      }
+
+      .committee-photo {
+        display: block;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50% 50% 0 0; /* arch shape */
+      }
+
+      .member-name {
+        position: absolute;
+        bottom: 10; /* stick to bottom of image */
+        left: 0;
+        width: 100%; /* match photo width */
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 6px 0;
+        border-radius: 0 0 8px 8px; /* rounded bottom corners */
+        font-weight: bold;
+      }
+
+      .committee-members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 20px; /* spacing between cards */
+      }
+
+      .committee-card {
+        flex: 0 0 200px; /* default width on desktop */
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      T .coming-soon-container {
+        text-align: center;
+        padding: 50px 20px;
+        margin: 40px 0;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+
+      .coming-soon-container h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .coming-soon-container p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        color: #666;
+      }
+      .loader {
+        border: 6px solid #f3f3f3; /* Light gray */
+        border-top: 6px solid #6a00ff; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 50px auto;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      @media (max-width: 600px) {
+        .committee-members {
+          flex-direction: column;
+          align-items: center;
         }
-        
-        .coming-soon-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
+
+        .committee-card {
+          flex: 0 0 80%; /* take most of the width */
         }
-        
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
+      }
+
+      .page-content {
+        flex: 1; /* take up remaining space */
+      }
+
+      footer {
+        flex-shrink: 0;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>Organizing Committee</h1>
-            
-            <div class="coming-soon-container">
+      <div class="container">
+        <h1>Organizing Committee</h1>
+        <div id="committee-container">
+          <div id="loader" class="loader"></div>
+        </div>
+
+        <!-- <div class="coming-soon-container">
                 <h2>Coming Soon</h2>
                 <p>The Organizing Committee for The Web Conference 2026 will be announced soon.</p>
                 <p>Please check back later for updates.</p>
-            </div>
-        </div>
+            </div> -->
+      </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>TheWebConf 2026</h3>
-                <p>April 13-17, 2026</p>
-                <p>Dubai, United Arab Emirates</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../calls.html">Calls</a></li>
-                    <li><a href="../program.html">Program</a></li>
-                    <li><a href="../attending.html">Attending</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p>Email: gc-www2026@acm.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>TheWebConf 2026</h3>
+          <p>April 13-17, 2026</p>
+          <p>Dubai, United Arab Emirates</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Web Conference. All rights reserved.</p>
-            <p>
-                <a href="https://www.acm.org/code-of-ethics" target="_blank">ACM Code of Ethics</a> | 
-                <a href="https://www.acm.org/about-acm/policy-against-harassment" target="_blank">ACM Policy Against Harassment</a> | 
-                <a href="../gdpr.html">GDPR Notice</a>
-            </p>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../calls.html">Calls</a></li>
+            <li><a href="../program.html">Program</a></li>
+            <li><a href="../attending.html">Attending</a></li>
+          </ul>
         </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Email: gc-www2026@acm.org</p>
+          <div class="social-media">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Web Conference. All rights reserved.</p>
+        <p>
+          <a href="https://www.acm.org/code-of-ethics" target="_blank"
+            >ACM Code of Ethics</a
+          >
+          |
+          <a
+            href="https://www.acm.org/about-acm/policy-against-harassment"
+            target="_blank"
+            >ACM Policy Against Harassment</a
+          >
+          |
+          <a href="../gdpr.html">GDPR Notice</a>
+        </p>
+      </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
     <script src="../js/main.js"></script>
     <script>
-        // Add dropdown toggle functionality for mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const tabMenu = document.querySelector('.tab-menu');
-            
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    tabMenu.classList.toggle('active');
-                });
+      // Add dropdown toggle functionality for mobile
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+        const tabMenu = document.querySelector(".tab-menu");
+
+        if (mobileMenuToggle) {
+          mobileMenuToggle.addEventListener("click", function () {
+            tabMenu.classList.toggle("active");
+          });
+        }
+
+        // For mobile: toggle dropdown on tap
+        if (window.innerWidth <= 768) {
+          const dropdownLinks = document.querySelectorAll(
+            ".tab-menu a.has-dropdown"
+          );
+
+          dropdownLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentNode.classList.toggle("active");
+              }
+            });
+          });
+        }
+        Papa.parse(
+          "https://docs.google.com/spreadsheets/d/1AdQ2JZ7BiSOwHSBPdBL_5ua2KI7wSSjgC30tm242_Ng/export?format=csv&gid=0",
+          {
+            download: true,
+            header: true,
+            complete: function (results) {
+              loader.style.display = "none";
+              renderCommittee(results.data);
+            },
+          }
+        );
+
+        // Function to check if image exists
+        function imageExists(url) {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = url;
+          });
+        }
+
+        async function renderCommittee(data) {
+          const container = document.getElementById("committee-container");
+          container.innerHTML = "";
+
+          // Group by role
+          const grouped = data.reduce((acc, member) => {
+            if (!acc[member["Role"]]) acc[member["Role"]] = [];
+            acc[member["Role"]].push(member);
+            return acc;
+          }, {});
+
+          for (const [role, members] of Object.entries(grouped)) {
+            const roleSection = document.createElement("div");
+            roleSection.className = "committee-role";
+            roleSection.innerHTML = `<h2>${role}</h2>`;
+
+            const membersDiv = document.createElement("div");
+            membersDiv.className = "committee-members";
+
+            for (let i = 0; i < members.length; i++) {
+              const m = members[i];
+              const rowIndex = data.indexOf(m); // Get the actual row index from the original data
+              // console.log(m, rowIndex);
+
+              const card = document.createElement("div");
+              card.className = "committee-card";
+
+              // Check if local image exists first
+              const localImagePath = `../images/commitee/${rowIndex + 2}.jpg`;
+              const imageExistsLocally = await imageExists(localImagePath);
+
+              let photo;
+              if (imageExistsLocally) {
+                // Use local image if it exists
+                photo = localImagePath;
+              } else {
+                // Fall back to the link from CSV
+                photo =
+                  m[
+                    "Add comment in this cell with a link to profile picture  (external link or to file uploaded in subfolder Profile pictures)"
+                  ];
+
+                if (!photo || photo.trim() === "") {
+                  // If no link provided, use a default placeholder
+                  photo = "../images/commitee/dummy.png";
+                } else if (photo.includes("drive.google.com")) {
+                  // Convert Google Drive links to direct download
+                  const match = photo.match(/\/d\/(.*?)\//);
+                  if (match) {
+                    photo = `https://drive.google.com/uc?export=download&id=${match[1]}`;
+                  }
+                } else {
+                  photo = encodeURI(photo);
+                }
+              }
+
+              const alias =
+                m[
+                  "Will have an alias xxx-www2026@acm.org mailing list on website"
+                ];
+              card.innerHTML = `
+              <div class="photo-wrapper">
+                <img src="${photo}" alt="${m["First name"]} ${m["Last name"]}" class="committee-photo" onerror="this.src='../images/commitee/dummy.png'">
+                <div class="member-name">
+                  ${m["First name"]} ${m["Last name"]}
+                </div>
+              </div>
+              <p class="affiliation">${m["Affiliation"]}</p>
+            `;
+
+              membersDiv.appendChild(card);
             }
-            
-            // For mobile: toggle dropdown on tap
-            if (window.innerWidth <= 768) {
-                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
-                
-                dropdownLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            this.parentNode.classList.toggle('active');
-                        }
-                    });
-                });
-            }
-        });
+
+            roleSection.appendChild(membersDiv);
+            container.appendChild(roleSection);
+          }
+        }
+      });
     </script>
 
     <script src="../js/header-loader.js"></script>
-</body>
+  </body>
 </html>
