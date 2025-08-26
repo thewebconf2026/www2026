@@ -308,24 +308,17 @@
         }
         function setupScrollAnimations() {
           const elements = document.querySelectorAll(".animate-on-scroll");
-          if (elements.length === 0) {
-            console.warn(
-              "No elements found to animate. Make sure .animate-on-scroll class is applied."
-            );
-            return;
-          }
           const observer = new IntersectionObserver(
             (entries) => {
               entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                   entry.target.classList.add("visible");
-                  observer.unobserve(entry.target); // Animate only once
+                  observer.unobserve(entry.target);
                 }
               });
             },
-            { threshold: 0.1 } // Trigger when 10% of the element is visible
+            { threshold: 0.1 }
           );
-
           elements.forEach((el) => observer.observe(el));
         }
 
@@ -367,7 +360,7 @@
               const rowIndex = data.indexOf(m);
 
               const card = document.createElement("div");
-              card.className = "committee-card  animate-on-scroll";
+              card.className = "committee-card ";
 
               const localImagePath = `../images/commitee/${rowIndex + 2}.jpg`;
               const imageExistsLocally = await imageExists(localImagePath);
@@ -394,7 +387,7 @@
               }
 
               card.innerHTML = `
-        <img src="${photo}" alt="${m["First name"]} ${m["Last name"]}" class="committee-photo" onerror="this.src='../images/commitee/dummy.png'">
+        <img src="${photo}" alt="${m["First name"]} loading="lazy" ${m["Last name"]}" class="committee-photo" onerror="this.src='../images/commitee/dummy.png'">
         <div class="member-name">
           ${m["First name"]} ${m["Last name"]}
         </div>
