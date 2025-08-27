@@ -33,6 +33,12 @@
         align-items: flex-start; /* Align items to the top */
         gap: 100px; /* Adjust gap as needed */
       }
+      .coordination-vol-artifact-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start; /* Align items to the top */
+        gap: 100px; /* Adjust gap as needed */
+      }
 
       .committee-photo {
         display: block;
@@ -127,6 +133,16 @@
           align-items: center; /* Center the role sections */
           gap: 0px;
         }
+
+        .coordination-vol-artifact-container {
+          flex-direction: column;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          align-items: center; /* Center the role sections */
+          gap: 0px;
+        }
         .best-seoul-student-container {
           flex-direction: column;
           margin-top: 0;
@@ -147,6 +163,10 @@
         .committee-card {
           flex: 0 0 80%; /* take most of the width */
           max-width: 300px; /* Optional: set a max-width for better appearance */
+        }
+        .coordination-vol-artifact-container .committee-role {
+          padding: 0 !important;
+          margin: 0 !important;
         }
         .website-chairs-advisors-container .committee-role {
           padding: 0 !important;
@@ -340,6 +360,7 @@
           // New container for Website Chairs and Advisors
           let chairsAdvisorsContainer = null;
           let bestSeoulStudentCOntainer = null;
+          let coordinationVolArtifact = null;
 
           for (const [role, members] of Object.entries(grouped)) {
             const roleSection = document.createElement("div");
@@ -395,11 +416,11 @@
       `;
               membersDiv.appendChild(card);
             }
-
+            console.log(role);
             roleSection.appendChild(membersDiv);
             // console.log(role);
             // Check if the role is Website Chair or Website Advisor
-            if (role === "Website Chair" || role === "Website advisor") {
+            if (role === "Website Chair" || role === "Website Advisor") {
               if (!chairsAdvisorsContainer) {
                 chairsAdvisorsContainer = document.createElement("div");
                 chairsAdvisorsContainer.className =
@@ -419,6 +440,18 @@
                 container.appendChild(bestSeoulStudentCOntainer);
               }
               bestSeoulStudentCOntainer.appendChild(roleSection);
+            } else if (
+              role == "Coordination Chair" ||
+              role == "Volunteers Chair" ||
+              role == "Artfifacts Chair"
+            ) {
+              if (!coordinationVolArtifact) {
+                coordinationVolArtifact = document.createElement("div");
+                coordinationVolArtifact.className =
+                  "coordination-vol-artifact-container";
+                container.appendChild(coordinationVolArtifact);
+              }
+              coordinationVolArtifact.appendChild(roleSection);
             } else {
               // Append other roles directly to the main container
               container.appendChild(roleSection);
