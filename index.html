@@ -13,6 +13,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
+  <style>
+    .conf-title {
+      white-space: nowrap; /* default desktop */
+    }
+    @media (max-width: 768px) {
+      .conf-title {
+        white-space: normal; /* allow wrap on mobile */
+      }
+    }
+  </style>
+
   <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
@@ -20,7 +31,7 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 style="white-space: nowrap">THE ACM WEB CONFERENCE 2026</h1>
+          <h1 class="conf-title">THE ACM WEB CONFERENCE 2026</h1>
           <h2>Dubai, United Arab Emirates</h2>
           <p>April 13-17, 2026</p>
         </div>
