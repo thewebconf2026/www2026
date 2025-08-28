@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Organizing Committee - The Web Conference 2026</title>
+    <title>Scientific Committee - The Web Conference 2026</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/tab-menu.css" />
     <link rel="stylesheet" href="../css/dropdown-menu.css" />
@@ -21,13 +21,13 @@
         /* padding-top: 60px; */
       }
 
-      .steering-treasurer-coor-container {
+      .website-chairs-advisors-container {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start; /* Align items to the top */
         gap: 100px; /* Adjust gap as needed */
       }
-      .steering-treasurer-coor-container {
+      .best-seoul-student-container {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start; /* Align items to the top */
@@ -124,7 +124,7 @@
         }
 
         /* Make the flex container for chairs and advisors stack vertically */
-        .steering-treasurer-coor-container {
+        .website-chairs-advisors-container {
           flex-direction: column;
           margin-top: 0;
           margin-bottom: 0;
@@ -143,7 +143,7 @@
           align-items: center; /* Center the role sections */
           gap: 0px;
         }
-        .steering-treasurer-coor-container {
+        .best-seoul-student-container {
           flex-direction: column;
           margin-top: 0;
           margin-bottom: 0;
@@ -168,17 +168,17 @@
           padding: 0 !important;
           margin: 0 !important;
         }
-        .steering-treasurer-coor-container .committee-role {
+        .website-chairs-advisors-container .committee-role {
           padding: 0 !important;
           margin: 0 !important;
         }
-        .steering-treasurer-coor-container {
+        .best-seoul-student-container {
           margin-top: 0;
           margin-bottom: 0;
           padding-top: 0;
           padding-bottom: 0;
         }
-        .steering-treasurer-coor-container .committee-role {
+        .best-seoul-student-container .committee-role {
           padding: 0 !important;
           margin: 0 !important;
         }
@@ -208,7 +208,7 @@
 
     <section class="page-content">
       <div class="container">
-        <h1>Organizing Committee</h1>
+        <h1>Scientific Committee</h1>
         <div id="committee-container">
           <div id="loader" class="loader"></div>
         </div>
@@ -273,6 +273,7 @@
 
     <script src="../js/main.js"></script>
     <script>
+      // Add dropdown toggle functionality for mobile
       org_com = [
         "General Chair",
         "Steering Committee Liaison",
@@ -283,9 +284,8 @@
         "Proceedings Chair",
         "Sponsorship Chair",
         "Volunteers Chair",
-        "Student Travel Award Chair",
+        "Artfifacts Chair",
       ];
-      // Add dropdown toggle functionality for mobile
       document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
         const tabMenu = document.querySelector(".tab-menu");
@@ -376,7 +376,7 @@
 
           for (const [role, members] of Object.entries(grouped)) {
             if (!org_com.includes(role)) {
-              // console.log("hey");
+              console.log("hey");
               continue;
             }
             const roleSection = document.createElement("div");
@@ -432,7 +432,7 @@
       `;
               membersDiv.appendChild(card);
             }
-            // console.log(role);
+            console.log(role);
             roleSection.appendChild(membersDiv);
             // console.log(role);
             // Check if the role is Website Chair or Website Advisor
@@ -440,25 +440,26 @@
               if (!chairsAdvisorsContainer) {
                 chairsAdvisorsContainer = document.createElement("div");
                 chairsAdvisorsContainer.className =
-                  "steering-treasurer-coor-container";
+                  "website-chairs-advisors-container";
                 container.appendChild(chairsAdvisorsContainer);
               }
               chairsAdvisorsContainer.appendChild(roleSection);
             } else if (
-              role === "Steering Committee Liaison" ||
-              role === "Treasurer" ||
-              role == "Coordination Chair"
+              role === "Best Paper Award Chair" ||
+              role === "Test of Time Award" ||
+              role == "Student Travel Award Chair"
             ) {
               if (!bestSeoulStudentCOntainer) {
                 bestSeoulStudentCOntainer = document.createElement("div");
                 bestSeoulStudentCOntainer.className =
-                  "steering-treasurer-coor-container";
+                  "best-seoul-student-container";
                 container.appendChild(bestSeoulStudentCOntainer);
               }
               bestSeoulStudentCOntainer.appendChild(roleSection);
             } else if (
-              role == "Student Travel Award Chair" ||
-              role == "Volunteers Chair"
+              role == "Coordination Chair" ||
+              role == "Volunteers Chair" ||
+              role == "Artfifacts Chair"
             ) {
               if (!coordinationVolArtifact) {
                 coordinationVolArtifact = document.createElement("div");
