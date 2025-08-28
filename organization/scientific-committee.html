@@ -284,6 +284,7 @@
         "Proceedings Chair",
         "Sponsorship Chair",
         "Volunteers Chair",
+        "Student Travel Award Chair",
         "Artfifacts Chair",
       ];
       document.addEventListener("DOMContentLoaded", function () {
@@ -375,8 +376,8 @@
           let coordinationVolArtifact = null;
 
           for (const [role, members] of Object.entries(grouped)) {
-            if (!org_com.includes(role)) {
-              console.log("hey");
+            if (org_com.includes(role)) {
+              // console.log("hey");
               continue;
             }
             const roleSection = document.createElement("div");
