@@ -1,0 +1,46 @@
+# Newsletter #1 - Welcome and Call for Contributions
+
+## Welcome to the ACM Web Conference 2026
+
+The 2026 edition of the ACM Web Conference will be held in Dubai, United Arab Emirates (UAE) from April 13 to April 17, 2026. Check our website (https://www2026.thewebconf.org/).
+
+The conference organizing committee is preparing an edition rich in scientific exchanges. In addition to the usual research tracks, the conference will feature the following additional tracks and events: Short Papers, Industry, Workshops, Tutorials, Ph.D. Symposium, and Demos, as well as three special tracks:  Competitions (for the first time in the conference series), Web4All, and History of Web. As usual, the Web4Good conference will be co-located with the main conference.
+
+## TheWebConf'2026 Main Research Tracks 
+
+We are happy to announce that Call for Papers for the Main Research tracks 
+(https://www2026.thewebconf.org/calls/research-tracks.html) has been published by our PC Chairs, Francesco Bonchi (CENTAI, Italy, and Eurecat, Spain), Ido Guy (Meta, Israel, and Ben-Gurion University of the Negev, Israel), and Emine Yilmaz (University College, UK and Amazon, UK).
+
+## Additional Calls
+
+We encourage to also consider the other call for papers or proposals:
+
+- Short Papers (https://www2026.thewebconf.org/calls/short-papers.html), chaired by Omar Alonso and Bracha Shapira.
+- Industry (https://www2026.thewebconf.org/calls/industry.html), chaired by Evgeniy Gabrilovich, Hady Law and Natasha Noy.
+- Tutorials (https://www2026.thewebconf.org/calls/tutorials.html), chaired by Ricardo Baeza-Yates and David Carmel.
+- Workshops (https://www2026.thewebconf.org/calls/workshops.html), chaired by Mohamed Reda Bouadjenek and Danai Koutra.
+- PhD Symposium (https://www2026.thewebconf.org/calls/phd-symposium.html), chaired by Salem Lahlou and Fabrizio Silvestri.
+- Demos (https://www2026.thewebconf.org/calls/demos.html, chaired by Yiqun Liu and Ahmed ElSayed.
+- Competitions (https://www2026.thewebconf.org/calls/competitions.html), chaired by Mouadh Yagoubi, Evelyne Viegas, and Lisheng Sun-Hosoya. 
+- Web4Good (https://www2026.thewebconf.org/calls/web4good.html), chaired by Roy Ka-Wei Lee, Usman Naseem, Tanmoy Chakraborty, Jisun An, and Daniela Paolotti.
+
+## Other Events
+
+The History of the Web (https://www2026.thewebconf.org/program/history-of-web.html) Special Track, chaired by Dame Wendy Hall and Oshani Seneviratne, is a by invitation-only event.
+
+## Colocated Conference
+
+We are delighted to share that, like in previous years, the Web4All (https://www.w4a.info/2026/) conference, the premier venue for web accessibility research, will be co-located with our conference.
+
+## Nominations
+
+Do you have a favorite Web Conference paper dating back to 2016 or before that demonstrated a lasting significant scientific, technical, industrial, or social impact over the years, and deserves recognition? Submit your nomination now for the Seoul Test of Time Award (https://www2026.thewebconf.org/calls/seoul-test-of-time-award.html), chaired by Marc Najork.
+
+We look forward to receiving your submissions to the conference.
+
+The General Chairs<br>
+Hakim Hacid (TII, UAE) and Yoelle Maarek (TII, Israel)
+
+
+
+

@@ -1,35 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Newsletters - The Web Conference 2026</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/tab-menu.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
+      .intro-text {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .newsletter-item {
+        margin-bottom: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        overflow: hidden; /* Hide overflow content when not expanded */
+      }
+
+      .newsletter-item:hover {
+        border-color: #cce5ff;
+        box-shadow: 0 2px 5px rgba(0, 123, 255, 0.1);
+      }
+
+      .newsletter-title {
+        padding: 15px 20px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .newsletter-title h2 {
+        color: #333;
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+
+      .newsletter-title::after {
+        content: "▼";
+        font-size: 0.8em;
+        color: #666;
+        transition: transform 0.3s ease;
+      }
+
+      .newsletter-item.expanded .newsletter-title::after {
+        transform: rotate(180deg);
+      }
+
+      .newsletter-content {
+        padding: 20px;
+        display: none;
+        border-top: 1px solid #eee;
+      }
+
+      .newsletter-item.expanded .newsletter-content {
+        display: block;
+      }
+
+      .newsletter-content h3 {
+        color: #333;
+        margin: 15px 0 10px 0;
+        font-size: 1em;
+        font-weight: 600;
+      }
+
+      .newsletter-content p {
+        line-height: 1.6;
+        margin: 10px 0;
+      }
+
+      .newsletter-content a {
+        color: #6a00ff;
+        text-decoration: none;
+      }
+
+      .newsletter-content a:hover {
+        text-decoration: underline;
+      }
+
+      .newsletter-content strong {
+        font-weight: bold;
+      }
+
+      .newsletter-content em {
+        font-style: italic;
+      }
+
+      .newsletter-content code {
+        font-family: monospace;
+        background-color: #f0f0f0;
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          padding: 0 20px;
+          font-size: 2em;
         }
-        
-        .coming-soon-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
+
+        main {
+          padding: 0 20px 40px 20px;
         }
-        
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
+
+        .newsletter-title {
+          padding: 12px 15px;
         }
+
+        .newsletter-title h2 {
+          font-size: 1em;
+        }
+
+        .newsletter-content {
+          padding: 15px;
+        }
+      }
+      .tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .tab-button {
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        background: #f5f5f5;
+        cursor: pointer;
+        border-radius: 4px 4px 0 0;
+      }
+      .tab-button.active {
+        background: #fff;
+        border-bottom: 1px solid #fff;
+        font-weight: bold;
+      }
+      .tab-panel {
+        display: none;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 0 4px 4px 4px;
+        background: #fff;
+      }
+      .tab-panel.active {
+        display: block;
+      }
+
+      .coming-soon-container {
+        text-align: center;
+        padding: 50px 20px;
+        margin: 40px 0;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+
+      .coming-soon-container h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .coming-soon-container p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        color: #666;
+      }
       /* Override highlight colors - only links should be purple */
       a {
         color: #6a00ff;
@@ -39,105 +188,207 @@
         color: #00e5ff;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>Newsletters</h1>
-            
-            
-            <p>
-                The ACM Web Conference Newsletter will be sent periodically, roughly once a month leading up to the conference.
-                Subscribe to stay apprised of the latest developments. Your email will only be used for this newsletter and will
-                not be sold or shared with any third party.
-              </p>
-            
-              <p>
-                <strong>List Subscription Page:</strong>
-                <a href="https://LISTSERV.ACM.ORG/SCRIPTS/WA-ACMLPX.CGI?SUBED1=THEWEBCONF-NEWSLETTER" target="_blank">
-                  https://LISTSERV.ACM.ORG/SCRIPTS/WA-ACMLPX.CGI?SUBED1=THEWEBCONF-NEWSLETTER
-                </a>
-              </p>
-            
-              <p>
-                <strong>Unsubscribe:</strong>
-                <a href="mailto:THEWEBCONF-NEWSLETTER-signoff-request@LISTSERV.ACM.ORG">
-                  THEWEBCONF-NEWSLETTER-signoff-request@LISTSERV.ACM.ORG
-                </a>
-              </p>
-            
+      <div class="container">
+        <h1>Newsletters</h1>
+
+        <p>
+          The ACM Web Conference Newsletter will be sent periodically, roughly
+          once a month leading up to the conference. Subscribe to stay apprised
+          of the latest developments. Your email will only be used for this
+          newsletter and will not be sold or shared with any third party.
+        </p>
+
+        <p>
+          <strong>List Subscription Page:</strong>
+          <a
+            href="https://LISTSERV.ACM.ORG/SCRIPTS/WA-ACMLPX.CGI?SUBED1=THEWEBCONF-NEWSLETTER"
+            target="_blank"
+          >
+            https://LISTSERV.ACM.ORG/SCRIPTS/WA-ACMLPX.CGI?SUBED1=THEWEBCONF-NEWSLETTER
+          </a>
+        </p>
+
+        <p>
+          <strong>Unsubscribe:</strong>
+          <a
+            href="mailto:THEWEBCONF-NEWSLETTER-signoff-request@LISTSERV.ACM.ORG"
+          >
+            THEWEBCONF-NEWSLETTER-signoff-request@LISTSERV.ACM.ORG
+          </a>
+        </p>
+        <div id="newsletter-list">
+          <!-- Newsletters will be loaded here -->
         </div>
+      </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>TheWebConf 2026</h3>
-                <p>April 13-17, 2026</p>
-                <p>Dubai, United Arab Emirates</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../calls.html">Calls</a></li>
-                    <li><a href="../program.html">Program</a></li>
-                    <li><a href="../attending.html">Attending</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p>Email: gc-www2026@acm.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>TheWebConf 2026</h3>
+          <p>April 13-17, 2026</p>
+          <p>Dubai, United Arab Emirates</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Web Conference. All rights reserved.</p>
-            <p>
-                <a href="https://www.acm.org/code-of-ethics" target="_blank">ACM Code of Ethics</a> | 
-                <a href="https://www.acm.org/about-acm/policy-against-harassment" target="_blank">ACM Policy Against Harassment</a> | 
-                <a href="../gdpr.html">GDPR Notice</a>
-            </p>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../calls.html">Calls</a></li>
+            <li><a href="../program.html">Program</a></li>
+            <li><a href="../attending.html">Attending</a></li>
+          </ul>
         </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Email: gc-www2026@acm.org</p>
+          <div class="social-media">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Web Conference. All rights reserved.</p>
+        <p>
+          <a href="https://www.acm.org/code-of-ethics" target="_blank"
+            >ACM Code of Ethics</a
+          >
+          |
+          <a
+            href="https://www.acm.org/about-acm/policy-against-harassment"
+            target="_blank"
+            >ACM Policy Against Harassment</a
+          >
+          |
+          <a href="../gdpr.html">GDPR Notice</a>
+        </p>
+      </div>
     </footer>
 
     <script src="../js/main.js"></script>
     <script>
-        // Add dropdown toggle functionality for mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const tabMenu = document.querySelector('.tab-menu');
-            
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    tabMenu.classList.toggle('active');
-                });
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("newsletters/news1.txt")
+          .then((response) => response.text())
+          .then((newsletterContent) => {
+            const newsletterList = document.getElementById("newsletter-list");
+            const lines = newsletterContent.split("\n");
+            let newsletters = [];
+            let currentNewsletter = null;
+
+            lines.forEach((line) => {
+              if (line.startsWith("# ")) {
+                if (currentNewsletter) {
+                  newsletters.push(currentNewsletter);
+                }
+                currentNewsletter = {
+                  title: line.substring(2).trim(),
+                  content: [],
+                };
+              } else if (currentNewsletter && line.trim() !== "") {
+                currentNewsletter.content.push(line);
+              }
+            });
+
+            if (currentNewsletter) {
+              newsletters.push(currentNewsletter);
             }
-            
-            // For mobile: toggle dropdown on tap
+
+            newsletters.forEach((newsletter, index) => {
+              const div = document.createElement("div");
+              div.className = "newsletter-item";
+
+              const titleDiv = document.createElement("div");
+              titleDiv.className = "newsletter-title";
+              titleDiv.innerHTML = `<h2>${newsletter.title}</h2>`;
+
+              const contentDiv = document.createElement("div");
+              contentDiv.className = "newsletter-content";
+
+              let contentHtml = "";
+              newsletter.content.forEach((line) => {
+                if (line.startsWith("## ")) {
+                  contentHtml += `<h3>${line.substring(3).trim()}</h3>`;
+                } else if (line.trim() !== "") {
+                  let processedLine = line;
+                  processedLine = processedLine.replace(/<br>/g, "");
+                  processedLine = processedLine.replace(
+                    /\*\*(.*?)\*\*/g,
+                    "<strong>$1</strong>"
+                  );
+                  processedLine = processedLine.replace(
+                    /\*(.*?)\*/g,
+                    "<em>$1</em>"
+                  );
+                  processedLine = processedLine.replace(
+                    /`([^`]+)`/g,
+                    "<code>$1</code>"
+                  );
+
+                  processedLine = processedLine.replace(
+                    /\[([^\]]+)\]\(([^)]+)\)/g,
+                    (match, text, url) =>
+                      `<a href="${url}" target="_blank">${text}</a>`
+                  );
+
+                  processedLine = processedLine.replace(
+                    /(https?:\/\/[^\s\)]+)/g,
+                    (match, url) =>
+                      `<a href="${url}" target="_blank">${url}</a>`
+                  );
+
+                  processedLine = processedLine.replace(
+                    /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,
+                    (match, email) => `<a href="mailto:${email}">${email}</a>`
+                  );
+
+                  contentHtml += `<p>${processedLine}</p>`;
+                }
+              });
+
+              contentDiv.innerHTML = contentHtml;
+
+              div.appendChild(titleDiv);
+              div.appendChild(contentDiv);
+
+              titleDiv.addEventListener("click", () => {
+                div.classList.toggle("expanded");
+              });
+
+              newsletterList.appendChild(div);
+            });
+          });
+      });
+
+      // For mobile: toggle dropdown on tap
+      if (window.innerWidth <= 768) {
+        const dropdownLinks = document.querySelectorAll(
+          ".tab-menu a.has-dropdown"
+        );
+
+        dropdownLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
             if (window.innerWidth <= 768) {
-                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
-                
-                dropdownLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            this.parentNode.classList.toggle('active');
-                        }
-                    });
-                });
+              e.preventDefault();
+              this.parentNode.classList.toggle("active");
             }
+          });
         });
+      }
     </script>
 
     <script src="../js/header-loader.js"></script>
-</body>
+  </body>
 </html>
