@@ -14,6 +14,26 @@
     />
   </head>
   <style>
+    /* 默认标题样式 */
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* 针对小屏横屏优化 */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero h1 {
+    font-size: 2rem;       /* 字体缩小 */
+    line-height: 1.3;      /* 增加行高，留呼吸空间 */
+    padding: 0 10px;       /* 两边加点内边距，避免挤边 */
+  }
+
+  .hero h2, .hero p {
+    font-size: 1rem;       /* 副标题和日期也跟着小一点 */
+  }
+}
     .conf-title {
       white-space: nowrap; /* default desktop */
     }
