@@ -17,10 +17,53 @@
       a {
         color: #6a00ff;
       }
-
       a:hover {
         color: #00e5ff;
       }
+      .accordion {
+        background: transparent;   /* 透明背景 */
+  border: none;              /* 去掉边框 */
+  border-bottom: 1px solid #eee; /* 用淡灰色线分隔 */
+  cursor: pointer;
+  padding: 15px 0;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  position: relative;
+  transition: color 0.3s;
+}
+.accordion.active {
+  color: #6a00ff; /* 展开状态保持颜色 */
+}
+.accordion:hover {
+  color: #6a00ff; /* 鼠标放上去时变蓝 */
+}
+.accordion::after {
+  content: '\25BC'; /* 下箭头 */
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+.tracks-section {
+  max-width: 800px;   /* 控制宽度 */
+  margin: 40px auto;  /* 居中 */
+  padding: 0 20px;
+}
+
+.accordion.active::after {
+  transform: translateY(-50%) rotate(180deg); /* 展开后变成上箭头 */
+}
+.panel {
+  padding: 0 14px;
+  display: none;
+  background-color: transparent;
+  overflow: hidden;
+}
     </style>
   </head>
   <body>
@@ -127,18 +170,331 @@
 
         <h2>Tracks</h2>
         <p>Our research interests are organized in the following tracks:</p>
-        <ul>
-          <li>Economics, online markets and human computation</li>
-          <li>Graph Algorithms and Modeling for the Web</li>
-          <li>Responsible web</li>
-          <li>Search and retrieval-augmented AI</li>
-          <li>Security and privacy</li>
-          <li>Semantics and Knowledge</li>
-          <li>Social networks and social media</li>
-          <li>Systems and infrastructure for Web, mobile and WoT</li>
-          <li>User modeling, personalization and recommendation</li>
-          <li>Web mining and content analysis</li>
-        </ul>
+        <div class="tracks-section">     
+<!-- Track 1 -->
+<button class="accordion">Economics, online markets and human computation</button>
+<div class="panel">
+  <p>The Web has served as a platform for large-scale online markets such as cloud computing, crowdsourcing, and the sharing economy. This growth highlights the importance of understanding the economics of the Web, and we welcome innovative research in this space. The new wave of AI applications introduce new perspectives with respect to economics, markets, and training data sets. This track is a forum for theoretical, empirical, and applied research related to the modeling, analysis, and design of Web-related economic activities, online markets, and human computation.</p>
+  
+</br>
+<p>The relevant topics include, but are not limited to:</p>
+<ul>
+  <li>Economic ramifications for generative AI infrastructure and applications</li>
+  <li>Humans versus LLMs for data annotation and labeling (e.g., quality, trade-offs, biases, evaluation)</li>
+  <li>Architectures and workflows that use LLMs for crowd work (e.g., productivity, efficiency, quality, biases, oversight, etc.)</li>
+  <li>Trust and reliance of crowd workers and data experts on GenAI</li>
+  <li>Uses of LLMs and GenAI for marketplace design, bidding, and strategic interactions</li>
+  <li>Cost models of using LLMs in production systems</li>
+  <li>Research challenges in human and human-AI computation</li>
+  <li>Fairness and ethical considerations in crowd work and in human-in-the-loop AI systems</li>
+  <li>LLM based quality controls for crowd work</li>
+  <li>Economics and fairness of platforms and recommendation systems</li>
+  <li>Economic aspects and information design of Web, GenAI, and cloud computing</li>
+  <li>Fairness, privacy, and diversity in economic environments</li>
+  <li>Incentives in network design for Web infrastructures and ecosystems</li>
+  <li>Advertising auctions, pricing, markets, and exchanges</li>
+  <li>The sharing economy</li>
+  <li>Sustainability of Web economics</li>
+  <li>Data quality aspects of human-annotated datasets</li>
+  <li>Social networks and social learning</li>
+  <li>Economic aspects of blockchain and cryptocurrencies</li>
+</ul>
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Riccardo Colini-Baldeschi (Meta)</li>
+    <li>Gabriella Kazai (Amazon)</li>
+  </ul>
+</div>
+
+<!-- Track 2 -->
+<button class="accordion">Graph Algorithms and Modeling for the Web</button>
+<div class="panel">
+  <p>We encourage submissions addressing scientific challenges in Web-related graphs, from models and algorithms to mining, learning, and applications.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Algorithms and analysis for heterogeneous, signed, attributed, multi-relational, temporal, higher-order, and annotated Web-related graphs</li>
+    <li>Algorithms and analysis for incomplete, noisy, or partially observed Web-related graphs</li>
+    <li>Representation, reconstruction, and subgraph or motif discovery in Web-related graphs</li>
+    <li>Querying, indexing, and retrieval in Web-related graphs</li>
+    <li>Efficient manipulation of static and dynamic Web-related graphs</li>
+    <li>Graph embeddings and representation learning for Web-related graphs</li>
+    <li>Graph neural networks and deep learning approaches for Web-related graphs</li>
+    <li>Foundation models and LLMs for Web-related graphs</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Atsushi Miyauchi (CENTAI Institute)</li>
+    <li>Kijung Shin (KAIST)</li>
+  </ul>
+</div>
+
+<!-- Track 3 -->
+<button class="accordion">Responsible Web</button>
+<div class="panel">
+  <p>We invite research contributions to the Responsible Web track. Over the past decades, the Web and the internet have grown to be an integral part of our lives. Through this track, we aim to surface the latest research on what it means to build a responsible web and internet, one that contributes towards realising more equitable, emancipatory, and sustainable futures.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Algorithmic accountability and transparency on the web</li>
+    <li>Audits of web technologies, standards, platforms, and applications</li>
+    <li>Consent frameworks and practices on the web</li>
+    <li>Data and user privacy-enhancing technologies for the Web</li>
+    <li>Ethical and legal aspects of web-scale data analysis, uses and collection practices</li>
+    <li>Fairness, accountability, transparency and ethics of web technologies</li>
+    <li>Human-perceived consequences of algorithmic deployment on the web</li>
+    <li>Machine-in-the-loop, human agency and autonomy</li>
+    <li>Measurement, analysis, and circumvention of Web censorship</li>
+    <li>Mitigating misinformation and disinformation</li>
+    <li>Mitigating online harms, including harassment, spam, and fake reviews</li>
+    <li>Social and technical mechanisms of refusal for web technologies and applications</li>
+    <li>Sustainability and climate impact of web technologies</li>
+    <li>Technology governance, policy, and regulations</li>
+    <li>Web technologies to support human rights, social justice, emancipation, and anti-oppression</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Danula Hettiachchi (RMIT University, Australia)</li>
+    <li>Bhaskar Mitra (Independent Researcher, Canada)</li>
+  </ul>
+</div>
+
+<!-- Track 4 -->
+<button class="accordion">Search and retrieval-augmented AI</button>
+<div class="panel">
+  <p>This track focuses on advancing the foundations and applications of search and retrieval-augmented AI. We invite original, high-quality contributions that explore models, algorithms, systems, and evaluation methodologies for search and ranking, query understanding, personalized and interactive retrieval, as well as multilingual and domain-specific search. The track also emphasizes emerging directions such as learning to rank with LLMs, retrieval-augmented generation (RAG), multi-modal RAG, and agentic search, with the goal of fostering research that bridges traditional information retrieval with the capabilities of modern AI.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Web query analysis, representation and understanding</li>
+    <li>Web search models and ranking</li>
+    <li>Web evaluation methodologies and metrics</li>
+    <li>Web crawling and indexing</li>
+    <li>Assisted, interactive, and conversational search</li>
+    <li>Personalized, context-aware and across-device search</li>
+    <li>Efficiency and scalability of Web search engines</li>
+    <li>Vertical and domain-specific search</li>
+    <li>Multilingual and cross-lingual Web search</li>
+    <li>Web learning to rank, online learning, and counterfactual learning for ranking</li>
+    <li>Web question answering</li>
+    <li>Ad search and search for Web retail</li>
+    <li>Natural language understanding for Web search</li>
+    <li>Large language models for search</li>
+    <li>Retrieval-Augmented Generation (RAG) and multi-modal RAG</li>
+    <li>Search Tool Learning with LLM: Teaching LLMs to invoke search and make use of retrieved information</li>
+    <li>Agentic search</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Nick Craswell (Microsoft)</li>
+    <li>Fabrizio Silvestri (Sapienza University of Rome)</li>
+  </ul>
+</div>
+
+<!-- Track 5 -->
+<button class="accordion">Security and privacy</button>
+<div class="panel">
+  <p>This track offers researchers the opportunity to present their work to the broad community of researchers interested in issues of security and privacy relating to the Web.</p>
+
+  </br>
+  <p>We invite submissions that address any aspect of web security and privacy, including theoretical foundations, practical implementations, and case studies.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Applications of cryptography</li>
+    <li>Authentication, authorization, and access control</li>
+    <li>Blockchains and distributed ledgers</li>
+    <li>Browser and end-point security</li>
+    <li>Cyber-crime defenses and forensics</li>
+    <li>Cryptocurrency and smart contracts</li>
+    <li>Data security and privacy</li>
+    <li>Data transparency and provenance</li>
+    <li>Large-scale security measurements</li>
+    <li>Security in web-based applications and services</li>
+    <li>Tracking, profiling, and countermeasures against them</li>
+    <li>Privacy-enhancing technologies</li>
+    <li>Security and privacy of machine learning and AI applications</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Grace Hui Yang (Georgetown University)</li>
+    <li>Igor Bilogrevic (Google)</li>
+  </ul>
+</div>
+
+<!-- Track 6 -->
+<button class="accordion">Semantics and Knowledge</button>
+<div class="panel">
+  <p>This track is a forum to gather researchers interested in knowledge graphs and other forms of structured data models with machine-interpretable semantics that are being widely adopted for many advanced applications on the Web. In this track, we invite original research submissions related to methods, algorithms, techniques and applications supporting the creation, acquisition, publication and consumption of interlinked structured data corpora – available on the web, the (human-assisted) semantic integration, the enrichment and processing of large, real-world datasets in a Web context.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Scalable techniques for the creation, curation, publication, maintenance, and consumption of large, Web-based, structured, reusable, knowledge graphs and ontologies</li>
+    <li>Representation, semantic annotation, enhancement, enrichments, access and/or integration of a variety of data on the Web, including, but not limited to, semi-structured data, tabular data, text, multimedia (images, sound, videos) and sensor data</li>
+    <li>Data modeling to support human-machine intelligence, including, but not limited to LLMs agents, intelligent system behavior, explanations, and user-friendly interactions</li>
+    <li>Methods, algorithms and applications for the development of semantic models, knowledge graphs and other forms of structured data models with machine-interpretable semantics</li>
+    <li>Methods to enhance, augment, integrate or synergize semantic models such as knowledge graphs and LLMs to enlarge the functionality of either or both models</li>
+    <li>Provenance, trust, security and privacy, and ethical issues in managing semantic data</li>
+    <li>Applications of semantic technologies for improving search, browsing, recommendation, personalization in applications and domains of interest to the Web community, e.g. news, fake detection, open science, medical and health science, humanities and social sciences</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Feng Xia (RMIT University)</li>
+    <li>Valentina Presutti (University of Bologna)</li>
+  </ul>
+</div>
+
+<!-- Track 7 -->
+<button class="accordion">Social networks and social media</button>
+<div class="panel">
+  <p>We welcome submissions in all areas that concern social networks, social media, and the interaction of the Web and society.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Social media analysis through the lenses of networks</li>
+    <li>Analysis of web-mediated communications, communities, and crowds</li>
+    <li>Social mining and social search on the Web</li>
+    <li>Influence propagation, information diffusion, and the prediction on networks (link prediction, node or subgraph prediction)</li>
+    <li>Computational social science (e.g., computational politics, propaganda, sociology, communication studies, media science, humanities, arts, and culture on the Web)</li>
+    <li>Socio-technical web-based systems</li>
+    <li>Media and governance (e.g., opinion dynamics, filter bubbles, polarization, conflicts or tribalization, self-governance, civic engagement, collective actions via the Web)</li>
+    <li>Fairness and bias in social network and social media analysis</li>
+    <li>Generative AI / large language models and their impact on social systems</li>
+    <li>Applications and emergent phenomena</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Jia Wu (Macquarie University)</li>
+    <li>Giuseppe Manco (ICAR-CNR)</li>
+  </ul>
+</div>
+
+<!-- Track 8 -->
+<button class="accordion">Systems and infrastructure for Web, mobile and WoT</button>
+<div class="panel">
+  <p>This track invites original research contributions on the design, construction, and performance evaluation of Web-based, mobile, and ubiquitous computing systems and architectures. We welcome submissions of interest to both academic and industrial research, which contribute to the understanding of Web, mobile, and Web of Things (WoT) systems; for example, via data analysis, empirical studies, novel application designs and implementations, deployment experiences and lessons learned, and usability evaluations.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Cloud, edge and content delivery systems for the Web</li>
+    <li>Decentralized Web and Fediverse systems</li>
+    <li>Applied ML and AI for Web-based mobile applications</li>
+    <li>ML and AI systems for Web, mobile and WoT</li>
+    <li>Federated Web and WoT systems, including distributed, federated and edge-based data processing</li>
+    <li>Virtualization and resource management in Web systems and infrastructures</li>
+    <li>Web performance, measurement, and characterization</li>
+    <li>Location- and context-aware Web and WoT applications and services</li>
+    <li>Energy management for devices in mobile Web and WoT environments</li>
+    <li>Novel mobile and WoT systems, and system-of-systems</li>
+    <li>Web applications in cross-disciplinary domains and verticals such as mixed reality, smart cities, and digital health</li>
+    <li>Data management and stream processing for Web, mobile and wireless applications</li>
+    <li>Experiences and lessons learnt from Web-based algorithms and system deployments</li>
+    <li>Sustainability and carbon-aware systems for Web, mobile, and WoT</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Petteri Nurmi (University of Helsinki)</li>
+    <li>Zheng Wang (University of Leeds)</li>
+  </ul>
+</div>
+
+<!-- Track 9 -->
+<button class="accordion">User modeling, personalization and recommendation</button>
+<div class="panel">
+  <p>In this track, we invite original research submissions addressing all aspects of inclusive, human-centered approaches to user modeling, personalization, and recommendation. We welcome contributions on data analytics, algorithm development, system design, use case reviews, and evaluation within the context of the Web.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>User model development and evaluation</li>
+    <li>User modeling and simulation for interactive and conversational systems</li>
+    <li>Practical large-scale studies of user experience</li>
+    <li>Personalized content ranking and presentation</li>
+    <li>ML for personalized search and recommendations</li>
+    <li>Social recommender systems and personalization for the social Web</li>
+    <li>Psychology-informed user models and recommender systems</li>
+    <li>Metrics for user behavior and evaluating success</li>
+    <li>Fairness-aware retrieval and ranking</li>
+    <li>Explainable and interpretable methods for personalization</li>
+    <li>Accountability, Transparency, and Ethics for personalization</li>
+    <li>User privacy protection in personalized systems</li>
+    <li>Studies of user behavior, including longitudinal effects of personalized systems</li>
+    <li>Large Language Models (LLM) for user modeling and recommendation</li>
+    <li>Attacks and countermeasures in recommendation systems</li>
+    <li>Federated recommendation systems and personalization</li>
+    <li>On-Device user modeling, personalization, and recommendation</li>
+    <li>User modeling for targeted and personalized online advertising</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Michael Ekstrand (Drexel University)</li>
+    <li>Alan Said (University of Gothenburg)</li>
+    <li>Sherry Sahebi (University at Albany)</li>
+  </ul>
+</div>
+
+<!-- Track 10 -->
+<button class="accordion">Web mining and content analysis</button>
+<div class="panel">
+  <p>This track welcomes submissions of original and high-quality research papers related to the extraction of information from the Web and the analysis and mining of Web content.</p>
+
+  </br>
+  <p>The relevant topics include, but are not limited to:</p>
+  <ul>
+    <li>Web data integration and cleaning</li>
+    <li>Web data generation and simulation</li>
+    <li>Web data visualization</li>
+    <li>Large pretrained models with web data</li>
+    <li>Machine learning and data science for the Web</li>
+    <li>Robustness and generalizability of Web mining methods</li>
+    <li>Normalization, clustering, classification, and summarization of Web text</li>
+    <li>Topic discovery and tracking</li>
+    <li>Community question answering</li>
+    <li>Sentiment analysis and opinion mining</li>
+    <li>Content-based information diffusion</li>
+    <li>Mining multimedia, multimodal, multilingual, cross-lingual Web data</li>
+    <li>Bridging structured and unstructured data</li>
+    <li>Web traffic and log analysis</li>
+    <li>Web measurements</li>
+    <li>Models for Web evolution</li>
+    <li>Interdisciplinary science discovery with web data mining</li>
+    <li>Web data provenance, reliability, and authenticity</li>
+    <li>Web data quality in the era of algorithmically-generated content</li>
+  </ul>
+
+  <p>Track Chairs:</p>
+  <ul>
+    <li>Hui Liu (Michigan State University)</li>
+    <li>Edgar Meij (Bloomberg)</li>
+  </ul>
+</div>
+
+<script>
+const acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    panel.style.display = (panel.style.display === "block") ? "none" : "block";
+  });
+}
+</script>
+</div>
       </br>
         <h2>Submission Guidelines</h2>
         <p>
