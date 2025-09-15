@@ -15,25 +15,26 @@
   </head>
   <style>
     /* 默认标题样式 */
-.hero h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  text-align: center;
-  word-wrap: break-word;
-}
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      text-align: center;
+      word-wrap: break-word;
+    }
 
-/* 针对小屏横屏优化 */
-@media (max-width: 900px) and (orientation: landscape) {
-  .hero h1 {
-    font-size: 2rem;       /* 字体缩小 */
-    line-height: 1.3;      /* 增加行高，留呼吸空间 */
-    padding: 0 10px;       /* 两边加点内边距，避免挤边 */
-  }
+    /* 针对小屏横屏优化 */
+    @media (max-width: 900px) and (orientation: landscape) {
+      .hero h1 {
+        font-size: 2rem; /* 字体缩小 */
+        line-height: 1.3; /* 增加行高，留呼吸空间 */
+        padding: 0 10px; /* 两边加点内边距，避免挤边 */
+      }
 
-  .hero h2, .hero p {
-    font-size: 1rem;       /* 副标题和日期也跟着小一点 */
-  }
-}
+      .hero h2,
+      .hero p {
+        font-size: 1rem; /* 副标题和日期也跟着小一点 */
+      }
+    }
     .conf-title {
       white-space: nowrap; /* default desktop */
     }
@@ -49,6 +50,28 @@
     <div id="header-placeholder"></div>
 
     <section class="hero">
+      <div class="hero-carousel">
+        <div
+          class="hero-slide"
+          style="background-image: url('images/dubai1.jpg')"
+        ></div>
+        <div
+          class="hero-slide"
+          style="background-image: url('images/dubai2.jpg')"
+        ></div>
+        <div
+          class="hero-slide"
+          style="background-image: url('images/dubai3.jpg')"
+        ></div>
+        <div
+          class="hero-slide"
+          style="background-image: url('images/dubai4.jpg')"
+        ></div>
+        <div
+          class="hero-slide"
+          style="background-image: url('images/dubai5.jpg')"
+        ></div>
+      </div>
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="conf-title">THE ACM WEB CONFERENCE 2026</h1>
@@ -98,8 +121,40 @@
             </div>
         </div>
     </section> -->
+    <section class="venue-scrapbook">
+      <div class="container">
+        <div class="venue-scrapbook-content">
+          <!-- Text on the left -->
+          <div class="venue-text">
+            <h2>Venue</h2>
+            <p>
+              The Web Conference 2026 will be held in Dubai, UAE, a city
+              renowned for its innovation, luxury, and iconic skyline. Connect
+              with the global tech community in a vibrant and inspiring setting.
+            </p>
+            <p>
+              Expect world-class facilities and easy access to international
+              flights via Dubai International Airport (DXB).
+            </p>
+          </div>
 
-    <section class="venue">
+          <!-- Polaroid Images on the right -->
+          <div class="venue-images">
+            <div class="polaroid" style="--rotate: -5deg">
+              <img src="images/scrapbook1.jpg" alt="Dubai Marina view" />
+            </div>
+            <div class="polaroid" style="--rotate: 3deg">
+              <img src="images/scrapbook2.jpg" alt="Burj Khalifa at sunset" />
+            </div>
+            <div class="polaroid" style="--rotate: -2deg">
+              <img src="images/scrapbook3.jpg" alt="Downtown Dubai aerial" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="venue">
       <div class="container">
         <h2>Venue</h2>
         <div class="venue-content">
@@ -131,7 +186,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <footer>
       <div class="footer-container">
@@ -189,6 +244,24 @@
         const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
         const tabMenuContainer = document.querySelector(".tab-menu-container");
 
+        const polaroids = document.querySelectorAll(".polaroid");
+
+        function isInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return rect.top < window.innerHeight - 100; // trigger 100px before visible
+        }
+
+        function scrollAnimation() {
+          polaroids.forEach((p) => {
+            if (isInViewport(p)) {
+              p.classList.add("visible");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", scrollAnimation);
+        scrollAnimation(); // initial check
+
         if (mobileMenuToggle) {
           mobileMenuToggle.addEventListener("click", function () {
             tabMenuContainer.classList.toggle("active");
@@ -210,6 +283,26 @@
             });
           });
         }
+        const slides = document.querySelectorAll(".hero-slide");
+        let currentIndex = 0;
+        const slideInterval = 5000; // 5 seconds per slide
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+          });
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+        }
+
+        // Initialize first slide
+        showSlide(currentIndex);
+
+        // Auto-rotate slides
+        setInterval(nextSlide, slideInterval);
       });
     </script>
 

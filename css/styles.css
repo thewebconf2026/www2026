@@ -77,10 +77,44 @@ img {
 }
 
 /* Header styles are now handled by header-layout.css */
+/* Carousel container fills hero */
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Individual slides */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Show the active slide */
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Keep hero content on top */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
 
 /* Hero Section */
 .hero {
-    background-image: url('../images/dubai-hero-sunset.jpg');
+    /* background-image: url('../images/dubai-hero-sunset.jpg'); */
     background-size: cover;
     background-position: center;
     color: white;
@@ -103,7 +137,7 @@ img {
     width: 100%;
     height: 100%;
     background: var(--purple); /* purple with 40% opacity */
-    opacity: 0.35;
+    opacity: 0.35; z-index: 0;
 }
 
 .hero-content {
@@ -341,6 +375,95 @@ footer {
 .footer-bottom a:hover {
     color: white;
 }
+
+
+
+
+/* Venue Scrapbook Section */
+.venue-scrapbook {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.venue-scrapbook-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.venue-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.venue-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.venue-text p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    flex: 0 0 33.333%; /* 1/3 of row */
+    min-width: 250px;  
+    line-height: 1.6;
+}
+
+/* Polaroid Image Styles */
+.venue-images {
+    /* flex: 1; */
+    display: flex;
+    flex: 0 0 66.666%;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    perspective: 1000px; /* for slight 3D effect */
+}
+
+.polaroid {
+ 
+    padding: 10px 10px 25px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: rotate(var(--rotate));
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.polaroid img {
+    width: 100%;
+       width: 300px; height: 250px;  
+    display: block; object-fit: cover;
+    border-radius: 3px;
+}
+
+/* Animation when scrolled into view */
+.polaroid.visible {
+    opacity: 1;
+    transform: rotate(var(--rotate)) translateY(0);
+}
+
+/* Polaroid hover effect */
+.polaroid:hover {
+    transform: rotate(var(--rotate)) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .venue-scrapbook-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .venue-images {
+        justify-content: center;
+    }
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
