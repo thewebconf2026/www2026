@@ -279,7 +279,7 @@
         "Treasurer",
         "Coordination Chair",
         "Website Chair",
-        "Website Advisor",
+        // "Website Advisor",
         "Proceedings Chair",
         "Sponsorship Chair",
         "Volunteers Chair",
@@ -444,6 +444,13 @@
                 container.appendChild(chairsAdvisorsContainer);
               }
               chairsAdvisorsContainer.appendChild(roleSection);
+          // 添加 Website Advisor 行（只加一次）
+            // const advisorsLine = document.createElement("p");
+            // advisorsLine.id = "advisor-line"; // 防止重复添加
+            // advisorsLine.textContent = "Website Advisor: Abderrahmane Maaradji";
+            // advisorsLine.style.textAlign = "center";
+            // chairsAdvisorsContainer.appendChild(advisorsLine);
+
             } else if (
               role === "Steering Committee Liaison" ||
               role === "Treasurer" ||
