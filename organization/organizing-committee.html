@@ -279,7 +279,7 @@
         "Treasurer",
         "Coordination Chair",
         "Website Chair",
-        // "Website Advisor",
+        "Website Advisor",
         "Proceedings Chair",
         "Sponsorship Chair",
         "Volunteers Chair",
@@ -403,25 +403,21 @@
               const imageExistsLocally = await imageExists(localImagePath);
 
               let photo;
-              if (imageExistsLocally) {
-                photo = localImagePath;
-              } else {
-                photo =
-                  m[
-                    "Add comment in this cell with a link to profile picture  (external link or to file uploaded in subfolder Profile pictures)"
-                  ];
-
-                if (!photo || photo.trim() === "") {
-                  photo = "../images/commitee/dummy.png";
-                } else if (photo.includes("drive.google.com")) {
-                  const match = photo.match(/\/d\/(.*?)\//);
-                  if (match) {
-                    photo = `https://drive.google.com/uc?export=download&id=${match[1]}`;
-                  }
+                if (imageExistsLocally) {
+                  photo = localImagePath;
                 } else {
-                  photo = encodeURI(photo);
+                  // 如果本地没有，就统一用 dummy.png
+                  photo = "../images/commitee/dummy.png";
                 }
-              }
+                // else if (photo.includes("drive.google.com")) {
+                //   const match = photo.match(/\/d\/(.*?)\//);
+                //   if (match) {
+                //     photo = `https://drive.google.com/uc?export=download&id=${match[1]}`;
+                //   }
+                // }
+                //  else {
+                //   photo = encodeURI(photo);
+                // }
 
               card.innerHTML = `
         <img src="${photo}" alt="${m["First name"]} loading="lazy" ${m["Last name"]}" class="committee-photo" onerror="this.src='../images/commitee/dummy.png'">
@@ -444,13 +440,6 @@
                 container.appendChild(chairsAdvisorsContainer);
               }
               chairsAdvisorsContainer.appendChild(roleSection);
-          // 添加 Website Advisor 行（只加一次）
-            // const advisorsLine = document.createElement("p");
-            // advisorsLine.id = "advisor-line"; // 防止重复添加
-            // advisorsLine.textContent = "Website Advisor: Abderrahmane Maaradji";
-            // advisorsLine.style.textAlign = "center";
-            // chairsAdvisorsContainer.appendChild(advisorsLine);
-
             } else if (
               role === "Steering Committee Liaison" ||
               role === "Treasurer" ||
