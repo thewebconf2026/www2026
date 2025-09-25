@@ -286,6 +286,7 @@
         "Volunteers Chair",
         "Student Travel Award Chair",
         "Artfifacts Chair",
+        "Media Chair"   // 新增这一行，过滤掉 Media Chair
       ];
       document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
@@ -469,7 +470,8 @@
                 container.appendChild(coordinationVolArtifact);
               }
               coordinationVolArtifact.appendChild(roleSection);
-            } else {
+            } 
+            else {
               // Append other roles directly to the main container
               container.appendChild(roleSection);
             }
