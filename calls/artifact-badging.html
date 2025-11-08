@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Artifact Badging - The Web Conference 2026</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      a {
+        color: #6a00ff;
+      }
+      a:hover {
+        color: #00e5ff;
+      }
+      .tracks-section {
+        max-width: 900px;
+        margin: 32px auto;
+        padding: 0 20px;
+      }
+      .important-dates h2 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .panel,
+      .content-block {
+        background: transparent;
+      }
+      .call-hero {
+        max-width: 900px;
+        margin: 28px auto;
+        padding: 0 20px;
+      }
+      footer .footer-bottom p {
+        margin: 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <section class="page-content">
+      <div class="container">
+        <div>
+          <h1>Call for Artifact Badging</h1>
+
+          <p>
+            We invite authors of accepted papers in all main tracks (i.e.,
+            <a
+              href="https://www2026.thewebconf.org/calls/research-tracks.html"
+              target="_blank"
+            >
+              the main research tracks</a
+            >, <a
+              href="https://www2026.thewebconf.org/calls/industry.html"
+              target="_blank"
+            >industry, <a
+              href="https://www2026.thewebconf.org/calls/short-papers.html"
+              target="_blank"
+            >short papers</a> and<a
+              href="https://www2026.thewebconf.org/calls/web4good.html"
+              target="_blank"
+            > Web4Good Special track)</a> of The Web
+            Conference to apply for the "Artifacts Available" badge in the ACM
+            Digital Library and on the conference website.
+          </p>
+
+          <p>
+            We would like to encourage sharing, discovery, and reuse of
+            artifacts, such as datasets, ML models, software, and other research
+            outputs associated with conference papers. At this stage, we welcome
+            submissions only from accepted papers. Artifact submissions will
+            undergo a light review and successful submissions will be awarded
+            the “Artifacts Available” badge in the ACM Digital Library.
+          </p>
+
+          <p>
+            If you would like to become an artifact badging reviewer at The Web
+            Conference 2026, or nominate someone else, please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSer8Jj5i0tvZxeCArdclGiqBEZRrN-zdfpTXn2L21n7NuPlTQ/viewform?usp=publish-editor" target="_blank">this form</a>.
+          </p>
+        </div>
+
+        <section class="important-dates">
+          <h2><i class="fas fa-calendar-alt"></i> Important Dates</h2>
+          <ul>
+            <li>
+              <b>Submission deadline:</b> submit your artifacts at the same time
+              as the <b>camera-ready version</b> of your paper.
+            </li>
+            <li><b>Main Proceedings:</b> February 18, 2026</li>
+            <li><b>Companion Proceedings:</b> March 11, 2026</li>
+          </ul>
+
+          <p>
+            <em
+              >All submission deadlines are end-of-day in the
+              <a
+                href="https://www.timeanddate.com/time/zones/aoe"
+                target="_blank"
+                >Anywhere on Earth (AoE)</a
+              >
+              time zone.</em
+            >
+          </p>
+        </section>
+
+        <h2>Scope</h2>
+        <p>
+          We welcome submissions of artifacts used or produced by accepted
+          papers in all tracks of the main or companion proceedings of The Web
+          Conference 2026, excluding workshop papers.
+        </p>
+
+        <h2>Submission Guidelines</h2>
+        <p>
+          You can apply for the “Artifacts Available” badge if you release a new
+          dataset, new code, or a similar artifact associated with your paper.
+          Authors of accepted papers will receive a link to submit their
+          artifacts.
+        </p>
+
+        <p>
+          Your artifact DOI must be included in the camera-ready version of your
+          paper. To insert your DOI, please use the following LaTeX commands
+          before the first section (i.e., Introduction) and after the \maketitle
+          of your LaTeX document:
+        </p>
+
+        <pre><code>\maketitle
+\newcommand\webconfavailabilityurl{https://doi.org/xxxx}
+\ifdefempty{\webconfavailabilityurl}{}{
+\begingroup\small\noindent\raggedright\textbf{Resource Availability:}\\
+% please change the following context to include multiple artifacts if necessary, including data, models, code, etc.
+The source code of this paper has been made publicly available at \url{\webconfavailabilityurl}.
+\endgroup
+}
+</code></pre>
+
+        <p>Additional requirements:</p>
+        <ul>
+          <li>
+            Your paper must include a “Resource availability” statement as
+            indicated above.
+          </li>
+          <li>
+            You must host the artifact(s) in a publicly available, archival
+            repository for research artifacts.
+          </li>
+          <li>
+            The artifact must have unique dereferenceable identifiers, such as a
+            Digital Object Identifier (DOI). Most archival research repositories
+            provide DOIs (e.g., Zenodo, Kaggle, Figshare, DataDryad, etc.).
+          </li>
+          <li>
+            For source code artifacts hosted in GitHub, please follow the
+            approach presented here to obtain a persistent identifier for your
+            repository:
+            <a
+              href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content"
+              target="_blank"
+              >GitHub: Referencing and citing content</a
+            >.
+          </li>
+          <li>
+            Add both the DOI and the source code repository link in the resource
+            availability statement.
+          </li>
+        </ul>
+
+        <h2>Reviewing Process</h2>
+        <p>
+          A conference review committee of volunteers will verify that artifacts
+          are indeed available in a publicly accessible archival repository at
+          the link that you specify. The review is a light verification (not a
+          full reproducibility assessment) focused on confirmatory checks that
+          the artifact exists, is downloadable, and is accompanied by minimal
+          instructions so others can access it.
+        </p>
+
+        <p>
+          If you would like to become an artifact badging reviewer at The Web
+          Conference 2026 or nominate someone else, please complete <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSer8Jj5i0tvZxeCArdclGiqBEZRrN-zdfpTXn2L21n7NuPlTQ/viewform?usp=publish-editor"
+              target="_blank"
+              >this form.</a
+            >.
+        </p>
+        <section class="important-dates">
+        <h2>Artifact Badging Co-Chairs</h2>
+        <a href="https://www.di.fc.ul.pt/~catiapesquita/" target="_blank"
+          >Catia Pesquita </a
+        > (LASIGE, Faculdade de Ciências, Universidade de Lisboa)
+        <br />
+        <a
+          href="https://w3id.org/people/dgarijo"
+          target="_blank"
+          >Daniel Garijo </a
+        >
+         (Universidad Politécnica de Madrid)
+        <br />
+
+       
+
+        <p>
+          <b>Contact:</b>
+          <a href="mailto:artifacts-www2026@acm.org">artifacts-www2026@acm.org</a>
+        </p>
+        </section>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>TheWebConf 2026</h3>
+          <p>April 13-17, 2026</p>
+          <p>Dubai, United Arab Emirates</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../calls.html">Calls</a></li>
+            <li><a href="../program.html">Program</a></li>
+            <li><a href="../attending.html">Attending</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Email: gc-www2026@acm.org</p>
+          <div class="social-media">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Web Conference. All rights reserved.</p>
+        <p>
+          <a href="https://www.acm.org/code-of-ethics" target="_blank"
+            >ACM Code of Ethics</a
+          >
+          |
+          <a
+            href="https://www.acm.org/about-acm/policy-against-harassment"
+            target="_blank"
+            >ACM Policy Against Harassment</a
+          >
+          |
+          <a href="../gdpr.html">GDPR Notice</a>
+        </p>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script>
+      // Add dropdown toggle functionality for mobile
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+        const tabMenu = document.querySelector(".tab-menu");
+
+        if (mobileMenuToggle) {
+          mobileMenuToggle.addEventListener("click", function () {
+            tabMenu.classList.toggle("active");
+          });
+        }
+
+        // For mobile: toggle dropdown on tap
+        if (window.innerWidth <= 768) {
+          const dropdownLinks = document.querySelectorAll(
+            ".tab-menu a.has-dropdown"
+          );
+
+          dropdownLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentNode.classList.toggle("active");
+              }
+            });
+          });
+        }
+      });
+    </script>
+
+    <script src="../js/header-loader.js"></script>
+  </body>
+</html>
