@@ -121,7 +121,7 @@ img {
     text-align: center;
     position: relative;
     /* Instead of fixed padding + min-height */
-    min-height: calc(100vh - var(--header-height));
+    min-height:  calc((100vh - var(--header-height)) / 1.25);
     padding: 0 20px;
 
     display: flex;
