@@ -15,11 +15,56 @@
   </head>
   <style>
     /* 默认标题样式 */
+    :root {
+      --card-bg: #f3f4f6; /* light gray */
+      --card-border: rgba(0, 0, 0, 0.06);
+      --card-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      --radius: 12px;
+      /* --max-width: 720px; */
+      --padding: 20px;
+      --accent: #111827;
+      --muted: #6b7280;
+    }
     .hero h1 {
       font-size: 3rem;
       line-height: 1.2;
       text-align: center;
       word-wrap: break-word;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--card-shadow);
+      border-radius: var(--radius);
+      max-width: var(--max-width);
+      width: 100%;
+      padding: var(--padding);
+      box-sizing: border-box;
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      color: var(--accent);
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .card p.lead {
+      margin: 0 0 12px 0;
+      color: var(--muted);
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--accent);
+
+      line-height: 1.5;
+    }
+
+    .card li {
+      margin-bottom: 10px;
     }
 
     /* 针对小屏横屏优化 */
@@ -61,6 +106,32 @@
 
     <section class="welcome">
       <div class="container">
+        <article
+          class="card"
+          style="margin-bottom: 1rem; margin-top: -1rem"
+          role="region"
+          aria-label="Conference update card"
+        >
+          <h3>Conference updates</h3>
+          <p class="lead">Quick summary of the latest calls and selections.</p>
+          <ul>
+            <li>
+              <strong>Main research and industry tracks:</strong> Submissions
+              are now closed and we are pleased to report a significant increase
+              (+63% and + 20%, respectively) as compared to last year.
+            </li>
+            <li>
+              <strong>Competitions:</strong> The Competitions call is now closed
+              with no submission selected for this instance of the Web
+              Conference.
+            </li>
+            <li>
+              <strong>Workshops:</strong> The workshops have been selected, stay
+              tuned for their full list, and information on how to submit, under
+              the Program Menu.
+            </li>
+          </ul>
+        </article>
         <h2 style="font-size: 2rem">Welcome to The Web Conference 2026</h2>
         <p>
           Since its inception in 1989, the World Wide Web has transformed the
