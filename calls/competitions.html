@@ -15,11 +15,31 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <style>
+      :root {
+        --card-bg: #f3f4f6; /* light gray */
+        --card-border: rgba(0, 0, 0, 0.06);
+        --card-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+        --radius: 12px;
+        /* --max-width: 720px; */
+        --padding: 20px;
+        --accent: #111827;
+        --muted: #6b7280;
+      }
       a {
         color: #6a00ff;
       }
       a:hover {
         color: #00e5ff;
+      }
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        box-shadow: var(--card-shadow);
+        border-radius: var(--radius);
+        max-width: var(--max-width);
+        width: 100%;
+        padding: var(--padding);
+        box-sizing: border-box;
       }
     </style>
   </head>
@@ -36,6 +56,20 @@
         </p> -->
 
         <h1>Call for Competitions – The Web Conference 2026</h1>
+        <p></p>
+        <article
+          class="card"
+          style="margin-bottom: 1rem; margin-top: -1rem"
+          role="region"
+          aria-label="Conference update card"
+        >
+          <!-- <p class="lead">Quick summary of the latest calls and selections.</p> -->
+
+          <strong>
+            The Competitions call is now closed with no submission selected for
+            this instance of the Web Conference.</strong
+          >
+        </article>
 
         <p>
           We are excited to announce, for the first time in the Web conference
@@ -81,10 +115,11 @@
             </li>
             <li><b>Proposal notification:</b><s> October 17, 2025</s></li>
             <li>
-              <b>Competition period:</b> October 28, 2025 – January 30, 2026
+              <b>Competition period:</b>
+              <s>October 28, 2025 – January 30, 2026</s>
             </li>
-            <li><b>Notification to winners:</b> February 2, 2026</li>
-            <li><b>Camera-ready submission:</b> February 9, 2026</li>
+            <li><b>Notification to winners:</b><s> February 2, 2026</s></li>
+            <li><b>Camera-ready submission:</b><s> February 9, 2026</s></li>
           </ul>
           <p>
             <em>
