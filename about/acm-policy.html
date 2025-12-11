@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code of Conduct - The Web Conference 2026</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tab-menu.css">
+    <link rel="stylesheet" href="../css/dropdown-menu.css">
+    <link rel="stylesheet" href="../css/header-layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header will be loaded here by JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <section class="page-content">
+        <div class="container">
+            <h1>ACM APC Policy</h1>
+            
+            <div class="content-block">
+                <h3>Important update on ACM's new open access publishing model for 2026 ACM Conferences!</h3>
+
+        <p>Starting January 1, 2026, ACM will fully transition to Open Access. All ACM publications, including those from ACM-sponsored conferences, will be 100% Open Access. Authors will have two primary options for publishing Open Access articles with ACM: the 
+        ACM Open institutional model or by paying 
+        Article Processing Charges (APCs).
+        With over <a href="https://libraries.acm.org/acmopen/open-participants">2,700+ institutions</a> already part of ACM Open with more institutions joining from around the world every week, the majority of ACM-sponsored conference papers will not require APCs from authors or conferences (currently, around 75% on average across all ACM-sponsored conferences).</p>
+        
+        <p>Authors from institutions not participating in ACM Open will need to pay an APC to publish their papers, unless they qualify for a geographic or discretionary financial hardship waiver. 
+        To find out whether an APC applies to your article, please consult the 
+        <a href="https://libraries.acm.org/acmopen/open-participants">list of participating institutions</a> in ACM Open and review the 
+        <a href="https://www.acm.org/publications/policies/policy-on-geographic-apc-waivers-and-discounts">Policy on Geographic APC Waivers and Discounts Policy</a> and the 
+        <a href="https://www.acm.org/publications/policies/policy-on-discretionary-open-access-apc-waivers">Policy on Discretionary APC Waivers</a>. 
+        Keep in mind that discretionary waivers are rare and are granted based on specific criteria set by ACM. Simply sending a message to ACM indicating an inability to pay an APC is typically insufficient justification for such a waiver. Waivers are based on the specific circumstances of the author(s) requesting the waiver. ACM does take seriously into consideration the institutional affiliation of the authors and whether it is a reasonable expectation that their institution should be joining the ACM Open program. This is necessary for the long-term financial sustainability of the ACM Open model.</p>
+        
+        <p>Understanding that this change could present financial challenges, ACM has approved a temporary subsidy for 2026 to ease the transition and allow more time for institutions to join ACM Open. The subsidy will offer:</p>
+        
+        <ul>
+          <li>$250 APC for ACM/SIG members</li>
+          <li>$350 for non-members</li>
+        </ul>
+        
+        <p>This represents a 65% discount off the regular <a href="https://www.acm.org/publications/openaccess#oapricing">APC list prices</a>, funded directly by ACM. Authors are encouraged to help advocate for their institutions to join ACM Open during this transition period. This temporary subsidized pricing will apply to all conferences scheduled for 2026.</p>
+        
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>TheWebConf 2026</h3>
+                <p>April 13-17, 2026</p>
+                <p>Dubai, United Arab Emirates</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../calls.html">Calls</a></li>
+                    <li><a href="../program.html">Program</a></li>
+                    <li><a href="../attending.html">Attending</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>Email: gc-www2026@acm.org</p>
+                <div class="social-media">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Web Conference. All rights reserved.</p>
+            <p>
+                <a href="https://www.acm.org/code-of-ethics" target="_blank">ACM Code of Ethics</a> | 
+                <a href="https://www.acm.org/about-acm/policy-against-harassment" target="_blank">ACM Policy Against Harassment</a> | 
+                <a href="../gdpr.html">GDPR Notice</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Add dropdown toggle functionality for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const tabMenu = document.querySelector('.tab-menu');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    tabMenu.classList.toggle('active');
+                });
+            }
+            
+            // For mobile: toggle dropdown on tap
+            if (window.innerWidth <= 768) {
+                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
+                
+                dropdownLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            this.parentNode.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+    <script src="../js/header-loader.js"></script>
+</body>
+</html>
