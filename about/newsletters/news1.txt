@@ -42,5 +42,42 @@ The General Chairs<br>
 Hakim Hacid (TII, UAE) and Yoelle Maarek (TII, Israel)
 
 
+# Newsletter #2 - Venue Revealed and Important Updates
+
+## Conference Venue
+The conference venue has been confirmed as the InterContinental Dubai Festival City. The location is highly accessible and situated near the waterfront, with several hotels in close proximity. Additional details regarding the venue and accommodation options will be published on the conference website shortly.
 
 
+## Visa Information
+Obtaining a visa for the UAE is generally straightforward for most countries. Detailed and up-to-date information on UAE visa requirements will be made available on the conference website soon.
+
+
+## ACM Open Access and APC Transition
+The conference is transitioning to the ACM Open Access publishing model  
+(see https://www2026.thewebconf.org/about/acm-policy.html). Under this model, authors are required to pay an Article Processing Charge (APC) for each published paper if none of the authors’ institutions are enrolled in the ACM Open program. The current APC is USD 250 for ACM members and USD 350 for non-ACM members. Papers for which the APC is not paid will not be included in the ACM Digital Library.
+
+
+## Keynote Speakers
+We are pleased to announce that two keynote speakers have been confirmed:  
+Dr Mounia Lalmas (Head of Tech Research & Personalization at Spotify) and Prof Katrina Ligett (Professor of Computer Science and Director of the Federmann Center for the Study of Rationality at The Hebrew University of Jerusalem).
+
+
+## Main Tracks Status
+Submissions are now closed, and we are pleased to report a substantial increase in submissions compared to last year (+63% in Research Tracks, and +20% in the Industrial Track). The review process is nearing completion.
+
+
+## Workshops, Tutorials, and Demonstrations
+- 23 workshops have been accepted this year: 14 new workshops and 9 returning workshops  
+  (see https://www2026.thewebconf.org/accepted/workshops.html)
+- 16 highly engaging tutorials have been accepted  
+  (see https://www2026.thewebconf.org/accepted/tutorials.html)
+- 82 demonstrations have been accepted
+
+
+We look forward to welcoming you to Dubai next April.
+
+
+The General Chairs
+
+
+Hakim Hacid (TII, UAE) and Yoelle Maarek (TII, Israel)
