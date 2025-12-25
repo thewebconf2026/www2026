@@ -1,119 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - The Web Conference 2026</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/tab-menu.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venue Information - The Web Conference 2026</title>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-        
-        .coming-soon-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
-        }
+      /* Override highlight colors - only links should be purple */
+      a {
+        color: #6a00ff;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        margin: 40px 0;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .venue-image {
+        /* text-align: center; */
+        border-radius: 0 !important;
+        /* overflow: visible !important; */
+        margin-bottom: 0px !important;
+        background-color: transparent !important;
+      }
+      .venue-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0px;
+        display: block;
+      }
+      a:hover {
+        color: #00e5ff;
+      }
+      .container-full {
+        display: flex; /* Enables flexbox layout for children */
+        width: 100%; /* Ensures the container spans the full width */
+      }
+
+      .left-half {
+        flex: 1; /* Distributes available space equally */
+        /* padding: 20px; */
+        /* Example background color */
+      }
+
+      .right-half {
+        flex: 1; /* Distributes available space equally */
+        padding: 20px;
+        border-radius: 0 !important;
+        overflow: visible !important;
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>Venue Information</h1>
-            
-            <div class="coming-soon-container">
-                <h2>Coming Soon</h2>
-                <p>This page is currently under development. Content for Venue Information will be available soon.</p>
-                <p>Please check back later for updates.</p>
+      <div class="container">
+        <h1>Venue Information</h1>
+
+        <div class="container-full">
+          <div class="left-half">
+            <h2>Conference Venue</h2>
+            <p>
+              Conference activities will be held in
+              <a
+                href="https://www.dubaifestivalcity.com/about-us/"
+                target="_blank"
+                >Dubai Festival City</a
+              >, a large, self-contained waterfront community on Dubai Creek
+              featuring the major Dubai Festival City Mall, luxury hotels, Golf
+              Club, entertainment, and waterfront dining.
+            </p>
+
+            <h3>InterContinental Dubai Festival City</h3>
+            <p>
+              <b>Address:</b> Al Kheeran – Dubai Festival City – Dubai – United
+              Arab Emirates<br />
+              <b>Phone:</b> +971 4 701 1111
+            </p>
+
+            <p>
+              The conference will take place at the
+              <a
+                href="https://www.ihg.com/intercontinental/hotels/gb/en/dubai/dxbhb/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-AE-_-DXBHB"
+                target="_blank"
+                >InterContinental Dubai Festival City by IHG</a
+              >, a major international conference hotel located along Dubai
+              Creek. The venue offers modern conference infrastructure,
+              including large plenary spaces, multiple breakout rooms, and full
+              audiovisual support, and has extensive experience hosting large
+              academic and industrial events. The hotel and conference center is
+              part of<b> Dubai Festival City</b>, a mixed-use district that
+              includes hotels, restaurants, and shopping areas within walking
+              distance. It is located approximately 10 minutes from Dubai
+              International Airport and is easily accessible by car and taxi
+              from all parts of the city.
+            </p>
+          </div>
+          <div class="right-half">
+            <div class="venue-image">
+              <img
+                src="./venue_image.webp"
+                alt="InterContinental Dubai Festival City"
+                style="border-radius: 0% !important"
+              />
             </div>
+          </div>
         </div>
+
+        <div class="container-full">
+          <div class="left-half">
+            <!-- Content for the left side goes here -->
+            <h2>About Dubai</h2>
+            <p>
+              Dubai is a major international city strategically located on the
+              southeastern coast of the Arabian Peninsula, along the Arabian
+              Gulf. Its geographic position at the crossroads of Europe, Asia,
+              and Africa makes it a natural global meeting point. Dubai
+              International Airport is among the world’s busiest, offering
+              direct connections to most major cities worldwide and enabling
+              convenient travel for international conference participants.
+            </p>
+
+            <p>
+              The city combines a rich cultural heritage with modern urban
+              development and world-class infrastructure. Alongside historic
+              districts, museums, and traditional markets, Dubai features
+              contemporary architecture, waterfront areas, and a diverse
+              culinary scene. Its safety, accessibility, and mature hospitality
+              ecosystem make it a practical and welcoming destination for large
+              international academic and professional conferences.
+            </p>
+          </div>
+          <div class="right-half">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/VE75g0frvr4"
+                title="Venue Overview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>TheWebConf 2026</h3>
-                <p>April 13-17, 2026</p>
-                <p>Dubai, United Arab Emirates</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../calls.html">Calls</a></li>
-                    <li><a href="../program.html">Program</a></li>
-                    <li><a href="../attending.html">Attending</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p>Email: gc-www2026@acm.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Web Conference. All rights reserved.</p>
-            <p>
-                <a href="https://www.acm.org/code-of-ethics" target="_blank">ACM Code of Ethics</a> | 
-                <a href="https://www.acm.org/about-acm/policy-against-harassment" target="_blank">ACM Policy Against Harassment</a> | 
-                <a href="../gdpr.html">GDPR Notice</a>
-            </p>
-        </div>
-    </footer>
-
-    <script src="../js/main.js"></script>
-    <script>
-        // Add dropdown toggle functionality for mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const tabMenu = document.querySelector('.tab-menu');
-            
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    tabMenu.classList.toggle('active');
-                });
-            }
-            
-            // For mobile: toggle dropdown on tap
-            if (window.innerWidth <= 768) {
-                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
-                
-                dropdownLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            this.parentNode.classList.toggle('active');
-                        }
-                    });
-                });
-            }
-        });
-    </script>
+    <!-- Footer will be loaded here by JavaScript -->
+    <div id="footer-placeholder"></div>
 
     <script src="../js/header-loader.js"></script>
-</body>
+    <script src="../js/footer-loader.js"></script>
+  </body>
 </html>
