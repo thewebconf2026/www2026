@@ -1,0 +1,1200 @@
+id ,Track,Title,Authors
+rfp0110,"Economics, Online Markets and Human Computation",Opinion Dynamics with Multiple Adversaries,Akhil Jalan and Marios Papachristou
+rfp0366,"Economics, Online Markets and Human Computation",Auto-bidding under Return-on-Spend Constraints with Uncertainty Quantification,"Jiale Han, Chun Gan, Chengcheng Zhang, Jie He, Zhangang
+Lin, Ching Law and Xiaowu Dai"
+rfp0434,"Economics, Online Markets and Human Computation",Deterring A Small Collusion is All You Need,Yotam Gafni
+rfp0507,"Economics, Online Markets and Human Computation",DARA: Few-shot Budget Allocation in Online Advertising via In-Context Decision Making with RL-Finetuned LLMs,"Mingxuan Song, Yusen Huo, Bohan Zhou, Shenglin Yin, Zhen
+Xiao, Jieyi Long, Zhilin Zhang and Chuan Yu"
+rfp0730,"Economics, Online Markets and Human Computation",The Power of Penalties: Negativity-Aware Incentives for High-Quality Crowdsourced Data Labeling,"Kai Wang, Runze Wu, Yu Xiong, Haifeng Sun, Anran Li,
+Shaojie Tang, Changjie Fan and Xiang-Yang Li"
+rfp0822,"Economics, Online Markets and Human Computation",Analysis of CEX-DEX Arbitrage Opportunities with Hidden Markov Models,Bence Ladóczki
+rfp0939,"Economics, Online Markets and Human Computation",LBM: Hierarchical Large Auto-Bidding Model via Reasoning and Acting,"Yewen Li, Zhiyi Lyu, Peng Jiang, Qingpeng Cai, Fei Pan, Bo
+An and Peng Jiang"
+rfp1107,"Economics, Online Markets and Human Computation",Platform Competition in the Autobidding World,"Gagan Aggarwal, Andres Perlroth, Ariel Schvartzman Cohenca
+and Mingfei Zhao"
+rfp1225,"Economics, Online Markets and Human Computation",PMIScore: An Unsupervised Approach to Quantify Dialogue Engagement,"Yongkang Guo, Yuqing Kong and Zhihuan Huang"
+rfp1229,"Economics, Online Markets and Human Computation",LiquidityPool: Game-Theoretic Analysis of Stakeholder Revenue in Ranking-Dependent DeFi,"Qinde Chen, Huawei Huang and Jian Zheng"
+rfp1286,"Economics, Online Markets and Human Computation",Aggregating Information and Preferences under Different Coordination Ability,"Qishen Han, Grant Schoenebeck, Biaoshuai Tao and Lirong Xia"
+rfp1311,"Economics, Online Markets and Human Computation",The Art of Two-Round Voting,"Qishen Han, Grant Schoenebeck, Biaoshuai Tao and Lirong Xia"
+rfp1455,"Economics, Online Markets and Human Computation","Allocating Chores with Restricted Additive Costs: Achieving EFX, MMS, and Efficiency Simultaneously","Zehan Lin, Xiaowei Wu and Shengwei Zhou"
+rfp1474,"Economics, Online Markets and Human Computation",All-but-one MMS Allocation for Chores,"Jiawei Qiu, Xiaowei Wu, Cong Zhang and Shengwei Zhou"
+rfp1495,"Economics, Online Markets and Human Computation",Strategic Content Creation with GenAI: To Share or Not to Share?,Gur Keinan and Omer Ben-Porat
+rfp1558,"Economics, Online Markets and Human Computation",AHBid: An Adaptable Hierarchical Bidding Framework for Cross-Channel Advertising,"Xinxin Yang, Yangyang Tang, Yikun Zhou, Yaolei Liu, Yun Li
+and Bo Yang"
+rfp1698,"Economics, Online Markets and Human Computation",Barter Exchange with Asymmetric Item Valuations,"Juan Luque, Sharmila Duppala, Michael Curry, John Dickerson
+and Aravind Srinivasan"
+rfp1825,"Economics, Online Markets and Human Computation",Online Rounding and Pricing Schemes for k-Rental Problems,"Hossein Nekouyan, Bo Sun, Raouf Boutaba and Xiaoqi Tan"
+rfp1841,"Economics, Online Markets and Human Computation",Online Advertising with Spatial Interactions,"Gagan Aggarwal, Yifan Wang and Mingfei Zhao"
+rfp1865,"Economics, Online Markets and Human Computation",Automated Deterministic Auction Design with Objective Decomposition,"Zhijian Duan, Haoran Sun, Yichong Xia, Siqiang Wang, Zhilin
+Zhang, Chuan Yu, Jian Xu and Xiaotie Deng"
+rfp2135,"Economics, Online Markets and Human Computation",The Query Complexity of Uniform Pricing,"Houshuang Chen, Yaonan Jin, Pinyan Lu and Chihao Zhang"
+rfp2292,"Economics, Online Markets and Human Computation",Pay for The Second-Best Service: A Game-Theoretic Approach against Dishonest LLM Providers,"Yuhan Cao, Yu Wang, Sitong Liu, Miao Li, Yixin Tao and
+Tianxing He"
+rfp2506,"Economics, Online Markets and Human Computation",Position Auctions in AI-Generated Content,"Santiago Balseiro, Kshipra Bhawalkar, Yuan Deng, Zhe Feng,
+Jieming Mao, Aranyak Mehta, Vahab Mirrokni, Renato Paes
+Leme, Di Wang and Song Zuo"
+rfp2508,"Economics, Online Markets and Human Computation",Determinants and Effects of Buy Box Suppression on Amazon,"Jeffrey Gleason, Shuo Zhang and Christo Wilson"
+rfp2518,"Economics, Online Markets and Human Computation",How to Strategize Human Content Creation in the Era of GenAI?,"Seyed Esmaeili, Kevin Lim, Kshipra Bhawalkar, Zhe Feng, Di
+Wang and Haifeng Xu"
+rfp2539,"Economics, Online Markets and Human Computation",Additively Competitive Secretaries,"Mohammad Mahdian, Jieming Mao, Enze Sun, Kangning Wang and
+Yifan Wang"
+rfp2547,"Economics, Online Markets and Human Computation",Improving the Price of Anarchy via Predictions in Parallel-Link Networks,"George Christodoulou, Vasilis Christoforidis, Alkmini
+Sgouritsa and Ioannis Vlachos"
+rfp2666,"Economics, Online Markets and Human Computation",The Price of Uncertainty for Social Consensus,Yunzhe Bai and Alec Sun
+rfp2834,"Economics, Online Markets and Human Computation",Marketing Hosting: From Fixed to Endogenous Budgets,"Bingzhe Wang, Tianyu Wang, Qi Qi, Xiaoxuan Deng, Zhilin
+Zhang and Chuan Yu"
+rfp3242,"Economics, Online Markets and Human Computation",Efficient and Fair Allocation on Graphs: From Orientation to Position-Aware Valuations,"Bo Li, Ankang Sun and Shiji Xing"
+rfp3267,"Economics, Online Markets and Human Computation",Data Pricing via Competitive Equilibrium,"Bhaskar Chaudhury, Jugal Garg, Aniket Murhekar and Jiaxin
+Song"
+rfp3426,"Economics, Online Markets and Human Computation",Single-Sample Bilateral Trade with a Broker,"Mohammadtaghi Hajiaghayi, Gary Peng and Suho Shin"
+rfp3609,"Economics, Online Markets and Human Computation",Social Deliberation: Democratic Deliberation Through Unbiased Social Interactions,"Dana Afazeli, Mohamad Latifian and Masoud Seddighin"
+rfp3786,"Economics, Online Markets and Human Computation",Differentially Private Anonymous Bandits for Multi-User Systems,"Mohammad Reza Badri, Hossein Esfandiari, Samira
+Hosseinghorban and Alireza Rezaeimoghadam"
+rfp3842,"Economics, Online Markets and Human Computation",Understanding Strategic Platform Entry and Seller Exploration: A Stackelberg Model,"Garrett Seo, Xintong Wang and David Parkes"
+rfp4490,"Economics, Online Markets and Human Computation",Stochastic Wage Suppression on Gig Platforms and How to Organize Against It,"Ana-Andreea Stoica, Celestine Mendler-Duenner and Moritz
+Hardt"
+rfp0027,Graph Algorithms and Modeling for the Web,Difference-based Sample Selection for Federated Graph Rationalization,Linan Yue and Weibo Gao
+rfp0068,Graph Algorithms and Modeling for the Web,Toward Graph-Tokenizing Large Language Models with Reconstructive Graph Instruction Tuning,"Zhongjian Zhang, Xiao Wang, Mengmei Zhang, Jiarui Tan and
+Chuan Shi"
+rfp0109,Graph Algorithms and Modeling for the Web,Multi-Source Unsupervised Graph Domain Adaptation via Concise Propagation–Transformation Pipeline,"Jiayi Wang, Yi Li, Xin Zheng, Junyang Chen, Yanqing Guo,
+Alan Wee-Chung Liew and Shirui Pan"
+rfp0161,Graph Algorithms and Modeling for the Web,Class-Domain Incremental Learning on Graphs via Disentangled Knowledge Distillation,"Qin Tian, Chen Zhao, Xintao Wu, Dong Li, Minglai Shao,
+Xujiang Zhao and Wenjun Wang"
+rfp0199,Graph Algorithms and Modeling for the Web,Riemannian Liquid Spatio-Temporal Graph Network,"Liangsi Lu, Jingchao Wang, Zhaorong Dai, Hanqian Liu and
+Yang Shi"
+rfp0207,Graph Algorithms and Modeling for the Web,Topology-Aware Feature Sorting Enables Universal Modeling on Homophilic and Heterophilic Graphs,"Yi Wang, Jitao Zhao, Dongxiao He, Jia Li, Yuxiao Huang and
+Zhiyong Feng"
+rfp0296,Graph Algorithms and Modeling for the Web,Exploring Sequential Dynamics on Temporal Graphs via Composite Filtering,"Yuanyuan Xu, Danni Wu, Xuemin Lin, Dong Wen, Wenjie Zhang,
+Lei Chen and Ying Zhang"
+rfp0318,Graph Algorithms and Modeling for the Web,Diffusion-based Kriging Model with Graph-enhanced Attention,"Mingtao Zhang, Guoli Yang, Zhanxing Zhu, Guangyin Jin,
+Mengzhu Wang and Xiaoying Bai"
+rfp0362,Graph Algorithms and Modeling for the Web,Graph Retention Networks for Dynamic Graphs,"Qian Chang, Xia Li, Xiufeng Cheng, Runsong Jia, Jinqing
+Yang, Guoping Hu and Ciprian Doru Giurcaneanu"
+rfp0364,Graph Algorithms and Modeling for the Web,A Graph Foundation Model for Unified Anomaly Detection,"Renda Han, Xiaobao Wang, Luzhi Wang, Wenxin Zhang,
+Guangzhen Yao and Hongxiang Liang"
+rfp0382,Graph Algorithms and Modeling for the Web,Maximum Edge-based Quasi-Clique: Novel Iterative Frameworks,"Hongbo Xia, Shengxin Liu and Zhaoquan Gu"
+rfp0383,Graph Algorithms and Modeling for the Web,Beyond Single-Granularity Prompts: A Multi-Scale Chain-of-Thought Prompt Learning for Graph,"Ziyu Zheng, Yaming Yang, Ziyu Guan, Wei Zhao, Xinyan Huang
+and Weigang Lu"
+rfp0389,Graph Algorithms and Modeling for the Web,Scalable and Provable Biclique-Preserving Clustering: The Power of Counting-based Approaches,"Longlong Lin, Zeli Wang, Rong-Hua Li, Xiaohai Dai, Li Ni
+and Jin Zhao"
+rfp0409,Graph Algorithms and Modeling for the Web,Graph Diffusion Evolution Model for Multi-Conditional Molecular Generation,"Xingcheng Fu, Lingyun Liu, Yisen Gao, Tianyu Chen, Qingyun
+Sun, Jianxin Li and Xianxian Li"
+rfp0413,Graph Algorithms and Modeling for the Web,Multi-Source Information Driven Spatio-Temporal Hypergraph Learning for Traffic Forecasting,"Ping Zhang, Jiayu Leng, Liang Yang, Anchen Li, Xiaochun Cao
+and Riting Xia"
+rfp0432,Graph Algorithms and Modeling for the Web,Riemannian Graph Tokenizer for Structural Knowledge Transfer,"Qimin Zhou, Haibo Liu, Yujie Wang, Li Sun and Chuan Shi"
+rfp0446,Graph Algorithms and Modeling for the Web,Integrated Mixture of Neighborhood and Community Experts for Graph-Based Fraud Detection,"Zhizhi Yu, Di Jin, Dongxiao He, Wenhuan Lu and Jianguo Wei"
+rfp0498,Graph Algorithms and Modeling for the Web,LEDA: Latent Semantic Distribution Alignment for Multi-domain Graph Pre-training,"Lianze Shan, Jitao Zhao, Dongxiao He, Siqi Liu, Jiaxu Cui
+and Weixiong Zhang"
+rfp0571,Graph Algorithms and Modeling for the Web,RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation,"Haonan Yuan, Qingyun Sun, Jiacheng Tao, Xingcheng Fu and
+Jianxin Li"
+rfp0608,Graph Algorithms and Modeling for the Web,SGExplainer: Balanced Path-based Signed Graph Neural Network Explanation for Link Sign Prediction,"Jie Gao, Jia Hu, Geyong Min and Fei Hao"
+rfp0647,Graph Algorithms and Modeling for the Web,FeedGuard: Online Critic-Guided Reinforcement Learning with Privacy-Preserving Feedback for Recommendation,"Mengying Zhu, Feiyue Chen, Lifan Jiang, Mengyuan Yang,
+Yangyang Wu, Guanjie Cheng and Xiaolin Zheng"
+rfp0664,Graph Algorithms and Modeling for the Web,"HomeRun: Performing Curveball Trades quasi in Streaming for Fast Null Modeling of Graphs, Hypergraphs, and Binary Matrices",Michelle Contreras-Catalan and Matteo Riondato
+rfp0697,Graph Algorithms and Modeling for the Web,Dir-GD: Directed Graph Distillation,"Ce Yang, Fei Hao, Jie Gao, Jianrui Chen, Jia Hu and Geyong
+Min"
+rfp0698,Graph Algorithms and Modeling for the Web,TAWRMAC: A Novel Dynamic Graph Representation Learning Method,"Soheila Farokhi, Xiaojun Qi and Hamid Karimi"
+rfp0734,Graph Algorithms and Modeling for the Web,Graph Neural Network Model Transferability Estimation via Decomposition-Augmented Discriminant Analysis,"Huanchang Ma, Xin Zheng, Jianyu Li, Alan Wee-Chung Liew,
+Wei Lan and Jian Gao"
+rfp0797,Graph Algorithms and Modeling for the Web,negMIX: Negative Mixup for OOD Generalization in Open-Set Node Classification,"Junwei Gong, Xiao Shen, Zhihao Chen, Shirui Pan, Xiao Wang
+and Xi Zhou"
+rfp0832,Graph Algorithms and Modeling for the Web,UTAG: Leveraging LLM as a Unified Embedding Generator for Text-Attributed Graphs,"Mingqian Ding, Jianjun Li, Zhiyuan Ma, Liwei Zhang and
+Wenqi Yang"
+rfp0851,Graph Algorithms and Modeling for the Web,Mitigating Dynamic Graph Distribution Shifts via Mixture of Variational Experts,"Qianyu Song, Chao Li, Yeyu Yan, Hui Zhou, Zhongying Zhao
+and Qingtian Zeng"
+rfp0905,Graph Algorithms and Modeling for the Web,STG-DGR: Fraud Detection on Streaming Transaction Graphs with Diffusion-based Generative Replay,"Rui Ou, Kun Zhu, Nana Zhang, Jiangtong Li, Chaochao Chen
+and Changjun Jiang"
+rfp0950,Graph Algorithms and Modeling for the Web,Text-attributed Graph Condensation via Text Selection and Attribute Matching,"Haowei Han, Yuxiang Wang, Guojia Wan, Hao Wang, Shanshan
+Feng, Hao Huang, Jiawei Jiang and Xiao Yan"
+rfp0968,Graph Algorithms and Modeling for the Web,Practical Group Steiner Tree Algorithms for Web Applications with Many Groups,"Qicheng Shan, Yuxuan Yang and Gong Cheng"
+rfp1006,Graph Algorithms and Modeling for the Web,Unsupervised Subgraph Anomaly Detection based on Pattern Collaboration,"Sun Jiayang, Liu Shenghao, Deng Xianjun, Xiang Wei, Luo
+Meng, Zhang Qiankun and Zheng Dandan"
+rfp1058,Graph Algorithms and Modeling for the Web,GraphTARIF: Linear Graph Transformer with Augmented Rank and Improved Focus,"Zhaolin Hu, Kun Li, Hehe Fan and Yi Yang"
+rfp1097,Graph Algorithms and Modeling for the Web,VSAL: A Vision Solver with Adaptive Layouts for Graph Property Detection,Jiahao Xie and Guangmo Tong
+rfp1142,Graph Algorithms and Modeling for the Web,Towards Graph Foundation Model: Node Feature Transfer Invariant Modeling on General Graphs,"Jitao Zhao, Yi Wang, Yawen Li, Dongxiao He, Di Jin, Zhiyong
+Feng and Weixiong Zhang"
+rfp1182,Graph Algorithms and Modeling for the Web,Sustained Vertex Cover on Temporal Graphs,"Junqiang Peng, Tian Bai, Jingyang Zhao and Mingyu Xiao"
+rfp1187,Graph Algorithms and Modeling for the Web,Dual-level Reweighting for Positive-Unlabeled Graph Classification,"Junghun Kim, Shihyung Park and U Kang"
+rfp1255,Graph Algorithms and Modeling for the Web,A Unified Graph Clustering Network,"Renda Han, Xiaobao Wang, Longbiao Wang, Wenxin Zhang,
+Ronghao Fu, Kaiming Wang, Zeyu Zhang and Kuntharrgyal Khysru"
+rfp1264,Graph Algorithms and Modeling for the Web,DP-DGAD: A Generalist Dynamic Graph Anomaly Detector with Dynamic Prototypes,"Jialun Zheng, Jie Liu, Jiannong Cao, Xiao Wang, Hanchen
+Yang and Yankai Chen"
+rfp1287,Graph Algorithms and Modeling for the Web,E$^2$SGNN: Reconciling Expression and Efficiency in Spiking Graph Neural Network,"Han Zhao, Xu Yang, Cheng Deng and Fan Liu"
+rfp1342,Graph Algorithms and Modeling for the Web,Anomaly Detection of Interaction Behaviors in Streaming Graphs,"Shuai Ren, Fan Zhang, Bolin Wang, Xiang Zhao and Zhihong
+Tian"
+rfp1354,Graph Algorithms and Modeling for the Web,Graph-to-Tree: Topological Decomposition for Self-Supervised Learning,"Yejiang Wang, Yuhai Zhao, Fangting Li, Jiapu Wang, Meixia
+Wang, Ling Li, Miaomiao Huang, Zhengkui Wang and Shirui Pan"
+rfp1493,Graph Algorithms and Modeling for the Web,Revisiting Graph-Level Anomaly Detection: From Partially to Fully Unsupervised Learning,"Zhenyu Yang, Ge Zhang, Shan Xue, Xiaoxiao Ma, Jian Yang,
+Hao Peng, Amin Beheshti and Jia Wu"
+rfp1538,Graph Algorithms and Modeling for the Web,Network Dismantling via Reverse Dismantling: Static and Dynamic Algorithms,"Jinyu Duan, Sijin Wang, Fan Zhang, Xiang Zhao, Wenjie Zhang
+and Zhihong Tian"
+rfp1571,Graph Algorithms and Modeling for the Web,FedCND: Federated Graph-Level Clustering under Inter-Client Cluster Number Discrepancy,"Junlong Wu, Renda Han, Wenxuan Tu, Jingxin Liu, Haotian
+Wang and Jieren Cheng"
+rfp1574,Graph Algorithms and Modeling for the Web,SCOUT: Structure-Aware Aspect and Anchor-Count Selection for Node Attribute Augmentation via Positional Information,"Dong-Hyuk Seo, Sein Kim, Taeri Kim, Won-Yong Shin and
+Sang-Wook Kim"
+rfp1628,Graph Algorithms and Modeling for the Web,Breaking the Scalability Barrier in Constrained Graph-Based Networked Control via Decision-Focused Learning,"Zhaoxing Yang, Yuchen Guo, Wenlong Li, Guiyun Fan, Haiming
+Jin and Linghe Kong"
+rfp1666,Graph Algorithms and Modeling for the Web,PAGE: Progressive Anomaly Generation Network for Semi-supervised Graph Anomaly Detection,"Ting Guo, Dongyu Pei, Gangzhu Qiao, Kaixuan Yao and Da Wang"
+rfp1672,Graph Algorithms and Modeling for the Web,Invariant Learning on Heterogeneous Graphs via Subgraph Environment Inference,"Yanghui Fu, Yunfei Wang, Hao Zou, Yue He, Haotian Wang,
+Qing Cheng, Guangquan Cheng and Shixuan Liu"
+rfp1689,Graph Algorithms and Modeling for the Web,ScaleGNN: Towards Scalable Graph Neural Networks via Adaptive High-order Neighboring Feature Fusion,"Xiang Li, Jianpeng Qi, Haobing Liu, Yuan Cao, Guoqing Chao,
+Zhongying Zhao, Junyu Dong, Xinwang Liu and Yanwei Yu"
+rfp1737,Graph Algorithms and Modeling for the Web,PIGCN: Physics-Inspired Graph Convolution Networks for Heterogeneous Social Event Detection,"Yongsheng Yu, Congbo Ma, Zitai Qiu, Shan Xue, Jian Yang and
+Jia Wu"
+rfp1806,Graph Algorithms and Modeling for the Web,Weighted Graph Clustering via Scale Contraction and Graph Structure Learning,"Haobing Liu, Yinuo Zhang, Tingting Wang, Ruobing Jiang and
+Yanwei Yu"
+rfp1831,Graph Algorithms and Modeling for the Web,Cross-Type Semantic Alignment for Multi-Type Anomaly Detection in Heterogeneous Graphs,"Di Jin, Xiao Huang, Xiaobao Wang, Fengyu Yan, Luzhi Wang
+and Hongxiang Liang"
+rfp1919,Graph Algorithms and Modeling for the Web,Graph Cross-Domain Continual Fine-Tuning via Orthogonal LoRA Routing with Contrastive Expert Specialization,"Qianyi Cai, Ziyue Qiao, Minghao Yang, Xiao Luo and Hui Xiong"
+rfp2055,Graph Algorithms and Modeling for the Web,Unveiling Backdoor Propagation in Graphs: Neuron-Centric Defense Mechanisms,"Di Jin, Bingdao Feng, Xiaobao Wang, Yuxiang Zhang, Zechuan
+Zhang, Liang Yang, Dongxiao He and Zhen Wang"
+rfp2111,Graph Algorithms and Modeling for the Web,Hierarchical Graph-Bag-Network for Self-Supervised Multi-Graph Learning,"Meixia Wang, Yuhai Zhao, Zhengkui Wang, Fenglong Ma,
+Yejiang Wang, Miaomiao Huang, Fazal Wahab, Wen Shan and
+Xingwei Wang"
+rfp2152,Graph Algorithms and Modeling for the Web,MessageShift: Fine-Grained Data Augmentation for Graph Neural Networks,"Weigang Lu, Zheng Liang, Yaming Yang, Ziyu Zheng, Meng Yan,
+Beilei Ling, Ziyu Guan and Wei Zhao"
+rfp2180,Graph Algorithms and Modeling for the Web,Generalizable Graph-level Anomaly Detection via Prompted Anomaly Expansion and Normality Extraction,"Ge Zhang, Jiapei Chen, Guohao Sun, Xiu Fang, Zhenyu Yang,
+Xixun Lin and Liang Yang"
+rfp2202,Graph Algorithms and Modeling for the Web,From Representation to Clusters: A Contrastive Learning Approach for Attributed Hypergraph Clustering,"Li Ni, Shuaikang Zeng, Lin Mu and Longlong Lin"
+rfp2225,Graph Algorithms and Modeling for the Web,Heterophily-Agnostic Hypergraph Neural Networks with Riemannian Local Exchanger,"Li Sun, Ming Zhang, Wenxin Jin, Zhongtian Sun, Zhenhao
+Huang, Hao Peng, Sen Su and Philip Yu"
+rfp2273,Graph Algorithms and Modeling for the Web,Meta-Learning Driven Few-Shot Knowledge Transfer with Dual-Stage Adaptive Data Replay for Cross-Domain Recommendation,"Yilei Qiu, Fei Xiong, Jun Hu, Shirui Pan and Liang Wang"
+rfp2341,Graph Algorithms and Modeling for the Web,VecFormer: Towards Efficient and Generalizable Graph Transformer with Graph Token Attention,"Jingbo Zhou, Jun Xia, Siyuan Li, Yunfan Liu, Wenjun Wang,
+Yufei Huang, Changxi Chi, Mutian Hong, Zhuoli Ouyang, Shu
+Wang, Zhongqi Wang, Xingyu Wu, Chang Yu and Stan Z. Li"
+rfp2349,Graph Algorithms and Modeling for the Web,Mitigating Homophily Disparity in Graph Anomaly Detection: A Scalable and Adaptive Approach,"Yunhui Liu, Qizhuo Xie, Yinfeng Chen, Xudong Jin, Tao
+Zheng, Bin Chong and Tieke He"
+rfp2351,Graph Algorithms and Modeling for the Web,IVQ-GNN: Mitigating Performance Gaps from Graph Connection Pattern Inconsistency via Vector Quantization,"Di Jin, Yixuan Du, Cuiying Huo, Xiaotong Huang, Ruqiong
+Zhang, Xiaobao Wang and Yawen Li"
+rfp2417,Graph Algorithms and Modeling for the Web,Disentangled Graph LLM for Molecule Graph Editing under Distribution Shifts,"Yang Yao, Xin Wang, Yuan Meng, Zeyang Zhang, Hong Mei and
+Wenwu Zhu"
+rfp2418,Graph Algorithms and Modeling for the Web,KEGOD: Kernel-enhanced Latent Substructure Learning for Graph Out-Of-Distribution Detection,"Yifan Wang, Haodong Zhang, Zhiping Xiao, Yusheng Zhao, Siyu
+Yi, Nan Yin, Xinwang Liu, Ming Zhang and Wei Ju"
+rfp2504,Graph Algorithms and Modeling for the Web,Identification of Influential Node Group in Attributed Graph through Explaining Graph Neural Network,"Xiao Tan, Tongtong Su, Jiayi Wu, Yan Zhang, Binghui Xu,
+Dian Shen, Meng Wang and Beilun Wang"
+rfp2555,Graph Algorithms and Modeling for the Web,AC$^2$L-GAD: Active Counterfactual Contrastive Learning for Graph Anomaly Detection,"Kamal Berahmand, Saman Forouzandeh, Mehrnoush Mohammadi,
+Parham Moradi and Mahdi Jalili"
+rfp2623,Graph Algorithms and Modeling for the Web,Controllable Graph Generation with Diffusion Models via Inference-Time Tree Search Guidance,"Jiachi Zhao, Zehong Wang, Yamei Liao, Chuxu Zhang and
+Yanfang Ye"
+rfp2631,Graph Algorithms and Modeling for the Web,Frequency-Corrupt Based Graph Self-Supervised Learning,"Haojie Li, Mengjiao Zhang, Guanfeng Liu, Qiang Hu, Yan Wang
+and Junwei Du"
+rfp2705,Graph Algorithms and Modeling for the Web,Can LLMs Fool Graph Learning? Exploring Universal Adversarial Attacks on Text-Attributed Graphs,"Zihui Chen, Yuling Wang, Pengfei Jiao, Kai Wu, Xiao Wang,
+Xiang Ao and Dalin Zhang"
+rfp2729,Graph Algorithms and Modeling for the Web,A^2GBD: Attack-Agnostic Graph Backdoor Defense,"Chenxu Du, Yang Liu, Xingtong Yu, Zhuoer Xu, Yang Liu and
+Tianrui Li"
+rfp2752,Graph Algorithms and Modeling for the Web,Multi-view Hierarchical Graph Contrastive Learning based on Asynchronous Asymmetric Structure,"Chuangui Cao, Shifei Ding, Jian Zhang, Lili Guo and Xuan Li"
+rfp2805,Graph Algorithms and Modeling for the Web,Hi-GMAE: Hierarchical Graph Masked Autoencoders,"Chuang Liu, Zelin Yao, Xueqi Ma, Mukun Chen, Luzhi Wang,
+Jia Wu and Wenbin Hu"
+rfp2810,Graph Algorithms and Modeling for the Web,Towards Robust Heterogeneous Graph Explanations under Structural Perturbations,"Yifan Lu, Pengfei Jiao, Xuan Guo, Ziyun Zou, Yiwei Wang,
+Mengzhou Gao, Huaming Wu and Imran Razzak"
+rfp2820,Graph Algorithms and Modeling for the Web,Discrete Diffusion-Based Model-Level Explanation of Heterogeneous GNNs with Node Features,Pallabee Das and Stefan Heindorf
+rfp2848,Graph Algorithms and Modeling for the Web,Long-Tailed Recognition of Evidential Experts for Graph-level Classification,"Wei Ju, Siyu Yi, Zhengyang Mao, Yifang Qin, Yifan Wang,
+Zhiping Xiao, Yiwei Fu, Ziyue Qiao and Ming Zhang"
+rfp2850,Graph Algorithms and Modeling for the Web,SPGCL: Subgraph Pattern-Aware Graph Contrastive Learning for High-Order Structural Representation,"Zhe Zhan, Xiangshi Li, Tingting Wang, Shuo Yu and Henan Lei"
+rfp2911,Graph Algorithms and Modeling for the Web,A Dual-Channel Contrastive Learning Framework for Anomaly Detection in Dynamic Graph Structures,"Runshuo Liu, Chao Li, Zhongying Zhao, Hui Zhou and Qingtian
+Zeng"
+rfp2927,Graph Algorithms and Modeling for the Web,Collaborative Subgraph Learning based Spectrum Sensing under Partial Observations,"Zhaowei Liu, Chang Liu, Dong Yang, Weiqing Yan, Yongchao
+Song and Anzuo Jiang"
+rfp2931,Graph Algorithms and Modeling for the Web,OFA-MAS: One-for-All Multi-Agent System Topology Design based on Mixture-of-Experts Graph Generative Models,"Shiyuan Li, Yixin Liu, Yu Zheng, Mei Li, Quoc Viet Hung
+Nguyen and Shirui Pan"
+rfp2966,Graph Algorithms and Modeling for the Web,LLM-enhanced Federated Graph Learning with Geometry-aware Graph Projection and Shared Subspace Aggregation,"Pengyang Zhou, Zhihao Huang, Jiahe Xu, Wu Wen, Xiaolin
+Zheng, Chaochao Chen and Jianwei Yin"
+rfp2975,Graph Algorithms and Modeling for the Web,SLFM: Semi-Supervised Local Community Detection Based on Hyperbolic Flow Matching,"Haixu Xiong, Li Sun, Yun Xiong, Suyang Zhou, Hongrun Ren
+and Yangyong Zhu"
+rfp3024,Graph Algorithms and Modeling for the Web,Contextual Structure-Enhanced Selective Graph Convolutional Network,"Shifei Ding, Fangchen Li, Lili Guo and Jian Zhang"
+rfp3049,Graph Algorithms and Modeling for the Web,Structure-Semantic Synergized Deep Contrastive Graph Clustering,"Shifei Ding, Zhe Li, Xiao Xu and Chao Li"
+rfp3231,Graph Algorithms and Modeling for the Web,Unifying Graph Out-of-Distribution Generalization and Detection through Spectral Contrastive Invariant learning,"Tianyin Liao, Ge Lan, Rui Chen, Ran Zhang, Zhiming Chen,
+Xiao Wang and Ziwei Zhang"
+rfp3241,Graph Algorithms and Modeling for the Web,GraphRAG-R1: Graph Retrieval-Augmented Generation with Process-Constrained Reinforcement Learning,"Chuanyue Yu, Kuo Zhao, Yuhan Li, Heng Chang, Mingjian Feng,
+Xiangzhe Jiang, Yufei Sun, Jia Li, Yuzhi Zhang, Qingyun
+Sun, Jianxin Li and Ziwei Zhang"
+rfp3251,Graph Algorithms and Modeling for the Web,WPIS: From In-the-Wild Web Images to Physics-Aware 3D Scene Graphs for Physical Reasoning,"Ke Ma, Cong Fu, Jianing Wang, Yifei Wang, Wenyuan Li,
+Xinggang Wang, Meng Wang and Tian Xia"
+rfp3479,Graph Algorithms and Modeling for the Web,Revisiting and Enhancing Graph Neural Networks through the Lens of Amortized Flows,"Minjie Cheng, Bokai Yan, Dixin Luo and Hongteng Xu"
+rfp3499,Graph Algorithms and Modeling for the Web,STELA: Spatiotemporal Forecasting via Graph Learning and Entropy-Guided LLM Adaptation,"Tiantian Huang, Yue Li, Wei Shao, Ziqi Xu, Qipeng Song and
+Hui Li"
+rfp3680,Graph Algorithms and Modeling for the Web,Towards Geometry-Consistent Federated Graph Learning,"Yuecen Wei, Zhiyu Zhuang, Yisen Gao, Xingcheng Fu, Qingyun
+Sun, Ziwei Zhang, Tianyu Wo and Chunming Hu"
+rfp3687,Graph Algorithms and Modeling for the Web,Towards A Universal Graph Structural Encoder,"Jialin Chen, Haolan Zuo, Haoyu Wang, Siqi Miao, Pan Li and
+Rex Ying"
+rfp3807,Graph Algorithms and Modeling for the Web,Stuart-Landau Oscillatory Graph Neural Network,"Kaicheng Zhang, David N Reynolds, Piero Deidda and
+Francesco Tudisco"
+rfp3974,Graph Algorithms and Modeling for the Web,SliceGX: Layer-wise GNN Explanation with Model-slicing,"Cibo Yu, Tingting Zhu, Tingyang Chen, Yinghui Wu, Arijit
+Khan and Xiangyu Ke"
+rfp4136,Graph Algorithms and Modeling for the Web,Rethinking Graph Generalization through the Lens of Sharpness-Aware Minimization,"Yang Qiu, Yixiong Zou and Jun Wang"
+rfp4140,Graph Algorithms and Modeling for the Web,CLGNN: A Contrastive Learning-based GNN for Temporal Betweenness Prediction under Extreme Value Imbalance,"Tianming Zhang, Renbo Zhang, Zhengyi Yang, Yunjun Gao, Bin
+Cao and Jing Fan"
+rfp4167,Graph Algorithms and Modeling for the Web,RARD: Rationale-First Blockwise Autoregressive Diffusion in Rationale‑Dominated Graph Generation,"Xu Fan, Zhang Yijun, Zhang Sibo, Ding Jiaxin, Fu Luoyi and
+Wang Xinbing"
+rfp4209,Graph Algorithms and Modeling for the Web,Space-based Parameter Evolving with Lightweight Optimization for Graph Adaptation to Evolving Shifts,"Junyu Luo, Zixuan Ouyang, Xiao Luo, Hourun Li, Zhiping
+Xiao, Yifan Wang and Ming Zhang"
+rfp4298,Graph Algorithms and Modeling for the Web,Zero-Shot Forecasting of Network Dynamics through Weight Flow Matching,"Shihe Zhou, Ruikun Li, Huandong Wang and Yong Li"
+rfp0672,Responsible Web,Rethinking Implicit Hate Speech Detection: Focusing on Latent Hate Components via Dual-Process Argumentation,"Shiqi Sun, Du Su, Wei Chen and Xueqi Cheng"
+rfp0808,Responsible Web,Does This Button Work? Investigating YouTube's Ineffective User Controls,"Jesse McCrosky, Ranadheer Malla, Aapo Tanskanen and Chico
+Camargo"
+rfp1304,Responsible Web,PIXEL: Adaptive Steering Via Position-wise Injection with eXact Estimated Levels under a Subspace Calibration,"Manjiang Yu, Hongji Li, Priyanka Singh, Xue Li, Di Wang and
+Lijie Hu"
+rfp1310,Responsible Web,Trireme: A Tripartite Regulation Scheme for Diffusion Models,"Hengtong Zhang, Chen Ye and Hongzhi Wang"
+rfp1423,Responsible Web,Doxing-as-a-Service: Demystifying the Chinese Online Doxing Ecosystem,"Yiran Gao, Pengcheng Xia, Liu Wang, Tianming Liu and Haoyu
+Wang"
+rfp1518,Responsible Web,Semi-Supervised Fake News Detection with Mixture of Experts,"Zhenyu Yang, Chaoyu Yang, Wenfeng Xu, Xiuxiu Hao, Huan
+Wang, Ge Zhang, Xiaoxiao Ma and Jun Shen"
+rfp2085,Responsible Web,BiasEdit: A Training-Free Bias-Detect-and-Edit Framework for Learning Fair Visual Classifiers,"Jungwook Seo, Yoonsik Park, Changmin Lee and Sungyong Baik"
+rfp2102,Responsible Web,Users Pay Twice: The Hidden Energy Cost of Web Advertising,"Samuel Pélissier, Naif Mehanna, Sterenn Roux, Quentin
+Perez, Walter Rudametkin, Johann Bourcier and Pierre
+Laperdrix"
+rfp2517,Responsible Web,Question the Questions: Auditing Representation in Online Deliberative Processes,"Soham De, Lodewijk Gelauff, Ashish Goel, Smitha Milli,
+Ariel Procaccia and Alice Siu"
+rfp2540,Responsible Web,From Navigation to Intention: Reframing the Web Experience through Goal-Driven Interfaces,Luca Cordioli and Maristella Matera
+rfp2732,Responsible Web,"Digital Skin, Digital Bias: Uncovering Tone-Based Biases in LLMs and Emoji Embeddings","Mingchen Li, Wajdi Aljedaani, Yingjie Liu, Navyasri Meka,
+Xuan Lu, Xinyue Ye, Junhua Ding and Yunhe Feng"
+rfp3145,Responsible Web,Read as You See: Guiding Unimodal LLMs for Low-Resource Explainable Harmful Meme Detection,"Fengjun Pan, Xiaobao Wu, Tho Quan and Anh Tuan Luu"
+rfp3213,Responsible Web,IConMoE: Modeling Intents of Misinformation using Concept Activation Vector-based Mixture of Experts,Atul Kumar Singh and Rahul Mishra
+rfp3220,Responsible Web,Towards LLM-centric Affective Visual Customization via Efficient and Precise Emotion Manipulating,"Jiamin Luo, Xuqian Gu, Jingjing Wang and Jiahong Lu"
+rfp3275,Responsible Web,BIND: A Bidirectionally Aligned Next-token Denoising Framework for Fast and Lightweight Deobfuscation of Harmful Web Text,Jinwoo Jung and Misuk Kim
+rfp3335,Responsible Web,Robust Fake News Detection using Large Language Models under Adversarial Sentiment Attacks,"Sahar Tahmasebi, Eric Müller-Budack and Ralph Ewerth"
+rfp3362,Responsible Web,MultiFPT: Towards Multi-Attribute Fairness in Pre-Trained Graph Neural Networks via Prompt Tuning,"Meng Cao, Mingcai Chen, Shuangjie Li, Hualei Yu, Shuai Feng
+and Demin Gao"
+rfp3417,Responsible Web,Is Contextual Advertising Safe? Analyzing Systemic Risks with Ads on YouTube,"Asmaa El Fraihi, Ines Abdelaziz and Oana Goga"
+rfp3421,Responsible Web,Be Responsible in Your Answers! Monitoring Out-of-Domain Behaviors in Domain-Specific LLMs,"Boquan Li, Chenzhe Lou, Zhe Ren, Peixin Zhang, Zirui Fu,
+Jun Sun and Yaowen Zheng"
+rfp3519,Responsible Web,D-Models and E-Models: Diversity-Stability Trade-offs in the Sampling Behavior of Large Language Models,"Jia Gu, Liang Pang, Huawei Shen and Xueqi Cheng"
+rfp3561,Responsible Web,Unifying Diversity and Fairness in Re-ranking via Economic Growth Theory,"Zhaofeng Li, Chen Xu, Xinyu Lin, Wenjie Wang and Xiaokui
+Xiao"
+rfp3734,Responsible Web,Emergence of Structural Disparities in the Web of Scientific Citations,"Buddhika Nettasinghe, Nazanin Alipourfard, Vikram
+Krishnamurthy and Kristina Lerman"
+rfp3736,Responsible Web,Dynamics of Human-AI Collective Knowledge on the Web: A Scalable Model and Insights for Sustainable Growth,Buddhika Nettasinghe and Kang Zhao
+rfp3748,Responsible Web,IO-X: Detecting and Attributing Content-Duplicating Influence Operations on X (Twitter),"Ashfaq Ali Shafin, Md Nahid Siddique and Bogdan Carbunar"
+rfp3763,Responsible Web,Causality Guided Representation Learning for Cross-Style Hate Speech Detection,"Chengshuai Zhao, Shu Wan, Paras Sheth, Karan Patwa, K.
+Selçuk Candan and Huan Liu"
+rfp4081,Responsible Web,Characterizing Iran's Phased National Internet Shutdown in 2025: A Progressive and Distributed Action,"Shibo Cui, Mingxuan Liu, Baojun Liu, Haixin Duan, Ruixuan
+Li, Chaoyi Lu, Jin Zhang, Zhicheng Wang and Jinghua Bai"
+rfp4131,Responsible Web,Navigating Truth in Multimodal Fact-checking via Retrieval- and Reasoning-Enhanced Large Language Models,"Fanrui Zhang, Qiang Zhang, Jianwen Sun, Chuanhao Li, Jiaxin
+Ai, Yukang Feng, Zizhen Li, Kaipeng Zhang, Jiawei Liu and
+Zheng-Jun Zha"
+rfp0046,Search and Retrieval-Augmented AI,What Should I Cite? A RAG Benchmark for Academic Citation Prediction,"Leqi Zheng, Jiajun Zhang, Canzhi Chen, Chaokun Wang,
+Hongwei Li, Yuying Li, Yaoxin Mao, Shannan Yan, Zixin Song,
+Zhiyuan Feng, Zhaolu Kang, Zirong Chen, Hang Zhang, Qiang
+Liu, Liang Wang and Ziyang Liu"
+rfp0061,Search and Retrieval-Augmented AI,Med-R$^2$: Crafting Trustworthy LLM Physicians via Retrieval and Reasoning of Evidence-Based Medicine,"Lu Keer, Zheng Liang, Da Pan, Shusen Zhang, Guosheng Dong,
+Huang Leng, Bin Cui, Zhonghai Wu and Wentao Zhang"
+rfp0072,Search and Retrieval-Augmented AI,Generalized Pseudo-Relevance Feedback,"Yiteng Tu, Weihang Su, Yujia Zhou, Yiqun Liu, Fen Lin, Qin
+Liu and Qingyao Ai"
+rfp0147,Search and Retrieval-Augmented AI,Rethinking the Hidden Risk of Reranking: Achieving Risk-aware Reranking with Information Gain for RAG with LLMs,"Zhizhao Liu, Zhihua Wen, Zhiliang Tian, Zhen Huang,
+Miaorong Zhu, Zimian Wei, Yifu Gao, Liang Ding and
+Dongsheng Li"
+rfp0210,Search and Retrieval-Augmented AI,"NeocorRAG: Less Irrelevant Information, More Explicit Evidence, and More Effective Recall via Evidence Chains","Shiyao Peng, Qianhe Zheng, Zhuodi Hao, Zichen Tang, Rongjin
+Li, Qing Huang, Jiayu Huang, Jiacheng Liu, Yifan Zhu and
+Haihong E"
+rfp0291,Search and Retrieval-Augmented AI,LoVR: A Benchmark for Long Video Retrieval in Multimodal Contexts,"Hao Liang, Qifeng Cai, Zhaoyang Han, Hejun Dong, Meiyi
+Qiang, Ruichuan An, Quanqing Xu, Bin Cui and Wentao Zhang"
+rfp0312,Search and Retrieval-Augmented AI,PruneRAG: Confidence-Guided Query Decomposition Trees for Efficient Retrieval-Augmented Generation,"Shuguang Jiao, Xinyu Xiao, Yunfan Wei, Shuhan Qi, Chengkai
+Huang, Quan Z. Michael Sheng and Lina Yao"
+rfp0535,Search and Retrieval-Augmented AI,Pedestrian-Centric Discriminative and Fine-grained Semantic Mining for Text-based Person Retrieval,"Yuheng Liang, Haipeng Chen, Yu Liu, Yingda Lyu and Xue Wang"
+rfp0587,Search and Retrieval-Augmented AI,QuiZSF: A Retrieval-Augmented Framework for Zero-Shot Time Series Forecasting,"Shichao Ma, Zhengyang Zhou, Qihe Huang, Binwu Wang and Yang
+Wang"
+rfp0643,Search and Retrieval-Augmented AI,Dual-Branch Multi-Granularity Network with Structured Contrastive Ranking for Cross-Modal Retrieval,"Zihao Chen, Chenyang Bu, Shengwei Ji and Xindong Wu"
+rfp0667,Search and Retrieval-Augmented AI,Less is More: Compact Clue Selection for Efficient Retrieval-Augmented Generation Reasoning,"Qianchi Zhang, Hainan Zhang, Liang Pang, Yongxin Tong,
+Hongwei Zheng and Zhiming Zheng"
+rfp0776,Search and Retrieval-Augmented AI,Déjà Vu of Strange Stickers! Enhancing Out-of-Distribution Robustness in Sticker Retrieval via Cross-Modal Intent Alignment,"Yu-An Liu, Ruqing Zhang, Jiafeng Guo, Changjiang Zhou, Fan
+Zhang and Yinhu Zhao"
+rfp0788,Search and Retrieval-Augmented AI,Model Editing for New Document Integration in Generative Information Retrieval,"Zhen Zhang, Zihan Wang, Xinyu Ma, Shuaiqiang Wang, Dawei
+Yin, Xin Xin, Pengjie Ren, Maarten de Rijke and Zhaochun Ren"
+rfp0791,Search and Retrieval-Augmented AI,LongRanker: Efficient One-Pass Document Reranking with Long-Context Large Language Models,"Changjiang Zhou, Ruqing Zhang, Jiafeng Guo, Maarten de
+Rijke, Fan Yixing and Xueqi Cheng"
+rfp0960,Search and Retrieval-Augmented AI,Breaking the Single-Reference-Vector Barrier in Approximate Nearest Neighbor Search,"Jiadong Xie, Jeffrey Liang, Siyi Teng, Jeffrey Xu Yu and
+Yingfan Liu"
+rfp0973,Search and Retrieval-Augmented AI,SQL-Checker: Error Detection and Labeling for Text-to-SQL with Interpretability Analysis,"Xingyu Ma, Xin Tian, Lingxiang Wu, Xuepeng Wang, Xueming
+Tang and Jinqiao Wang"
+rfp1120,Search and Retrieval-Augmented AI,DMAP: Human-Aligned Structural Document Map for Multimodal Document Understanding,"Shunliang Fu, Yanxin Zhang, Yixin Xiang, Xiaoyu Du and
+Jinhui Tang"
+rfp1138,Search and Retrieval-Augmented AI,To Search or Not to Search: Aligning the Decision Boundary of Deep Search Agents via Causal Intervention,"Wenlin Zhang, Kuicai Dong, Junyi Li, Yingyi Zhang, Xiaopeng
+Li, Pengyue Jia, Yi Wen, Derong Xu, Maolin Wang, Yichao
+Wang, Yong Liu and Xiangyu Zhao"
+rfp1148,Search and Retrieval-Augmented AI,Difficulty-Aware Agentic Orchestration for Query-Specific Multi-Agent Workflows,"Jinwei Su, Qizhen Lan, Yinghui Xia, Lifan Sun, Weiyou Tian,
+Tianyu Shi and Lewei He"
+rfp1316,Search and Retrieval-Augmented AI,XR: Cross-Modal Agents for Composed Image Retrieval,"Zhongyu Yang, Wei Pang and Yingfang Yuan"
+rfp1318,Search and Retrieval-Augmented AI,Are LLM Web Search Engines Sustainable? A Web-Measurement Study of Real-Time Fetching,"Abdur-Rahman Ibrahim Sayyid-Ali, Daanish Uddin Khan and
+Naveed Bhatti"
+rfp1353,Search and Retrieval-Augmented AI,A Fact-Checking Framework with Denoising Evidence Retrieval and LLM-Based Debate Verification,"Jun Yang, Bai Yuhan, Dandan Song, Zhijing Wu and Yuhang Tian"
+rfp1370,Search and Retrieval-Augmented AI,MCoT-MVS: Multi-level Vision Selection by Multi-modal Chain-of-Thought Reasoning for Composed Image Retrieval,"Xuri Ge, Chunhao Wang, Xindi Wang, Zheyun Qin, Zhumin Chen
+and Xin Xin"
+rfp1390,Search and Retrieval-Augmented AI,Conflict-Aware RAG: Multi-Stage Learning with Conflict Signals for Robust Retrieval-Augmented Generation,"Haiyan Wu, Chenchen Wang, Chaoqun Sun, Chengxiong Lu,
+Zhiqiang Zhang and Yanhong Chen"
+rfp1459,Search and Retrieval-Augmented AI,Toward Generalized Web Agent Training: A Deep Dive into Entropy-Balanced Reinforcement Learning,"Guanting Dong, Licheng Bao, Zhongyuan Wang, Kangzhi Zhao,
+Xiaoxi Li, Jiajie Jin, Jinghan Yang, Hangyu Mao, Fuzheng
+Zhang, Kun Gai, Guorui Zhou, Yutao Zhu, Ji-Rong Wen and
+Zhicheng Dou"
+rfp1547,Search and Retrieval-Augmented AI,IRAG: Robust Multimodal Retrieval-Augmented Generation via Hazard Separation,"Ruikun Luo, Zixiao Feng, Lin Gu and Xiaoyu Xia"
+rfp1663,Search and Retrieval-Augmented AI,SDR-CIR: Semantic Debias Retrieval Framework for Training-Free Zero-Shot Composed Image Retrieval,"Yi Sun, Jinyu Xu, Qing Xie, Jiachen Li, Yanchun Ma and
+Yongjian Liu"
+rfp1790,Search and Retrieval-Augmented AI,FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation,"Senlei Zhang, Tongjun Shi, Dandan Song, Luan Zhang, Shuhao
+Zhang, Xiaofei Liao and Hai Jin"
+rfp1960,Search and Retrieval-Augmented AI,Towards Open-World Retrieval-Augmented Generation on Knowledge Graph: A Multi-Agent Collaboration Framework,"Jiasheng Xu, Mingda Li, Yongqiang Tang, Peijie Wang and
+Wensheng Zhang"
+rfp2004,Search and Retrieval-Augmented AI,BANCO: Drift-Aware Batched Bandits for Adaptive Proximity Graph Pruning,"Jin Cheng, Xiangxiang Dai, Ningning Ding, John C.S. Lui and
+Jianwei Huang"
+rfp2187,Search and Retrieval-Augmented AI,DA-RAG: Dynamic Attributed Community Search for Retrieval-Augmented Generation,"Xingyuan Zeng, Zuohan Wu, Yue Wang, Chen Zhang, Quanming
+Yao, Libin Zheng and Jian Yin"
+rfp2217,Search and Retrieval-Augmented AI,QChunker: Learning Question-Aware Text Chunking for Domain RAG via Multi-Agent Debate,"Jihao Zhao, Daixuan Li, Pengfei Li, Shuaishuai Zu, Biao Qin
+and Hongyan Liu"
+rfp2385,Search and Retrieval-Augmented AI,DeepAgent: A General Reasoning Agent with Scalable Toolsets,"Xiaoxi Li, Wenxiang Jiao, Jiarui Jin, Guanting Dong, Jiajie
+Jin, Yinuo Wang, Hao Wang, Yutao Zhu, Ji-Rong Wen, Yuan Lu
+and Zhicheng Dou"
+rfp2692,Search and Retrieval-Augmented AI,Enhancing Domain-Adaptive Hashing via Evidential Learning and Progressive Alignment,"Junsheng Wang, Tiantian Gong, Yeyun Wu and Liyan Zhang"
+rfp2781,Search and Retrieval-Augmented AI,CompactRAG: Reducing LLM Calls and Token Overhead in Multi-Hop Question Answering,"Hao Yang, Zhiyu Yang, Xvpeng Zhang, Wei Wei, Yunjie Zhang
+and Lin Yang"
+rfp2863,Search and Retrieval-Augmented AI,OpenDecoder: Open Large Language Model Decoding to Incorporate Document Quality in RAG,"Fengran Mo, Zhan Su, Yuchen Hui, Jinghan Zhang, Jia Ao Sun,
+Zheyuan Liu, Chao Zhang, Tetsuya Sakai and Jian-Yun Nie"
+rfp2878,Search and Retrieval-Augmented AI,HL-CMR: Hypergraph Learning for Cross-Modal Retrieval,"Guohui Ding, Jing Li, Yimin Xu and Rui Zhou"
+rfp2899,Search and Retrieval-Augmented AI,Diversifying Differentiable Graph Retrieval with Topic-Adaptive Multi-Intent Learning,"Dongcheon Lee, Ji-Yeon Park, Hye-Yoon Baek, Jimyeung Seo,
+Seyeong Kim and Byungkook Oh"
+rfp2935,Search and Retrieval-Augmented AI,ToolBox-RL: Learning to Generalize Tool Use Across Massive Repositories,"Xinyan Shi, Renzhi Wang, Haodong Liu and Piji Li"
+rfp2959,Search and Retrieval-Augmented AI,Facilitating Generative Retrieval with Logical Denoising for Interpretable Conversational Search,"Qichuan Liu, Chentao Zhang, Yuxuan Hu, Chenfeng Zheng,
+Qinggang Zhang and Zhihong Zhang"
+rfp2973,Search and Retrieval-Augmented AI,KEPo: Knowledge Evolution Poison on Graph-based Retrieval-Augmented Generation,"Qizhi Chen, Chao Qi, Yihong Huang, Muquan Li, Rongzheng
+Wang, Dongyang Zhang, Ke Qin and Shuang Liang"
+rfp3139,Search and Retrieval-Augmented AI,Beyond More Context: Retrieval Diversity Boosts Multi-Turn Intent Understanding,"Zhiming Lin, Canran Xiao and Kai Zhao"
+rfp3285,Search and Retrieval-Augmented AI,PaperAsk: A Benchmark for Reliability Evaluation of LLMs in Paper Search and Reading,"Yutao Wu, Xiao Liu, Yunhao Feng, Jiale Ding and Xingjun Ma"
+rfp3293,Search and Retrieval-Augmented AI,SeaRAG: Reducing Hallucination in Retrieval-Augmented Generation via Statement-Entity Adaptive Ranking,"Xiaosong Yuan, Xiaofeng Zhang, Di Zhao, Yijia Zhang and
+Ying Wang"
+rfp3297,Search and Retrieval-Augmented AI,DocResearcher: A Unified System for Multimodal Document Parsing and Deep Research,"Kuicai Dong, Shurui Huang, Fangda Ye, Wei Han, Zhi Zhang,
+Dexun Li, Wenjun Li, Qu Yang, Gang Wang, Yichao Wang, Chen
+Zhang and Yong Liu"
+rfp3465,Search and Retrieval-Augmented AI,Experience is the Best Teacher: Augmenting LLM Reasoning with Knowledge Learned from the Past,"Mingjun Zhou, Weixin Zeng and Xiang Zhao"
+rfp3538,Search and Retrieval-Augmented AI,"Evidential Matching, Uncertainty Calibration: Towards Robust Composed Video Retrieval with Noisy Triplets","Zhangtao Cheng, Bozhu Zheng, Ting Zhong and Fan Zhou"
+rfp3649,Search and Retrieval-Augmented AI,Inferential Question Answering,"Jamshid Mozafari, Hamed Zamani, Guido Zuccon and Adam Jatowt"
+rfp3690,Search and Retrieval-Augmented AI,PairSem: LLM-Guided Pairwise Semantic Matching for Scientific Document Retrieval,"Wonbin Kweon, Runchu Tian, Seongku Kang, Pengcheng Jiang,
+Zhiyong Lu, Jiawei Han and Hwanjo Yu"
+rfp3899,Search and Retrieval-Augmented AI,Reasoning by Exploration: A Unified Approach to Retrieval and Generation over Graphs,"Haoyu Han, Kai Guo, Harry Shomer, Yu Wang, Yucheng Chu,
+Hang Li, Li Ma and Jiliang Tang"
+rfp3988,Search and Retrieval-Augmented AI,From Retrieval to Generation: Unifying External and Parametric Knowledge for Medical Question Answering,"Lei Li, Xiao Zhou, Yingying Zhang and Xian Wu"
+rfp4011,Search and Retrieval-Augmented AI,Cost-Aware Retrieval-Augmentation Reasoning Models with Adaptive Retrieval Depth,"Helia Hashemi, Victor Rühle and Saravan Rajmohan"
+rfp4094,Search and Retrieval-Augmented AI,Rethinking Soft Compression in Retrieval-Augmented Generation: A Query-Conditioned Selector Perspective,"Yunhao Liu, Zian Jia, Xinyu Gao, Kanjun Xu and Yun Xiong"
+rfp4129,Search and Retrieval-Augmented AI,SketchMind: Understanding Abstract Sketches with MLLMs for Fine-Grained Sketch-Based Image Retrieval,"Li Changxing, Donglin Zhang, Zhikai Hu, Xiao-Jun Wu and
+Josef Kittler"
+rfp4146,Search and Retrieval-Augmented AI,HyperRAG: Reasoning N-ary Facts over Hypergraphs for Retrieval Augmented Generation,"Wen-Sheng Lien, Yu-Kai Chan, Hao-Lung Hsiao, Bo-Kai Ruan,
+Meng-Fen Chiang, Chien-An Chen, Yi-Ren Yeh and Hong-Han
+Shuai"
+rfp4281,Search and Retrieval-Augmented AI,A Unified Framework for Context-Aware and Relation-Aware Graph Retrieval-Augmented Generation,"Haoyang Zhong, Yifei Sun, Antong Zhang, Chunping Wang, Lei
+Chen and Yang Yang"
+rfp4321,Search and Retrieval-Augmented AI,AgenticShop: Benchmarking Agentic Product Curation for Personalized Web Shopping,"Sunghwan Kim, Ryang Heo, Yongsik Seo, Jinyoung Yeo and
+Dongha Lee"
+rfp4333,Search and Retrieval-Augmented AI,CFVBench: A Comprehensive Video Benchmark for Fine-grained Multimodal Retrieval-Augmented Generation,"Kaiwen Wei, Xiao Liu, Jie Zhang, Zijian Wang, Ruida Liu,
+Yuming Yang, Xin Xiao, Xiao Sun, Haoyang Zeng, Changzai
+Pan, Yidan Zhang, Jiang Zhong, Peijin Wang and Yingchao Feng"
+rfp4372,Search and Retrieval-Augmented AI,RPO-RAG: Aligning Small LLMs with Relation-aware Preference Optimization for Knowledge Graph Question Answering,"Kaehyun Um, Kyuhwan Yeom, Haerim Yang, Minyoung Choi,
+Hyeongjun Yang and Kyong-Ho Lee"
+rfp4486,Search and Retrieval-Augmented AI,TRACE: Trajectory-Aware Comprehensive Evaluation for Deep Research Agents,"Yanyu Chen, Jiyue Jiang, Jiahong Liu, Yifei Zhang, Xiao Guo
+and Irwin King"
+rfp0280,Security and Privacy,Exploring and Exploiting Security Vulnerabilities in Self-Hosted LLM Services,"Zhihuang Liu, Ling Hu, Yonghao Tang, Tongqing Zhou, Fang
+Liu and Zhiping Cai"
+rfp0334,Security and Privacy,SIsomap: Secure Collaborative Manifold Learning with Reducing Communication Costs,"Peizhao Zhou, Xiaojie Guo, Pinzhi Chen, Ranyang Liu, Lihai
+Nie, Tong Li and Zheli Liu"
+rfp0379,Security and Privacy,PrivSplit: A Lossless Method for Prompt Privacy in Distributed Parameter-Efficient Fine-Tuning,"Wujia Niu, Lan Zhang, Haoran Cheng and Shen Li"
+rfp0405,Security and Privacy,Unveiling and Mitigating Untargeted Poisoning Attacks on Federated Knowledge Graph Embedding,"Wenzheng Jiang, Ke Liang, Wenke Huang, Xiongtao Zhang,
+Zhenxing Xu, Guancheng Wan, Cheston Tan, Flint Xiaofeng Fan
+and Ji Wang"
+rfp0625,Security and Privacy,TGNN: Enhancing Pixel Tracking Detection via LLM-driven Annotation and GAT-powered Structural Representation,"Shenping Xiong, Xutong Wang, Ze Jin, Xinyu Liu, Haoqiang
+Wang, Zhen Chen, Ru Tan and Qixu Liu"
+rfp0642,Security and Privacy,DiSCoQR: Diffusion-Driven Semantic Compression for Robust Image Steganography in Standard QR Codes,Lijing Ren and Denghui Zhang
+rfp0806,Security and Privacy,Reconstructing Training Data from Adapter-based Federated Large Language Models,"Silong Chen, Yuchuan Luo, Guilin Deng, Yi Liu, Ming Xu,
+Shaojing Fu and Xiaohua Jia"
+rfp0819,Security and Privacy,Has the Two-Decade-Old Prophecy Come True? Artificial Bad Intelligence Triggered by Merely a Single-Bit Flip in Large Language Models,"Yu Yan, Siqi Lu, Yang Gao, Zhaoxuan Li, Ziming Zhao,
+Qingjun Yuan and Yongjuan Wang"
+rfp0848,Security and Privacy,Netting Phish in the IPFS Ocean: Real-Time Monitoring and Characterization of Decentralized Phishing Campaigns,"Anas Kastantin, Leonhard Balduf, Onur Ascigil, Saidu
+Sokoto, Björn Scheuermann, Andrzej Duda, Michał Król and
+Maciej Korczyński"
+rfp0907,Security and Privacy,Reading Between the Lines: Towards Reliable Black-box LLM Fingerprinting via Zeroth-order Gradient Estimation,"Shuo Shao, Yiming Li, Hongwei Yao, Yifei Chen, Yuchen Yang
+and Zhan Qin"
+rfp0921,Security and Privacy,FraudShield: Knowledge Graph Empowered Defense for LLMs against Fraud Attacks,"Naen Xu, Jinghuai Zhang, Ping He, Chunyi Zhou, Jun Wang,
+Zhihui Fu, Tianyu Du, Zhaoxiang Wang and Shouling Ji"
+rfp0923,Security and Privacy,Combating Knowledge Corruption in Agent Systems: A Byzantine-Tolerant Secure Collaborative RAG Framework,"Zhaoqi Wang, Daqing He, Zijian Zhang, Ye Liu, Jiamou Liu,
+Zhirui Zeng, Zhan Qin, Zhen Li, Xin Li, Hongwei Yao,
+Jincheng An, Yong Liu, Yi Li, Qi Sun, Xiulei Liu and
+Liehuang Zhu"
+rfp0936,Security and Privacy,HyperDetector: Advanced Persistent Threat Detection via Hypergraph Neural Networks with Enhanced Global Perception,"Ziyue Wu, Nan Wang, Jiqiang Liu, Hairong Dong and Xibin Zhao"
+rfp0946,Security and Privacy,PADD: Prefix-based Attention Divergence Detector for LLM Jailbreaks,"Ziqun Bao, Jiaqiang Niu, Yuchen Shao and Chengcheng Wan"
+rfp0971,Security and Privacy,Privacy-Friendly Adaptation of Vision Transformers for Communication and Latency-Efficient Private Inference,"Zhi Pang, Bo Feng, Meng Luo, Chenhao Liu, Shuwang Xu, Kai
+Zhao, Yadi Wu and Bo Zeng"
+rfp1065,Security and Privacy,MGFFD-VLM: Multi-Granularity Prompt Learning for Face Forgery Detection with VLM,"Tao Chen, Jingyi Zhang, Decheng Liu and Chunlei Peng"
+rfp1095,Security and Privacy,SaGD: A Node-Level Differentially Private Graph Learning Framework with Sensitivity-Aware Gradient Descent,"Jianxin Wei, Ergute Bao, Xiaokui Xiao and Ting Yu"
+rfp1108,Security and Privacy,Red-Teaming Privacy-Protective Perturbations: Blind Face Restoration as an Attack Strategy,"Zelin Li, Yifan Liu, Huimin Zeng, Yaokun Liu, Ruichen Yao,
+Yang Zhang and Dong Wang"
+rfp1124,Security and Privacy,Eclipse Attacks on Ethereum’s Peer-to-Peer Network,"Ruisheng Shi, Yuxuan Liang, Zijun Guo, Qin Wang, Lina Lan,
+Chenfeng Wang and Zhuoyi Zheng"
+rfp1172,Security and Privacy,Xemis: Fair and Robust Privacy-Preserving Data Trading based on Distributed Noise Sharing,"Xinxin Xing, Yizhong Liu, Ruonan Chen, Banghong Qin,
+Wangjie Qiu, Jianwei Liu, Qianhong Wu, Willy Susilo and
+Robert H. Deng"
+rfp1213,Security and Privacy,LLMQuA: Practical Backdoor Injection on Large Language Model Quantization,"Xiangxiang Chen, Peixin Zhang, Jun Sun, Jin Song Dong,
+Wenhai Wang and Jingyi Wang"
+rfp1271,Security and Privacy,ProvGuard: Logic-Aware Multi-View Contrastive Learning for Robust and Efficient Host Threat Detection,"Anyuan Sang, Li Yang, Lu Zhou, Cheng Zhou, Junbo Jia and
+Huipeng Yang"
+rfp1350,Security and Privacy,Unveiling the Vulnerability of Graph-LLMs: An Interpretable Multi-Dimensional Adversarial Attack on TAGs,"Bowen Fan, Zhilin Guo, Xunkai Li, Yihan Zhou, Bing Zhou,
+Zhenjun Li, Rong-Hua Li and Guoren Wang"
+rfp1373,Security and Privacy,Robust LLM-Based Website Fingerprinting under Dynamic Real-World Conditions,"Xiyuan Zhao, Xinhao Deng, Tianyu Cui, Yixiang Zhang, Ke Xu
+and Qi Li"
+rfp1429,Security and Privacy,WAMO: Toward Secure Browser Inference via Web Model Obfuscation in WebAssembly,"Yitong Wang, Pengfei Yu, Hao Han, Jingjing Gu, Fengyuan Xu
+and Xinyi Huang"
+rfp1528,Security and Privacy,Breaking Cross-modal Alignment in Embodied Intelligence: A Multimodal Adversarial Attack Framework for Vision-Language-Action Models,"Zhihui Zhao, Xiaorong Dong, Yaowen Zheng, Xiaohui Chen,
+Yimo Ren, Hangbei Cheng, Yongle Chen and Limin Sun"
+rfp1541,Security and Privacy,TGweaver: Synthesizing Transaction Graphs for De-anonymization Analysis,"Fajie Wu, Jiajing Wu, Zhiying Wu, Jun Chen, Tao Wang,
+Longjian He, Bowen Song and Weiqiang Wang"
+rfp1563,Security and Privacy,"Towards Practical LLM Unlearning: Efficient, Modular, and Retain-Free","Peng Liu, Peng-Fei Zhang, Jianfeng Qu, Ximing Li, Zhixu Li
+and Pengpeng Zhao"
+rfp1661,Security and Privacy,The Promise vs. Reality of NFT Decentralization: An Empirical Study of Storage Strategies and Defects,"Yufang Wu, Siwen Chen, Chao Li, Yuan Weng and Wei Wang"
+rfp1669,Security and Privacy,WebGeoInfer: Structure-Free Multi-Stage Framework for Geolocation Inference from Exposed Device Web Interfaces,"Huipeng Yang, Li Yang, Lu Zhou, Lichuan Ma, Xinyue Wang,
+Junbo Jia and Anyuan Sang"
+rfp1683,Security and Privacy,ICL-EVADER: Zero-Query Black-Box Evasion Attacks on In-Context Learning and Their Defenses,"Ningyuan He, Ronghong Huang, Qianqian Tang, Hongyu Wang,
+Xianghang Mi and Shanqing Guo"
+rfp1704,Security and Privacy,PWAVEP: Purifying Imperceptible Adversarial Perturbations in 3D Point Clouds via Spectral Graph Wavelets,"Li Haoran, Renyang Liu, Hongjia Liu, Chen Wang, Long Yin
+and Jian Xu"
+rfp1736,Security and Privacy,Federated Latent Factor Learning for Privacy-Preserving Spatio-Temporal Signal Recovery,"Chengjun Yu, Di Wu, Yi He, Jia Chen and Xin Luo"
+rfp1898,Security and Privacy,Zelda: Feedback-driven Closed-box Fuzzing for Identifying Web Application Vulnerabilities,"Soyoung Lee, Sunnyeo Park, Yonghwi Kwon and Sooel Son"
+rfp1906,Security and Privacy,Proteus: Towards Accurate and Low-overhead In-Network Malicious Traffic Detection,"Longlong Zhu, Linying Zheng, Qing Shu, Zedi Chen, Jiashuo
+Yu, Yuhan Wu, Shaopeng Zhou, Hongyan Liu, Dong Zhang,
+Chunming Wu and Xiang Chen"
+rfp1913,Security and Privacy,Re-understanding Graph Unlearning through Memorization,"Pengfei Ding, Yan Wang and Guanfeng Liu"
+rfp1965,Security and Privacy,Mitigating Cumulative Privacy Risk in Continual Information Sharing: A Dynamic Stackelberg Game Approach,"Yuzi Yi, Weixuan Wang, Yehong Luo, Jinqiao Shi and Jiwei
+Huang"
+rfp2026,Security and Privacy,Unveiling the Resilience of LLM-Enhanced Search Engines against Black-Hat SEO Manipulation,"Pei Chen, Geng Hong, Xinyi Wu, Mengying Wu, Zixuan Zhu,
+Mingxuan Liu, Baojun Liu, Mi Zhang and Min Yang"
+rfp2037,Security and Privacy,Beyond Detection: Autonomous Anomaly Remediation for MCP Against Tool Poisoning Attacks,"Zhiqiang Wang, Guanquan Shi, Yanting Wang, Yichao Gao,
+Hongsen Lang, Yunhao Yao, Haohua Du and Xiang-Yang Li"
+rfp2060,Security and Privacy,On the Effectiveness of Mempool-based Transaction Auditing,Jannik Albrecht and Ghassan Karame
+rfp2061,Security and Privacy,Tracking the Stray Sheep: Understanding DNS Response Manipulation in the Wild,"Wenhao Wu, Zhaohua Wang, Zihan Li, Qinxin Li, Yiming Xia,
+Chuan Gao, Guangxing Zhang and Zhenyu Li"
+rfp2081,Security and Privacy,"Too Much Sharing, Too Little Security: Authentication Cookie Theft At Scale",Tobias Gattermayer and Haya Schulmann
+rfp2082,Security and Privacy,Forge: A Robust Multi-tab Website Fingerprinting Attack via Blind Source Separation,"Yitan Huang, Wei Qiao, Ding Wang, Meng Shen, Di Zhao, Linxu
+Li, Susu Cui, Bo Jiang, Zhigang Lu and Baoxu Liu"
+rfp2092,Security and Privacy,HiFi-WF: Toward Realistic Website Fingerprinting with Multi-tab and Subpage Recognition,"Songyang Wu, Chuan Ma, Ming Ding, Long Yuan, Biwen Chen,
+Yuwen Qian and Tao Xiang"
+rfp2143,Security and Privacy,DIARY: Differentially Private Recovery with Adaptive Privacy Budgets in Federated Unlearning,"Hengzhi Wang, Lu Dai, Xianliang Zhang, Haoran Chen,
+Juncheng Hu and Kun Yang"
+rfp2147,Security and Privacy,ShadowClone: Scalable Decentralized Identity with Cross-Domain Anonymity and Accountable Traceability,"Yizhong Liu, Zedan Zhao, Boyu Zhao, Na Wang, Haojun Tan and
+Jianwei Liu"
+rfp2197,Security and Privacy,FalconScope: Effective and Efficient Detection of Hidden Web Interfaces in IoT Devices,"Jiaming Guo, Haoran Yang, Kuihao Yan, Jiekang Hu, Xiaoqi
+Jia, Haichao Du and Qihang Zhou"
+rfp2253,Security and Privacy,The Asymmetric Vulnerability: Bypassing LLM Defenses via Guardrail-Model Mismatch,"Junyi Wang, Zhibin Zhu and Chuanyi Liu"
+rfp2261,Security and Privacy,Bento: Fine-Grained Memory Isolation for COTS WebAssembly Binaries,Oussama Draissi and Lucas Davi
+rfp2265,Security and Privacy,DeepUL: Deep Unlearning via Model Sparsity,"Zhigao Zheng, Kai Yin, Yaowen Kuang, Tao Wang, Yahong Chen,
+Shihong Yao and Hao Huang"
+rfp2358,Security and Privacy,DSSmoothing: Toward Certified Dataset Ownership Verification for Pre-trained Language Models via Dual-Space Smoothing,"Ting Qiao, Xing Liu, Wenke Huang, Jianbin Li, Zhaoxin Fan
+and Yiming Li"
+rfp2360,Security and Privacy,ARuleCon: Agentic Security Rule Conversion,"Ming Xu, Hongtai Wang, Yanpei Guo, Zhengmin Yu, Weili Han,
+Hoon Wei Lim, Jin Song Dong and Jiaheng Zhang"
+rfp2405,Security and Privacy,SentinelNet: Safeguarding Multi-Agent Collaboration Through Credit-Based Dynamic Threat Detection,Yang Feng and Xudong Pan
+rfp2429,Security and Privacy,Anti-Phishing Training (Still) Does Not Work: A Reproduction of Phishing Training Inefficacy Grounded in the NIST Phish Scale,Andrew Rozema and James Davis
+rfp2489,Security and Privacy,Real or Rogue? Detecting Malicious Miniapps with Deceptive Reporting Interface,Yuqing Yang and Zhiqiang Lin
+rfp2521,Security and Privacy,Reliable Non-Leveled Homomorphic Encryption for Web Services,Baigang Chen and Dongfang Zhao
+rfp2624,Security and Privacy,Towards Robust Detection of Chinese Toxic Variants via Dynamic Knowledge Graph–LLM Reasoning,"Shaochen Yang, Kefei Zhou and Wei Xu"
+rfp2726,Security and Privacy,Acting Flatterers via LLMs Sycophancy: Combating Clickbait with LLMs Opposing-Stance Reasoning,"Chaowei Zhang, Xiansheng Luo, Zewei Zhang, Yi Zhu, Jipeng
+Qiang and Longwei Wang"
+rfp2749,Security and Privacy,DeepSVU: Towards In-depth Security-oriented Video Understanding via Unified Physical-world Regularized MoE,"Yujie Jin, Wenxin Zhang, Jingjing Wang and Guodong Zhou"
+rfp2788,Security and Privacy,Greedy Attack: Breaking Finality against VeChain Proof-of-Authority Consensus Protocol,"Rujia Li, Qin Wang, Haochen Wang, Xueqian Lu and Sisi Duan"
+rfp2818,Security and Privacy,SPCA: Stream Parser Confusion Attack for Web Application Firewall Evasion in HTTP/2,"Kyungrok Choi, Woonghee Lee and Junbeom Hur"
+rfp2840,Security and Privacy,Distribution-Aligned Synthetic Text Generation via Tail-Aware Enhancement,"Yuan Fan, Xiaoyuan Liu, Bo Liu, Wubing Wang, Jia Sun,
+Wenzhi Chen, Huaikang Fang, Lifeng Tao and Fan Mo"
+rfp2949,Security and Privacy,SemFuzz: A Semantics-Aware Fuzzing Framework for Network Protocol Implementations,"Yanbang Sun, Quan Luo, Yuelin Wang, Qian Chen, Benjin Liu,
+Ruiqi Chen, Qing Huang, Xiaohong Li and Junjie Wang"
+rfp2956,Security and Privacy,DRGW: Learning Disentangled Representations for Robust Graph Watermarking,"Jiasen Li, Yanwei Liu, Zhuoyi Shang, Xiaoyan Gu and Weiping
+Wang"
+rfp2992,Security and Privacy,PrivSniffer: Graph-based Contextual Privacy Leakage Detection for User-Generated Texts,"Hangyu Ye, Liyao Xiang, Naixuan Huang, Dongyue Yu, Lijun
+Zhang and Gang Wang"
+rfp3045,Security and Privacy,Does Ad-Free Mean Less Data Collection? An Empirical Study of Platform Data Practices and User Expectations,"Sepehr Mousavi, Abhisek Dash, Savvas Zannettou and Krishna
+P. Gummadi"
+rfp3050,Security and Privacy,Risk-free Selfish Mining in Hybrid Predictability Model. A Case Study on Polkadot’s NPoS,"Mingfei Zhang, Rujia Li, Xinyu Lei and Sisi Duan"
+rfp3064,Security and Privacy,Sybil Attacks on Centrality Measures,Marcin Waniek
+rfp3237,Security and Privacy,When Reasoning Leaks Membership: Membership Inference Attack on Black-box Large Reasoning Models,"Ruihan Hu, Yu-Ming Shang, Wei Luo, Ye Tao and Xi Zhang"
+rfp3257,Security and Privacy,RoFiRe: Robust Website Fingerprinting on Real-World Tor Traffic via Improved Augmentation and Normalization,"Haeseung Jeon, Sujin Kim, Nate Mathews, Hosung Kang and Se
+Eun Oh"
+rfp3320,Security and Privacy,GIANT: Structure-Agnostic Practical Adversarial Attacks for Graph-based Network Intrusion Detection Systems,"Jianjin Zhao, Dongqi Han, Chao Ma, Qi Li, Zhiwei Cui,
+Hongliang Zhu, Hua Zhang, Mingshu He, Yijun Lu, Jiong Dong,
+Yuyin Ma and Meng Shen"
+rfp3328,Security and Privacy,Beyond Denial-of-Service: The Puppeteer's Attack for Fine-Grained Control in Ranking-Based Federated Learning,"Zhihao Chen, Zirui Gong, Jianting Ning, Yanjun Zhang and
+Leo Yu Zhang"
+rfp3386,Security and Privacy,Balancing Privacy and Security of QNAME Minimisation,"Qinxin Li, Zhaohua Wang, Wenhao Wu, Zihan Li, Yiming Xia,
+Chuan Gao and Zhenyu Li"
+rfp3425,Security and Privacy,Do You Really Know What I Am Doing? Backdoor Attacks on Provenance-Based Intrusion Detection Systems,"Shaodi Xie, Wei Yuan, Haoyu Jiang, Zhu Gong, Haoran Wang,
+Heng Li and Tiejun Wu"
+rfp3447,Security and Privacy,Trust on Reload: Securing Browser-Based End-to-End Encryption,"Simon Schwarz, Florian Bauckholt and Leon Trampert"
+rfp3464,Security and Privacy,Fast or Secure? Push the Limit of Privacy Leakage Threat via Charging Side-Channel Attacks,"Jiaxin Jiang, Xutong Zhang, Jiahao Li, Leqi Zhao, Zhengxin
+Guo, Kaiyan Cui, Ming Gao, Jinsong Han and Fu Xiao"
+rfp3504,Security and Privacy,Resisting Manipulative Bots in Meme Coin Copy Trading: A Multi-Agent Approach with Chain-of-Thought Reasoning,"Yichen Luo, Yebo Feng, Jiahua Xu and Yang Liu"
+rfp3599,Security and Privacy,PeriNet: Periodic Deep Learning Framework for Modality-Agnostic Privacy Preserving,"Yan Zhang, Yihong Song, Manzhou Li, Qiushi Li, Qi Li and Ju
+Ren"
+rfp3717,Security and Privacy,Inferring Users’ Demographics and Sensitive Interests Using the Topics API,"Athicha Srivirote, Muhammad Abu Bakar Aziz, Jeffrey
+Gleason, Desheng Hu and Christo Wilson"
+rfp3755,Security and Privacy,CogAgent: Self-Evolving Cognitive Agents for Multi-Source Fraud Detection in Heterogeneous Financial Networks,"Qianyu Wang, Weiyou Tian, Rong Wang, Wei-Tek Tsai, Tianyu
+Shi, Zhuang Liu and Tianze Xia"
+rfp3759,Security and Privacy,JANUS: A Dual-Constraint Generative Framework for Stealthy Node Injection Attacks,"Jiahao Zhang, Xiaobing Pei, Zhaokun Zhong, Wenqiang Hao and
+Zhenghao Tang"
+rfp3783,Security and Privacy,The Algorithmic Self-Portrait:Deconstructing Memory in ChatGPT,"Abhisek Dash, Soumi Das, Elisabeth Kirsten, Qinyuan Wu, Sai
+Keerthana Karnam, Krishna P. Gummadi, Thorsten Holz,
+Muhammad Bilal Zafar and Savvas Zannettou"
+rfp3911,Security and Privacy,Understanding Server-side Commercial Fingerprinting,"Elisa Luo, Tom Ritter, Stefan Savage and Geoffrey M Voelker"
+rfp4197,Security and Privacy,Unequal Vulnerability: The Differential Impact of Label Flipping Attacks Across Classes,"Pinlong Zhao, Mengyang Li, Pengfei Jiao, Huijun Tang and Ou
+Wu"
+rfp4227,Security and Privacy,Evasion Under Blockchain Sanctions,"Endong Liu, Mark Ryan, Liyi Zhou and Pascal Berrang"
+rfp4426,Security and Privacy,AdVersa: Adversarially-Robust and Practical Ad and Tracker Blocking in the Wild,"Chaejin Lim, Kiho Lee, Beomjin Jin, Heewon Baek and
+Hyoungshick Kim"
+rfp4474,Security and Privacy,Unveiling the Underground Phishing Ecosystem: A 12-Year Longitudinal Study of Deep and Dark Web Forums,"Dohee Kim, Zhao Hui, Doowon Kim and Sungjae Hwang"
+rfp4558,Security and Privacy,YouChoose: A Lightweight Anonymous Proof of Account Ownership,"Aarav Varshney, Prashant Agrawal and Mahabir Prasad Jhanwar"
+rfp0134,Semantics and Knowledge,Bridging Expert Reasoning and LLM Detection: A Knowledge-Driven Framework for Malicious Packages,"Wenbo Guo, Shiwen Song, Jiaxun Guo, Zhengzi Xu, Chengwei
+Liu, Haoran Ou, Mengmeng Ge and Yang Liu"
+rfp0153,Semantics and Knowledge,Multimodal Graph Conditioned Diffusion Model for Video Captioning,"Benhui Zhang, Junyu Gao and Yuan Yuan"
+rfp0188,Semantics and Knowledge,HingeMem: Boundary Guided Long-Term Memory with Query Adaptive Retrieval for Scalable Dialogues,"Yijie Zhong, Yunfan Gao and Haofen Wang"
+rfp0376,Semantics and Knowledge,Aligning Multiple Knowledge Graphs in A Single Pass,"Yaming Yang, Zhe Wang, Ziyu Guan, Wei Zhao, Weigang Lu,
+Xinyan Huang, Jiangtao Cui and Xiaofei He"
+rfp0524,Semantics and Knowledge,Unifying Deductive and Abductive Reasoning in Knowledge Graphs with Masked Diffusion Model,"Yisen Gao, Jiaxin Bai, Yi Huang, Xingcheng Fu, Qingyun Sun
+and Yangqiu Song"
+rfp0564,Semantics and Knowledge,LHG: LLM-enhanced and Heterogeneous Graph-induced for Unsupervised Social Event Detection,"Zitai Qiu, Rongwei Xu, Congbo Ma, Shan Xue, Jian Yang,
+Guanfeng Liu, Quan Z. Sheng, Amin Beheshti and Jia Wu"
+rfp0632,Semantics and Knowledge,Decoding Web Memorization: A Semantic Membership Inference Attack on LLMs,"Zhiyao Wu, Zi Liang and Haibo Hu"
+rfp0685,Semantics and Knowledge,Are LLMs Stable Formal Logic Translators in Logical Reasoning Across Linguistically Diversified Texts?,"Qingchuan Li, Jiatong Li, Zirui Liu, Mingyue Cheng, Yitong
+Zhou, Yuting Zeng, Qi Liu and Tongxuan Liu"
+rfp0711,Semantics and Knowledge,DSTAG: A Semantic Tag-Enhanced Dual-Graph Convolutional Network for Temporal Knowledge Graph Completion,"Yuchao Zhang, Xiangjie Kong, Kailun Ye, Shangfei Zheng and
+Guojiang Shen"
+rfp0726,Semantics and Knowledge,Bridging Semantic Understanding and Popularity Bias with LLMs,"Renqiang Luo, Dong Zhang, Yupeng Gao, Wen Shi, Mingliang
+Hou, Jiaying Liu, Zhe Wang and Shuo Yu"
+rfp0857,Semantics and Knowledge,Plan Then Retrieve: Reinforcement Learning-Guided Complex Reasoning over Knowledge Graphs,"Yanlin Song, Ben Liu, Víctor Gutiérrez-Basulto, Zhiwei Hu,
+Qianqian Xie, Min Peng, Sophia Ananiadou and Jeff Z. Pan"
+rfp0955,Semantics and Knowledge,Multi-Granularity Multi-Modal Knowledge Graph Representation Learning via Subgraph-Aware Adaptive Fusion and Hierarchical Relation Modeling,"Peining Li, Meiyu Liang, Wei Huang, Junping Du, Zhe Xue,
+Guanhua Ye, Wu Liu and Lei Shi"
+rfp0991,Semantics and Knowledge,Matrix as Plan: Structured Logical Reasoning with Feedback-Driven Replanning,"Ke Chen, Jiandian Zeng, Zihao Peng, Guo Li, Guangxue Zhang
+and Tian Wang"
+rfp1144,Semantics and Knowledge,Simple-Sampling and Hard-Mixup with Prototypes to Rebalance Contrastive Learning for Text Classification,"Mengyu Li, Yonghao Liu, Fausto Giunchiglia, Ximing Li,
+Xiaoyue Feng and Renchu Guan"
+rfp1145,Semantics and Knowledge,Grasp: Refining Semantic Graphs into Purified Knowledge for Cross-Modal Communication,"Liang Chen, Xiaoding Wang, Limei Lin, Dajin Wang, Zhiquan
+Liu and Jie Wu"
+rfp1151,Semantics and Knowledge,CausalSKyHop: Knowledge-Aware Causal Explanation of Dynamic GNNs via Higher-Order Semantic Reasoning,"Jixuan Wu, Limei Lin, Xiaoding Wang, Kunpeng Xu and Jie Wu"
+rfp1157,Semantics and Knowledge,Traceable Latent Variable Discovery Based on Multi-Agent Collaboration,"Huaming Du, Tao Hu, Yijie Huang, Yu Zhao, Guisong Liu, Tao
+Gu, Gang Kou and Carl Yang"
+rfp1188,Semantics and Knowledge,Conditional Diffusion Guided Knowledge Transfer for Multi-Domain Knowledge Graph Completion,"Jiawei Sheng, Taoyu Su, Xixun Lin, Xiaodong Li and Tingwen
+Liu"
+rfp1246,Semantics and Knowledge,DyLogNet: A Dynamic Multi-Relational Graph Framework for Log Anomaly Detection,"Xudong Zhao, Xiaolong Xu, Haolong Xiang, Tong Gao, Lianyong
+Qi, Amin Beheshti, Xuyun Zhang and Wanchun Dou"
+rfp1329,Semantics and Knowledge,Lifting Manifolds to Mitigate Pseudo-Alignment in LLM4TS,"Liangwei Nathan Zheng, Wenhao Liang, Wei Emma Zhang, Miao
+Xu, Olaf Maennel and Weitong Chen"
+rfp1398,Semantics and Knowledge,MePe: Rethinking Multimodal Chinese Idiom Reading Comprehension from a Metaphorical Perspective,"Tongguan Wang, Junkai Li, Feiyue Xue, Hui Liu, Dongyu Su,
+Wangjun Huang and Ying Sha"
+rfp1402,Semantics and Knowledge,PLIKD: Prompt Learning with Instance-aware Knowledge Distillation for Web-scale Semantic Image Classification,"Jianye Xie, Chunhua Hu, Lianyong Qi, Fan Wang, Xiaolong Xu,
+Haolong Xiang, Xuyun Zhang, Shichao Pei, Amin Beheshti,
+Wanchun Dou and Xiaokang Zhou"
+rfp1508,Semantics and Knowledge,Dual History Enhancement with Hybrid Hypergraph-Graph Networks for Temporal Knowledge Graph Reasoning,"Kailun Ye, Xiangjie Kong, Yuchao Zhang, Xuan Wang, Linan
+Zhu, Jiaxin Du, Guojiang Shen and Jianxin Li"
+rfp1524,Semantics and Knowledge,GraphCogent: Mitigating LLMs' Working Memory Constraints via Multi-Agent Collaboration in Complex Graph Understanding,"Rongzheng Wang, Shuang Liang, Qizhi Chen, Yihong Huang,
+Muquan Li, Yizhuo Ma, Dongyang Zhang, Ke Qin and Man-Fai
+Leung"
+rfp1651,Semantics and Knowledge,Neuro-Sym Supporter: A Thoughtful Emotion Support Agent Integrating Neural and Symbolic Policy Learning,"Minghui Ma, Bin Guo, Mengqi Chen, Jingqi Liu, Yasan Ding,
+Yan Liu and Han Wang"
+rfp1656,Semantics and Knowledge,LoSemB: Logic-Guided Semantic Bridging for Inductive Tool Retrieval,"Luyao Zhuang, Qinggang Zhang, Huachi Zhou, Yujing Zhang and
+Xiao Huang"
+rfp1751,Semantics and Knowledge,EMSEdit: Efficient Multi-Step Meta-Learning-based Model Editing,"Xiaopeng Li, Shasha Li, Xi Wang, Shezheng Song, Bin Ji,
+Shangwen Wang, Jun Ma, Xiaodong Liu, Mina Liu and Jie Yu"
+rfp1779,Semantics and Knowledge,When to Trust: A Causality-Aware Calibration Framework for Accurate Knowledge Graph Retrieval-Augmented Generation,"Jing Ren, Bowen Li, Ziqi Xu, Xikun Zhang, Haytham Fayek and
+Xiaodong Li"
+rfp1811,Semantics and Knowledge,Beyond Factual Queries: A Novel Predictive Retrieval-Augmented Generation,"Debo Cheng, Jianfeng Deng, Qingfeng Chen, Jinyi Jie and
+Jiangzhang Gan"
+rfp1818,Semantics and Knowledge,MMTableBench: A Multi-level Multimodal Benchmark for Reasoning and Layout Complexity in Table QA,"Xianjie Wu, Xiaohang Xu, Tingyu Jiang, Jian Yang, Di Liang,
+Xianfu Cheng, Zhenhe Wu, Linzheng Chai, Wei Zhang, Jiaheng
+Liu, Ge Zhang, Bob Simons, Tongliang Li and Zhoujun Li"
+rfp1843,Semantics and Knowledge,Adaptive Task Balancing for Visual Instruction Tuning via Inter-Task Contribution and Intra-Task Difficulty,"Yanqi Dai, Yong Wang, Zebin You, Dong Jing, Xiangxiang Chu
+and Zhiwu Lu"
+rfp1899,Semantics and Knowledge,Generalized Incremental Learning under Concept Drift across Evolving Data Streams,"En Yu, Jie Lu and Guangquan Zhang"
+rfp1900,Semantics and Knowledge,MARCH: Multi-Teacher Contrastive Hypergraph Distillation,"Rongwei Xu, Zitai Qiu, Pengfei Ding, Jia Wu, Yan Wang, Amin
+Beheshti and Guanfeng Liu"
+rfp1957,Semantics and Knowledge,Multimodal Trajectory Representation Learning for Travel Time Estimation,"Zhi Liu, Xuyuan Hu, Xiao Han, Zhehao Dai, Zhaolin Deng,
+Guojiang Shen and Xiangjie Kong"
+rfp1977,Semantics and Knowledge,STARK: Structure-Aware and Adaptive Representation Learning for Continual Knowledge Graph Embedding,Kyunghwan Lee and Dong-Wan Choi
+rfp1994,Semantics and Knowledge,Large Language Model for OWL Proofs,"Hui Yang, Jiaoyan Chen and Uli Sattler"
+rfp2018,Semantics and Knowledge,Unlearning of Knowledge Graph Embedding via Preference Optimization,"Jiajun Liu, Wenjun Ke, Peng Wang, Yao He, Ziyu Shang,
+Guozheng Li, Zijie Xu and Ke Ji"
+rfp2100,Semantics and Knowledge,Missingness-aware Federated Contrastive Learning on Semantic Graphs,"Shuo Yu, Zhuoyang Han, Guoqing Han, Tao Tang, Feng Ding and
+Qiang Zhang"
+rfp2161,Semantics and Knowledge,CASE: Conflict-assessed Knowledge-sensitive Neuron Tuning for Lifelong Model Editing,"Zhange Zhang, Yuqing Ma, Yulong Wang, Tianbo Wang, Jiakai
+Wang, Simin Li and Xianglong Liu"
+rfp2246,Semantics and Knowledge,ReaLM: Residual Quantization Bridges Knowledge Graph Embeddings and Large Language Models,"Wenbin Guo, Xin Wang, Jiaoyan Chen, Lingbing Guo, Zhao Li
+and Zirui Chen"
+rfp2275,Semantics and Knowledge,Adaptive Multi-Interaction Web Semantic Graph Representation,"Feng Ding, Tingting Wang, Ruolin Li, Ying Jin, Junxiang
+Zhang, Shan Jin, Yicong Li and Xin Ye"
+rfp2287,Semantics and Knowledge,Counterfactual Augmented Causal Reasoning for Aspect-Based Sentiment Analysis,"Yiming Wu, Liang Hu, Mingzhu Zhou, Tangwei Ye, Xuejie Yang,
+Xun Yang, Zhongyuan Lai, Qi Zhang and Usman Naseem"
+rfp2311,Semantics and Knowledge,Conditional Information Extraction with Diffusion Model on Fact-Condition Star Graph,"Yunxiao Yang, Jianting Chen, Xiaoying Gao, Zaiyuan Di and
+Yang Xiang"
+rfp2324,Semantics and Knowledge,RAIE:Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation,"Jin Zeng, Yupeng Qi, Hui Li, Chengming Li, Ziyu Lyu, Lixin
+Cui and Lu Bai"
+rfp2337,Semantics and Knowledge,Enhancing Multi-Modal Entity Alignment via Multi-Grained Decision Fusion,"Yu Xing, Qizhuo Xie, You Lv, Ziyang Zhou, Qianzi Hou, Qing
+Gu, Bin Chong and Tieke He"
+rfp2375,Semantics and Knowledge,S-Path-RAG: Semantic-Aware Shortest-Path Retrieval Augmented Generation for Multi-Hop Knowledge Graph Question Answering,"Rong Fu, Yemin Wang, Tianxiang Xu, Yongtai Liu, Weizhi
+Tang, Wangyu Wu, Xiaowen Ma and Simon Fong"
+rfp2533,Semantics and Knowledge,Language Model Representations for Efficient Few-Shot Tabular Classification,"Inwon Kang, Parikshit Ram, Yi Zhou, Horst Samulowitz and
+Oshani Seneviratne"
+rfp2548,Semantics and Knowledge,Relation-Aware Multimodal Analogical Reasoning with Modality Fingerprints and Adaptive Gating,"Ruofan Wang, Zijian Huang, Qiqi Wang, Yuchen Su, Robert
+Amor, Kaiqi Zhao and Meng-Fen Chiang"
+rfp2632,Semantics and Knowledge,Harnessing LLM for Noise-Robust Cognitive Diagnosis in Web-Based Intelligent Education Systems,"Guixian Zhang, Guan Yuan, Ziqi Xu, Yanmei Zhang, Jing Ren,
+Zhenyun Deng and Debo Cheng"
+rfp2703,Semantics and Knowledge,DTransKT: A Dual Transferable Knowledge Tracing Framework for Cross-Disciplinary Self-Adaptation,"Kun Liang, Jiake Ge, Xin Wang and Yiying Zhang"
+rfp2724,Semantics and Knowledge,DRMD: Explainable Depression Detection Based on Metaphorical Conceptual Mapping,"Dongyu Zhang, Wanqiu Liao, Weichen Hu and Hongfei Lin"
+rfp2893,Semantics and Knowledge,Spectral Disentanglement and Enhancement: A Dual-domain Contrastive Framework for Representation Learning,"Jinjin Guo, Yexin Li, Zhichao Huang, Jun Fang, Zhiyuan Liu,
+Chao Liu, Pengzhang Liu and Qixia Jiang"
+rfp2908,Semantics and Knowledge,Towards Meta-Cognitive Knowledge Editing for Multimodal LLMs,"Zhaoyu Fan, Kaihang Pan, Mingze Zhou, Bosheng Qin, Juncheng
+Li, Shengyu Zhang, Wenqiao Zhang, Siliang Tang, Fei Wu and
+Yueting Zhuang"
+rfp2914,Semantics and Knowledge,Verifiable Federated Representation Learning for Cross-domain Sequential Recommendation,"Tao Tang, Botao Liu, Ciyuan Peng, Ivan Lee and Xiangjie Kong"
+rfp2915,Semantics and Knowledge,Kleene Closure Property Path Query Optimization  Based on Node Clustered Index,"Tenglong Ren, Lulu Yang, Xiaowang Zhang and Zhiyong Feng"
+rfp3003,Semantics and Knowledge,How Human Experts Educate Specialized LLMs: Filling Knowledge Gaps in KG-Augmented Generation through Hallucination Detection,"Chaofan Li, Lixing Chen, Junhua Tang, Yang Bai, Yutong
+Zhang, Zhi Zheng, Pan Zhou and Zhe Qu"
+rfp3005,Semantics and Knowledge,AgentPRM: Process Reward Models for LLM Agents via Step-Wise Promise and Progress,"Zhiheng Xi, Chenyang Liao, Guanyu Li, Zhihao Zhang,
+Wenxiang Chen, Binghai Wang, Senjie Jin, Yuhao Zhou, Jian
+Guan, Wei Wu, Tao Ji, Tao Gui, Qi Zhang and Xuanjing Huang"
+rfp3136,Semantics and Knowledge,A Simplex Approach to Synthetic Knowledge Graph Generation,"Ana Alexandra Morim da Silva, Atul Bhopalsing Pundir,
+Michael Röder and Axel-Cyrille Ngonga Ngomo"
+rfp3141,Semantics and Knowledge,Detecting Miscitation on the Scholarly Web through LLM-Augmented Text-Rich Graph Learning,"Huidong Wu, Haojia Xiang, Jingtong Gao, Xiangyu Zhao,
+Dengsheng Wu and Jianping Li"
+rfp3199,Semantics and Knowledge,MemoTime: Memory-Augmented Temporal Knowledge Graph Enhanced Large Language Model Reasoning,"Xingyu Tan, Xiaoyang Wang, Qing Liu, Xiwei Xu, Xin Yuan,
+Liming Zhu and Wenjie Zhang"
+rfp3315,Semantics and Knowledge,DyMRL: Dynamic Multispace Representation Learning for Multimodal Event Forecasting in Knowledge Graph,"Feng Zhao, Kangzheng Liu, Teng Peng, Yu Yang and Guandong Xu"
+rfp3329,Semantics and Knowledge,Empowering LLMs for Structure-Based Drug Design via Exploration-Augmented Latent Inference,"Xuanning Hu, Anchen Li, Qianli Xing, Jinglong Ji, Hao Tuo
+and Bo Yang"
+rfp3367,Semantics and Knowledge,PRoH: Dynamic Planning and Reasoning over Knowledge Hypergraphs for Retrieval-Augmented Generation,"Xiangjun Zai, Xingyu Tan, Xiaoyang Wang, Qing Liu, Xiwei Xu
+and Wenjie Zhang"
+rfp3389,Semantics and Knowledge,A Unified and Time-Efficient Multi-Agent Framework for Data Discovery,"Yunhao Xiao, Ying Wang, Michael Bewong, Selasi Kwashie,
+Xiaoxia Li and Zaiwen Feng"
+rfp3526,Semantics and Knowledge,Expectation-Guided Self-Verification for Aligning Large Reasoning Models with Domain Knowledge,"Han Zhang, Chen Zhao, Shasha Wang, Gang Chen and Chenghong
+Zhang"
+rfp3671,Semantics and Knowledge,KG-BiLM: Knowledge Graph Embedding via Bidirectional Language Models,"Zirui Chen, Xin Wang, Zhao Li, Wenbin Guo, Dongxiao He,
+Yanbing Li and Wushour Silamu"
+rfp3728,Semantics and Knowledge,Incentivizing Agentic Reasoning Capability with Outcome Supervision for Knowledge Base Question Answering,"Zhuo Chen, Fei Wang, Zixuan Li, Zhao Zhang, Weiwei Ding,
+Chuanguang Yang, Yongjun Xu and Xiaolong Jin"
+rfp3788,Semantics and Knowledge,A Unified Framework for Rule Learning: Integrating Commonsense Knowledge from LLMs with Structured Knowledge from Knowledge Graphs,"Qirui Hao, Kewei Cheng, Tongze Zhang, Hongyuan Liu, Junming
+Shao and Carl Yang"
+rfp3795,Semantics and Knowledge,TaxoBell: Gaussian Box Embeddings for Self-Supervised Taxonomy Expansion,"Sahil Mishra, Srinitish Srinivasan, Srikanta Bedathur and
+Tanmoy Chakraborty"
+rfp3839,Semantics and Knowledge,Learning to Route: A Rule-Driven Agent Framework for Hybrid-Source Retrieval-Augmented Generation,"Haoyue Bai, Haoyu Wang, Shengyu Chen, Zhengzhang Chen,
+Lu-An Tang, Wei Cheng, Yanjie Fu and Haifeng Chen"
+rfp3851,Semantics and Knowledge,MixRAG : Mixture-of-Experts Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering,"Lihui Liu, Jiayuan Ding, Subhabrata Mukherjee and Carl Yang"
+rfp3901,Semantics and Knowledge,AdaQE-CG: Adaptive Query Expansion for Web-Scale Generative AI Model and Data Card Generation,"Haoxuan Zhang, Ruochi Li, Zhenni Liang, Sattari Mehri, Phat
+Vo, Collin Qu, Ting Xiao, Junhua Ding, Yang Zhang and
+Haihua Chen"
+rfp4002,Semantics and Knowledge,Learning to Evolve: Bayesian-Guided Continual Knowledge Graph Embedding,"Linyu Li, Zhi Jin, Yuanpeng He, Dongming Jin, Yichi Zhang,
+Haoran Duan, Xuan Zhang, Zhengwei Tao and Tashi Nyima"
+rfp4030,Semantics and Knowledge,Dual-View Hypercube Alignment Framework for Open-World Entity Typing,"Hu Chen, Yu Zhu and Wei Shen"
+rfp4039,Semantics and Knowledge,WiNELL: Wikipedia Never-Ending Updating with LLM Agents,"Revanth Gangi Reddy, Tanay Dixit, Jiaxin Qin, Cheng Qian,
+Daniel Lee, Jiawei Han, Kevin Small, Xing Fan, Ruhi
+Sarikaya and Heng Ji"
+rfp4054,Semantics and Knowledge,Counterfactual Meta-task Augmentation for Few-shot Graph Node Classification,"Zhiqiang Wang, Jiaxin Zhang, Chenchao Zhang, Shiying Cheng,
+Jianqing Liang and Peng Song"
+rfp4128,Semantics and Knowledge,Node Role-Guided LLMs for Dynamic Graph Clustering,"Dongyuan Li, Ying Zhang, Yaozu Wu and Renhe Jiang"
+rfp4268,Semantics and Knowledge,Towards Foundation Models for MMKG: Multi-Task Inductive Generalization via Task-Aware Routing,"Shundong Yang, Jing Yang, Xiaowen Jiang, Xiaofen Wang,
+Laurence T. Yang, Yuan Gao, Xinfa Jiang, Jie Chen and
+Chaojun Zhang"
+rfp4371,Semantics and Knowledge,Knowledge-Enhanced Multimodal Fake News Detection: Semantic Visual and Priority Fusion,"Qin Zhang, Jiaying Liu, Qian Tao, Zhiwei Guo, Qiyue Zhong,
+Yifan Zhang and Ziyan Huang"
+rfp4498,Semantics and Knowledge,BLEND: Balanced and Leaf-Enhanced Dual Fine-Tuning for Taxonomy Completion,"Pankaj Iiitd, Dhruv Kumar, Vinayak Abrol and Vikram Goyal"
+rfp4567,Semantics and Knowledge,"Beyond Single Pass, Looping Through Time: KG-IRAG with Iterative Knowledge Retrieval","Ruiyi Yang, Hao Xue, Imran Razzak and Flora D. Salim"
+rfp0126,Social Networks and Social Media,Many Hands Make Light Work: Group-based Information Diffusion Prediction over Long-Context Cascades,"Zihan Feng, Yajun Yang, Xin Huang, Xin Wang, Hong Gao and
+Qinghua Hu"
+rfp0282,Social Networks and Social Media,Collusion-Aware Set-level Learning Framework for Detecting Spamming Activities,Yuli Liu
+rfp0310,Social Networks and Social Media,"The Devil Within, The Cure Without: Securing Locally Private Graph Learning under Poisoning","Longzhu He, Peng Tang, Li Sun and Sen Su"
+rfp0347,Social Networks and Social Media,Open or Blocked Skies? Community Moderation Practices in Bluesky,"Saidu Sokoto, Leonhard Balduf, Onur Ascigil, Gareth Tyson,
+Ignacio Castro, Björn Scheuermann, Andrea Baronchelli and
+Michał Król"
+rfp0381,Social Networks and Social Media,H-NeiFi: Non-Invasive and Consensus-Efficient Multi-Agent Opinion Guidance,"Shijun Guo, Haoran Xu, Yaming Yang, Ziyu Guan, Wei Zhao,
+Zhang Xinyi and Song Yishan"
+rfp0570,Social Networks and Social Media,Effective and Unsupervised Social Event Detection and Evolution via RAG and Structural Entropy,"Qitong Liu, Hao Peng, Zuchen Li, Xihang Meng, Ziyu Yang,
+Jiting Li, Li Sun and Philip Yu"
+rfp0729,Social Networks and Social Media,FairGE: Fairness-Aware Graph Encoding in Incomplete Social Networks,"Renqiang Luo, Huafei Huang, Tao Tang, Jing Ren, Ziqi Xu,
+Mingliang Hou, Enyan Dai and Feng Xia"
+rfp0747,Social Networks and Social Media,Explaining Synergistic Effects in Social Recommendations,"Yicong Li, Shan Jin, Qi Liu, Shuo Wang, Jiaying Liu, Shuo
+Yu, Qiang Zhang, Kuanjiu Zhou and Feng Xia"
+rfp0920,Social Networks and Social Media,Graph Adversarial Defense via Hilbert-Schmidt Independence Criterion against Influence Maximization Attacks,"Yuxing Guo, Jianqing Liang, Kaixuan Yao, Zhihao Guo and
+Jiye Liang"
+rfp1085,Social Networks and Social Media,Multi-task Inference of Diffusion Networks,"Ting Gan, Kudereti Kuerban, Qian Yan, Ling Han, Zhigao
+Zheng and Hao Huang"
+rfp1127,Social Networks and Social Media,Social Event Prediction via Fourier Graph Learning,"Mingjie Qiu, Zhiyi Tan and Bing-Kun Bao"
+rfp1133,Social Networks and Social Media,Towards Rare Social Event Prediction via Mediator Learning,"Mingjie Qiu, Zhiyi Tan and Bing-Kun Bao"
+rfp1466,Social Networks and Social Media,Rhythm of Opinion: Interpretable Hawkes-Graph Networks for Hierarchical Opinion Propagation,"Yulong Li, Zhixiang Lu, Peixin Guo, Simin Lai, Yuxuan
+Zhang, Haochen Xue, Xiwei Liu, Yichen Li, Zhaodong Wu,
+Feilong Tang, Mian Zhou, Chong Li, Imran Razzak, Qingxia Li
+and Jionglong Su"
+rfp1934,Social Networks and Social Media,FS_GPlib: Breaking the Web-Scale Barrier — A Unified Acceleration Framework for Graph Propagation Models,"Chang Guo, Juyuan Zhang, Chang Su, Tianlong Fan and Linyuan
+Lü"
+rfp1982,Social Networks and Social Media,"Beyond Words: Enhancing Desire, Emotion, and Sentiment Recognition with Non-Verbal Cues","Wei Chen, Tongguan Wang, Feiyue Xue, Junkai Li, Hui Liu and
+Ying Sha"
+rfp2045,Social Networks and Social Media,Pattern-aware Illicit Account Detection based on User Behavior Sequences,"Zehao Wang, Lanjun Wang, Fuxia Guo and Yanjie Dong"
+rfp2049,Social Networks and Social Media,Source Localization in Continuous-Time Propagation via Spectral ODE Modeling,"Dongpeng Hou, Yuchen Wang, Giulio Cimini, Roberto Benzi,
+Huixiang Zhang, Zhen Wang and Chao Gao"
+rfp2136,Social Networks and Social Media,TFWaveFormer: Temporal-Frequency Collaborative Multi-level Wavelet Transformer for Dynamic Link Prediction,"Hantong Feng, Yonggang Wu, Duxin Chen and Wenwu Yu"
+rfp2272,Social Networks and Social Media,CIFAD: Causal-Invariant Subspace Learning for Few-Shot Anomaly Detection on Dynamic Relational Graphs,"Xiao Yu, Haolong Xiang, Xiaolong Xu, Qi Lianyong, Zhang
+Xuyun, Fan Wei and Dou Wanchun"
+rfp2316,Social Networks and Social Media,Fair k-Center Clustering on Massive Social Network Data Streams,"Longkun Guo, Chaoqi Jia and Chao Chen"
+rfp2437,Social Networks and Social Media,How Social Media Peer Comments Influence Privacy Decisions in Photo Sharing: Context and Individual Differences Cause Comments to Backfire,"Tangila Islam Tanni, Renita Washburn, Yan Solihin and Mary
+Jean Amon"
+rfp2581,Social Networks and Social Media,Unmasking Bots in Higher Dimensions: Message Passing over Simplexes for Bot Detection,"Fangfang Li, Huihui Zhang, Xin Zhang and Wei Wu"
+rfp2584,Social Networks and Social Media,Unicoon: Hypergraph-based Multi-Agent Simulation of Information Cocoons,"Chunyu Wei, Tu Yongsiqi and Yunhai Wang"
+rfp2642,Social Networks and Social Media,Prism: Towards Lowering User Cognitive Load in LLMs via Complex Intent Understanding,"Zenghua Liao, Jinzhi Liao and Xiang Zhao"
+rfp2669,Social Networks and Social Media,TGSBM: Transformer-Guided Stochastic Block Model for Link Prediction,"Zhejian Yang, Songwei Zhao, Zilin Zhao and Hechang Chen"
+rfp2723,Social Networks and Social Media,LAPS: A Lightweight Privilege-Allocation Prompting Framework for Source Localization,"Hengrui Cui, Yang Fang, Yuehang Cao and Xiang Zhao"
+rfp2962,Social Networks and Social Media,ContiGuard: A Framework for Continual Toxicity Detection Against Evolving Evasive Perturbations,"Hankun Kang, Xin Miao, Jianhao Chen, Jintao Wen, Mayi Xu,
+Weiyu Zhang, Wenpeng Lu and Tieyun Qian"
+rfp3028,Social Networks and Social Media,PolicySim: An LLM-Based Agent Social Simulation Sandbox for Proactive Policy Optimization,"Renhong Huang, Ning Tang, Jiarong Xu, Yuxuan Cao, Qingqian
+Tu, Sheng Guo, Bo Zheng, Huiyuan Liu and Yang Yang"
+rfp3159,Social Networks and Social Media,Securing Your Place in the Review Network: A Dynamic Embeddedness-aware Graph Neural Network for Restaurant Survival Prediction,"Yilong Zang, Hengyun Li, Xinbo Yu and Liangfei Qiu"
+rfp3193,Social Networks and Social Media,Emergent Coordinated Behaviors in Networked LLM Agents: Modeling the Strategic Dynamics of Information Operations,"Gian Marco Orlando, Jinyi Ye, Valerio La Gatta, Mahdi
+Saeedi, Vincenzo Moscato, Emilio Ferrara and Luca Luceri"
+rfp3266,Social Networks and Social Media,From Social Media to Psychological Scale: An Adaptive Framework with Two-Hop Retrieval for Depression Screening,"Yangyang Xu, Jinpeng Hu, Peipei Song, Zhangling Duan and
+Xun Yang"
+rfp3570,Social Networks and Social Media,Playing Close to the Vest: Competitive Information Propagation in Partially Observed Dual-Population Mean-Field Games,"Dun Tan, Lixing Chen, Bo Zhang, Hongfu Liu, Hao Peng,
+Shenghong Li, Yang Bai and Pan Zhou"
+rfp3590,Social Networks and Social Media,Fairness in Opinion-Formation Dynamics,"Nikos Theologis, Evaggelia Pitoura, Evimaria Terzi and
+Panayiotis Tsaparas"
+rfp3643,Social Networks and Social Media,LLM-Driven Semantic ID for Information Diffusion Prediction,"Haoshuang Liu, Zihan Feng, Yajun Yang, Xin Wang, Hong Gao
+and Qinghua Hu"
+rfp3714,Social Networks and Social Media,"SoftHateBench: Evaluating Moderation Models Against Reasoning-Driven, Policy-Compliant Hostility","Xuanyu Su, Diana Inkpen and Nathalie Japkowicz"
+rfp3715,Social Networks and Social Media,Tracing Belief-Driven Thoughts with Theory-of-Mind Agents: An Opinion Analysis Framework,"Jintao Wen, Yunfeng Ning, Hankun Kang, Xin Miao and Tieyun
+Qian"
+rfp3862,Social Networks and Social Media,DREAMS: A Social Exchange Theory-Informed Modeling of Misinformation Engagement on Social Media,Lin Tian and Marian-Andrei Rizoiu
+rfp4070,Social Networks and Social Media,Cross-Platform Narrative Prediction: Leveraging Platform-Invariant Discourse Networks,"Patrick Gerard, Luca Luceri, Leonardo Blas and Emilio
+Ferrara"
+rfp4260,Social Networks and Social Media,"They Said Memes Were Harmless --- We Found the Ones That Hurt: Decoding Jokes, Symbols, and Cultural References","Sahil Tripathi, Gautam Siddharth Kashyap, Mehwish Nasim,
+Jian Yang, Jiechao Gao and Usman Naseem"
+rfp4425,Social Networks and Social Media,Relational Database Distillation: From Structured Tables to Condensed Graph Data,"Xinyi Gao, Jingxi Zhang, Lijian Chen, Tong Chen, Lizhen Cui
+and Hongzhi Yin"
+rfp4488,Social Networks and Social Media,LLMs Killed Q&A Stars? Analyzing the Impact of LLM-Generated Answers on an Online Q&A Platform,Dongwon Shin and Sooel Son
+rfp4499,Social Networks and Social Media,DynaFLUX: Implicit Dynamics-Preserving Reinforcement Learning for Topology-Free Influence Maximization,"Daiyunke Zhang, Ting Deng, Tianchen Zhu, Shuai Ma, Daqing
+Li, Mingtian Peng and Feng Tian"
+rfp0028,"Systems and Infrastructure for Web, Mobile, and Web of Things",Smaller but Better: ​​Plasticity-Preserving Continual Learning for Embedded AI​,"Chenxin Mao, Haibo Liu, Zhenzhe Zheng, Fan Wu and Guihai
+Chen"
+rfp0042,"Systems and Infrastructure for Web, Mobile, and Web of Things",Cross-city Time Series Forecasting with Retrieval-Augmented Large Language Models,"Yue Jiang, Chenxi Liu, Yile Chen, Qin Chao, Shuai Liu,
+Cheng Long and Gao Cong"
+rfp0137,"Systems and Infrastructure for Web, Mobile, and Web of Things",FedBridge: Accelerating Edge-Assisted Federated Learning for Model-Heterogeneous Clients,"Kaibin Wang, Qiang He, Zeqian Dong, Ziteng Wei, Caslon
+Chua, Feifei Chen, Hai Jin and Yun Yang"
+rfp0263,"Systems and Infrastructure for Web, Mobile, and Web of Things",Beyond Single view Decoding: Dual-view Map Inference from Trajectories via Primal-Dual Graphs Co-generation,"Wenyu Wu, Jiafan Liu and Jiali Mao"
+rfp0368,"Systems and Infrastructure for Web, Mobile, and Web of Things",Glasses: Enabling Fast Environment-aware Few-Shot Learning via Device-Cloud Collaboration,"Qiang He, Sheng Zhong, Jiazhen Yang, Feifei Chen, Hai Jin
+and Yun Yang"
+rfp0491,"Systems and Infrastructure for Web, Mobile, and Web of Things",Macro-Micro Collaborative Learning for Logical Data Center Microservice Indicators Forecasting,"Mohan Gao, Zhemeng Yu, Yang Luo, Lintao Ma, Yinbo Sun,
+Yuchen Fang and Xiaofeng Gao"
+rfp0500,"Systems and Infrastructure for Web, Mobile, and Web of Things",Task-Aware Cloud-End Offloading for Vision-Language Model Serving via Dynamic Modality-Specific Adapter Scheduling,"Zian Wang, Ziyi Wang, Jie Xing, Yaya Wei, Ziyan Zhong and
+Lanshan Zhang"
+rfp0513,"Systems and Infrastructure for Web, Mobile, and Web of Things",SkyCL: Swift Continuous Learning with Kinship-Awareness for Multi-Drone Video Analytics under Drastic Drift,"Yuanzheng Tan, Qing Li, Jiaqi Cui, Jun Peng, Gareth Tyson,
+Zhenhui Yuan, Tingting Yang and Yong Jiang"
+rfp0521,"Systems and Infrastructure for Web, Mobile, and Web of Things",ST-LEGO: Large Language Models as Modular Architects for Traffic Prediction,"Shuhao Li, Weidong Yang, Yue Cui, Lipeng Ma, Yixuan Li,
+Chaoteng Wu, Lu Qin and Fan Zhang"
+rfp0542,"Systems and Infrastructure for Web, Mobile, and Web of Things",Meteor: High-Performance Control Message Delivery for Large-Scale Clouds,"Gongming Zhao, Baoqing Wang, Min Chen, Hongli Xu, Jiawei
+Liu, Xuwei Yang, Liguang Xie, Yongqiang Yang and Ying Xiong"
+rfp0561,"Systems and Infrastructure for Web, Mobile, and Web of Things",MASI: Memory-Adaptive Inference Framework for Spiking Neural Networks on Edge Devices,"Di Yu, Helin Zheng, Changze Lv, Xin Du, Linshan Jiang,
+Xiang Liu, Gang Pan and Shuiguang Deng"
+rfp0589,"Systems and Infrastructure for Web, Mobile, and Web of Things",FedRGL: Federated Riemannian Graph Learning in Mixed-Curvature Spaces with Ricci-Gated Convolution,"Haizhou Du, Haolin Wu, Zijie Zhu and Zicheng Shi"
+rfp0595,"Systems and Infrastructure for Web, Mobile, and Web of Things",FedSRD: Sparsify-Reconstruct-Decompose for Communication-Efficient Federated Large Language Models Fine-Tuning,"Guochen Yan, Luyuan Xie, Qingni Shen, Yuejian Fang and
+Zhonghai Wu"
+rfp0613,"Systems and Infrastructure for Web, Mobile, and Web of Things",Personalized Federated Fine-Tuning for LLMs via Data-Driven Heterogeneous Model Architectures,"Yicheng Zhang, Zhen Qin, Zhaomin Wu, Jian Hou and Shuiguang
+Deng"
+rfp0628,"Systems and Infrastructure for Web, Mobile, and Web of Things",MoE-LC: General-Purpose Lossless Compression for Multi-modal Data via Entropy-Aware Multi-Experts,"Zeyi Lu, Xiaoxiao Ma, Yujun Huang, Minxiao Chen, Bin Chen
+and Shu-Tao Xia"
+rfp0705,"Systems and Infrastructure for Web, Mobile, and Web of Things",TraceLLM: Evaluating and Exploring Large Language Models on Trace Analysis in Microservice-based Web Applications,"Tong Zhou, Xin Peng, Jie Zhang, Chaofeng Sha, Chenxi Zhang,
+Zicheng Yuan and Senyu Xie"
+rfp0739,"Systems and Infrastructure for Web, Mobile, and Web of Things",TimeMar: Multi-Scale Autoregressive Modeling for Unconditional Time Series Generation,"Xiangyu Xu, Qingsong Zhong and Jilin Hu"
+rfp0893,"Systems and Infrastructure for Web, Mobile, and Web of Things",Broken Promise: Differential Analysis of Functional Discrepancies Between WebAssembly and Native Binaries,"Xiao Wu, Alan Romano, Liyan Huang, Qiwen Yan, Cai Fu and
+Weihang Wang"
+rfp1024,"Systems and Infrastructure for Web, Mobile, and Web of Things",Self-Speculative Decoding for On-device MoE Acceleration,"Peirong Zheng, Wenchao Xu and Haozhao Wang"
+rfp1111,"Systems and Infrastructure for Web, Mobile, and Web of Things",Investigating Web Content Delivery Performance over Starlink,"Rohan Bose, Jinwei Zhao, Tanya Shreedhar, Jianping Pan and
+Nitinder Mohan"
+rfp1131,"Systems and Infrastructure for Web, Mobile, and Web of Things",Augmenting Cross-View Geo-Localization with Spatial Semantics from Vision Foundation Models,"Ji Shen, Lixing Chen, Yang Bai, Zhongqi Miao, Zhe Qu, Pan
+Zhou and Jianhua Li"
+rfp1199,"Systems and Infrastructure for Web, Mobile, and Web of Things",HeteroSim: Towards High-Fidelity Heterogeneous LLM Training Simulation on GPUs,"Xiaofei Yue, Fangming Zhao, Fulun Ye, Jiongchi Yu, Zhaoxuan
+Li, Tingting Li, Ziming Zhao and Jianwei Yin"
+rfp1220,"Systems and Infrastructure for Web, Mobile, and Web of Things",Curiosity Driven Knowledge Retrieval for Mobile Agents,"Sijia Li, Xiaoyu Tan, Shahir Ali, Niels Schmidt, Gengchen
+Ma and Xihe Qiu"
+rfp1247,"Systems and Infrastructure for Web, Mobile, and Web of Things",EcoTune: Edge-Cloud Collaborative Model Adaptation for Budget-Constrained On-Device SLM Personalization,"Gong Chen, Mingkai Lin, Xiaobin Hong, Wenzhong Li and
+Sanglu Lu"
+rfp1250,"Systems and Infrastructure for Web, Mobile, and Web of Things",Breath: Adaptive Protection Boundary in FEC Encoding for Mobile Real-Time Video Streaming,"Shiyang Huang, Gerui Lv, Yuankang Zhao, Jiaxing Zhang,
+Qingyue Tan, Congkai An, Huanhuan Zhang, Xinyi Zhang,
+Qinghua Wu and Zhenyu Li"
+rfp1339,"Systems and Infrastructure for Web, Mobile, and Web of Things",Prototype Augmentation-based Edge-end Heterogeneous Collaborative Learning,"Enze Yu, Penghuan Cheng, Haipeng Dai, Haihan Zhang, Sujin
+Hou, Meng Li, Zhenzhe Zheng, Qiang He and Guihai Chen"
+rfp1410,"Systems and Infrastructure for Web, Mobile, and Web of Things",WinFLoRA: Incentivizing Client-Adaptive Aggregation in Federated LoRA under Privacy Heterogeneity,"Mengsha Kou, Xiaoyu Xia, Ziqi Wang, Ibrahim Khalil, Ruikun
+Luo, Jingwen Zhou and Minhui Xue"
+rfp1502,"Systems and Infrastructure for Web, Mobile, and Web of Things",Wiseswap: Elastic Datacenter Network-Aware Disaggregated Memory for Multi-Tenant Cloud,"Mingxuan Liu, Jianhua Gu, Tianhai Zhao and Dong Sun"
+rfp1539,"Systems and Infrastructure for Web, Mobile, and Web of Things",Octopus: Vehicle-to-Road Collaborative Perception for Autonomous Driving with Closed-Loop Fusion,"Ruikun Luo, Jiadong Zhao, Peize Su, Jieming Yang, Jing
+Yang, Yuan Gao, Minhui Xue and Xiaoyu Xia"
+rfp1556,"Systems and Infrastructure for Web, Mobile, and Web of Things",Beyond Class Boundaries: Federated Visual Primitive Sharing with Text-Guided Adaptation,"Yongqiang Huang, Yingyu Chen, Tao Wang, Zexin Lu, Zerui
+Shao, Beibei Li and Yi Zhang"
+rfp1562,"Systems and Infrastructure for Web, Mobile, and Web of Things",ViTs: Teaching Machines to See Time Series Anomalies Like Human Experts,"Zexin Wang, Changhua Pei, Yang Liu, Hengyue Jiang, Quan
+Zhou, Haotian Si, Hang Cui, Jianhui Li, Gaogang Xie,
+Jingjing Li and Dan Pei"
+rfp1610,"Systems and Infrastructure for Web, Mobile, and Web of Things",FedDiG: Frequency-Guided Diffusion Diversity for Generalizable Federated Time Series Classification,"Haoran Shi, Junru Zhang, Cheng Peng, Xiaoli Tang, Longtao
+Huang and Han Yu"
+rfp1622,"Systems and Infrastructure for Web, Mobile, and Web of Things",FSDI: Frequency-Shaped Diffusion For Time-Series Imputation,"Wangmeng Shen, Hongfan Gao, Qingsong Zhong, Dingli Xu and
+Jilin Hu"
+rfp1631,"Systems and Infrastructure for Web, Mobile, and Web of Things",Automated Model Selection for Multivariate Time Series Forecasting,"Xiaoxuan Fan, Jiaqi Sun, Xianjun Deng, Qiankun Zhang, Wei
+Xiang, Shenghao Liu and Lingzhi Yi"
+rfp1659,"Systems and Infrastructure for Web, Mobile, and Web of Things",Energy-Efficient and Dequantization-Free Quantization of LLMs: A Spiking Neural Network Approach to Salient Value Mitigation,"Chenyu Wang, Zhanglu Yan, Zhi Zhou, Xu Chen and Weng-Fai
+Wong"
+rfp1675,"Systems and Infrastructure for Web, Mobile, and Web of Things",RAFed: Responsive Augmentation and Approximate Update Method for Federated Learning with Non-IID Data,Yicheng Di and Zhanjie Zhang
+rfp1700,"Systems and Infrastructure for Web, Mobile, and Web of Things",Enhancing Federated Class-Incremental Learning via Spatial-Temporal Statistics Aggregation,"Zenghao Guan, Guojun Zhu, Yucan Zhou, Wu Liu, Weiping Wang,
+Jiebo Luo and Xiaoyan Gu"
+rfp1707,"Systems and Infrastructure for Web, Mobile, and Web of Things",HALO: Hierarchical Reinforcement Learning for Large-Scale Adaptive Traffic Signal Control,"Yaqiao Zhu, Hongkai Wen, Geyong Min and Man Luo"
+rfp1813,"Systems and Infrastructure for Web, Mobile, and Web of Things",Starlink in the Wild: Multi-Perspective Measurements via DNS,"Ruoxuan Xia, Bingyu Li, Zhenyu Chen, Pengyu Yuan, Yunjia
+Wang, Xiaofeng Zheng and Jingqiang Lin"
+rfp1861,"Systems and Infrastructure for Web, Mobile, and Web of Things",Can Multimodal LLMs Perform Time Series Anomaly Detection?,"Xiongxiao Xu, Haoran Wang, Yueqing Liang, Philip S. Yu, Yue
+Zhao and Kai Shu"
+rfp1912,"Systems and Infrastructure for Web, Mobile, and Web of Things",LaTune: Lightweight and Adaptive Configuration Tuning for LLM Inference on Edge Devices,"Siqi Zhong, Mugeng Liu, Haiyang Shen, Chongyang Pan and Yun
+Ma"
+rfp1937,"Systems and Infrastructure for Web, Mobile, and Web of Things",FedAKD: Federated Adaptive Knowledge Distillation via Global Knowledge Calibration and Decoupling,"Yingchao Wang, Wenqi Niu and Hanpo Hou"
+rfp1985,"Systems and Infrastructure for Web, Mobile, and Web of Things",EdgeGen: Efficient LLM-Empowered Model Generation with Quantization-Aware NAS,"Yingqi Peng, Wenhao Zhou, Kaijie Gong, Yang Liu, Yi Gao and
+Wei Dong"
+rfp2064,"Systems and Infrastructure for Web, Mobile, and Web of Things",AgentSense: LLMs Empower Generalizable and Explainable Web-Based Participatory Urban Sensing,"Xusen Guo, Mingxing Peng, Xixuan Hao, Xingchen Zou,
+Qiongyan Wang, Sijie Ruan and Yuxuan Liang"
+rfp2104,"Systems and Infrastructure for Web, Mobile, and Web of Things",MF^3: Multimodal Federated Learning with Dual-Path Mamba-Transformer for Metro Flow Prediction,"Bingjie Wang, Chao Zhang, Wentao Li and Deyu Li"
+rfp2120,"Systems and Infrastructure for Web, Mobile, and Web of Things",An LLM-Powered Cooperative Framework for Large-Scale Multi-Vehicle Navigation,"Yuping Zhou, Siqi Lai, Jindong Han and Hao Liu"
+rfp2308,"Systems and Infrastructure for Web, Mobile, and Web of Things",Alzo: Auto-Tuning with Reinforcement Learning for DAG-based Blockchains,"Qiuyu Ding, Rongkai Zhang, Qinnan Zhang, Zhen Xiao, Jieyi
+Long, Mingchao Wan, Sen Liu and Jin Dong"
+rfp2391,"Systems and Infrastructure for Web, Mobile, and Web of Things",TRACE: Trajectory Recovery with State Propagation Diffusion for Urban Mobility,"Jinming Wang, Hai Wang, Hongkai Wen, Geyong Min and Man Luo"
+rfp2443,"Systems and Infrastructure for Web, Mobile, and Web of Things",Concordia: Enabling Low-Conflict Distributed Transaction Scheduling in Sharding Blockchain via Cooperative Perception,"Yanxiu Liu, Linpeng Jia, Xiaohu Yang, Zhongcheng Li and Yi
+Sun"
+rfp2577,"Systems and Infrastructure for Web, Mobile, and Web of Things",SecureSplit: Mitigating Backdoor Attacks in Split Learning,"Zhihao Dou, Dongfei Cui, Weida Wang, Anjun Gao, Yueyang
+Quan, Mengyao Ma, Viet Vo, Guangdong Bai, Zhuqing Liu and
+Minghong Fang"
+rfp2587,"Systems and Infrastructure for Web, Mobile, and Web of Things",BeeQoS: A Cloud-Native QoS System for Adaptive and Scalable Multi-Priority Bandwidth Guarantees,"Jinyao Liu, Si Wu, Haoyuan Ma, Chaoqun Li, Hongjing Yu,
+Dingyi Jia, Feng Li and Pengfei Hu"
+rfp2601,"Systems and Infrastructure for Web, Mobile, and Web of Things",Predictability-Aware Compression and Decompression Framework for Multichannel Time Series Data with Latent Seasonality,"Ziqi Liu, Pei Zeng and Yi Ding"
+rfp2880,"Systems and Infrastructure for Web, Mobile, and Web of Things",Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate,"Zhiyuan Fang, Xingfan Yu, Yuegui Huang, Zicong Hong, Yufeng
+Lyu, Wuhui Chen, Yue Yu and Fan Yu"
+rfp2901,"Systems and Infrastructure for Web, Mobile, and Web of Things",BIND: Enabling Continuous Transaction Processing During Account Migration in Sharded Blockchains,"Jiahao Qi, Dian Ding, Jie Li, Jiannong Cao, Yi-Chao Chen,
+Guangtao Xue and Shengyun Liu"
+rfp2924,"Systems and Infrastructure for Web, Mobile, and Web of Things",Camel: Frame-Level Bandwidth Estimation for Low-Latency Live Streaming under Video Bitrate Undershooting,"Liming Liu, Zhidong Jia, Li Jiang, Wei Zhang, Lan Xie, Feng
+Qian, Leju Yan, Bing Yan, Qiang Ma, Zhou Sha, Wei Yang,
+Yixuan Ban and Xinggong Zhang"
+rfp3034,"Systems and Infrastructure for Web, Mobile, and Web of Things",Adaptive Model and Strategy Routing for Cost-Efficient LLM Services,"Zhihong Pan, Kai Zhang, Yuze Zhao and Yupeng Han"
+rfp3091,"Systems and Infrastructure for Web, Mobile, and Web of Things",DualDis: A Dual Disentanglement Network for Vehicle Re-identification,"Wenying He, Feiyu Wang, Guangquan Xu, Yude Bai and Fei Guo"
+rfp3384,"Systems and Infrastructure for Web, Mobile, and Web of Things",CoLOR-DP: Conjugate Low-Rank Differential Privacy for Structure-Aware LoRA Fine-Tuning,"Kai Zhang, Yuxuan Xu, Wenxiang Lin, Chaoqun Hong, Pei-Wei
+Tsai, Xin Yuan and Minhui Xue"
+rfp3405,"Systems and Infrastructure for Web, Mobile, and Web of Things",CA-PFL: Client-adaptive Parameter-efficient Fine-tuning for Personalized Federated Learning,"Daixin Song, Hui Cai, Haojie Zhang, Biyun Sheng, Jian Zhou,
+Mang Ye and Fu Xiao"
+rfp3467,"Systems and Infrastructure for Web, Mobile, and Web of Things",MetaKube: An Experience-Aware LLM Framework for Kubernetes Failure Diagnosis,"Wei Sun, Ting Wang, Xinran Tian, Wanshun Lan, Xuhan Feng,
+Haoyue Li and Fangxin Wang"
+rfp3520,"Systems and Infrastructure for Web, Mobile, and Web of Things",Amortized Predictability-aware Training Framework for Time Series Forecasting and Classification,"Xu Zhang, Peng Wang, Yichen Li and Wei Wang"
+rfp3531,"Systems and Infrastructure for Web, Mobile, and Web of Things",SEMixer: Semantics Enhanced MLP-Mixer for Multiscale Mixing and Long-term Time Series Forecasting,"Xu Zhang, Qitong Wang, Peng Wang and Wei Wang"
+rfp3556,"Systems and Infrastructure for Web, Mobile, and Web of Things",FovRL: Joint Foveation and Quality Control for Immersive VR Streaming Using Reinforcement Learning,"Yuk Hang Tsui, Ze Wu, Ahmad Alhilal, Matti Siekkinen and
+Pan Hui"
+rfp3575,"Systems and Infrastructure for Web, Mobile, and Web of Things",SuperEar: Eavesdropping on Mobile Voice Calls via Stealthy Acoustic Metamaterials,"Zhiyuan Ning, Zhanyong Tang, Juan He, Weizhi Meng, Yuntian
+Chen, Jie Zhang and Zheng Wang"
+rfp3866,"Systems and Infrastructure for Web, Mobile, and Web of Things",A Structure-Agnostic Co-Tuning Framework for LLMs and SLMs in Cloud-Edge Systems,"Yuze Liu, Yunhan Wang, Tiehua Zhang, Zhishu Shen, Cheng
+Peng, Libing Wu, Feng Xia and Jiong Jin"
+rfp3981,"Systems and Infrastructure for Web, Mobile, and Web of Things",FediScan: Collaborative Social Bot Detection in the Fediverse,"Min Gao, Wen Wen, Haoran Du, Qiang Duan, Yu Xiao, Yupeng
+Li, Xin Wang, Pan Hui and Yang Chen"
+rfp4535,"Systems and Infrastructure for Web, Mobile, and Web of Things",FedMHO: Heterogeneous One-Shot Federated Learning Towards Resource-Constrained Clients,"Dezhong Yao, Tongtong Liu, Yuexin Shi and Zhiqiang Xu"
+rfp0016,"User Modeling, Personalization and Recommendation",ThinkRec: Thinking-based recommendation via LLM,"Qihang Yu, Kairui Fu, Zheqi Lv, Shengyu Zhang, Xinhui Wu,
+Chen Lin, Feng Wei, Bo Zheng and Fei Wu"
+rfp0111,"User Modeling, Personalization and Recommendation",Adaptive Graph Reweighting for Collaborative Filtering,"Yijun Sheng, Ximing Chen, Pui Ieng Lei, Yanyan Liu and
+Zhiguo Gong"
+rfp0151,"User Modeling, Personalization and Recommendation",Quantum-enhanced Representation Learning and Matching Learning for Recommendation,Anchen Li and Elena Casiraghi
+rfp0208,"User Modeling, Personalization and Recommendation","SEAR: LLM-Powered Sequential Recommendation via Fusion of Collaborative, Semantic, and Rating Information","Wei Guan, Jian Cao, Qiqi Cai, Jianqi Gao, Jinyu Cai and
+See-Kiong Ng"
+rfp0294,"User Modeling, Personalization and Recommendation",Guiding Generative Recommender Systems with Structured Human Priors via Multi-head Decoding,"Yunkai Zhang, Qiang Zhang, Diji Yang, Ryan Lin, Ruizhong
+Qiu, Benyu Zhang, Hanchao Yu, Jason Liu, Yinglong Xia,
+Zhuokai Zhao, Lizhu Zhang, Xiangjun Fan, Zhuoran Yu,
+Abhishek Kumar and Zeyu Zheng"
+rfp0450,"User Modeling, Personalization and Recommendation",Iterative Semantic Reasoning from Individual to Group Interests for Generative Recommendation with LLMs,"Xiaofei Zhu, Jinfei Chen, Feiyang Yuan and Yang Zhou"
+rfp0478,"User Modeling, Personalization and Recommendation",Generative Data Transformation: From Mixed to Unified Data,"Jiaqing Zhang, Mingjia Yin, Hao Wang, Yuxin Tian, Yuyang
+Ye, Yawen Li, Wei Guo, Yong Liu and Enhong Chen"
+rfp0505,"User Modeling, Personalization and Recommendation",From Entity Reliability to Clean Feedback: An Entity-Aware Denoising Framework Beyond Interaction-Level Signals,"Ze Liu, Xianquan Wang, Shuochen Liu, Jie Ma, Huibo Xu,
+Yupeng Han, Kai Zhang and Jun Zhou"
+rfp0512,"User Modeling, Personalization and Recommendation",Reinforcement Learning-Constrained Segmented User Modeling with Large Language Models for Recommendation,"Yu Xia, Qing Tan, He Chen, Jingyu Chen and Qian Dong"
+rfp0576,"User Modeling, Personalization and Recommendation",Thorki: Decoupling General and Personalized Knowledge with Collaborative Fusion for Personalized Federated Learning,"Qiang He, Rui Chen, Yicheng Liu, Sheng Zhong, Haipeng Dai,
+Feifei Chen, Hai Jin and Yun Yang"
+rfp0594,"User Modeling, Personalization and Recommendation",ES-MemEval: Benchmarking Conversational Agents on Personalized Long-Term Emotional Support,"Tiantian Chen, Jiaqi Lu, Ying Shen and Lin Zhang"
+rfp0606,"User Modeling, Personalization and Recommendation",Pathways of Thoughts: Multi-Directional Thinking for Long-form Personalized Question Answering,"Alireza Salemi, Cheng Li, Mingyang Zhang, Qiaozhu Mei,
+Zhuowan Li, Spurthi Amba Hombaiah, Weize Kong, Tao Chen,
+Hamed Zamani and Michael Bendersky"
+rfp0619,"User Modeling, Personalization and Recommendation",Large Language Models-Enhanced Semantic Diffusion for User-Centric Recommendation,"Xian Mo, Yijun Hu and Jun Pang"
+rfp0637,"User Modeling, Personalization and Recommendation",Not All Information Brings Benefits: Personalization-Driven Agent Debate for Conversational Recommendation,"Pengfei Zhang, Guojia An, Jin Huang, Yuhan Yang, Yang Yang
+and Jie Zou"
+rfp0649,"User Modeling, Personalization and Recommendation",DiffGRM: Diffusion-based Generative Recommendation Model,"Zhao Liu, Yichen Zhu, Yiqing Yang, Xiao Lv, Guoping Tang,
+Rui Huang, Qiang Luo, Ruiming Tang and Guorui Zhou"
+rfp0679,"User Modeling, Personalization and Recommendation",IACLR: Intention Alignment via Contrastive Learning for Bipartite Graph Recommendation,"Huiying Hu, Tuo Wang, Yixiao Zhou and Xiaoqing Lyu"
+rfp0716,"User Modeling, Personalization and Recommendation",FairFS: Addressing Deep Feature Selection Biases for Recommender System,"Xianquan Wang, Zhaocheng Du, Jieming Zhu, Qinglin Jia,
+Zhenhua Dong and Kai Zhang"
+rfp0731,"User Modeling, Personalization and Recommendation",Tail-Aware Data Augmentation for Long-Tail Sequential Recommendation,"Yizhou Dang, Zhifu Wei, Minhan Huang, Lianbo Ma, Jianzhe
+Zhao, Guibing Guo and Xingwei Wang"
+rfp0757,"User Modeling, Personalization and Recommendation",Lifelong Sequential Recommendation with Adaptive Subsequence Compression and Contextual Fusion,"Fei Li, Xiaoming Liu, Jiayi Luo, Guibing Guo, Jianzhe Zhao
+and Xingwei Wang"
+rfp0804,"User Modeling, Personalization and Recommendation",Off-Policy Learning with Limited Supply,"Koichi Tanaka, Ren Kishimoto, Bushun Kawagishi, Yusuke
+Narita, Yasuo Yamamoto, Nobuyuki Shimizu and Yuta Saito"
+rfp0833,"User Modeling, Personalization and Recommendation",Multi-Task Multi-Behavior Sequential Recommendation,"Weihao Du, Ziran Deng, Weike Pan and Zhong Ming"
+rfp0850,"User Modeling, Personalization and Recommendation",S2CDR: Smoothing-Sharpening Process Model for Cross-Domain Recommendation,"Xiaodong Li, Juwei Yue, Xinghua Zhang, Jiawei Sheng,
+Wenyuan Zhang, Taoyu Su, Zefeng Zhang and Tingwen Liu"
+rfp0882,"User Modeling, Personalization and Recommendation",Multi-view Semantic Contrastive Alignment for Multimodal Recommendation,Jiuqiang Li and Hongjun Wang
+rfp0941,"User Modeling, Personalization and Recommendation",pFedDKS: Detached Knowledge Sharing for Personalized Federated Learning,"Haozhao Wang, Wenchao Xu, Jingzhi Wang, Yunfeng Fan,
+Xiaoquan Yi and Rui Zhang"
+rfp0957,"User Modeling, Personalization and Recommendation",Adaptive Contrastive Learning in Sequential Recommendation based on Perturbation and Restoration Networks,"Yanbo Zhou, Bin Lü, Xu-Hua Yang, Xin-Li Xu and Boling Wang"
+rfp0963,"User Modeling, Personalization and Recommendation",Optimizing Multi-Turn Interactive Recommendation Agents via Generative Intrinsic Motivation,"Xueyang Feng, Jiakai Tang, Xu Chen, Quanyu Dai and Zhenhua
+Dong"
+rfp1012,"User Modeling, Personalization and Recommendation",Unveiling and Simulating Short-Video Addiction Behaviors via Economic Addiction Theory,"Chen Xu, Zhipeng Yi, Ruizi Wang, Wenjie Wang, Jun Xu and
+Maarten de Rijke"
+rfp1018,"User Modeling, Personalization and Recommendation",HyMiRec: A Hybrid Multi-interest Learning Framework for LLM-based Sequential Recommendation,"Jingyi Zhou, Cheng Chen, Kai Zuo, Manjie Xu, Zhendong Fu,
+Yibo Chen, Xu Tang and Yao Hu"
+rfp1119,"User Modeling, Personalization and Recommendation",PULSE: Socially-Aware User Representation Modeling Toward Parameter-Efficient Graph Collaborative Filtering,"Doyun Choi, Cheonwoo Lee, Biniyam Aschalew Tolera, Taewook
+Ham, Chanyoung Park and Jaemin Yoo"
+rfp1121,"User Modeling, Personalization and Recommendation",PRISM: Personalized Recommendation via Information Synergy Module,"Yutong Li, Xinyi Zhang, Peijie Sun, Letian Sha and
+Zhongxuan Han"
+rfp1147,"User Modeling, Personalization and Recommendation",Learning on Adaptive Manifolds for Graph Collaborative Filtering,"Guangzhi Qi, Guojun Liu and Qi Zhou"
+rfp1150,"User Modeling, Personalization and Recommendation",Room Matters: Dynamic Room-level Collaboration Information Modeling for Live Streaming Recommendation,"Ke Guo, Changle Qu, Xiao Zhang, Liqin Zhao, Shijun Wang,
+Yanan Niu and Jun Xu"
+rfp1155,"User Modeling, Personalization and Recommendation",ONE-PASS: Single Forward Pass Decoding for Listwise Reranking,"Yingpeng Du, Zhu Sun, Tianjun Wei and Jie Zhang"
+rfp1160,"User Modeling, Personalization and Recommendation",Personalized Learning Path Planning through Goal-Driven Learner State Modeling,"Joy Jia Yin Lim, Ye He, Jifan Yu, Xin Cong, Daniel
+Zhang-Li, Zhiyuan Liu, Huiqin Liu, Lei Hou, Juanzi Li and
+Bin Xu"
+rfp1174,"User Modeling, Personalization and Recommendation",Personalized Parameter-Efficient Fine-Tuning of Foundation Models for Multimodal Recommendation,"Sunwoo Kim, Hyunjin Hwang and Kijung Shin"
+rfp1179,"User Modeling, Personalization and Recommendation",Bridging Time and Domains: A Time-aware Framework for Cross-Domain Sequential Recommendation,"Zemu Liu, Zhida Qin, Pengzhan Zhou, Tianyu Huang and Gangyi
+Ding"
+rfp1190,"User Modeling, Personalization and Recommendation",Bridging Explicit and Implicit Intent: Unified Interest Generative Method for Joint Search-Recommendation Modeling,"Dongliang Liao, Chenxing Wang and Yawen Zeng"
+rfp1228,"User Modeling, Personalization and Recommendation",CC-OR-Net: A Unified Framework for LTV Prediction through Structural Decoupling,"Mingyu Zhao, Haoran Bai, Yu Tian, Bing Zhu and Hengliang Luo"
+rfp1234,"User Modeling, Personalization and Recommendation",Dynamic Routing-Based Adaptive Multi-LLM Collaboration: A Unified Recommendation Framework with Decision Knowledge Complementation,"Jiale Huang, Yingyuan Xiao, Likang Wu, Xu Cheng, Wengguang
+Zheng, Qingbo Hao, Ming He and Hongke Zhao"
+rfp1262,"User Modeling, Personalization and Recommendation",KE-FedRS: Tackling Data Sparsity in Federated Recommendation via Knowledge Enhancement,"Jiayu Bao, Hongjian Shi, Guanyu Zhang, Rui Zhou, Haozhao
+Wang and Yuan Liu"
+rfp1317,"User Modeling, Personalization and Recommendation",Long Story Short: Auditing U.S. Political Polarization in Recommendations for Long- vs. Short-form Videos on YouTube,"Shaokang Jiang, Arshia Arya, Seoyoung Kweon, Ivan Liang,
+Deepak Kumar and Kristen Vaccaro"
+rfp1325,"User Modeling, Personalization and Recommendation",Gaussian Mixture Flow Matching with Domain Alignment for Multi-Domain Sequential Recommendation,"Xiaoxin Ye, Chengkai Huang, Hongtao Huang and Lina Yao"
+rfp1345,"User Modeling, Personalization and Recommendation",From Prediction to Understanding: Leveraging Reasoning in Large Language Model-based Recommendations,"Zhi-Yuan Chen, Siyu Lu, Qiang Liu, Xingxing Wang and Yankai
+Lin"
+rfp1394,"User Modeling, Personalization and Recommendation",Generative Regression Based Watch Time Prediction for Short-Video Recommendation,"Hongxu Ma, Kai Tian, Tao Zhang, Xuefeng Zhang, Han Zhou,
+Chenghou Jin, Chunjie Chen, Han Li, Jihong Guan and
+Shuigeng Zhou"
+rfp1401,"User Modeling, Personalization and Recommendation",Line Graphs Are Here! Unlock a Simple Solution for Data Sparsity and Class Imbalance in Recommender System,"Junming Zhou, Hao Zhong, Shupeng Li, Zhengyang Wu, Yong
+Tang and Ronghua Lin"
+rfp1404,"User Modeling, Personalization and Recommendation",FeDecider: An LLM-Based Framework for Federated Cross-Domain Recommendation,"Xinrui He, Ting-Wei Li, Tianxin Wei, Xuying Ning, Xinyu He,
+Wenxuan Bao, Hanghang Tong and Jingrui He"
+rfp1461,"User Modeling, Personalization and Recommendation",Joint Similar User Exploration and Informative Behavior Guidance for Multi-Modal New Item Recommendation,"Jianye Xie, Lianyong Qi, Weiming Liu, Anqi Wang, Xiaolong
+Xu, Haolong Xiang, Xuyun Zhang, Wenwen Gong, Yang Zhang,
+Amin Beheshti and Wanchun Dou"
+rfp1471,"User Modeling, Personalization and Recommendation",AgentDR: Dynamic Recommendation with Implicit Item-Item Relations via LLM-based Agents,"Mingdai Yang, Nurendra Choudhary, Jiangshu Du, Edward W.
+Huang, Philip Yu, Karthik Subbian and Danai Koutra"
+rfp1519,"User Modeling, Personalization and Recommendation",ScotRec: Social Chain-of-Thought LLM Reasoning for Recommendation,"Kaibei Li, Jie Zou, Qika Lin, Weikang Guo, Qinyang He and
+Yang Yang"
+rfp1586,"User Modeling, Personalization and Recommendation","Modeling Cascaded Delay Feedback for Online Net Conversion Rate Prediction: Benchmark, Insights and Solutions","Mingxuan Luo, Guipeng Xv, Sishuo Chen, Xinyu Li, Li Zhang,
+Zhangming Chan, Xiang-Rong Sheng, Han Zhu, Jian Xu, Bo
+Zheng and Chen Lin"
+rfp1636,"User Modeling, Personalization and Recommendation",Temporal-Series-Aware Adaptive Positional Encoding for Transformer-based Sequential Recommendation,"Rongbo Qi, Yaqi Zhang, Chunyao Song and Tingjian Ge"
+rfp1647,"User Modeling, Personalization and Recommendation",MCRec: Few-Shot Multimodal Cover Recommendation via User Interest Profiles,"Weixin Zheng, Chunyao Song and Tingjian Ge"
+rfp1687,"User Modeling, Personalization and Recommendation",Diversity-Augmented Negative Sampling for Implicit Collaborative Filtering,"Yueqing Xuan, Kacper Sokol, Mark Sanderson and Jeffrey Chan"
+rfp1695,"User Modeling, Personalization and Recommendation","Delayed Feedback Modeling for Post-Click Gross Merchandise Volume Prediction: Benchmark, Insights and Approaches","Xinyu Li, Sishuo Chen, Guipeng Xv, Li Zhang, Mingxuan Luo,
+Zhangming Chan, Xiang-Rong Sheng, Han Zhu, Jian Xu and Chen
+Lin"
+rfp1746,"User Modeling, Personalization and Recommendation","AlphaFree: Recommendation Free from Users, IDs, and GNNs","Minseo Jeon, Junwoo Jung, Daewon Gwak and Jinhong Jung"
+rfp1748,"User Modeling, Personalization and Recommendation",Same Last-Item Confusion Unveiled: A Unified Mitigation Framework for Graph Learning in Session-Based Recommendation,"Jinpeng Chen, Jianxiang He, Yuan Cao, Huan Li, Zhenye Yang,
+Kaimin Wei, Xiongnan Jin, Senzhang Wang and Weiping Tu"
+rfp1782,"User Modeling, Personalization and Recommendation",R2NS: Recall and Re-ranking of Negative Samples for Sequential Recommendation,"Yuanzi Li, Xuri Ge, Jingyu Zhao, Yidan Wang, Jiyuan Yang,
+Zhumin Chen, Zhaochun Ren and Xin Xin"
+rfp1812,"User Modeling, Personalization and Recommendation",WeaveRec: An LLM-Based Cross-Domain Sequential Recommendation Framework with Model Merging,"Min Hou, Xin Liu, Le Wu, Chenyi He, Hao Liu, Zhi Li, Xin Li
+and Si Wei"
+rfp1853,"User Modeling, Personalization and Recommendation",Drifting with Intent: Generative Interest Trajectories for Multimodal Web Recommendation,"Weilin Zhou, Hao Zhang and Guangxin Wu"
+rfp1942,"User Modeling, Personalization and Recommendation",Field Matters: A Lightweight LLM-enhanced Method for CTR Prediction,"Yu Cui, Feng Liu, Jiawei Chen, Xingyu Lou, Changwang Zhang,
+Jun Wang, Yuegang Sun, Xiaohu Yang and Can Wang"
+rfp2073,"User Modeling, Personalization and Recommendation",Retracing and Restoring: Chronological Context Preservation for Effective Dynamic Recommendation,"Min-Jeong Kim, Jiwon Son, Yeon-Chang Lee and Sang-Wook Kim"
+rfp2079,"User Modeling, Personalization and Recommendation",BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations,"Mengyang Ma, Xiaopeng Li, Wanyu Wang, Zhaocheng Du,
+Jingtong Gao, Pengyue Jia, Yuyang Ye, Yiqi Wang, Yunpeng
+Weng, Weihong Luo, Xiao Han and Xiangyu Zhao"
+rfp2124,"User Modeling, Personalization and Recommendation",Modeling Endogenous Logic: Causal Neuro-Symbolic Reasoning Model for Explainable Multi-Behavior Recommendation,"Yuzhe Chen, Jie Cao, Youquan Wang, Haicheng Tao, Darko
+Vuković and Jia Wu"
+rfp2130,"User Modeling, Personalization and Recommendation",DynaMoLTV: A Cross-Game Dynamic Mixture Model with Weighted Sub-Distributions for Player Lifetime Value Prediction,"Furen Xu, Jie Zhang, Kai Jiang, Chengxiang Zhuo and Zang Li"
+rfp2148,"User Modeling, Personalization and Recommendation",From Criteria to Ranking: Targeting-Aware Tripartite Graph Learning for Multi-Criteria Recommendation,Zhenhua Meng and Fanshen Meng
+rfp2354,"User Modeling, Personalization and Recommendation",SAGE: Global Semantic Alignment with LLMs for Long-Tail Sequential Recommendation,"Maolin Wang, Tongshu Bian, Ziyan Wang, Xiaotong Jiang,
+Binhao Wang, Derong Xu, Wanyu Wang, Ruocheng Guo and
+Xiangyu Zhao"
+rfp2407,"User Modeling, Personalization and Recommendation",Relation-aware Diffusion-Asymmetric Graph Contrastive Learning for Recommendation,"Yixuan Huang, Jiawei Chen, Shengfan Zhang and Zane Cao"
+rfp2419,"User Modeling, Personalization and Recommendation",TargetMR: Learning Modality Target for Multimodal Recommendation,"Gu Tang, Jinghe Wang, Jiang Bo, Ze Zhao, Jianping Zhou,
+Xiaoying Gan, Luoyi Fu, Xinbing Wang and Chenghu Zhou"
+rfp2571,"User Modeling, Personalization and Recommendation",Mixture of Sequence: Theme-Aware Mixture-of-Experts for Long-Sequence Recommendation,"Xiao Lin, Zhicheng Tang, Weilin Cong, Mengyue Hang, Kai
+Wang, Yajuan Wang, Zhichen Zeng, Ting-Wei Li, Hyunsik Yoo,
+Zhining Liu, Xuying Ning, Ruizhong Qiu, Wen-Yen Chen, Shuo
+Chang, Rong Jin, Huayu Li and Hanghang Tong"
+rfp2646,"User Modeling, Personalization and Recommendation",MCLMR: A Model-Agnostic Causal Learning Framework for Multi-Behavior Recommendation,"Ranxu Zhang, Junjie Meng, Ying Sun, Ziqi Xu, Bing Yin, Hao
+Li, Yanyong Zhang and Chao Wang"
+rfp2791,"User Modeling, Personalization and Recommendation",Adaptive Location Hierarchy Learning for Long-Tailed Mobility Prediction,"Yu Wang, Junshu Dai, Yuchen Ying, Hanyang Yuan, Zunlei
+Feng, Tongya Zheng and Mingli Song"
+rfp2858,"User Modeling, Personalization and Recommendation",Scaling Collaborative Filtering with Multimodal Contrastive Fine-tuning,"Liwei Jin, Dan Luo, Lixin Zou, Chenliang Li, Xiangyang Luo,
+Xixun Lin, Liming Dong and Yifan Zhang"
+rfp2955,"User Modeling, Personalization and Recommendation",Embedding Enhancement via Fine-Tuned Language Models for Learner-Item Cognitive Modeling,"Yuanhao Liu, Zihan Zhou, Kaiying Wu, Shuo Liu, Yiyang
+Huang, Jiajun Guo, Aimin Zhou and Hong Qian"
+rfp3020,"User Modeling, Personalization and Recommendation",Spattack: Subgroup Poisoning Attacks on Federated Recommender Systems,"Bo Yan, Yurong Hao, Dingqi Liu, Huabin Sun, Pengpeng Qiao,
+Wei Yang Bryan Lim, Yang Cao and Chuan Shi"
+rfp3023,"User Modeling, Personalization and Recommendation",C-HyPOD: Causal Hyperbolic Learning with Prototype Orthogonal Disentanglement for Graph Out-of-Distribution Recommendation,"Jiahao Liang, Yutian Xiao, Haoran Yang, Zhiwen Yu, Jia-Nan
+Liu and Kaixiang Yang"
+rfp3074,"User Modeling, Personalization and Recommendation",Towards Context-aware Reasoning-enhanced Generative Searching in E-commerce,"Zhiding Liu, Ben Chen, Mingyue Cheng, Enhong Chen, Li Li,
+Chenyi Lei, Wenwu Ou, Han Li and Kun Gai"
+rfp3075,"User Modeling, Personalization and Recommendation",Quantifying User Coherence: A Unified Framework for Analyzing Recommender Systems Across Domains,"Michael Soumm, Alexandre Fournier-Montgieux, Adrian Popescu
+and Bertrand Delezoide"
+rfp3118,"User Modeling, Personalization and Recommendation",FCRLLM: Aligning LLM with Collaborative Filtering for Long-tailed Sequential Recommendation,"Byungmoon Heo, Namjun Lee, Seonah Kim and Jaekwang Kim"
+rfp3149,"User Modeling, Personalization and Recommendation",ONeRec: Towards Openness-Aware and Adaptive Proactive News Recommendation,"Jie Li, Zhen Cui and Linmei Hu"
+rfp3157,"User Modeling, Personalization and Recommendation",Multimodal-enhanced Federated Recommendation: A Group-wise Fusion Approach,"Chunxu Zhang, Weipeng Zhang, Guodong Long, Zhiheng Xue,
+Riting Xia and Bo Yang"
+rfp3166,"User Modeling, Personalization and Recommendation",Learning Evolving Preferences: A Federated Continual Framework for User-Centric Recommendation,"Chunxu Zhang, Zhiheng Xue, Guodong Long, Weipeng Zhang and
+Bo Yang"
+rfp3170,"User Modeling, Personalization and Recommendation",Sharpness-Consistent Cross-Domain Recommendation for Cold-Start Items,"Ke Fei, Jingjing Li, Zhekai Du and Hongbo Chen"
+rfp3189,"User Modeling, Personalization and Recommendation",Sharpness-Aware Minimization for Generalized Embedding Learning in Federated Recommendation,"Fengyuan Yu, Xiaohua Feng, Yuyuan Li, Changwang Zhang, Jun
+Wang and Chaochao Chen"
+rfp3235,"User Modeling, Personalization and Recommendation",Generative Archetype-Grounded Item Representations for Sequential Recommendation,"Yifan Li, Jiahong Liu, Xinni Zhang, Hao Chen, Yankai Chen,
+Wenhao Yu, Jianting Chen and Irwin King"
+rfp3258,"User Modeling, Personalization and Recommendation",Dynamic Experts Synergy for Multi-Task Recommendation,"Haotian Wu, Yingpeng Du, Zhu Sun, Jie Zhang and Puay Siew
+Tan"
+rfp3321,"User Modeling, Personalization and Recommendation",Talos: Optimizing Top-K Accuracy in Recommender Systems,"Shengjia Zhang, Weiqin Yang, Jiawei Chen, Peng Wu, Yuegang
+Sun, Gang Wang, Qihao Shi and Can Wang"
+rfp3326,"User Modeling, Personalization and Recommendation",Causality Enhancement for Cross-Domain Recommendation,"Zhibo Wu, Yunfan Wu, Yang Chang, Ping Yang and Yao Hu"
+rfp3346,"User Modeling, Personalization and Recommendation",Does LLM Focus on the Right Words? Mitigating Context Bias in LLM-based Recommenders,"Bohao Wang, Jiawei Chen, Feng Liu, Changwang Zhang, Jun
+Wang, Canghong Jin, Chun Chen and Can Wang"
+rfp3365,"User Modeling, Personalization and Recommendation",From Token to Item: Enhancing Large Language Models for Recommendation via Item-aware Attention Mechanism,"Xiaokun Zhang, Bowei He, Jiamin Chen, Ziqiang Cui and Chen
+Ma"
+rfp3372,"User Modeling, Personalization and Recommendation",GenCI: Generative Modeling of User Interest Shift via Cohort-based Intent Learning for CTR Prediction,"Kesha Ou, Zhen Tian, Wayne Xin Zhao, Hongyu Lu and Ji-Rong
+Wen"
+rfp3396,"User Modeling, Personalization and Recommendation",Following the TRAIL: Predicting and Explaining Tomorrow’s Hits with a Fine-Tuned LLM,"Yinan Zhang, Zhixi Chen, Jiazheng Jing and Zhiqi Shen"
+rfp3398,"User Modeling, Personalization and Recommendation",RMBRec: Robust Multi-Behavior Recommendation towards Target Behaviors,"Miaomiao Cai, Zhijie Zhang, Junfeng Fang, Zhiyong Cheng,
+Xiang Wang and Meng Wang"
+rfp3456,"User Modeling, Personalization and Recommendation",Prototype-Aligned Federated Soft-Prompts for Continual Web Personalization,Canran Xiao and Liwei Hou
+rfp3458,"User Modeling, Personalization and Recommendation",Modeling Stage-wise Evolution of User Interests for News Recommendation,"Zhiyong Cheng, Yike Jin, Zhijie Zhang, Huilin Chen,
+Zhangling Duan and Meng Wang"
+rfp3533,"User Modeling, Personalization and Recommendation",QDDR: Quality-Driven Intent Disentanglement with Dual-Path Modeling for Recommendation,"Nengjun Zhu, Yixun Lu and Qi Zhang"
+rfp3549,"User Modeling, Personalization and Recommendation",IMPerSumm: Information-Modulated User Preference Modeling for Personalized Text Summarization,"Parthiv Chatterjee, Dhara Jhaveri, Sourish Dasgupta and
+Tanmoy Chakraborty"
+rfp3583,"User Modeling, Personalization and Recommendation",CCL-Diff: Representation-Consistent Diffusion with Intrinsic Contrastive Learning for Recommender Systems,"Lingyan Zhang, Wanyu Ling, Shuwen Daizhou, Li Kuang and
+Kehua Guo"
+rfp3616,"User Modeling, Personalization and Recommendation",SemaCDR: LLM-Powered Transferable Semantics for Cross-Domain Sequential Recommendation,"Chunxu Zhang, Shanqiang Huang, Zijian Zhang, Jiahong Liu,
+Linsong Yu, Ruiqi Wan, Bo Yang and Irwin King"
+rfp3723,"User Modeling, Personalization and Recommendation",Exploration Sizing via Model-Predictive Control,"Ethan Che, Hakan Ceylan, James McInerney and Nathan Kallus"
+rfp3771,"User Modeling, Personalization and Recommendation",Post-hoc Popularity Bias Correction in GNN-based Collaborative Filtering,"Md Aminul Islam, Elena Zheleva and Ren Wang"
+rfp3846,"User Modeling, Personalization and Recommendation",Identifying and Upweighting Power-Niche Users to Mitigate Popularity Bias in Recommendations,"David Liu, Erik Weis, Moritz Laber, Tina Eliassi-Rad and
+Brennan Klein"
+rfp3909,"User Modeling, Personalization and Recommendation",Efficient Content-based Recommendation Model Training via Noise-aware Coreset Selection,"Hung V. Tran, Tong Chen, Hechuan Wen, Quoc Viet Hung
+Nguyen, Bin Cui and Hongzhi Yin"
+rfp3926,"User Modeling, Personalization and Recommendation",DrunkAgent: Stealthy Memory Corruption in LLM-Powered Recommender Agents,"Shiyi Yang, Zhibo Hu, Xinshu Li, Chen Wang, Tong Yu, Xiwei
+Xu, Liming Zhu and Lina Yao"
+rfp4124,"User Modeling, Personalization and Recommendation",The Double-Edged Sword of Knowledge Transfer: Diagnosing and Curing Fairness Pathologies in Cross-Domain Recommendation,"Yuhan Zhao, Weixin Chen, Li Chen and Weike Pan"
+rfp4139,"User Modeling, Personalization and Recommendation",Multi-modal Bipartite Graph Structure Learning with Information Bottleneck for Micro-video Recommendation,"Ying He, Desheng Cai, Shengsheng Qian, Quan Fang, Yinwei
+Wei and Changsheng Xu"
+rfp4239,"User Modeling, Personalization and Recommendation",Hyena Operator for Fast Sequential Recommendation,"Jiahao Liu, Lin Li, Zhiyuan Li, Kaixi Hu, Kaize Shi and
+Jingling Yuan"
+rfp4245,"User Modeling, Personalization and Recommendation",TopKGAT: A Top-K Objective-Driven Architecture for Recommendation,"Sirui Chen, Jiawei Chen, Canghong Jin, Sheng Zhou, Jingbang
+Chen, Wujie Sun and Can Wang"
+rfp4340,"User Modeling, Personalization and Recommendation",Token-level Collaborative Alignment for LLM-based Generative Recommendation,"Fake Lin, Binbin Hu, Zhi Zheng, Xi Zhu, Ziqi Liu, Zhiqiang
+Zhang, Jun Zhou and Tong Xu"
+rfp4414,"User Modeling, Personalization and Recommendation",MemWeaver: A Hierarchical Memory from Textual Interactive Behaviors for Personalized Generation,"Shuo Yu, Mingyue Cheng, Daoyu Wang, Qi Liu, Zirui Liu, Ze
+Guo and Xiaoyu Tao"
+rfp4450,"User Modeling, Personalization and Recommendation",Taming the Long Tail: Efficient Item-wise Sharpness-Aware Minimization for LLM-based Recommender Systems,"Jiaming Zhang, Yuyuan Li, Xiaohua Feng, Li Zhang, Longfei
+Li, Jun Zhou and Chaochao Chen"
+rfp0017,Web Mining and Content Analysis,Cardinality is Not Enough: Super Host Detection via Segmented Cardinality Estimation,"Yilin Zhao, Jiawei Huang, Xianshi Su, Weihe Li, Xin Li, Yan
+Liu, Jiacheng Xie, Qichen Su, Jin Ye, Wanchun Jiang and
+Jianxin Wang"
+rfp0241,Web Mining and Content Analysis,Beyond Patches: Superpixel Token-based Transformers for Attribute-Specific Fashion Retrieval,"Shuili Zhang, Hongzhang Mu, Wenyuan Zhang, Duohe Ma and
+Tingwen Liu"
+rfp0255,Web Mining and Content Analysis,VarParser: Unleashing the Neglected Power of Variables for LLM-based Log Parsing,"Jinrui Sun, Tong Jia, Minghua He and Ying Li"
+rfp0713,Web Mining and Content Analysis,PAMAS: Self-Adaptive Multi-Agent System with Perspective Aggregation for Misinformation Detection,"Zongwei Wang, Min Gao, Junliang Yu, Tong Chen and Chenghua
+Lin"
+rfp0751,Web Mining and Content Analysis,Multi-Aspect Mining and Anomaly Detection for Heterogeneous Tensor Streams,"Soshi Kakio, Yasuko Matsubara, Ren Fujiwara and Yasushi
+Sakurai"
+rfp0901,Web Mining and Content Analysis,EIAN: Explicit Interaction-aware Attention Network for Interpretable Event Modeling,"Jiping Zhang, Hua Zhu, Hong Huang, Yongkang Zhou, Kehan Yin
+and Bang Liu"
+rfp0915,Web Mining and Content Analysis,Byte-token Enhanced Language Models for Temporal Point Processes Analysis,"Quyu Kong, Yixuan Zhang, Yang Liu, Panrong Tong, Enqi Liu
+and Feng Zhou"
+rfp1009,Web Mining and Content Analysis,ColorBench: Benchmarking Mobile Agents with Graph-Structured Framework for Complex Long-Horizon Tasks,"Yuanyi Song, Heyuan Huang, Qiqiang Lin, Yin Zhao, Xiangmou
+Qu, Jun Wang, Xingyu Lou, Weiwen Liu, Zhuosheng Zhang, Jun
+Wang, Zhaoxiang Wang, Yong Yu and Weinan Zhang"
+rfp1074,Web Mining and Content Analysis,Dynamic Prototype-Augmented Stance Detection: Learning from the Seen to Reason about the Unseen,"Zhaodan Zhang, Jin Zhang and Jiafeng Guo"
+rfp1166,Web Mining and Content Analysis,Triple-R: Iterative Query Rewriting and Refinement for Retrieval-Augmented Fake News Detection,"Jie Li, Jinrui Wang, Linmei Hu and Yuqiu Deng"
+rfp1204,Web Mining and Content Analysis,Expectation-Maximization Driven Contrastive Disentanglement for Generalized Category Discovery,"Weiyi Yang, Richong Zhang, Junfan Chen, Jiawei Sheng and
+Lihong Wang"
+rfp1237,Web Mining and Content Analysis,Hermes the Polyglot: A Unified Framework to Enhance Expressiveness for Multimodal Interlingual Subtitling,"Chaoqun Cui, Shijing Wang, Liangbin Huang, Qingqing Gu,
+Zhaolong Huang, Xiao Zeng and Wenji Mao"
+rfp1290,Web Mining and Content Analysis,A Frequency-Aware Mixture of Heterogeneous Experts Framework for Knowledge Tracing,"Youheng Bai, Mingliang Hou, Teng Guo, Zitao Liu and Weiqi
+Luo"
+rfp1432,Web Mining and Content Analysis,KMLP: A Scalable Hybrid Architecture for Web-Scale Tabular Data Modeling,"Mingming Zhang, Pengfei Shi, Junbo Zhao, Ningtao Wang, Feng
+Zhao, Guandong Sun, Yulin Kang, Xing Fu, Zhiqing Xiao,
+Weiqiang Wang and Ruizhe Gao"
+rfp1447,Web Mining and Content Analysis,Measuring and Enhancing Human Value Alignment in Zero-Shot Document-Level Claim Extraction,Yuanzhen Hao and Desheng Wu
+rfp1481,Web Mining and Content Analysis,Thinking Bidirectionally: A Reasoning and Self-Correction Approach for Text-Based Event Prediction with Large Language Models,"Liwei Qian, Hang Zhang, Yiheng Wu, Yanmin Li, Mengna Zhu,
+Lihua Liu and Jibing Wu"
+rfp1512,Web Mining and Content Analysis,Hyperbolic Multimodal Generative Representation Learning for Generalized Zero-Shot Multimodal Information Extraction,"Baohang Zhou, Kehui Song, Rize Jin, Yu Zhao, Xuhui Sui,
+Xinying Qian, Xingyue Guo and Ying Zhang"
+rfp1553,Web Mining and Content Analysis,MIDE: Multimodal Dialogue Emotion Recognition via Mutual Information Enhancement and Dynamic Modality Selection,"Zhibo Zhang, Jianjun Li and Zhiyuan Ma"
+rfp1588,Web Mining and Content Analysis,JitterSketch: Finding Jittery Flows in Network Streams,"Zhongxian Liang, Qilong Shi, Xiyan Liang, Zihan Li, Wenjun
+Li, Tong Yang, Yangyang Wang, Mingwei Xu and Weizhe Zhang"
+rfp1686,Web Mining and Content Analysis,GFMixer: Decoupled Temporal Gradient and Fourier-Aware Attention for Time Series Forecasting,"Lin Zhang, Qing Li and Jingmei Zhao"
+rfp1781,Web Mining and Content Analysis,MIGC-CMamba: Cross-Domain Mamba with Multi-Scale Imaging and Granular-Ball Computing for Traffic Flow Prediction,"Wenxia Chang, Chao Zhang, Wentao Li and Deyu Li"
+rfp1800,Web Mining and Content Analysis,TrueLens: Video Fake News Detection with Dual Level Evidence Gathering and Consolidation,"Junyi Chen, Qian Liu, Jing Sun and Yi Zhang"
+rfp1845,Web Mining and Content Analysis,STaR: Towards Effective and Stable Table Reasoning via Slow-Thinking Large Language Models,"Huajian Zhang, Mingyue Cheng, Yucong Luo and Xiaoyu Tao"
+rfp1846,Web Mining and Content Analysis,We Need a More Robust Classifier: Dual Causal Learning Empowers Domain-Incremental Time Series Classification,"Zhipeng Liu, Peibo Duan, Xuan Tang, Haodong Jing, Mingyang
+Geng, Yongsheng Huang, Jialu Xu, Bin Zhang and Binwu Wang"
+rfp1849,Web Mining and Content Analysis,Enhancing Large Language Models for Time-Series Forecasting via Vector-Injected In-Context Learning,"Jianqi Zhang, Jingyao Wang, Wenwen Qiang, Fanjiang Xu and
+Changwen Zheng"
+rfp1980,Web Mining and Content Analysis,Efficient High-Dimensional Time Series Forecasting with Transformers: A Channel Reordering Perspective,"Yuchen Fang, Shiyu Wang, Yuxuan Liang, Zhou Ye, Yang Xiang,
+Yan Zhao and Kai Zheng"
+rfp2019,Web Mining and Content Analysis,Fusion Is Not A Simple Ensemble! Towards The Evolving Views in Insider Threat Detection,"Chengyu Song, Lin Yang, Jianming Zheng, Jingjing Zhang,
+Hongyu Kuang, Jinzhi Liao and Mengchun Zhao"
+rfp2115,Web Mining and Content Analysis,BHGap: A Deep Iterative Prompting and Multi-stage Alignment Framework for Dynamic Facial Expression Recognition,"Yichi Zhang, Yunqi Han, Jiayue Ding and Liangyu Chen"
+rfp2163,Web Mining and Content Analysis,Diffusion Generative Recommendation with Continuous Tokens,"Haohao Qu, Shanru Lin, Yujuan Ding, Yiqi Wang and Wenqi Fan"
+rfp2218,Web Mining and Content Analysis,EEO-TFV: Escape-Explore Optimizer for Web-Scale Time-Series Forecasting and Vision Analysis,"Hua Wang, Jinghao Lu and Fan Zhang"
+rfp2245,Web Mining and Content Analysis,Towards Multi-Label Text Interpretation with Chain-of-Thought Prompting and Contextualized Knowledge,"Rui Wang, Ziang Li, Haiping Huang, Jialin Yu, Yuxiang Zhou
+and Guozi Sun"
+rfp2263,Web Mining and Content Analysis,Evolving Proxy Kills Drift: Data-Efficient Streaming Time Series Anomaly Detection,"Qing Wei, Hao Miao, Yan Zhao, Kai Zheng, Bin Yang, Volker
+Markl and Christian S. Jensen"
+rfp2303,Web Mining and Content Analysis,VisionST: Coordinating Cross-modal Traffic Prediction with Interactive Geo-image Encoding,"Jinwen Chen, Hao Miao, Chenxi Liu, Yan Zhao and Kai Zheng"
+rfp2630,Web Mining and Content Analysis,MuVaC: A Variational Causal Framework for Multimodal Sarcasm Understanding in Dialogues,"Diandian Guo, Fangfang Yuan, Cong Cao, Xixun Lin, Chuan
+Zhou, Hao Peng, Yanan Cao and Yanbing Liu"
+rfp2679,Web Mining and Content Analysis,Anchor Drift No More: Hierarchical Consistency-Guided Prompt Distillation for Incomplete Multimodal Learning,"Ruiting Dai, Zesen Cai, Lisi Mo, Guiduo Duan, Keren Shi and
+Tao He"
+rfp2700,Web Mining and Content Analysis,LoRA-E^2: Effective and Efficient Low-rank Adaptation,"Shengkun Zhu, Jinshan Zeng, Yiming Wang, Sheng Wang, Yuan
+Sun, Shangfeng Chen, Yuan Yao and Qiang Yang"
+rfp2712,Web Mining and Content Analysis,Modeling Point-to-Point Dependency for High-Dimensional Long-Term Series Forecasting,"Xinyu Li, Kexi Chen, Ying Zheng, Zhiyi Yao, Yi Xie, Jihan
+Dai, Lei Bai, Jin Zhao, Jiajie Shen, Yunqi Cai, Hong Lu and
+Xin Wang"
+rfp2763,Web Mining and Content Analysis,Shift-Resilient Diffusive Imputation for Variable Subset Forecasting,"Haihua Xu, Qi Hao, He Zhang, Jianpeng Zhao, Ziyue Qiao, Lu
+Jiang, Pengfei Wang, Yingjie Zhou and Pengyang Wang"
+rfp2864,Web Mining and Content Analysis,Leveraging LLM and Multiscale Knowledge States to Improve Knowledge Tracing in Programming Tasks,"Mingxing Shao, Tiancheng Zhang, Yifang Yin, Wenhui Wu,
+Zikai Li, Minghe Yu, Fangling Leng and Ge Yu"
+rfp2946,Web Mining and Content Analysis,Re-Diffusion: Modeling Latent Residuals with Diffusion for Time-Series Forecasting,"Boning Zhang, Haishuai Wang, Zehong Hu, Jiajun Wang, Hongyi
+Zhang and Jia Jia"
+rfp2947,Web Mining and Content Analysis,Reinforcement Learning with Verbalized Probabilities for LLM Classification,"Liyao Li, Hao Chen, Jiaming Tian, Wentao Ye, Lirong Gao,
+Chao Ye, Ningtao Wang, Xing Fu, Yu Cheng, Haobo Wang, Gang
+Chen and Junbo Zhao"
+rfp3040,Web Mining and Content Analysis,Mitigating Cognitive Vulnerabilities in Code Generation via Multi-Agent Adversarial Debate,"Shuofu Liu, Quanjiang Guo, Xiao Liu and Ying Liu"
+rfp3143,Web Mining and Content Analysis,CCAF: Coarse-to-fine Cross-Modal Alignment and Fusion for Multimodal Sentiment Analysis,"Xianbing Zhao, Shengzun Yang and Buzhou Tang"
+rfp3152,Web Mining and Content Analysis,E2PL: Effective and Efficient Prompt Learning for Incomplete Multi-view Multi-Label Class Incremental Learning,"Jiajun Chen, Yue Wu, Kai Huang, Wenxi Zhao, Wu Yangyang,
+Xiaoye Miao, Mengying Zhu, Meng Xi and Guanjie Cheng"
+rfp3179,Web Mining and Content Analysis,ATGFB-MFF: Adaptive Text-Guided Fiber Bundle Feature Fusion with LLMs for Multimodal Sentiment Analysis and Emotion Recognition in Conversations,"Zhaowei Liu, Sheng Liu, Weiqing Yan, Peng Song, Yongchao
+Song and Rufei Gao"
+rfp3186,Web Mining and Content Analysis,CIDC: Cluster Identification-Guided Dual Correction for Robust Short Text Clustering,"Yuhua Zhao, Zhixin Han, Xuan Li, Peiyu Xu, Hang Gao,
+Mengting Hu and Tiegang Gao"
+rfp3214,Web Mining and Content Analysis,Mamba Hawkes Process for Event Sequence Modeling,"Shan Dai, Yuyang Shen, Yuyang Liang, Chenhao Ma and
+Anningzhe Gao"
+rfp3215,Web Mining and Content Analysis,StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning,"Changwu Li, Tongjun Shi, Shuhao Zhang, Binbin Chen,
+Bingsheng He, Xiaofei Liao and Hai Jin"
+rfp3358,Web Mining and Content Analysis,Interpretable Dynamic Network Modeling of Tensor Time Series via Kronecker Time-Varying Graphical Lasso,"Shingo Higashiguchi, Koki Kawabata, Yasuko Matsubara and
+Yasushi Sakurai"
+rfp3401,Web Mining and Content Analysis,Time-TK: A Multi-Offset Temporal Interaction Framework Combining Transformer and Kolmogorov-Arnold Networks for Time Series Forecasting,"Fan Zhang, Shiming Fan and Hua Wang"
+rfp3450,Web Mining and Content Analysis,Is Misinformation More Open? A Study of robots.txt Gatekeeping on the Web,"Nicolas Steinacker-Olsztyn, Devashish Gosain and Ha Dao"
+rfp3457,Web Mining and Content Analysis,Bias Mitigation for Harmful Meme Detection using Front-door Adjustment,"Jiangfeng Zeng, Cheng Xiong, Xiao Ma and Jialin Qin"
+rfp3488,Web Mining and Content Analysis,Multistage Feedback-Driven Causal Discovery from Textual Data with Large Language Models,"Juntao Yang, Dayuan Cao, Kui Yu, Xiang Wang, Jing Yang, Lin
+Liu and Jiuyong Li"
+rfp3729,Web Mining and Content Analysis,FedDis: A Causal Disentanglement Framework for Federated Traffic Prediction,"Chengyang Zhou, Zijian Zhang, Chunxu Zhang, Hao Miao, Yulin
+Zhang, Kedi Lyu and Juncheng Hu"
+rfp3841,Web Mining and Content Analysis,VL-KGE: Vision–Language Models Meet Knowledge Graph Embeddings,"Athanasios Efthymiou, Stevan Rudinac, Monika Kackovic,
+Nachoem Wijnberg and Marcel Worring"
+rfp3893,Web Mining and Content Analysis,Inference Cost Attacks for Retrieval-Augmented Large Language Models,"Chengliang Liu, Liangbo Ning, Yujuan Ding and Wenqi Fan"
+rfp4073,Web Mining and Content Analysis,GlassMiner: Mining Looking Glass Services via Structure-Semantics Fusion for Web Observability,"Yunze Wei, Xingang Shi, Han Zhang, Tianyu Zhang, Yahui Li
+and Xia Yin"
+rfp4097,Web Mining and Content Analysis,UrbanMoE: A Sparse Multi-Modal Mixture-of-Experts Framework for Multi-Task Urban Region Profiling,"Pingping Liu, Jiamiao Liu, Zijian Zhang, Hao Miao, Qi
+Jiang, Qingliang Li, Qiuzhan Zhou and Irwin King"
+rfp4098,Web Mining and Content Analysis,From Newborn to Impact: Bias-Aware Citation Prediction,"Mingfei Lu, Mengjia Wu, Jiawei Xu, Weikai Li, Feng Liu,
+Ying Ding, Yizhou Sun, Jie Lu and Yi Zhang"
+rfp4172,Web Mining and Content Analysis,FedRMamba: Federated Residual Mamba for Multivariate Time-Series Forecasting,"Zhiwei Hu, Liang Zhang and Guangxu Zhu"
+rfp4295,Web Mining and Content Analysis,From Manipulation to Mistrust: Explaining Diverse Micro-Video Misinformation for Robust Debunking in the Wild,"Zhi Zeng, Yifei Yang, Jiaying Wu, Xulang Zhang, Xiangzheng
+Kong, Herun Wan, Zihan Ma and Minnan Luo"
+rfp4319,Web Mining and Content Analysis,Prompt-Induced Linguistic Fingerprints for LLM-Generated Fake News Detection,"Chi Wang, Min Gao, Zongwei Wang, Junwei Yin, Kai Shu and
+Chenghua Lin"
+rfp4332,Web Mining and Content Analysis,BARouter: A Budget-adaptive Online Large Language Model Router Framework,"Lingkai Zu, Xiyue Peng and Xin Liu"
+rfp4367,Web Mining and Content Analysis,Moral Outrage Shapes Commitments Beyond Attention: Multimodal Moral Emotions on YouTube in Korea and the US,"Seongchan Park, Jaehong Kim, Hyeonseung Kim, Heejin Bin,
+Sue Moon and Wonjae Lee"
+rfp4373,Web Mining and Content Analysis,Dynamic Multi-period Experts for Online Time Series Forecasting,"Seungha Hong, Sukang Chae, Suyeon Kim, Sanghwan Jang and
+Hwanjo Yu"
+rfp4424,Web Mining and Content Analysis,Unlocking the Multilingual Long-Tail Web: A Fused Macro-Micro Framework for Scalable Content Analysis,"Jiarui Zhang, Yifan Deng and Qihao Wang"
