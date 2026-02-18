@@ -1,119 +1,402 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coming Soon - The Web Conference 2026</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/tab-menu.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-        
-        .coming-soon-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
-        }
+      .coming-soon-container {
+        text-align: center;
+        padding: 50px 20px;
+        margin: 40px 0;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+
+      .coming-soon-container h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .coming-soon-container p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        color: #666;
+      }
+      main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .keynote-card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .keynote-card img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .keynote-info h2 {
+        margin: 0 0 5px;
+        color: #1f2937;
+      }
+
+      .keynote-info h4 {
+        margin: 0 0 10px;
+        font-weight: normal;
+        color: #666;
+      }
+
+      .meta {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #111;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>Keynotes</h1>
-            
-            <div class="coming-soon-container">
-                <h2>Coming Soon</h2>
-                <p>This page is currently under development. Content for Keynotes will be available soon.</p>
-                <p>Please check back later for updates.</p>
+      <div class="container">
+        <h1>Keynotes</h1>
+
+        <main>
+          <div class="keynote-card">
+            <img src="./keynoteimages/Pascale.jpg" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Pascale Fung</h2>
+              <h4>The Hong Kong University of Science & Technology, China</h4>
+
+              <!-- <div class="meta">
+                Date: May 15, 2024 · Time: 9:00 AM – 10:00 AM
+              </div> -->
+
+              <div class="title">
+                Towards AI That Understands the Human World
+              </div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+                AI has reached a turning point. Systems can now perceive,
+                generate, and act in language and image across digital platforms
+                at unprecedented scale. Yet as AI moves from tools to
+                collaborators—embedded in decision-making, institutions, and
+                everyday life—a new requirement becomes unavoidable: AI must
+                understand the world the way humans inhabit it. This talk
+                introduces Cognitive World Modeling as the next phase of AI
+                development. It unifies physical world modeling—time, space,
+                causality, action—with mental world modeling—goals, beliefs,
+                intentions, emotions, and social norms—into a single, persistent
+                representation of reality as experienced by humans. Together,
+                these models allow AI systems not only to predict outcomes, but
+                to reason about meaning, context, and consequence. Cognitive
+                World Modeling moves AI beyond reactive toward systems that can
+                plan, explain, adapt, and collaborate over time. Alignment and
+                trust emerge not as post hoc constraints, but as properties of
+                systems that maintain accurate, evolving models of both the
+                external world and the humans within it.
+                <br />
+
+                <b>Bio</b>
+                <br />
+
+                Pascale Fung is a Fellow of the ACL, AAAI, IEEE, and ISCA for
+                her significant contribution to human-machine interactions and
+                AI ethics. She is an expert on the Global Future Council of the
+                World Economic Forum since 2016. She is on the Expert Network of
+                the UN Advisory Body on AI. She is a Chair Professor at the
+                Department of Electronic & Computer Engineering at The Hong Kong
+                University of Science & Technology (HKUST), and a visiting
+                professor at the Central Academy of Fine Arts in Beijing. She
+                previously led the Embodied AI Agents research effort at
+                Meta-FAIR.
+              </p>
             </div>
-        </div>
+          </div>
+
+          <div class="keynote-card">
+            <img src="./keynoteimages/Mounia.jpg" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Mounia Lalmas</h2>
+              <h4>Spotify, UK</h4>
+
+              <div class="meta">
+                Date: May 16, 2024 · Time: 9:00 AM – 10:00 AM
+              </div>
+
+              <div class="title">
+                Building AI-Driven Web Experiences at Scale
+              </div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+                AI is no longer just a component of Web systems; it is
+                increasingly shaping the experiences users have online. From
+                search and recommendation to conversational and generative
+                interfaces, AI is redefining how people interact with content at
+                Web scale. In this keynote, I reflect on how recent advances in
+                AI, including deep learning and generative models, are reshaping
+                the design space of Web technologies. Drawing on insights from
+                developing AI-driven systems at Spotify, I discuss how search
+                and recommendation are evolving into interactive, intent-aware
+                experiences that support exploration and discovery. The talk
+                highlights emerging system paradigms and research questions
+                around building such experiences at scale, and reflects on the
+                implications for the design of future Web systems and
+                interactions.
+                <br />
+                <b>Bio</b>
+                <br />
+                Mounia Lalmas is Senior Director of Research at Spotify, where
+                she leads Tech Research in Personalisation, focusing on search,
+                recommendation, and discovery systems at scale. Her work spans
+                information retrieval, recommender systems, user engagement, and
+                the application of modern AI techniques, including generative
+                models, to large-scale online platforms. She previously held
+                senior roles in industry and academia, including Director of
+                Research at Yahoo and Professor of Information Retrieval at
+                Queen Mary University of London, and has also held a research
+                professorship at the University of Glasgow. Mounia is an
+                Honorary Professor at University College London and a
+                Distinguished Research Fellow at the University of Amsterdam. An
+                active member of the web, search, and recommender systems
+                research communities, she has co-chaired major conferences
+                including SIGIR, WWW, WSDM, and CIKM, and authored over 260
+                publications. Her work bridges foundational research and
+                real-world deployment, with a current focus on how AI is
+                reshaping large-scale systems.
+              </p>
+            </div>
+          </div>
+          <div class="keynote-card">
+            <img src="./keynoteimages/Katrina.jpg" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Katrina Ligett</h2>
+              <h4>The Hebrew University of Jerusalem, Israel</h4>
+
+              <div class="title">Data Degrades with Use</div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+                We often treat data as an infinitely reusable resource: a single
+                dataset can support many analyses, train multiple models, and be
+                shared widely without apparent cost. This talk argues that in
+                important ways, data is not endlessly reusable. Instead, in
+                certain contexts, data behaves like a consumable resource that
+                degrades with use. The clearest example arises in the presence
+                of privacy concerns. Fundamental results show that any
+                informative public analysis of personal data inevitably leaks
+                some information about the underlying individuals, and that
+                these privacy losses accumulate across repeated uses of the same
+                or overlapping datasets. If some level of privacy is to be
+                preserved, this imposes intrinsic limits on how many times data
+                can be used. In joint work under submission, we connect this
+                perspective to the mosaic effect from legal scholarship, arguing
+                that privacy risks arise not only from combining data pieces,
+                but also from combining seemingly innocuous data uses. This view
+                suggests regulatory and technical approaches that treat data use
+                itself as a rival good. Data can also degrade with use even when
+                privacy is not at stake. A line of work on adaptive data
+                analysis shows that repeatedly querying the same dataset can
+                lead to overfitting: results that appear valid on the dataset
+                but fail to generalize to the underlying distribution, even when
+                the dataset is very large. In both privacy and generalization,
+                each interaction with a dataset consumes part of a limited
+                resource, constraining future computations. Recognizing data
+                degradation opens a range of research directions, including
+                systems for tracking and budgeting data use, algorithmic
+                techniques to mitigate degradation, the role of synthetic data
+                and data curators, and new models of non-worst-case adaptive
+                computation. Together, these directions work towards a data
+                ecosystem that explicitly accounts for data degradation.
+
+                <br />
+                <b>Bio</b>
+                <br />
+                Katrina Ligett is a Professor in the School of Computer Science
+                and Engineering at The Hebrew University of Jerusalem, where he
+                is also the director of the interdisciplinary Federmann Center
+                for the Study of Rationality, and an affiliated faculty member
+                and former head of the MATAR program on the Interfaces of
+                Technology, Society, and Networks. Before joining Hebrew
+                University, she was faculty in computer science and economics at
+                Caltech. Katrina’s primary research interests are in data
+                privacy, algorithmic fairness, machine learning theory, and
+                algorithmic game theory. She received her PhD in Computer
+                Science from Carnegie Mellon University in 2009 and did her
+                postdoc at Cornell University. She is a recipient of an ERC
+                grant, an NSF CAREER award, and a Microsoft Faculty Fellowship.
+              </p>
+            </div>
+          </div>
+          <div class="keynote-card">
+            <img src="./keynoteimages/Alistair.jpg" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Alistair Moffat</h2>
+              <h4>University of Melbourne, Australia</h4>
+
+              <div class="title">
+                (Everything You Never Knew You Needed To Know About),
+                Rank-Biased Measurement For Web Search
+              </div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+                In information retrieval and web search we measure how good
+                search engines are at ordering answers to user queries, how
+                close two ranked lists are to each other, how good LLMs are at
+                re-ranking sets of candidate documents, and how close generated
+                answer sentences are to the ideal output. This talk begins by
+                motivating the top-weighted measurements that arise when ordered
+                sequences are involved, including reviewing the rank-biased
+                precision and rank-biased overlap measurements proposed in 2008
+                and 2010 respectively. The second part of the talk then presents
+                recent work unifying the two previous rank-biased approaches as
+                elements in a larger framework that exposes a third rank-biased
+                measurement, rank-biased recall, a dual of rank-biased
+                precision. Finally, in the third part of the talk, new ways in
+                which the degree of top-weighting bias can be controlled are
+                described, allowing practitioners and researchers to better
+                define their measurement goals, and hence more precisely target
+                their experiments.
+
+                <br />
+                <b>Bio</b>
+                <br />
+                Professor Alistair Moffat is now in his 40th year as a faculty
+                member at the University of Melbourne. Early work included
+                coauthorship of the book “Managing Gigabytes: Compressing and
+                Indexing Documents and Images” (1994, 1999), and development of
+                innovative mechanisms for implementing ranked queries via
+                compressed inverted indexes. Most recently Alistair has been
+                focused on IR evaluation, including models for user query
+                formulation and result perusal, and the material on rank-biased
+                measurement that is the subject of this talk. Alistair was
+                inducted into the SIGIR Academy in 2021, and recently became a
+                Fellow of the ACM for his contributions to the implementation
+                and evaluation of search systems.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>TheWebConf 2026</h3>
-                <p>April 13-17, 2026</p>
-                <p>Dubai, United Arab Emirates</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../calls.html">Calls</a></li>
-                    <li><a href="../program.html">Program</a></li>
-                    <li><a href="../attending.html">Attending</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p>Email: gc-www2026@acm.org</p>
-                <div class="social-media">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>TheWebConf 2026</h3>
+          <p>April 13-17, 2026</p>
+          <p>Dubai, United Arab Emirates</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 The Web Conference. All rights reserved.</p>
-            <p>
-                <a href="https://www.acm.org/code-of-ethics" target="_blank">ACM Code of Ethics</a> | 
-                <a href="https://www.acm.org/about-acm/policy-against-harassment" target="_blank">ACM Policy Against Harassment</a> | 
-                <a href="../gdpr.html">GDPR Notice</a>
-            </p>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../calls.html">Calls</a></li>
+            <li><a href="../program.html">Program</a></li>
+            <li><a href="../attending.html">Attending</a></li>
+          </ul>
         </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Email: gc-www2026@acm.org</p>
+          <div class="social-media">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Web Conference. All rights reserved.</p>
+        <p>
+          <a href="https://www.acm.org/code-of-ethics" target="_blank"
+            >ACM Code of Ethics</a
+          >
+          |
+          <a
+            href="https://www.acm.org/about-acm/policy-against-harassment"
+            target="_blank"
+            >ACM Policy Against Harassment</a
+          >
+          |
+          <a href="../gdpr.html">GDPR Notice</a>
+        </p>
+      </div>
     </footer>
 
     <script src="../js/main.js"></script>
     <script>
-        // Add dropdown toggle functionality for mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const tabMenu = document.querySelector('.tab-menu');
-            
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    tabMenu.classList.toggle('active');
-                });
-            }
-            
-            // For mobile: toggle dropdown on tap
-            if (window.innerWidth <= 768) {
-                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
-                
-                dropdownLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            this.parentNode.classList.toggle('active');
-                        }
-                    });
-                });
-            }
-        });
+      // Add dropdown toggle functionality for mobile
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+        const tabMenu = document.querySelector(".tab-menu");
+
+        if (mobileMenuToggle) {
+          mobileMenuToggle.addEventListener("click", function () {
+            tabMenu.classList.toggle("active");
+          });
+        }
+
+        // For mobile: toggle dropdown on tap
+        if (window.innerWidth <= 768) {
+          const dropdownLinks = document.querySelectorAll(
+            ".tab-menu a.has-dropdown",
+          );
+
+          dropdownLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentNode.classList.toggle("active");
+              }
+            });
+          });
+        }
+      });
     </script>
 
     <script src="../js/header-loader.js"></script>
-</body>
+  </body>
 </html>
