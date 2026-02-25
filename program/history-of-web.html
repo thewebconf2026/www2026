@@ -10,26 +10,74 @@
     <link rel="stylesheet" href="../css/header-layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .coming-soon-container {
-            text-align: center;
-            padding: 50px 20px;
-            margin: 40px 0;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-        
-        .coming-soon-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .coming-soon-container p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            color: #666;
-        }
+      .coming-soon-container {
+        text-align: center;
+        padding: 50px 20px;
+        margin: 40px 0;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+
+      .coming-soon-container h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .coming-soon-container p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        color: #666;
+      }
+      main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .keynote-card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .keynote-card img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .keynote-info h2 {
+        margin: 0 0 5px;
+        color: #1f2937;
+      }
+
+      .keynote-info h4 {
+        margin: 0 0 10px;
+        font-weight: normal;
+        color: #666;
+      }
+
+      .meta {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #111;
+      }
     </style>
 </head>
 <body>
@@ -37,15 +85,113 @@
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>History of the Web</h1>
-            
-            <div class="coming-soon-container">
-                <h2>Coming Soon</h2>
-                <p>This page is currently under development. Content for History of the Web will be available soon.</p>
-                <p>Please check back later for updates.</p>
+            <div class="container">
+        <h1>History of the Web</h1>
+        <p>The History of the Web track highlights how key historical decisions, institutional incentives, and socio-technical shifts have shaped the Web’s evolution, and how those choices continue to influence the systems we build and rely on today. This year’s program traces a connected trajectory from early information retrieval and ranking, through the rise of user experience, engagement, and platform dynamics, to the Semantic Web’s vision of machine-understandable data and knowledge graphs. It then brings that historical arc into direct conversation with the current wave of large language models and agentic AI, showing how contemporary AI capabilities are deeply entangled with the Web as both infrastructure and archive: a source of training data, a medium for evaluation, and a space where social impact is felt. Across talks and the panel, the program emphasizes recurring ideas and persistent tensions, such as relevance versus reliability, openness versus governance, scale versus accountability, and shows how historical perspective can sharpen our understanding of what is genuinely new, what is cyclical, and what remains unresolved. Ultimately, the track positions history as an analytical lens for guiding more responsible, informed, and durable choices in future Web research and innovation.</p>
+    </div>
+      <div class="container">
+        <h1>Invited Keynote Talks:</h1>
+
+        <main>
+          <div class="keynote-card">
+            <img src="./keynoteimages/Mounia.jpg" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Mounia Lalmas</h2>
+              <!-- <div class="meta">
+                Date: May 15, 2024 · Time: 9:00 AM – 10:00 AM
+              </div> -->
+
+              <div class="title">
+                Evolving Notions of Success on the Web: From Retrieval to Experience
+              </div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+The early web was centered on documents, hyperlinks, and retrieval, emphasizing efficient access to relevant information. Over time, as the web expanded in scale and scope, its focus shifted toward users and their experiences, bringing attention, engagement, and satisfaction to the forefront. These changes marked a fundamental transformation in how the web is built and evaluated. This talk offers a historical perspective on how the web’s goals and success metrics evolved in response to content abundance, changing patterns of use, and rising user expectations. It explores how classical notions of relevance broadened to include intent, context, satisfaction, and trust, and how these evolving priorities shaped a wide range of online experiences. It concludes by reflecting on what this trajectory reveals about today’s attention-driven web and the emerging role of AI in shaping online experiences.
+                <br />
+
+                <b>Bio</b>
+                <br />
+
+Mounia Lalmas is Senior Director of Research at Spotify, where she leads Tech Research in Personalisation, and is a researcher in information retrieval, recommender systems, user engagement, and evaluation. Her work spans the evolution of the web from early document retrieval and search to large-scale personalized platforms. She previously held senior roles in both academia and industry, including Director of Research at Yahoo and Professor of Information Retrieval at Queen Mary University of London and the University of Glasgow. Mounia is an Honorary Professor at University College London and a Distinguished Research Fellow at the University of Amsterdam. She has been an active member of the web, search, and recommender systems communities for many years, co-chairing conferences such as SIGIR, WWW, WSDM, and CIKM, and authoring over 260 publications. Her recent work explores how generative AI is influencing large-scale retrieval, recommendation, and online experiences.
+              </p>
             </div>
-        </div>
+          </div>
+
+          <div class="keynote-card">
+            <img src="./keynoteimages/Natasha.png" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Natasha Noy</h2>
+
+              <div class="title">
+The Semantic Web’s Second Act: Why Everything Old is New Again in Agentic AI
+              </div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+The Semantic Web promised a future where computers could understand data and act on our behalf. Today, Agentic AI is finally delivering on that promise. This talk bridges the gap between the history of the Semantic Web and the future of AI.  We will revisit the early milestones of machine-to-machine communication—from shared vocabularies and ontologies to knowledge graphs—and explore how the web’s original "logic layer" is finally being realized through modern AI.
+                <br />
+                <b>Bio</b>
+                <br />
+Natasha Noy is a scientist at Google Research where she works at the intersection of data and AI, focusing on making the world's information more accessible to both humans and machines. She also leads the team building Dataset Search, a search engine for all the datasets on the Web. Prior to joining Google, Dr. Noy worked at Stanford Center for Biomedical Informatics Research where she was a driving force in the Protégé project and made major contributions to ontology alignment and collaborative engineering. She served as the president of Semantic Web Science Association (SWSA) between 2011 and 2017. Dr. Noy is a Fellow of AAAI and ACM. 
+              </p>
+            </div>
+          </div>
+          <div class="keynote-card">
+            <img src="./keynoteimages/Evgeniy.jpg" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Evgeniy Gabrilovich</h2>
+
+              <div class="title">The Pendulum of Verbosity: The Evolution of Search from Blue Links to Agents</div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+This invited talk examines the evolution of information discovery and consumption on the Web. Over the past three decades, search has oscillated between verbosity and concision, both in how users express their needs and in how systems respond, revealing a persistent negotiation of cognitive effort and responsibility between humans and machines.
+<br />
+Before modern search engines, information discovery was mediated by librarians: users articulated verbose, nuanced information needs, and expert intermediaries pointed users to the right places in a catalog. Early Web search mirrored this model at scale: search engines primarily returned navigational results in the form of “ten blue links”, placing the burden of interpretation, synthesis, and decision-making squarely on the user.
+<br />
+Then came the era of efficiency. Search engines trained users to write telegraphic queries, which were invisibly augmented with exogenous signals such as personalization, location, and temporal context. Advances in large-scale information extraction enabled engines to move beyond indexing pages toward delivering concise answers “above the fold”, saving users clicks and reading time. Although these answers were often grounded in a single source, verticals such as symptom search pioneered multi-source synthesis through knowledge-powered machine learning models.
+<br />
+The most profound transformation has arrived with large language models. Search is increasingly transforming into conversational systems capable of synthesizing comprehensive, multi-faceted answers from disparate sources. Users are once again willing to write longer queries (now framed as prompts) and to consume much longer outputs. This marks a significant shift in cognitive responsibility as the search engine evolves from a mere indexer into an authoritative synthesizer.
+<br />
+We are now entering the era of agentic search. Moving beyond read-only operations, agents can plan and act on the user’s behalf, changing the state of the world and completing entire tasks rather than merely retrieving information. Yet this expanded agency raises the stakes: agents’ errors become costlier, and user effort does not disappear but instead shifts from cognitive effort (reading) to verification effort (auditing and supervising the agent). Viewed in retrospect, the history of search is not a linear march toward automation, but a continuous renegotiation of effort: from users adapting to engine constraints, to engines finally evolving to meet, and even anticipate, complex human intent.
+
+
+
+                <br />
+                <b>Bio</b>
+                <br />
+Dr. Evgeniy Gabrilovich is Vice President of Applied Science at Microsoft, where he leads the use of foundation AI models to build next-generation collaborative experiences in Microsoft Teams. Previously, he was a research director at Meta, focused on neuromotor interfaces and conversational agents, and a principal research scientist at Google Health, where he founded and led the Public & Environmental Health Research team. Evgeniy is a Fellow of both the ACM and the IEEE, and a member of the ACM SIGIR Academy. He has received the IJCAI-JAIR Best Paper Prize and the Karen Sparck Jones Award. Deeply involved in the research community, he served as technical program chair for WSDM 2021, WWW 2017, and WSDM 2015. Evgeniy earned his PhD in computer science from the Technion – Israel Institute of Technology and completed the Executive MD program at Harvard Medical School.
+              </p>
+            </div>
+          </div>
+          <div class="keynote-card">
+            <img src="./keynoteimages/Ricardo.jpg" alt="Speaker Photo" />
+            <div class="keynote-info">
+              <h2>Ricardo Baeza-Yates</h2>
+              <h4>WASP Professor at KTH Royal Institute of Technology, Stockholm, Sweden</h4>
+
+              <div class="title">
+From Lexical and Semantic to Predictive Search: Evolution or Involution?
+              </div>
+
+              <p>
+                <b>Abstract</b>
+                <br />
+We cover the evolution of web search from lexical and semantic search to the generative AI-powered chatbots common today. For that we need to deep dive into the technical mechanics of vectors, neural IR, and RAG, retrieval augmented generation. To understand the impact of these new tools we need to look at bigger philosophical AI questions: What are we losing when we let machines “guess” for us? Are we widening the digital divide? Are we getting a little too lazy? And we will loss cognitive skills?
+
+                <br />
+                <b>Bio</b>
+                <br />
+Ricardo Baeza-Yates is a part-time WASP Professor at KTH, the Swedish Institute of Technology. He is also a part-time Professor at Universitat Pompeu Fabra in Barcelona and at Universidad de Chile in Santiago. From 2021 and until early 2025 he was the Director of Research at the Institute for Experiential AI of Northeastern University. Before, he was the CTO of NTENT, a semantic search technology company based in California and prior to these roles, he was VP of Research at Yahoo Labs, based in Barcelona, Spain, and later in Sunnyvale, California, from 2006 to 2016. He is co-author of the best-seller Modern Information Retrieval textbook published by Addison-Wesley in 1999 and 2011 (2nd ed), which won the ASIST 2012 Book of the Year award. From 2002 to 2004 he was elected to the Board of Governors of the IEEE Computer Society and between 2012 and 2016 was elected to the ACM Council. Since 2010 he has been a founding member of the Chilean Academy of Engineering. In 2009 he was elevated to ACM Fellow and in 2011 to IEEE Fellow. He obtained the Spanish National Research Award Ángela Ruiz Robles for applied research and technology transfer given by the Scientific Computing Societies of Spain and the BBVA Foundation in 2018 and the Chilean National Award on Applied and Technological Sciences in 2024, among other distinctions. He obtained a Ph.D. in CS from the University of Waterloo, Canada, and his areas of expertise are responsible AI, web search and data mining, information retrieval, data science and algorithms in general.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
     </section>
 
     <footer>
