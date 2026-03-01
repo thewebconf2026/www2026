@@ -51,6 +51,9 @@ class HeaderLoader {
       if (placeholder) {
         placeholder.innerHTML = headerHTML;
 
+        // Extract and execute scripts from the fetched content
+        this.executeScriptsFromHTML(headerHTML);
+
         // Update navigation to show active page
         this.setActiveNavigation();
 
@@ -97,6 +100,32 @@ class HeaderLoader {
     }
     // console.log(header.offsetHeight);
   }
+
+  /**
+   * Extract and execute scripts from HTML content
+   * This is needed because innerHTML doesn't execute script tags
+   */
+  executeScriptsFromHTML(htmlContent) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlContent, 'text/html');
+    const scripts = doc.querySelectorAll('script');
+    
+    scripts.forEach((script) => {
+      const newScript = document.createElement('script');
+      
+      // Copy attributes
+      for (let attr of script.attributes) {
+        newScript.setAttribute(attr.name, attr.value);
+      }
+      
+      // Copy script content
+      newScript.textContent = script.textContent;
+      
+      // Execute by appending to document
+      document.head.appendChild(newScript);
+    });
+  }
+
   /**
    * Set active navigation item based on current page
    */
