@@ -133,6 +133,10 @@
     "end": {
       "date": "July 3, 2026",
       "description": "Conference Ends"
+    },
+    "conference_period": {
+      "date": "June 29 – July 3, 2026",
+      "description": "Conference Dates"
     }
   }
 }
