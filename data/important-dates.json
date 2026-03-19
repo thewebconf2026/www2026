@@ -97,7 +97,7 @@
       "description": "Workshop paper camera-ready"
     },
     "workshop_dates": {
-      "date": "April 13 - 14, 2026",
+      "date": "June 29 - 30, 2026",
       "description": "Workshops"
     }
   },
@@ -127,11 +127,11 @@
   },
   "conference": {
     "start": {
-      "date": "April 13, 2026",
+      "date": "June 29, 2026",
       "description": "Conference Starts"
     },
     "end": {
-      "date": "April 17, 2026",
+      "date": "July 3, 2026",
       "description": "Conference Ends"
     }
   }
