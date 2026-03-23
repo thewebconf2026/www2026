@@ -30,6 +30,25 @@
             margin: 0 auto 20px;
             color: #666;
         }
+        
+        /* Two-column layout for member lists */
+        .page-content ul {
+            column-count: 2;
+            column-gap: 30px;
+            column-fill: balance;
+        }
+        
+        .page-content ul li {
+            break-inside: avoid;
+            margin-bottom: 8px;
+        }
+        
+        /* Responsive: single column on smaller screens */
+        @media (max-width: 768px) {
+            .page-content ul {
+                column-count: 1;
+            }
+        }
     </style>
 </head>
 <body>
