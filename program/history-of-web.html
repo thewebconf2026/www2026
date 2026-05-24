@@ -78,6 +78,91 @@
         margin-bottom: 8px;
         color: #111;
       }
+
+      /* ── Program Schedule ── */
+      .schedule-table {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+
+      .schedule-item {
+        display: grid;
+        grid-template-columns: 155px 1fr;
+        background: #fff;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .schedule-item:last-child {
+        border-bottom: none;
+      }
+
+      .schedule-time {
+        background: #f0f0f0;
+        color: #444;
+        padding: 14px 16px;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        line-height: 1.4;
+        border-right: 3px solid #d0d0d0;
+      }
+
+      .schedule-event {
+        padding: 14px 20px;
+        color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+      }
+
+      .schedule-speaker {
+        font-weight: 700;
+      }
+
+      .schedule-talk {
+        color: #555;
+        font-style: italic;
+        font-size: 0.94em;
+      }
+
+      .schedule-meta {
+        color: #777;
+        font-size: 0.88em;
+      }
+
+      .schedule-break-row {
+        text-align: center;
+        color: #888;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 9px 0;
+        background: #f8f9fa;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        margin: 0;
+      }
+
+      .schedule-item--panel .schedule-time {
+        background: #f0f0f0;
+        color: #444;
+      }
+
+      @media (max-width: 600px) {
+        .schedule-item {
+          grid-template-columns: 1fr;
+        }
+        .schedule-time {
+          font-size: 12px;
+          padding: 8px 14px;
+        }
+        .schedule-event {
+          padding: 10px 14px;
+        }
+      }
     </style>
 </head>
 <body>
@@ -89,6 +174,67 @@
         <h1>History of the Web</h1>
         <p>The History of the Web track highlights how key historical decisions, institutional incentives, and socio-technical shifts have shaped the Web’s evolution, and how those choices continue to influence the systems we build and rely on today. This year’s program traces a connected trajectory from early information retrieval and ranking, through the rise of user experience, engagement, and platform dynamics, to the Semantic Web’s vision of machine-understandable data and knowledge graphs. It then brings that historical arc into direct conversation with the current wave of large language models and agentic AI, showing how contemporary AI capabilities are deeply entangled with the Web as both infrastructure and archive: a source of training data, a medium for evaluation, and a space where social impact is felt. Across talks and the panel, the program emphasizes recurring ideas and persistent tensions, such as relevance versus reliability, openness versus governance, scale versus accountability, and shows how historical perspective can sharpen our understanding of what is genuinely new, what is cyclical, and what remains unresolved. Ultimately, the track positions history as an analytical lens for guiding more responsible, informed, and durable choices in future Web research and innovation.</p>
     </div>
+      <!-- Program Schedule -->
+      <div class="container">
+        <h1>Program</h1>
+        <main>
+          <div class="schedule-table">
+            <div class="schedule-item">
+              <div class="schedule-time">12:00 – 12:05</div>
+              <div class="schedule-event">
+                <span>Welcome by the Chairs</span>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">12:05 – 12:30</div>
+              <div class="schedule-event">
+                <span>Seoul Test of Time Winner Presentation</span>
+                <span class="schedule-meta">20 min talk + 5 min Q&amp;A</span>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">12:30 – 13:00</div>
+              <div class="schedule-event">
+                <span class="schedule-speaker">Evgeniy Gabrilovich</span>
+                <span class="schedule-talk">The Pendulum of Verbosity: The Evolution of Search from Blue Links to Agents</span>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">13:00 – 13:30</div>
+              <div class="schedule-event">
+                <span class="schedule-speaker">Ricardo Baeza-Yates</span>
+                <span class="schedule-talk">From Lexical and Semantic to Predictive Search: Evolution or Involution?</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-table">
+            <div class="schedule-item">
+              <div class="schedule-time">16:00 – 16:20</div>
+              <div class="schedule-event">
+                <span class="schedule-speaker">Axel Polleres</span>
+                <span class="schedule-talk">On the Historic Roots of Agentic AI in Semantic Web Services</span>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">16:20 – 16:50</div>
+              <div class="schedule-event">
+                <span class="schedule-speaker">Mounia Lalmas</span>
+                <span class="schedule-talk">Evolving Notions of Success on the Web: From Retrieval to Experience</span>
+              </div>
+            </div>
+            <div class="schedule-item schedule-item--panel">
+              <div class="schedule-time">16:50 – 17:00</div>
+              <div class="schedule-event">
+                <span class="schedule-speaker">Panel Discussion</span>
+                <span class="schedule-meta">Yoelle Maarek, Ricardo Baeza-Yates, Wendy Hall</span>
+                <span class="schedule-meta">Moderated by Oshani Seneviratne</span>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
       <div class="container">
         <h1>Invited Keynote Talks:</h1>
 
