@@ -174,32 +174,45 @@ while i <= last_row:
                 pass  # nothing extra
 
             elif n_detail == 1:
-                # Tutorial / Workshop / Poster subcategory with just title line
+                # Tutorial / Workshop / or multi-paper cell (PhD Symposium, Web4All, etc.)
                 dr0 = detail_rows[0]
                 for j, text in dr0.items():
                     if j in sessions_by_col:
-                        lines = text.split('\n')
-                        # First line is the title, rest are authors/url
-                        sessions_by_col[j]['name'] = lines[0].strip()
-                        rest = '\n'.join(lines[1:]).strip()
-                        # Detect URL
-                        urls = re.findall(r'https?://\S+', rest)
-                        if urls:
-                            sessions_by_col[j]['url'] = urls[0]
-                        # Authors line
-                        non_url = re.sub(r'https?://\S+', '', rest).strip()
-                        if non_url:
-                            sessions_by_col[j]['papers'].append({
-                                'title': lines[0].strip(),
-                                'authors': non_url,
-                                'acm_url': None
-                            })
+                        # If cell contains \n\n separators it holds multiple paper blocks
+                        if '\n\n' in text.strip():
+                            blocks = re.split(r'\n\s*\n', text.strip())
+                            sessions_by_col[j]['name'] = None  # no separate name row
+                            for block in blocks:
+                                block = block.strip()
+                                if not block:
+                                    continue
+                                blines = block.split('\n')
+                                title = blines[0].strip()
+                                authors = ' '.join(l.strip() for l in blines[1:] if l.strip())
+                                sessions_by_col[j]['papers'].append({
+                                    'title': title,
+                                    'authors': authors,
+                                    'acm_url': None
+                                })
                         else:
-                            sessions_by_col[j]['papers'].append({
-                                'title': lines[0].strip(),
-                                'authors': '',
-                                'acm_url': None
-                            })
+                            # Single item: tutorial or workshop (title + presenters + optional URL)
+                            lines = text.split('\n')
+                            first = lines[0].strip()
+                            # If the whole cell is just a URL, use it as the session link only
+                            if re.match(r'https?://', first) and len(lines) == 1:
+                                sessions_by_col[j]['url'] = first
+                            else:
+                                sessions_by_col[j]['name'] = first
+                                rest = '\n'.join(lines[1:]).strip()
+                                urls = re.findall(r'https?://\S+', rest)
+                                if urls:
+                                    sessions_by_col[j]['url'] = urls[0]
+                                non_url = re.sub(r'https?://\S+', '', rest).strip()
+                                sessions_by_col[j]['papers'].append({
+                                    'title': first,
+                                    'authors': non_url,
+                                    'acm_url': None
+                                })
 
             elif n_detail >= 2:
                 # First detail row: session names (no \n expected)
@@ -290,6 +303,22 @@ def render_session_card_overview(sess):
 </div>'''
 
 
+def item_label(code, count):
+    """Return a human-readable count label appropriate for the session type."""
+    c = str(code)
+    singular, plural = (
+        ('poster',      'posters')      if 'Poster' in c else
+        ('demo',        'demos')        if c.startswith('Demo') else
+        ('short paper', 'short papers') if c.startswith('ShortP') else
+        ('paper',       'papers')       if c.startswith('PhD') else
+        ('item',        'items')        if c.startswith('History') or c.startswith('Web4All') else
+        ('tutorial',    'tutorials')    if c.startswith('tut') else
+        ('workshop',    'workshops')    if c.startswith('wk') else
+        ('paper',       'papers')
+    )
+    return f'{count} {singular if count == 1 else plural}'
+
+
 def render_session_card_full(sess, slot_idx, sess_idx):
     code = sess['code']
     name = sess['name'] or track_label(code)
@@ -323,7 +352,7 @@ def render_session_card_full(sess, slot_idx, sess_idx):
     if papers:
         toggle = f' data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}"'
         count = len(papers)
-        paper_label = f'{count} paper{"s" if count > 1 else ""}'
+        paper_label = item_label(code, count)
         papers_section = f'''<div class="collapse" id="{collapse_id}">
   <div class="papers-container">{papers_html}</div>
 </div>'''
