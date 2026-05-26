@@ -9,7 +9,348 @@ import html as html_lib
 import re
 
 # ─────────────────────────────────────────────
-# 1. Parse Excel
+# 1. Static content — Keynote / Workshop / Tutorial details
+# ─────────────────────────────────────────────
+
+KEYNOTE_DETAILS = {
+    'katrina': {
+        'display_name': 'Katrina Ligett',
+        'affiliation': 'The Hebrew University of Jerusalem, Israel',
+        'title': 'Data Degrades with Use',
+        'abstract': (
+            'We often treat data as an infinitely reusable resource: a single dataset can support many '
+            'analyses, train multiple models, and be shared widely without apparent cost. This talk argues '
+            'that in important ways, data is not endlessly reusable. Instead, in certain contexts, data '
+            'behaves like a consumable resource that degrades with use. The clearest example arises in the '
+            'presence of privacy concerns. Fundamental results show that any informative public analysis of '
+            'personal data inevitably leaks some information about the underlying individuals, and that these '
+            'privacy losses accumulate across repeated uses of the same or overlapping datasets. If some level '
+            'of privacy is to be preserved, this imposes intrinsic limits on how many times data can be used. '
+            'In joint work under submission, we connect this perspective to the mosaic effect from legal '
+            'scholarship, arguing that privacy risks arise not only from combining data pieces, but also from '
+            'combining seemingly innocuous data uses. Data can also degrade with use even when privacy is not '
+            'at stake. A line of work on adaptive data analysis shows that repeatedly querying the same '
+            'dataset can lead to overfitting: results that appear valid on the dataset but fail to generalize '
+            'to the underlying distribution, even when the dataset is very large. Recognizing data degradation '
+            'opens a range of research directions, including systems for tracking and budgeting data use, '
+            'algorithmic techniques to mitigate degradation, the role of synthetic data and data curators, '
+            'and new models of non-worst-case adaptive computation.'
+        ),
+        'bio': (
+            'Katrina Ligett is a Professor in the School of Computer Science and Engineering at The Hebrew '
+            'University of Jerusalem, where she is also the director of the interdisciplinary Federmann '
+            'Center for the Study of Rationality. Before joining Hebrew University, she was faculty in '
+            'computer science and economics at Caltech. Her primary research interests are in data privacy, '
+            'algorithmic fairness, machine learning theory, and algorithmic game theory. She received her PhD '
+            'from Carnegie Mellon University in 2009 and did her postdoc at Cornell University. She is a '
+            'recipient of an ERC grant, an NSF CAREER award, and a Microsoft Faculty Fellowship.'
+        ),
+    },
+    'mounia': {
+        'display_name': 'Mounia Lalmas',
+        'affiliation': 'Spotify, UK',
+        'title': 'Building AI-Driven Web Experiences at Scale',
+        'abstract': (
+            'AI is no longer just a component of Web systems; it is increasingly shaping the experiences '
+            'users have online. From search and recommendation to conversational and generative interfaces, '
+            'AI is redefining how people interact with content at Web scale. In this keynote, I reflect on '
+            'how recent advances in AI, including deep learning and generative models, are reshaping the '
+            'design space of Web technologies. Drawing on insights from developing AI-driven systems at '
+            'Spotify, I discuss how search and recommendation are evolving into interactive, intent-aware '
+            'experiences that support exploration and discovery. The talk highlights emerging system paradigms '
+            'and research questions around building such experiences at scale, and reflects on the implications '
+            'for the design of future Web systems and interactions.'
+        ),
+        'bio': (
+            'Mounia Lalmas is Senior Director of Research at Spotify, where she leads Tech Research in '
+            'Personalisation, focusing on search, recommendation, and discovery systems at scale. Her work '
+            'spans information retrieval, recommender systems, user engagement, and the application of modern '
+            'AI techniques to large-scale online platforms. She previously held senior roles including Director '
+            'of Research at Yahoo and Professor of Information Retrieval at Queen Mary University of London. '
+            'Mounia is an Honorary Professor at University College London and a Distinguished Research Fellow '
+            'at the University of Amsterdam. She has co-chaired major conferences including SIGIR, WWW, WSDM, '
+            'and CIKM, and authored over 260 publications.'
+        ),
+    },
+    'alistair': {
+        'display_name': 'Alistair Moffat',
+        'affiliation': 'University of Melbourne, Australia',
+        'title': '(Everything You Never Knew You Needed To Know About) Rank-Biased Measurement For Web Search',
+        'abstract': (
+            'In information retrieval and web search we measure how good search engines are at ordering '
+            'answers to user queries, how close two ranked lists are to each other, how good LLMs are at '
+            're-ranking sets of candidate documents, and how close generated answer sentences are to the ideal '
+            'output. This talk begins by motivating the top-weighted measurements that arise when ordered '
+            'sequences are involved, including reviewing the rank-biased precision and rank-biased overlap '
+            'measurements proposed in 2008 and 2010. The second part then presents recent work unifying the '
+            'two previous rank-biased approaches as elements in a larger framework that exposes a third '
+            'rank-biased measurement, rank-biased recall. Finally, in the third part, new ways in which the '
+            'degree of top-weighting bias can be controlled are described, allowing practitioners and '
+            'researchers to better define their measurement goals and more precisely target their experiments.'
+        ),
+        'bio': (
+            'Professor Alistair Moffat is now in his 40th year as a faculty member at the University of '
+            'Melbourne. Early work included coauthorship of the book "Managing Gigabytes: Compressing and '
+            'Indexing Documents and Images" (1994, 1999), and development of innovative mechanisms for '
+            'implementing ranked queries via compressed inverted indexes. Most recently Alistair has been '
+            'focused on IR evaluation, including models for user query formulation and result perusal, and '
+            'rank-biased measurement. Alistair was inducted into the SIGIR Academy in 2021, and recently '
+            'became a Fellow of the ACM for his contributions to the implementation and evaluation of '
+            'search systems.'
+        ),
+    },
+    'pascale': {
+        'display_name': 'Pascale Fung',
+        'affiliation': 'AMI Labs & The Hong Kong University of Science & Technology',
+        'title': 'Towards AI That Understands the Human World',
+        'abstract': (
+            'AI has reached a turning point. Systems can now perceive, generate, and act in language and '
+            'image across digital platforms at unprecedented scale. Yet as AI moves from tools to '
+            'collaborators—embedded in decision-making, institutions, and everyday life—a new requirement '
+            'becomes unavoidable: AI must understand the world the way humans inhabit it. This talk '
+            'introduces Cognitive World Modeling as the next phase of AI development. It unifies physical '
+            'world modeling—time, space, causality, action—with mental world modeling—goals, beliefs, '
+            'intentions, emotions, and social norms—into a single, persistent representation of reality as '
+            'experienced by humans. Together, these models allow AI systems not only to predict outcomes, '
+            'but to reason about meaning, context, and consequence. Alignment and trust emerge not as post '
+            'hoc constraints, but as properties of systems that maintain accurate, evolving models of both '
+            'the external world and the humans within it.'
+        ),
+        'bio': (
+            'Pascale Fung\'s long-term research background is in multimodal interactive systems including '
+            'audio, speech, text and video. She is the Co-founder and Chief Research & Innovation Officer at '
+            'AMI Labs. She was previously the Senior Director of AI Research at Meta-FAIR, leading research '
+            'on embodied AI agents. She is also a Chair Professor of ECE at The Hong Kong University of '
+            'Science & Technology (HKUST). She is a Fellow of the ACL, AAAI, IEEE, and ISCA for her '
+            'significant contribution to human-machine interactions.'
+        ),
+    },
+}
+
+
+def keynote_lookup(event_text):
+    if event_text is None:
+        return None
+    et = event_text.lower()
+    for key in KEYNOTE_DETAILS:
+        if key in et:
+            return KEYNOTE_DETAILS[key]
+    return None
+
+
+WORKSHOP_DETAILS = {
+    'AAIMVT': {
+        'full_name': '1st Workshop on Applied AI and Multimodal Visualization Technologies',
+        'organizers': 'Cesar Sanin (Australian Institute of Higher Education / University of New England), Edward Szczerbicki (University of Newcastle / Gdansk University of Technology), Md Rafiqul Islam (Charles Darwin University)',
+        'url': 'https://rafiqulislamcse24.wixsite.com/aaimvt-26',
+        'abstract': 'A full-day interactive workshop exploring how applied AI and multimodal visualization technologies can enhance knowledge representation, decision-making, and human-machine collaboration. Topics include cutting-edge research at the intersection of AI and multimodal visualization, interdisciplinary dialogue between researchers and practitioners, and methodologies to improve human decision-making through multimodal data representation.',
+    },
+    'AiOfAi': {
+        'full_name': 'The Workshop on Adverse Impacts and Collateral Effects of Artificial Intelligence Technologies',
+        'organizers': 'Esma Aimeur (Universite de Montreal), Rim Ben Salem (Polytechnique Montreal), Dorsaf Sallami (Universite de Montreal), Julita Vassileva (University of Saskatchewan), Nora Boulahia-Cuppens (Polytechnique Montreal)',
+        'url': 'https://sites.google.com/view/aiofai-2026/home',
+        'abstract': 'AiOfAi highlights the double-edged nature of AI in the digital age, examining how it can be exploited to undermine trust, privacy, and integrity, while also serving as a foundation for more secure, ethical, and resilient digital ecosystems. The workshop discusses the societal impact of widespread AI adoption, ethical and legal frameworks for responsible AI deployment, and emerging approaches in cybersecurity and fairness.',
+    },
+    'ALTARS': {
+        'full_name': '4th Workshop on Augmented Intelligence in Technology-Assisted Review Systems (ALTARS 2026)',
+        'organizers': 'Giorgio Maria Di Nunzio (University of Padova, Italy), Evangelos Kanoulas (University of Amsterdam), Prasenjit Majumder (DAIICT, Gandhinagar, India)',
+        'url': 'https://altars2026.dei.unipd.it/',
+        'abstract': 'ALTARS 2026 explores recent advances and open challenges in Technology-Assisted Review (TAR) systems for large-scale, high-recall retrieval across the Web. Topics include intelligent retrieval, human-in-the-loop learning, explainable and responsible AI, and the integration of LLMs and knowledge graphs into review workflows across legal, scientific, and web-scale domains.',
+    },
+    "BeyondFacts'26": {
+        'full_name': '6th International Workshop on Computational Methods for Online Discourse Analysis',
+        'organizers': 'Stefan Dietze (Heinrich-Heine-University Dusseldorf & GESIS), Dimitar Dimitrov (GESIS), Pavlos Fafalios (Technical University of Crete & FORTH-ICS), Konstantin Todorov (University of Montpellier / LIRMM / CNRS)',
+        'url': 'https://beyondfacts2026.wordpress.com/',
+        'abstract': 'This workshop strengthens relations between knowledge representation and NLP communities, providing a forum for works on modeling, extraction and analysis of online discourse. It addresses the need for shared understanding of discourse data—claims, arguments, stances, and veracity—using methods from machine learning, NLP, large language models and Web data mining.',
+    },
+    'DHOW-MiLLA': {
+        'full_name': 'Joint Workshop on Diffusion of Harmful Content on Online Web and Countering Misinformation in the Age of LLMs and Agents',
+        'organizers': 'Thomas Mandl (University of Hildesheim), Haiming Liu (University of Southampton), Gautam Kishore Shahi (University of Duisburg-Essen), Amit Kumar Jaiswal (IIT BHU Varanasi), and others',
+        'url': 'https://dhow-workshop.github.io/2026/',
+        'abstract': 'DHOW-MiLLA consolidates research on harmful content diffusion and misinformation under one umbrella. With LLMs and agent-based AI systems creating a dual-use paradigm, this workshop focuses on cross-platform, multilingual solutions that mitigate modern misinformation while harnessing AI capabilities for verification, fact-checking, and detection of deepfakes, propaganda, and multimodal disinformation.',
+    },
+    'FAAW': {
+        'full_name': 'International Workshop on Foundations and Architectures for the Agentic Web',
+        'organizers': 'Abderrahmane Maaradji (University of Doha for Science and Technology), Boualem Benatallah (Dublin City University), Fatma Outay (Zayed University, UAE), Ramesh Raskar (MIT Media Lab), Pradyumna Chari (MIT Media Lab), and others',
+        'url': 'https://faaw.univ-tours.fr/',
+        'abstract': 'The Agentic Web is emerging as billions of AI agents discover, communicate, and coordinate across the open Web. This workshop covers web-native building blocks: agent registries, identity and credentials (DIDs/VCs), authorization (OAuth 2.0), discovery (DNS-SD), and federation patterns, as well as economic mechanisms (reputation, knowledge pricing) and societal coordination (governance, accountability).',
+    },
+    'FL@FM': {
+        'full_name': 'International Workshop on Federated Foundation Models for the Web 2026',
+        'organizers': 'Irwin King (The Chinese University of Hong Kong), Guodong Long (University of Technology Sydney), Zenglin Xu (Fudan University), Han Yu (Nanyang Technological University), Xiaoli Tang (Nanyang Technological University)',
+        'url': 'https://federated-learning.org/fl@fm-www-2026/',
+        'abstract': 'With foundation models becoming the norm in ML development, federated learning (FL) becomes crucial for privacy-preserving and distributed learning at scale. This workshop provides a platform for researchers and industry professionals to discuss latest advancements in FL methods for foundation models, enabling efficient training while safeguarding sensitive data.',
+    },
+    'GLOW': {
+        'full_name': 'Graph-enhanced LLMs for Trustworthy Web Data Management',
+        'organizers': 'Gianluca Bonifazi (Marche Polytechnic University), Stefano Cirillo (University of Salerno), Eliana Pastor (Polytechnic University of Turin), Luca Virgili (Marche Polytechnic University)',
+        'url': 'https://glow-workshop.github.io/www2026/',
+        'abstract': 'This workshop explores synergies between LLMs and graph-based knowledge representations (knowledge graphs, property graphs) to build trustworthy data-driven Web applications. LLMs generate fluent responses but often struggle with factuality, bias, and hallucinations. Graphs provide structured, interconnected representations that can serve as grounding and validation layers for LLM-based systems.',
+    },
+    'HCRS': {
+        'full_name': 'The 2nd Workshop on Human-Centered Recommender Systems',
+        'organizers': 'Kaike Zhang (University of Chinese Academy of Sciences), Jiakai Tang (Renmin University of China), Julian McAuley (University of California, San Diego), Lina Yao (CSIRO Data61, Australia), and others',
+        'url': 'https://hcrec.github.io/',
+        'abstract': 'HCRS calls for a paradigm shift from optimizing engagement toward designing recommender systems that truly understand, involve, and benefit people. Centered around Human Understanding, Human Involvement, and Human Impact, the workshop covers topics from LLM-based interactive recommenders to societal welfare optimization and responsible recommendation research.',
+    },
+    'LARS': {
+        'full_name': 'LLM & Agents for Recommendation Systems',
+        'organizers': 'Keerthi Gopalakrishnan (Walmart Global Tech), Qi Xu (Meta AI), Aysenur Inan (Walmart Global Tech), Zhigang Hua (Meta AI), Shuang Yang (Meta AI), Luyi Ma (Walmart Global Tech)',
+        'url': 'https://llmandagents4recsys.github.io/',
+        'abstract': 'Recommendation systems are undergoing a major shift from traditional centralized pipelines to agentic ecosystems that can plan, reason, negotiate, and interact across the entire journey of discovery, personalization, and fulfillment. This workshop explores architectures, evaluation, trust, fairness, and real-world deployments to shape the next generation of adaptive, explainable recommendation ecosystems.',
+    },
+    'MM4SG': {
+        'full_name': 'Fourth International Workshop on Multimodal Content Analysis for Social Good',
+        'organizers': 'Usman Naseem (Macquarie University), Surendrabikram Thapa (Virginia Tech), Roy Ka-Wei Lee (Singapore University of Technology and Design), Mehwish Nasim (University of Western Australia)',
+        'url': 'https://sites.google.com/view/mm4sg-webconf26',
+        'abstract': 'MM4SG addresses the challenge of moderating multimodal content (memes, text-embedded images) on social platforms. The workshop brings together researchers from NLP, machine learning, computational social science, and ethics to explore innovative solutions for content moderation, sharing cutting-edge research on multimodal content analysis techniques.',
+    },
+    'PromptEng': {
+        'full_name': 'Third International Workshop on Prompt Engineering for Pre-Trained Language Models',
+        'organizers': 'Damien Graux (EcoVadis), Sebastien Montella (Huawei Technologies Ltd.), Hajira Jabeen (UniKlinik Cologne)',
+        'url': 'https://prompteng-ws.github.io/2026/',
+        'abstract': 'This workshop gathers practitioners to exchange about good practices, optimizations, results and novel paradigms for designing efficient prompts and context-building to make use of LLMs. Since LLM performances are highly dependent on the exact phrasing used in prompts, the workshop focuses on fail-retry strategies, prompt optimization, and novel prompting paradigms.',
+    },
+    'R2CASS': {
+        'full_name': 'The 2nd International Workshop on Social Science Meets Web Data: Reproducible and Reusable Computational Approaches',
+        'organizers': 'Fakhri Momeni (GESIS), Arnim Bleier (GESIS), Danilo Dessi (University of Sharjah, UAE), Muhammad Taimoor Khan (GESIS)',
+        'url': 'https://sites.google.com/view/r2cass/home',
+        'abstract': 'R2CASS advances computational reproducibility in social science, which relies on digital behavioral data from social media platforms. It brings together computer scientists, social scientists, and policy makers to improve the credibility and reproducibility of computational social science research. Features a hands-on session on the Methods Hub platform for computational reproducibility.',
+    },
+    'SemTech': {
+        'full_name': '4th International Workshop on AI and Semantic Technologies for the Scientific, Technical, and Legal Web',
+        'organizers': 'Rima Dessi (Higher College of Technologies, UAE), Jeenu Joy (FIZ-Karlsruhe), Danilo Dessi (University of Sharjah, UAE), Francesco Osborne (The Open University, UK), Hidir Aras (FIZ-Karlsruhe)',
+        'url': 'https://semtech4stld.github.io/',
+        'abstract': 'SemTech 2026 focuses on methods combining Semantic Web technologies, NLP, LLMs, and other AI to model knowledge across scientific, technical, and legal domains. The workshop invites research on knowledge graph creation, semantic annotation, LLM-KG hybrid reasoning, and trustworthy AI pipelines for scientific, patent, and legal Web content.',
+    },
+    'TempWeb': {
+        'full_name': 'The 16th Temporal Web Analytics Workshop',
+        'organizers': 'Marc Spaniol (University of Caen Normandy), Omar Alonso (Amazon), Ricardo Baeza-Yates (KTH, Royal Institute of Technology Stockholm)',
+        'url': 'https://temporalweb.net/',
+        'abstract': 'TempWeb provides a venue for researchers across all domains where the temporal dimension opens new challenges and possibilities. The workshop focuses on investigating infrastructures, scalable methods, and innovative software for aggregating, querying, and analyzing heterogeneous temporal data at Internet scale.',
+    },
+    'TrustFM': {
+        'full_name': 'Trustworthy Foundation Models for Web Intelligence: Causal Perspectives and Challenges',
+        'organizers': 'Haoang Chi (Tsinghua University), Qi Wang (Tsinghua University), Jiantong Jiang (University of Melbourne), Jiangchao Yao (Shanghai Jiaotong University), Feng Liu (University of Melbourne), Bo Han (Hong Kong Baptist University)',
+        'url': 'https://www-tfm-causal.github.io/www2026-workshop/',
+        'abstract': 'This workshop advances discussion on Trustworthy Foundation Models for the Web by introducing a causal perspective to improving the reliability, interpretability, and fairness of large-scale models. It convenes experts from machine learning, causal inference, web data mining, and social computing to establish a roadmap toward more robust, transparent, and ethically aligned Web AI systems.',
+    },
+    'TIME': {
+        'full_name': '2nd International Workshop on Transformative Insights in Multi-faceted Evaluation',
+        'organizers': 'Lei Wang (Griffith University & CSIRO), Md Zakir Hossain (Curtin University), Tom Gedeon (Curtin University), Syed Mohammed Shamsul Islam (ECU), Rafiqul Islam (Charles Sturt University), Yasmeen George (Monash University), Shreya Ghosh (University of Queensland)',
+        'url': 'https://time.griffith.edu.au/workshop/time2026/',
+        'abstract': 'TIME brings together domain experts to share insights on social network analysis, graph algorithms, web mining, semantics, security, privacy, fairness, and ethics on the web. The workshop invites survey, evaluation, or review papers that critically analyze models and datasets from diverse perspectives, complemented by invited talks from experts and industry leaders.',
+    },
+    'TML': {
+        'full_name': 'International Workshop on Trustworthy Multimodal Learning for Social Media Analysis',
+        'organizers': 'Jingwei Sun (ByteDance), Guosheng Lin (Nanyang Technological University), Fengmao Lv (Southwest Jiaotong University), Tao Liang (ByteDance), Junlin Fang (Southwest Jiaotong University)',
+        'url': 'https://ttthhl.github.io/www2026-workshop/',
+        'abstract': 'TML 2026 focuses on trustworthy multimodal learning methods for social media analysis, covering multimodal social media content analysis with LMMs, effective multimodal fusion and information alignment, and performance and safety evaluation of LMMs including quality of generated content, model hallucinations, and vulnerability to adversarial attacks.',
+    },
+    'WebAds': {
+        'full_name': 'Emerging Trends in Web Advertising',
+        'organizers': 'Ehsan Toreini (Samsung R&D Institute UK), Muadh Al Kalbani (Samsung R&D Institute UK)',
+        'url': 'https://samsunginternet.github.io/webads26/',
+        'abstract': 'The landscape of web advertising is undergoing a profound transformation, fueled by advancements in technologies that prioritize user privacy, AI-driven personalization, and immersive experiences. This workshop provides a platform for timely, responsible discussions among experts from advertising, privacy, data science, and related fields.',
+    },
+    'WebAndTheCity': {
+        'full_name': '12th International Smart City Workshop - Data-Driven Smart Cities',
+        'organizers': 'Leonidas Anthopoulos (University of Thessaly, Greece), Marijn Janssen (Delft University of Technology), Vishanth Weerakkody (University of Bradford, UK)',
+        'url': 'https://webandthecity.home.blog/',
+        'abstract': 'In the era of IoT, AI, and agentic AI integration, cities are being transformed into urban environments that use data as a foundational asset. This workshop explores how the Web supports smart city transformation and how technologies can improve urban decision-making, optimize services, and enhance citizen well-being.',
+    },
+    'WebST': {
+        'full_name': 'The 2nd International Workshop on Spatio-Temporal Data Mining from the Web',
+        'organizers': 'Yuxuan Liang (HKUST Guangzhou), Hao Xue (University of New South Wales), Ming Jin (Griffith University), Fei Wang (Institute of Computing Technology, CAS), Shirui Pan (Griffith University), Flora Salim (University of New South Wales)',
+        'url': 'https://webst2026.netlify.app/',
+        'abstract': 'A comprehensive workshop catering to professionals interested in sensing, mining, and understanding big and heterogeneous spatio-temporal data generated from the Web (social media posts, geotagged images, mobility traces) to tackle real-world challenges such as climate change, disaster response, urban planning, and location-based social networks.',
+    },
+    'ZABAPAD': {
+        'full_name': 'Zero-knowledge Proof and Blockchain for Web 4.0: Advancing the Post-quantum and Decentralized Era',
+        'organizers': 'Shiho Kim (Yonsei University), Roberto Di Pietro (KAUST), Davor Svetinovic (Khalifa University, UAE), KyungHi Chang (Inha University), Madhusudan Singh (Pennsylvania State University)',
+        'url': 'https://zabapad.github.io',
+        'abstract': 'ZABAPAD focuses on zero-knowledge technologies, blockchain infrastructure, and post-quantum readiness for the emerging Web 4.0 ecosystem. Topics include ZKP-based authentication, ZKML, Layer-2 proving/verification, TEE+ZK integration for verifiable compute, and post-quantum migration of identities, wallets, ledgers, and protocols across finance, mobility, healthcare, and AI/ML domains.',
+    },
+}
+
+TUTORIAL_DETAILS = {
+    'temporal information retrieval and question answering in the age of llms': {
+        'presenters': 'Bhawna Piryani, Avishek Anand, and Adam Jatowt',
+        'abstract': 'This tutorial provides a comprehensive overview of Temporal Information Retrieval (TIR) and Temporal Question Answering (TQA), addressing temporal relevance, reasoning, and adaptation in information access. It traces the evolution from early rule-based approaches to modern transformer and LLM architectures, highlighting how temporal modeling, reasoning, and retrieval-augmented generation are reshaping the field.',
+    },
+    'out-of-distribution generalized generative ai': {
+        'presenters': 'Xin Wang, Yuwei Zhou, Zirui Pan, and Wenwu Zhu',
+        'abstract': 'This tutorial disseminates recent research advancements in multi-modal generative AI, focusing on MLLMs and diffusion models. It covers solutions and future directions for challenges from shifting data distributions, emerging concepts, and evolving complex scenarios, including generalizable post-training techniques and unified multi-modal generation frameworks for dynamic open environments.',
+    },
+    'towards a responsible web: economic perspectives on fairness in information retrieval': {
+        'presenters': 'Chen Xu, Clara Rus, Yuanna Liu, Marleen de Jonge, Jun Xu, and Maarten de Rijke',
+        'abstract': 'Fairness is a crucial aspect of a responsible Web. This tutorial organizes fairness algorithms within an economic cube with dimensions: macro vs. micro, demand vs. supply, and short-term vs. long-term fairness. It draws parallels between IR systems and economic markets, demonstrating how IR fairness can be integrated into a structured economic framework with open problems and promising directions.',
+    },
+    'next-gen code development with collaborative ai agents': {
+        'presenters': 'Shweta Garg, Behrooz Omidvar-Tehrani, Shengyu Fu, Gauthier Guinet, and Baishakhi Ray',
+        'abstract': 'This tutorial explores AI-powered software development where LLMs function as collaborative agents that plan, code, test, and review alongside human developers. Using GitHub Copilot, Mistral Code and Kiro as exemplars, it covers multi-agent coordination, reflective collaboration, long-term memory, tool-integrated verification, and secure deployment patterns for modern engineering environments.',
+    },
+    'llm-enhanced web-centric spatio-temporal intelligence: methods, applications, and frontier research': {
+        'presenters': 'Zijian Zhang, Hao Miao, Yuxuan Liang, Yan Zhao, and Irwin King',
+        'abstract': 'This tutorial provides a comprehensive overview of LLM-Enhanced Web-Centric Spatio-Temporal Intelligence, organized at three levels: Location-level intelligence, Region-level intelligence, and broader spatio-temporal patterns. It presents methods, applications, and frontier research in the LLM era for Web-centric spatio-temporal data including geo-social media, LBS, and transportation records.',
+    },
+    'quantum-safe, efficient, and ai-enhanced blockchains for the web: a cooperative tutorial on quantum computing, blockchain applications, and data standards': {
+        'presenters': 'Dongping Liu, Aoyu Zhang, and Luyao Zhang',
+        'abstract': 'This tutorial explores how quantum computing and blockchain can jointly redefine trust, efficiency, and intelligence of next-generation Web systems. It covers principles of quantum computing and their implications for secure blockchain architectures, post-quantum cryptography, and culminates in a hands-on experience with cloud-based quantum computation through Amazon Braket.',
+    },
+    'conversational search: from fundamentals to frontiers in the age of agents': {
+        'presenters': 'Chuan Meng, Fengran Mo, Mohammad Aliannejadi, Jeff Dalton, and Jian-Yun Nie',
+        'abstract': 'This tutorial connects fundamentals with recent agentic paradigms in conversational search. It covers how LLMs enable multi-turn interactions to fulfill complex information needs, drive search systems toward agentic paradigms that can plan strategies, execute dynamic retrieval, and support autonomous behaviours. Designed for students, researchers, and practitioners from academia and industry.',
+    },
+    'bandits, llms, and agentic web': {
+        'presenters': 'Djallel Bouneffouf, and Raphael Feraud',
+        'abstract': 'This tutorial offers a comprehensive guide on using multiarmed bandit (MAB) algorithms to improve LLMs with a special focus on enabling agentic behavior. It covers foundational MAB concepts (epsilon-greedy, UCB, Thompson Sampling), integrating MAB with LLMs for text generation, and real-world case studies in content recommendation, dialogue generation, and personalized content creation.',
+    },
+    'unstructured to structured: building knowledge graphs from documents for web applications': {
+        'presenters': 'Qiang Sun, Yihao Ding, Sirui Li and Wei Liu',
+        'abstract': 'This tutorial presents methods for transforming unstructured Web content into structured Knowledge Graphs (KGs), covering information extraction across entities, relations, events, and spatio-temporal indices. It discusses hybrid systems combining LLMs with structured knowledge including LLM-driven KG construction, RAG over enterprise knowledge bases, and KG-augmented LLMs for grounded reasoning.',
+    },
+    'foundations for the agentic web: infrastructure, economics, and society': {
+        'presenters': 'Ramesh Raskar, and Pradyumna Chari',
+        'abstract': 'This tutorial provides a comprehensive framework for understanding the agentic web across three development phases: Foundations (discovery, identity, protocols), Agentic Economy (pricing, reputation, markets), and Agentic Society (population dynamics, governance, coordination). It draws on recent advances in registry architectures, protocol standards, and resolution mechanisms for agent ecosystems.',
+    },
+    'generalist model for structured data: foundations, frontiers and applications': {
+        'presenters': 'Peng Cui, Xingxuan Zhang, Han-Jia Ye, Jintai Chen, and Shuyang Li',
+        'abstract': 'Structured data is ubiquitous in web-scale and enterprise applications. This tutorial covers both conventional modeling paradigms and recent in-context learning (ICL)-based approaches for structured foundation models, discussing pretraining data generation, multi-task learning, and emerging directions including zero-shot inference and knowledge transfer across diverse structured settings.',
+    },
+    'robust graph learning on the web: challenges, methods, and applications': {
+        'presenters': 'Xiang Ao, Yang Liu, Guansong Pang, Yuanhao Ding, Hezhe Qiao, Dawei Cheng, and Qing He',
+        'abstract': 'This tutorial surveys strategies for robust graph learning on the Web, presenting a structured taxonomy of robustness threats (dynamic user behavior, incomplete content, adversarial interference, distribution shifts) and categorizing current approaches from data-level preprocessing to model-level adaptation. Includes real-world case studies from recommender systems to anomaly detection.',
+    },
+    'responsible prompting on the web: governance, mini-evaluation, and readiness with chatgpt': {
+        'presenters': 'Manali Sharma and Ayush Garg',
+        'abstract': 'This tutorial teaches a clear, repeatable workflow for responsible prompting in a browser-only setting with ChatGPT. It covers zero-shot vs. few-shot, chain-of-thought, role prompts, output formatting, multi-turn prompt chaining, and reverse prompting. Participants leave with prompt cards, a scoring rubric, and a deployment readiness one-pager documenting metrics, failure modes, and limitations.',
+    },
+}
+
+
+def get_workshop_details(session_name):
+    if not session_name:
+        return None
+    m = re.match(r'\(([^)]+)\)', session_name.strip())
+    if m:
+        code = m.group(1).strip()
+        if code in WORKSHOP_DETAILS:
+            return WORKSHOP_DETAILS[code]
+        base = re.sub(r'\s*\d{4}$', '', code).rstrip('0123456789').rstrip("'").strip()
+        if base in WORKSHOP_DETAILS:
+            return WORKSHOP_DETAILS[base]
+    return None
+
+
+def get_tutorial_details(title):
+    if not title:
+        return None
+    return TUTORIAL_DETAILS.get(title.strip().lower())
+
+
+# ─────────────────────────────────────────────
+# 2. Parse Excel
 # ─────────────────────────────────────────────
 
 wb = openpyxl.load_workbook(
@@ -19,22 +360,26 @@ ws = wb['Program']
 
 all_rows = [list(row) for row in ws.iter_rows(values_only=True)]
 
-# Find last non-empty row
 last_row = 0
 for i, row in enumerate(all_rows):
     if any(v is not None for v in row):
         last_row = i
 
+
 def is_special_event(slot_code):
-    """Return True if col B value looks like a single special event."""
-    specials = ['break', 'keynote', 'conference opening', 'town hall',
-                'plenary', 'posters and demos']
+    specials = ['break', 'keynote', 'conference opening', 'town hall', 'plenary']
     if slot_code is None:
         return False
     return any(slot_code.lower().startswith(s) for s in specials)
 
+
+def is_poster_session(slot_code):
+    if slot_code is None:
+        return False
+    return str(slot_code).lower().startswith('posters and demos')
+
+
 def track_label(code):
-    """Convert a track code to a human-readable label."""
     if code is None:
         return ''
     c = str(code).strip()
@@ -62,36 +407,35 @@ def track_label(code):
             return label
     return c
 
+
 def track_color_class(code):
-    """Map track code to a CSS class for styling."""
     if code is None:
         return 'track-other'
     c = str(code).strip()
-    if c.startswith('tut'):      return 'track-tutorial'
-    if c.startswith('wk'):       return 'track-workshop'
-    if c.startswith('Econ'):     return 'track-econ'
-    if c.startswith('Graph'):    return 'track-graph'
-    if c.startswith('Search'):   return 'track-search'
-    if c.startswith('Semantic'): return 'track-semantics'
-    if c.startswith('Social'):   return 'track-social'
-    if c.startswith('System'):   return 'track-systems'
-    if c.startswith('Security'): return 'track-security'
-    if c.startswith('Mining'):   return 'track-mining'
-    if c.startswith('RecSys'):   return 'track-recsys'
-    if c.startswith('Industry'): return 'track-industry'
-    if c.startswith('History'):  return 'track-history'
-    if c.startswith('Web4Good'): return 'track-web4good'
-    if c.startswith('RespWeb'):  return 'track-respweb'
-    if c.startswith('PhD'):      return 'track-phd'
-    if c.startswith('Web4All'):  return 'track-web4all'
-    if c.startswith('Demos'):    return 'track-demos'
-    if c.startswith('ShortP'):   return 'track-short'
-    if c.startswith('BestP'):    return 'track-best'
+    if c.startswith('tut'):       return 'track-tutorial'
+    if c.startswith('wk'):        return 'track-workshop'
+    if c.startswith('Econ'):      return 'track-econ'
+    if c.startswith('Graph'):     return 'track-graph'
+    if c.startswith('Search'):    return 'track-search'
+    if c.startswith('Semantic'):  return 'track-semantics'
+    if c.startswith('Social'):    return 'track-social'
+    if c.startswith('System'):    return 'track-systems'
+    if c.startswith('Security'):  return 'track-security'
+    if c.startswith('Mining'):    return 'track-mining'
+    if c.startswith('RecSys'):    return 'track-recsys'
+    if c.startswith('Industry'):  return 'track-industry'
+    if c.startswith('History'):   return 'track-history'
+    if c.startswith('Web4Good'):  return 'track-web4good'
+    if c.startswith('RespWeb'):   return 'track-respweb'
+    if c.startswith('PhD'):       return 'track-phd'
+    if c.startswith('Web4All'):   return 'track-web4all'
+    if c.startswith('Demos'):     return 'track-demos'
+    if c.startswith('ShortP'):    return 'track-short'
+    if c.startswith('BestP'):     return 'track-best'
     return 'track-other'
 
 
-# Build program structure
-program = []  # list of day dicts
+program = []
 current_day = None
 i = 0
 
@@ -100,42 +444,39 @@ while i <= last_row:
     col_a = row[0]
     col_b = row[1] if len(row) > 1 else None
 
-    # Skip header rows
     if i < 2:
         i += 1
         continue
 
-    # Day row
     if isinstance(col_a, datetime):
         current_day = {'date': col_a, 'slots': []}
         program.append(current_day)
         i += 1
         continue
 
-    # Time slot row
     if col_a and isinstance(col_a, str) and current_day is not None:
         time_str = col_a.strip()
-        
-        # Gather session codes (cols B..N)
+
         codes = []
         for j in range(1, 27):
             val = row[j] if j < len(row) else None
             if val is not None:
                 codes.append({'col_idx': j, 'code': str(val).strip()})
 
-        # Is this a special single event?
         only_b = (len(codes) == 1 and codes[0]['col_idx'] == 1)
         special = is_special_event(col_b) if only_b else False
+        poster = is_poster_session(col_b) if only_b else False
 
         slot = {
             'time': time_str,
             'special': special,
-            'event': col_b if special else None,
-            'sessions': [] if not special else None,
+            'poster': poster,
+            'event': col_b if (special or poster) else None,
+            'sessions': [] if not (special or poster) else None,
             'detail_rows': []
         }
 
-        if not special:
+        if not special and not poster:
             for c in codes:
                 slot['sessions'].append({
                     'col_idx': c['col_idx'],
@@ -147,7 +488,6 @@ while i <= last_row:
 
         current_day['slots'].append(slot)
 
-        # Collect detail rows
         i += 1
         detail_rows = []
         while i <= last_row:
@@ -157,7 +497,7 @@ while i <= last_row:
             dr = {}
             for j in range(1, 27):
                 v = nr[j] if j < len(nr) else None
-                if v is not None:
+                if v is not None and isinstance(v, str):
                     dr[j] = str(v)
             if dr:
                 detail_rows.append(dr)
@@ -165,23 +505,51 @@ while i <= last_row:
 
         slot['detail_rows'] = detail_rows
 
-        # ── Interpret detail rows ──────────────────────
-        if not special and slot['sessions']:
+        if poster and len(detail_rows) >= 2:
+            dr0 = detail_rows[0]
+            dr1 = detail_rows[1]
+            sub_sessions = []
+            for j in sorted(dr0.keys()):
+                code_val = dr0[j].strip()
+                if not code_val:
+                    continue
+                papers = []
+                if j in dr1:
+                    blocks = re.split(r'\n\s*\n', dr1[j].strip())
+                    for block in blocks:
+                        block = block.strip()
+                        if not block:
+                            continue
+                        blines = block.split('\n')
+                        title_p = blines[0].strip()
+                        if re.match(r'WITHDRAWN', title_p, re.IGNORECASE):
+                            continue
+                        authors_p = ' '.join(l.strip() for l in blines[1:] if l.strip())
+                        papers.append({
+                            'title': title_p,
+                            'authors': authors_p,
+                            'acm_url': None
+                        })
+                sub_sessions.append({
+                    'col_idx': j,
+                    'code': code_val,
+                    'name': track_label(code_val),
+                    'papers': papers,
+                    'url': None,
+                })
+            slot['sessions'] = sub_sessions
+
+        elif not special and not poster and slot['sessions']:
             sessions_by_col = {s['col_idx']: s for s in slot['sessions']}
             n_detail = len(detail_rows)
 
-            if n_detail == 0:
-                pass  # nothing extra
-
-            elif n_detail == 1:
-                # Tutorial / Workshop / or multi-paper cell (PhD Symposium, Web4All, etc.)
+            if n_detail == 1:
                 dr0 = detail_rows[0]
                 for j, text in dr0.items():
                     if j in sessions_by_col:
-                        # If cell contains \n\n separators it holds multiple paper blocks
                         if '\n\n' in text.strip():
                             blocks = re.split(r'\n\s*\n', text.strip())
-                            sessions_by_col[j]['name'] = None  # no separate name row
+                            sessions_by_col[j]['name'] = None
                             for block in blocks:
                                 block = block.strip()
                                 if not block:
@@ -190,15 +558,11 @@ while i <= last_row:
                                 title = blines[0].strip()
                                 authors = ' '.join(l.strip() for l in blines[1:] if l.strip())
                                 sessions_by_col[j]['papers'].append({
-                                    'title': title,
-                                    'authors': authors,
-                                    'acm_url': None
+                                    'title': title, 'authors': authors, 'acm_url': None
                                 })
                         else:
-                            # Single item: tutorial or workshop (title + presenters + optional URL)
                             lines = text.split('\n')
                             first = lines[0].strip()
-                            # If the whole cell is just a URL, use it as the session link only
                             if re.match(r'https?://', first) and len(lines) == 1:
                                 sessions_by_col[j]['url'] = first
                             else:
@@ -209,19 +573,15 @@ while i <= last_row:
                                     sessions_by_col[j]['url'] = urls[0]
                                 non_url = re.sub(r'https?://\S+', '', rest).strip()
                                 sessions_by_col[j]['papers'].append({
-                                    'title': first,
-                                    'authors': non_url,
-                                    'acm_url': None
+                                    'title': first, 'authors': non_url, 'acm_url': None
                                 })
 
             elif n_detail >= 2:
-                # First detail row: session names (no \n expected)
                 dr0 = detail_rows[0]
                 for j, text in dr0.items():
                     if j in sessions_by_col:
                         sessions_by_col[j]['name'] = text.strip()
 
-                # Second detail row: papers (title\nauthor blocks separated by \n\n)
                 dr1 = detail_rows[1]
                 for j, text in dr1.items():
                     if j in sessions_by_col:
@@ -234,9 +594,7 @@ while i <= last_row:
                             title = blines[0].strip()
                             authors = ' '.join(l.strip() for l in blines[1:] if l.strip())
                             sessions_by_col[j]['papers'].append({
-                                'title': title,
-                                'authors': authors,
-                                'acm_url': None
+                                'title': title, 'authors': authors, 'acm_url': None
                             })
         continue
 
@@ -244,28 +602,21 @@ while i <= last_row:
 
 
 # ─────────────────────────────────────────────
-# 2. HTML generation helpers
+# 3. HTML helpers
 # ─────────────────────────────────────────────
 
 def esc(s):
     return html_lib.escape(str(s)) if s else ''
-
-DAY_LABELS = {
-    'Monday': 'Mon', 'Tuesday': 'Tue', 'Wednesday': 'Wed',
-    'Thursday': 'Thu', 'Friday': 'Fri', 'Saturday': 'Sat', 'Sunday': 'Sun'
-}
 
 def day_id(day):
     return day['date'].strftime('day-%Y-%m-%d')
 
 def format_day_tab(day):
     d = day['date']
-    weekday = d.strftime('%A')
-    return f"{weekday}<br><span>{d.strftime('%-d %b')}</span>"
+    return f"{d.strftime('%A')}<br><span>{d.strftime('%-d %b')}</span>"
 
 def format_day_heading(day):
-    d = day['date']
-    return d.strftime('%A, %B %-d, %Y')
+    return day['date'].strftime('%A, %B %-d, %Y')
 
 SPECIAL_EVENT_CLASS = {
     'break': 'slot-break',
@@ -285,6 +636,20 @@ def special_class(event):
             return v
     return 'slot-special'
 
+def item_label(code, count):
+    c = str(code)
+    singular, plural = (
+        ('poster',       'posters')      if 'Poster' in c else
+        ('demo',         'demos')        if c.startswith('Demo') else
+        ('short paper',  'short papers') if c.startswith('ShortP') else
+        ('paper',        'papers')       if c.startswith('PhD') else
+        ('item',         'items')        if c.startswith('History') or c.startswith('Web4All') else
+        ('tutorial',     'tutorials')    if c.startswith('tut') else
+        ('workshop',     'workshops')    if c.startswith('wk') else
+        ('paper',        'papers')
+    )
+    return f'{count} {singular if count == 1 else plural}'
+
 
 def render_session_card_overview(sess):
     code = sess['code']
@@ -292,31 +657,13 @@ def render_session_card_overview(sess):
     color_cls = track_color_class(code)
     tlabel = track_label(code)
     url = sess.get('url')
-
     title_html = esc(name)
-    if url:
+    if url and not code.startswith('tut') and not code.startswith('wk'):
         title_html = f'<a href="{esc(url)}" target="_blank" class="session-ext-link">{esc(name)} <i class="fas fa-external-link-alt"></i></a>'
-
     return f'''<div class="session-card {color_cls}">
   <div class="session-track-badge">{esc(tlabel)}</div>
   <div class="session-name">{title_html}</div>
 </div>'''
-
-
-def item_label(code, count):
-    """Return a human-readable count label appropriate for the session type."""
-    c = str(code)
-    singular, plural = (
-        ('poster',      'posters')      if 'Poster' in c else
-        ('demo',        'demos')        if c.startswith('Demo') else
-        ('short paper', 'short papers') if c.startswith('ShortP') else
-        ('paper',       'papers')       if c.startswith('PhD') else
-        ('item',        'items')        if c.startswith('History') or c.startswith('Web4All') else
-        ('tutorial',    'tutorials')    if c.startswith('tut') else
-        ('workshop',    'workshops')    if c.startswith('wk') else
-        ('paper',       'papers')
-    )
-    return f'{count} {singular if count == 1 else plural}'
 
 
 def render_session_card_full(sess, slot_idx, sess_idx):
@@ -328,37 +675,60 @@ def render_session_card_full(sess, slot_idx, sess_idx):
     url = sess.get('url')
     collapse_id = f"collapse-{slot_idx}-{sess_idx}"
 
+    is_tutorial = code.startswith('tut')
+    is_workshop = code.startswith('wk')
+
     title_html = esc(name)
-    if url:
+    if url and not is_tutorial and not is_workshop:
         title_html = f'<a href="{esc(url)}" target="_blank" class="session-ext-link">{esc(name)} <i class="fas fa-external-link-alt"></i></a>'
 
-    papers_html = ''
-    if papers:
+    papers_section = ''
+    header_extra = ''
+
+    if is_tutorial or is_workshop:
+        details = get_workshop_details(name) if is_workshop else get_tutorial_details(name)
+        detail_content = ''
+        if details:
+            if is_workshop:
+                ws_url = details.get('url', url or '')
+                detail_content += f'<p class="detail-full-name"><strong>{esc(details["full_name"])}</strong></p>'
+                if details.get('organizers'):
+                    detail_content += f'<p class="detail-organizers"><i class="fas fa-users"></i> {esc(details["organizers"])}</p>'
+                if ws_url:
+                    detail_content += f'<p class="detail-link"><i class="fas fa-globe"></i> <a href="{esc(ws_url)}" target="_blank">{esc(ws_url)}</a></p>'
+                if details.get('abstract'):
+                    detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
+            else:
+                detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
+                if details.get('presenters'):
+                    detail_content += f'<p class="detail-organizers"><i class="fas fa-chalkboard-teacher"></i> <strong>Presenters:</strong> {esc(details["presenters"])}</p>'
+                if details.get('abstract'):
+                    detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
+        else:
+            detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
+            if papers and papers[0].get('authors'):
+                label = 'Presenters' if is_tutorial else 'Organizers'
+                detail_content += f'<p class="detail-organizers"><strong>{label}:</strong> {esc(papers[0]["authors"])}</p>'
+            if url:
+                detail_content += f'<p class="detail-link"><i class="fas fa-globe"></i> <a href="{esc(url)}" target="_blank">{esc(url)}</a></p>'
+
+        toggle = f' data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}"'
+        papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{detail_content}</div></div>'
+        header_extra = f'<button class="papers-toggle"{toggle}><span class="papers-count">details</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
+
+    elif papers:
         items = []
         for p in papers:
-            ptitle = esc(p['title'])
-            pauth = esc(p['authors'])
-            # Wrap title in <a> with placeholder href for future ACM DL link
-            # The data-acm attribute makes it easy to add links later
-            title_link = f'<a href="#" class="paper-title acm-link-placeholder" data-acm="">{ptitle}</a>'
-            if pauth:
-                items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span><span class="paper-authors">{pauth}</span></li>')
+            title_link = f'<a href="#" class="paper-title acm-link-placeholder" data-acm="">{esc(p["title"])}</a>'
+            if p.get('authors'):
+                items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span><span class="paper-authors">{esc(p["authors"])}</span></li>')
             else:
                 items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span></li>')
-        papers_html = f'<ul class="paper-list">' + ''.join(items) + '</ul>'
-
-    toggle = ''
-    papers_section = ''
-    if papers:
+        papers_html = '<ul class="paper-list">' + ''.join(items) + '</ul>'
         toggle = f' data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}"'
-        count = len(papers)
-        paper_label = item_label(code, count)
-        papers_section = f'''<div class="collapse" id="{collapse_id}">
-  <div class="papers-container">{papers_html}</div>
-</div>'''
-        header_extra = f'<button class="papers-toggle" {toggle}><span class="papers-count">{paper_label}</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
-    else:
-        header_extra = ''
+        paper_label = item_label(code, len(papers))
+        papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{papers_html}</div></div>'
+        header_extra = f'<button class="papers-toggle"{toggle}><span class="papers-count">{paper_label}</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
 
     return f'''<div class="session-card {color_cls}">
   <div class="session-card-header">
@@ -370,6 +740,64 @@ def render_session_card_full(sess, slot_idx, sess_idx):
 </div>'''
 
 
+def render_keynote_block_overview(event, slot_idx):
+    sc = special_class(event)
+    kd = keynote_lookup(event)
+    if kd:
+        return (f'<div class="slot-special-block {sc}">'
+                f'<div class="keynote-speaker-name">{esc(event)}</div>'
+                f'<div class="keynote-talk-title">{esc(kd["title"])}</div>'
+                f'</div>')
+    return f'<div class="slot-special-block {sc}">{esc(event)}</div>'
+
+
+def render_keynote_block_full(event, slot_idx):
+    sc = special_class(event)
+    kd = keynote_lookup(event)
+    if not kd:
+        return f'<div class="slot-special-block {sc}">{esc(event)}</div>'
+    collapse_id = f"keynote-detail-{slot_idx}"
+    detail_html = (
+        f'<p class="keynote-detail-title"><strong>Talk Title:</strong> {esc(kd["title"])}</p>'
+        f'<p class="keynote-detail-abstract"><strong>Abstract:</strong> {esc(kd["abstract"])}</p>'
+        f'<p class="keynote-detail-bio"><strong>Bio:</strong> {esc(kd["bio"])}</p>'
+    )
+    return (
+        f'<div class="slot-special-block {sc}">'
+        f'<div class="keynote-header-row">'
+        f'<div>'
+        f'<div class="keynote-speaker-name">{esc(event)}</div>'
+        f'<div class="keynote-talk-title">{esc(kd["title"])}</div>'
+        f'</div>'
+        f'<button class="papers-toggle keynote-details-btn" data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}">'
+        f'<span class="papers-count">details</span><i class="fas fa-chevron-down toggle-icon"></i>'
+        f'</button>'
+        f'</div>'
+        f'<div class="collapse" id="{collapse_id}"><div class="keynote-expand-content">{detail_html}</div></div>'
+        f'</div>'
+    )
+
+
+def render_poster_session(slot, is_full_schedule, slot_idx):
+    event_name = slot['event']
+    sc = special_class(event_name)
+    sub_sessions = slot.get('sessions') or []
+    header_block = f'<div class="slot-special-block {sc} poster-session-header">{esc(event_name)}</div>'
+    if not sub_sessions:
+        return header_block
+    cards = ''
+    for si, sess in enumerate(sub_sessions):
+        if is_full_schedule:
+            cards += render_session_card_full(sess, slot_idx, si) + '\n'
+        else:
+            cards += render_session_card_overview(sess) + '\n'
+    return f'{header_block}\n<div class="session-grid poster-sub-grid">{cards}</div>'
+
+
+# ─────────────────────────────────────────────
+# 4. CSS / scripts
+# ─────────────────────────────────────────────
+
 COMMON_HEAD_LINKS = '''
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/tab-menu.css">
@@ -378,12 +806,8 @@ COMMON_HEAD_LINKS = '''
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 '''
 
-PROGRAM_CSS = '''
-<style>
-/* ── Program layout ────────────────────────── */
+PROGRAM_CSS = '''<style>
 .program-page { padding: 30px 0 60px; }
-
-/* Day navigation tabs */
 .day-tabs {
   display: flex; flex-wrap: wrap; gap: 6px;
   margin-bottom: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 0;
@@ -395,31 +819,21 @@ PROGRAM_CSS = '''
   border-bottom: 3px solid transparent; margin-bottom: -2px;
 }
 .day-tab-btn:hover { background: #ede5ff; color: #6a00ff; }
-.day-tab-btn.active { background: white; color: #6a00ff;
-  border-bottom: 3px solid #6a00ff; }
+.day-tab-btn.active { background: white; color: #6a00ff; border-bottom: 3px solid #6a00ff; }
 .day-tab-btn span { font-size: 0.8rem; font-weight: 400; display: block; }
-
-/* Day panels */
 .day-panel { display: none; }
 .day-panel.active { display: block; }
-
-/* Time slot blocks */
 .time-slot { margin-bottom: 20px; }
 .time-label {
   display: inline-flex; align-items: center; gap: 6px;
   color: #555; font-size: 0.82rem; font-weight: 700;
-  letter-spacing: .4px; margin-bottom: 10px;
-  padding: 4px 0;
+  letter-spacing: .4px; margin-bottom: 10px; padding: 4px 0;
 }
 .time-label i { opacity: .5; font-size: 0.78rem; }
-.time-note { font-size: 0.75rem; color: #888; margin-left: 8px; font-style: italic; }
-
-/* Special events — unified structure, colour accent only differs */
 .slot-special-block {
   border-radius: 6px; padding: 13px 18px; margin-bottom: 4px;
   font-size: 0.95rem; font-weight: 600; line-height: 1.4; color: #1a1a1a;
-  background: #fff; border: 1px solid #e8e8e8;
-  border-left: 4px solid #bbb;
+  background: #fff; border: 1px solid #e8e8e8; border-left: 4px solid #bbb;
   box-shadow: 0 1px 4px rgba(0,0,0,.05);
 }
 .slot-keynote  { border-left-color: #6a00ff; }
@@ -428,18 +842,44 @@ PROGRAM_CSS = '''
 .slot-closing  { border-left-color: #00a855; }
 .slot-plenary  { border-left-color: #e08000; }
 .slot-posters  { border-left-color: #0078d4; }
-
+/* Keynote expanded */
+.keynote-header-row {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+}
+.keynote-speaker-name { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; }
+.keynote-talk-title   { font-size: 0.88rem; font-weight: 500; color: #555; margin-top: 3px; font-style: italic; }
+.keynote-details-btn  { flex-shrink: 0; }
+.keynote-expand-content {
+  margin-top: 12px; padding-top: 12px; border-top: 1px solid #e8e0ff;
+  font-size: 0.84rem; color: #333; line-height: 1.6;
+}
+.keynote-detail-title { margin: 0 0 8px; font-style: italic; color: #555; }
+.keynote-detail-abstract { margin: 8px 0; }
+.keynote-detail-bio { margin: 8px 0 0; }
+.keynote-expand-content strong { color: #1a1a1a; }
+/* Poster sessions */
+.poster-session-header { margin-bottom: 10px; }
+.poster-sub-grid { margin-top: 8px; }
+/* Workshop/tutorial detail panel */
+.detail-full-name { margin: 0 0 6px; }
+.detail-organizers { font-size: 0.8rem; color: #555; margin: 4px 0; }
+.detail-organizers i { margin-right: 5px; color: #888; }
+.detail-link { font-size: 0.8rem; margin: 4px 0; }
+.detail-link i { margin-right: 5px; color: #888; }
+.detail-link a { color: #1565c0; word-break: break-all; }
+.detail-link a:hover { text-decoration: underline; }
+.detail-abstract { font-size: 0.81rem; color: #444; margin: 6px 0 0; line-height: 1.55; }
+.detail-abstract strong { color: #1a1a1a; }
 /* Session grid */
 .session-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 10px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;
 }
 @media (max-width: 768px) {
   .session-grid { grid-template-columns: 1fr 1fr; }
   .day-tab-btn { padding: 8px 12px; font-size: 0.82rem; }
   .slot-special-block { font-size: 0.88rem; padding: 11px 14px; }
   .day-heading { font-size: 1.1rem; }
+  .keynote-header-row { flex-direction: column; gap: 8px; }
 }
 @media (max-width: 480px) {
   .session-grid { grid-template-columns: 1fr; }
@@ -448,7 +888,6 @@ PROGRAM_CSS = '''
   .time-label { font-size: 0.78rem; }
   .program-page { padding: 16px 0 40px; }
 }
-
 /* Session cards */
 .session-card {
   border-radius: 8px; padding: 12px 14px;
@@ -458,20 +897,16 @@ PROGRAM_CSS = '''
   display: flex; flex-direction: column; gap: 6px;
 }
 .session-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.13); transform: translateY(-1px); }
-
 .session-card-header { display: flex; flex-direction: column; gap: 6px; }
 .session-track-badge {
   font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: .7px; padding: 2px 8px; border-radius: 20px;
   display: inline-block; align-self: flex-start;
 }
-.session-name {
-  font-size: 0.88rem; font-weight: 600; color: #1a1a1a; line-height: 1.4;
-}
+.session-name { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; line-height: 1.4; }
 .session-ext-link { color: inherit; text-decoration: none; }
 .session-ext-link:hover { text-decoration: underline; }
 .session-ext-link .fas { font-size: 0.7rem; opacity: 0.7; }
-
 /* Track colors */
 .track-tutorial .session-track-badge  { background:#f3e8ff; color:#6a00ff; }
 .track-workshop .session-track-badge  { background:#e8eaff; color:#2d3ad0; }
@@ -494,8 +929,6 @@ PROGRAM_CSS = '''
 .track-short    .session-track-badge  { background:#f3e5f5; color:#6a1b9a; }
 .track-best     .session-track-badge  { background:#fff9c4; color:#827717; }
 .track-other    .session-track-badge  { background:#f5f5f5; color:#616161; }
-
-/* Left border colors per track */
 .track-tutorial  { border-left:3px solid #6a00ff; }
 .track-workshop  { border-left:3px solid #2d3ad0; }
 .track-econ      { border-left:3px solid #f0a000; }
@@ -517,7 +950,6 @@ PROGRAM_CSS = '''
 .track-short     { border-left:3px solid #8e24aa; }
 .track-best      { border-left:3px solid #f9a825; }
 .track-other     { border-left:3px solid #9e9e9e; }
-
 /* Papers toggle button */
 .papers-toggle {
   display: flex; align-items: center; gap: 6px;
@@ -529,43 +961,25 @@ PROGRAM_CSS = '''
 .papers-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(180deg); }
 .papers-count { font-weight: 600; }
 .toggle-icon { transition: transform .2s; font-size: 0.7rem; }
-
 /* Papers list */
-.papers-container {
-  margin-top: 8px; border-top: 1px solid #f0e8ff; padding-top: 8px;
-}
+.papers-container { margin-top: 8px; border-top: 1px solid #f0e8ff; padding-top: 8px; }
 .paper-list { list-style: none; margin: 0; padding: 0; }
-.paper-item {
-  padding: 7px 0; border-bottom: 1px solid #f5f5f5;
-  display: flex; flex-direction: column; gap: 2px;
-}
+.paper-item { padding: 7px 0; border-bottom: 1px solid #f5f5f5; display: flex; flex-direction: column; gap: 2px; }
 .paper-item:last-child { border-bottom: none; }
-.paper-title-wrap { }
-.paper-title {
-  font-size: 0.82rem; font-weight: 600; color: #1a1a1a;
-  text-decoration: none; line-height: 1.35;
-}
+.paper-title { font-size: 0.82rem; font-weight: 600; color: #1a1a1a; text-decoration: none; line-height: 1.35; }
 .paper-title:hover { color: #6a00ff; text-decoration: underline; }
 .acm-link-placeholder { color: #1a1a1a; pointer-events: none; cursor: default; }
-.acm-link-placeholder[href]:not([href="#"]) {
-  color: #1565c0; pointer-events: auto; cursor: pointer;
-}
-.paper-authors {
-  font-size: 0.76rem; color: #666; line-height: 1.3;
-}
-
+.acm-link-placeholder[href]:not([href="#"]) { color: #1565c0; pointer-events: auto; cursor: pointer; }
+.paper-authors { font-size: 0.76rem; color: #666; line-height: 1.3; }
 /* Timezone note */
 .timezone-note {
   background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 6px;
   padding: 10px 16px; margin-bottom: 24px; font-size: 0.88rem; color: #555;
   display: flex; align-items: center; gap: 8px;
 }
-
-/* Day header */
 .day-heading {
   font-size: 1.3rem; font-weight: 700; color: #1a1a1a;
-  padding: 14px 0 10px; border-bottom: 2px solid #6a00ff;
-  margin-bottom: 20px;
+  padding: 14px 0 10px; border-bottom: 2px solid #6a00ff; margin-bottom: 20px;
 }
 </style>
 '''
@@ -575,7 +989,6 @@ COMMON_SCRIPTS = '''
     <script src="../js/footer-loader.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Day tab switching
         document.querySelectorAll('.day-tab-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var target = this.dataset.target;
@@ -585,7 +998,6 @@ COMMON_SCRIPTS = '''
                 document.getElementById(target).classList.add('active');
             });
         });
-        // Activate first tab
         var firstBtn = document.querySelector('.day-tab-btn');
         if (firstBtn) firstBtn.click();
     });
@@ -595,7 +1007,6 @@ COMMON_SCRIPTS = '''
 COLLAPSE_SCRIPT = '''
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Collapse toggle (no Bootstrap dependency)
         document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var targetId = this.dataset.bsTarget.replace('#','');
@@ -615,51 +1026,37 @@ COLLAPSE_SCRIPT = '''
     </script>
 '''
 
-COLLAPSE_CSS = '''
-    <style>
-    .collapse { display: none; }
-    .collapse.show { display: block; }
-    </style>
+COLLAPSE_CSS = '''<style>
+.collapse { display: none; }
+.collapse.show { display: block; }
+</style>
 '''
 
 # ─────────────────────────────────────────────
-# 3. Build overview.html
+# 5. Build overview.html
 # ─────────────────────────────────────────────
 
 def build_overview():
     tabs_html = ''
     panels_html = ''
-
     for di, day in enumerate(program):
         did = day_id(day)
-        heading = format_day_heading(day)
-        tab_label = format_day_tab(day)
-        tabs_html += f'<button class="day-tab-btn" data-target="{did}">{tab_label}</button>\n'
-
+        tabs_html += f'<button class="day-tab-btn" data-target="{did}">{format_day_tab(day)}</button>\n'
+        base_idx = sum(len(program[k]['slots']) for k in range(di))
         slots_html = ''
-        for slot in day['slots']:
-            time_html = f'<div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>{esc(slot["time"])}</div>'
-
+        for si, slot in enumerate(day['slots']):
+            sidx = base_idx + si
+            time_html = f'<div class="time-label"><i class="fas fa-clock"></i>{esc(slot["time"])}</div>'
             if slot['special']:
-                sc = special_class(slot['event'])
-                slots_html += f'''<div class="time-slot">
-  {time_html}
-  <div class="slot-special-block {sc}">{esc(slot["event"])}</div>
-</div>\n'''
+                event = slot['event']
+                block = render_keynote_block_overview(event, sidx) if keynote_lookup(event) else f'<div class="slot-special-block {special_class(event)}">{esc(event)}</div>'
+                slots_html += f'<div class="time-slot">\n  {time_html}\n  {block}\n</div>\n'
+            elif slot['poster']:
+                slots_html += f'<div class="time-slot">\n  {time_html}\n  {render_poster_session(slot, False, sidx)}\n</div>\n'
             else:
-                cards = ''
-                if slot['sessions']:
-                    for sess in slot['sessions']:
-                        cards += render_session_card_overview(sess) + '\n'
-                slots_html += f'''<div class="time-slot">
-  {time_html}
-  <div class="session-grid">{cards}</div>
-</div>\n'''
-
-        panels_html += f'''<div class="day-panel" id="{did}">
-  <h2 class="day-heading">{esc(heading)}</h2>
-  {slots_html}
-</div>\n'''
+                cards = ''.join(render_session_card_overview(s) + '\n' for s in (slot['sessions'] or []))
+                slots_html += f'<div class="time-slot">\n  {time_html}\n  <div class="session-grid">{cards}</div>\n</div>\n'
+        panels_html += f'<div class="day-panel" id="{did}">\n  <h2 class="day-heading">{esc(format_day_heading(day))}</h2>\n  {slots_html}\n</div>\n'
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -672,75 +1069,43 @@ def build_overview():
 </head>
 <body>
     <div id="header-placeholder">Header loading...</div>
-
-    <section class="page-header">
-        <div class="container">
-            <h1>Program Overview</h1>
-        </div>
-    </section>
-
-    <section class="page-content program-page">
-        <div class="container">
-            <div class="timezone-note">
-                <i class="fas fa-info-circle"></i>
-                All times are in <strong>UAE time (GST, UTC+4)</strong>.
-            </div>
-
-            <div class="day-tabs">
-                {tabs_html}
-            </div>
-
-            {panels_html}
-        </div>
-    </section>
-
+    <section class="page-header"><div class="container"><h1>Program Overview</h1></div></section>
+    <section class="page-content program-page"><div class="container">
+        <div class="timezone-note"><i class="fas fa-info-circle"></i> All times are in <strong>UAE time (GST, UTC+4)</strong>.</div>
+        <div class="day-tabs">{tabs_html}</div>
+        {panels_html}
+    </div></section>
     <div id="footer-placeholder"></div>
     {COMMON_SCRIPTS}
 </body>
-</html>
-'''
+</html>'''
 
 
 # ─────────────────────────────────────────────
-# 4. Build full-schedule.html
+# 6. Build full-schedule.html
 # ─────────────────────────────────────────────
 
 def build_full_schedule():
     tabs_html = ''
     panels_html = ''
-    global_slot_idx = 0
-
     for di, day in enumerate(program):
         did = day_id(day)
-        heading = format_day_heading(day)
-        tab_label = format_day_tab(day)
-        tabs_html += f'<button class="day-tab-btn" data-target="{did}">{tab_label}</button>\n'
-
+        tabs_html += f'<button class="day-tab-btn" data-target="{did}">{format_day_tab(day)}</button>\n'
+        base_idx = sum(len(program[k]['slots']) for k in range(di))
         slots_html = ''
-        for slot in day['slots']:
-            time_html = f'<div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>{esc(slot["time"])}</div>'
-
+        for si, slot in enumerate(day['slots']):
+            sidx = base_idx + si
+            time_html = f'<div class="time-label"><i class="fas fa-clock"></i>{esc(slot["time"])}</div>'
             if slot['special']:
-                sc = special_class(slot['event'])
-                slots_html += f'''<div class="time-slot">
-  {time_html}
-  <div class="slot-special-block {sc}">{esc(slot["event"])}</div>
-</div>\n'''
+                event = slot['event']
+                block = render_keynote_block_full(event, sidx) if keynote_lookup(event) else f'<div class="slot-special-block {special_class(event)}">{esc(event)}</div>'
+                slots_html += f'<div class="time-slot">\n  {time_html}\n  {block}\n</div>\n'
+            elif slot['poster']:
+                slots_html += f'<div class="time-slot">\n  {time_html}\n  {render_poster_session(slot, True, sidx)}\n</div>\n'
             else:
-                cards = ''
-                if slot['sessions']:
-                    for si, sess in enumerate(slot['sessions']):
-                        cards += render_session_card_full(sess, global_slot_idx, si) + '\n'
-                slots_html += f'''<div class="time-slot">
-  {time_html}
-  <div class="session-grid">{cards}</div>
-</div>\n'''
-            global_slot_idx += 1
-
-        panels_html += f'''<div class="day-panel" id="{did}">
-  <h2 class="day-heading">{esc(heading)}</h2>
-  {slots_html}
-</div>\n'''
+                cards = ''.join(render_session_card_full(s, sidx, si2) + '\n' for si2, s in enumerate(slot['sessions'] or []))
+                slots_html += f'<div class="time-slot">\n  {time_html}\n  <div class="session-grid">{cards}</div>\n</div>\n'
+        panels_html += f'<div class="day-panel" id="{did}">\n  <h2 class="day-heading">{esc(format_day_heading(day))}</h2>\n  {slots_html}\n</div>\n'
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -754,63 +1119,38 @@ def build_full_schedule():
 </head>
 <body>
     <div id="header-placeholder">Header loading...</div>
-
-    <section class="page-header">
-        <div class="container">
-            <h1>Full Schedule</h1>
-        </div>
-    </section>
-
-    <section class="page-content program-page">
-        <div class="container">
-            <div class="timezone-note">
-                <i class="fas fa-info-circle"></i>
-                All times are in <strong>UAE time (GST, UTC+4)</strong>.
-                Click <strong>"N papers"</strong> on any session card to expand the paper list.
-            </div>
-
-            <div class="day-tabs">
-                {tabs_html}
-            </div>
-
-            {panels_html}
-        </div>
-    </section>
-
+    <section class="page-header"><div class="container"><h1>Full Schedule</h1></div></section>
+    <section class="page-content program-page"><div class="container">
+        <div class="timezone-note"><i class="fas fa-info-circle"></i> All times are in <strong>UAE time (GST, UTC+4)</strong>. Click <strong>details</strong> on any session to expand.</div>
+        <div class="day-tabs">{tabs_html}</div>
+        {panels_html}
+    </div></section>
     <div id="footer-placeholder"></div>
     {COMMON_SCRIPTS}
     {COLLAPSE_SCRIPT}
 </body>
-</html>
-'''
+</html>'''
 
 
 # ─────────────────────────────────────────────
-# 5. Write files
+# 7. Write files
 # ─────────────────────────────────────────────
-
-overview_html = build_overview()
-full_html = build_full_schedule()
 
 with open('program/overview.html', 'w', encoding='utf-8') as f:
-    f.write(overview_html)
+    f.write(build_overview())
 print('Written: program/overview.html')
 
 with open('program/full-schedule.html', 'w', encoding='utf-8') as f:
-    f.write(full_html)
+    f.write(build_full_schedule())
 print('Written: program/full-schedule.html')
 
-# Stats
-total_papers = 0
-for day in program:
-    for slot in day['slots']:
-        if not slot['special'] and slot['sessions']:
-            for sess in slot['sessions']:
-                total_papers += len(sess['papers'])
-
-print(f'\nProgram stats:')
-print(f'  Days: {len(program)}')
-for day in program:
-    slots = len(day["slots"])
-    print(f'  {day["date"].strftime("%A %b %d")}: {slots} slots')
-print(f'  Total papers/posters/tutorials: {total_papers}')
+total_papers = sum(
+    len(sess.get('papers', []))
+    for day in program
+    for slot in day['slots']
+    for sess in (slot.get('sessions') or [])
+)
+poster_slots = sum(1 for day in program for slot in day['slots'] if slot.get('poster'))
+print(f'\nDays: {len(program)}')
+print(f'Poster sessions parsed: {poster_slots}')
+print(f'Total papers/items: {total_papers}')

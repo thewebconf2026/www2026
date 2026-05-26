@@ -11,12 +11,8 @@
     <link rel="stylesheet" href="../css/header-layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    
-<style>
-/* ── Program layout ────────────────────────── */
+    <style>
 .program-page { padding: 30px 0 60px; }
-
-/* Day navigation tabs */
 .day-tabs {
   display: flex; flex-wrap: wrap; gap: 6px;
   margin-bottom: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 0;
@@ -28,31 +24,21 @@
   border-bottom: 3px solid transparent; margin-bottom: -2px;
 }
 .day-tab-btn:hover { background: #ede5ff; color: #6a00ff; }
-.day-tab-btn.active { background: white; color: #6a00ff;
-  border-bottom: 3px solid #6a00ff; }
+.day-tab-btn.active { background: white; color: #6a00ff; border-bottom: 3px solid #6a00ff; }
 .day-tab-btn span { font-size: 0.8rem; font-weight: 400; display: block; }
-
-/* Day panels */
 .day-panel { display: none; }
 .day-panel.active { display: block; }
-
-/* Time slot blocks */
 .time-slot { margin-bottom: 20px; }
 .time-label {
   display: inline-flex; align-items: center; gap: 6px;
   color: #555; font-size: 0.82rem; font-weight: 700;
-  letter-spacing: .4px; margin-bottom: 10px;
-  padding: 4px 0;
+  letter-spacing: .4px; margin-bottom: 10px; padding: 4px 0;
 }
 .time-label i { opacity: .5; font-size: 0.78rem; }
-.time-note { font-size: 0.75rem; color: #888; margin-left: 8px; font-style: italic; }
-
-/* Special events — unified structure, colour accent only differs */
 .slot-special-block {
   border-radius: 6px; padding: 13px 18px; margin-bottom: 4px;
   font-size: 0.95rem; font-weight: 600; line-height: 1.4; color: #1a1a1a;
-  background: #fff; border: 1px solid #e8e8e8;
-  border-left: 4px solid #bbb;
+  background: #fff; border: 1px solid #e8e8e8; border-left: 4px solid #bbb;
   box-shadow: 0 1px 4px rgba(0,0,0,.05);
 }
 .slot-keynote  { border-left-color: #6a00ff; }
@@ -61,18 +47,44 @@
 .slot-closing  { border-left-color: #00a855; }
 .slot-plenary  { border-left-color: #e08000; }
 .slot-posters  { border-left-color: #0078d4; }
-
+/* Keynote expanded */
+.keynote-header-row {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+}
+.keynote-speaker-name { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; }
+.keynote-talk-title   { font-size: 0.88rem; font-weight: 500; color: #555; margin-top: 3px; font-style: italic; }
+.keynote-details-btn  { flex-shrink: 0; }
+.keynote-expand-content {
+  margin-top: 12px; padding-top: 12px; border-top: 1px solid #e8e0ff;
+  font-size: 0.84rem; color: #333; line-height: 1.6;
+}
+.keynote-detail-title { margin: 0 0 8px; font-style: italic; color: #555; }
+.keynote-detail-abstract { margin: 8px 0; }
+.keynote-detail-bio { margin: 8px 0 0; }
+.keynote-expand-content strong { color: #1a1a1a; }
+/* Poster sessions */
+.poster-session-header { margin-bottom: 10px; }
+.poster-sub-grid { margin-top: 8px; }
+/* Workshop/tutorial detail panel */
+.detail-full-name { margin: 0 0 6px; }
+.detail-organizers { font-size: 0.8rem; color: #555; margin: 4px 0; }
+.detail-organizers i { margin-right: 5px; color: #888; }
+.detail-link { font-size: 0.8rem; margin: 4px 0; }
+.detail-link i { margin-right: 5px; color: #888; }
+.detail-link a { color: #1565c0; word-break: break-all; }
+.detail-link a:hover { text-decoration: underline; }
+.detail-abstract { font-size: 0.81rem; color: #444; margin: 6px 0 0; line-height: 1.55; }
+.detail-abstract strong { color: #1a1a1a; }
 /* Session grid */
 .session-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 10px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;
 }
 @media (max-width: 768px) {
   .session-grid { grid-template-columns: 1fr 1fr; }
   .day-tab-btn { padding: 8px 12px; font-size: 0.82rem; }
   .slot-special-block { font-size: 0.88rem; padding: 11px 14px; }
   .day-heading { font-size: 1.1rem; }
+  .keynote-header-row { flex-direction: column; gap: 8px; }
 }
 @media (max-width: 480px) {
   .session-grid { grid-template-columns: 1fr; }
@@ -81,7 +93,6 @@
   .time-label { font-size: 0.78rem; }
   .program-page { padding: 16px 0 40px; }
 }
-
 /* Session cards */
 .session-card {
   border-radius: 8px; padding: 12px 14px;
@@ -91,20 +102,16 @@
   display: flex; flex-direction: column; gap: 6px;
 }
 .session-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.13); transform: translateY(-1px); }
-
 .session-card-header { display: flex; flex-direction: column; gap: 6px; }
 .session-track-badge {
   font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: .7px; padding: 2px 8px; border-radius: 20px;
   display: inline-block; align-self: flex-start;
 }
-.session-name {
-  font-size: 0.88rem; font-weight: 600; color: #1a1a1a; line-height: 1.4;
-}
+.session-name { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; line-height: 1.4; }
 .session-ext-link { color: inherit; text-decoration: none; }
 .session-ext-link:hover { text-decoration: underline; }
 .session-ext-link .fas { font-size: 0.7rem; opacity: 0.7; }
-
 /* Track colors */
 .track-tutorial .session-track-badge  { background:#f3e8ff; color:#6a00ff; }
 .track-workshop .session-track-badge  { background:#e8eaff; color:#2d3ad0; }
@@ -127,8 +134,6 @@
 .track-short    .session-track-badge  { background:#f3e5f5; color:#6a1b9a; }
 .track-best     .session-track-badge  { background:#fff9c4; color:#827717; }
 .track-other    .session-track-badge  { background:#f5f5f5; color:#616161; }
-
-/* Left border colors per track */
 .track-tutorial  { border-left:3px solid #6a00ff; }
 .track-workshop  { border-left:3px solid #2d3ad0; }
 .track-econ      { border-left:3px solid #f0a000; }
@@ -150,7 +155,6 @@
 .track-short     { border-left:3px solid #8e24aa; }
 .track-best      { border-left:3px solid #f9a825; }
 .track-other     { border-left:3px solid #9e9e9e; }
-
 /* Papers toggle button */
 .papers-toggle {
   display: flex; align-items: center; gap: 6px;
@@ -162,76 +166,44 @@
 .papers-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(180deg); }
 .papers-count { font-weight: 600; }
 .toggle-icon { transition: transform .2s; font-size: 0.7rem; }
-
 /* Papers list */
-.papers-container {
-  margin-top: 8px; border-top: 1px solid #f0e8ff; padding-top: 8px;
-}
+.papers-container { margin-top: 8px; border-top: 1px solid #f0e8ff; padding-top: 8px; }
 .paper-list { list-style: none; margin: 0; padding: 0; }
-.paper-item {
-  padding: 7px 0; border-bottom: 1px solid #f5f5f5;
-  display: flex; flex-direction: column; gap: 2px;
-}
+.paper-item { padding: 7px 0; border-bottom: 1px solid #f5f5f5; display: flex; flex-direction: column; gap: 2px; }
 .paper-item:last-child { border-bottom: none; }
-.paper-title-wrap { }
-.paper-title {
-  font-size: 0.82rem; font-weight: 600; color: #1a1a1a;
-  text-decoration: none; line-height: 1.35;
-}
+.paper-title { font-size: 0.82rem; font-weight: 600; color: #1a1a1a; text-decoration: none; line-height: 1.35; }
 .paper-title:hover { color: #6a00ff; text-decoration: underline; }
 .acm-link-placeholder { color: #1a1a1a; pointer-events: none; cursor: default; }
-.acm-link-placeholder[href]:not([href="#"]) {
-  color: #1565c0; pointer-events: auto; cursor: pointer;
-}
-.paper-authors {
-  font-size: 0.76rem; color: #666; line-height: 1.3;
-}
-
+.acm-link-placeholder[href]:not([href="#"]) { color: #1565c0; pointer-events: auto; cursor: pointer; }
+.paper-authors { font-size: 0.76rem; color: #666; line-height: 1.3; }
 /* Timezone note */
 .timezone-note {
   background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 6px;
   padding: 10px 16px; margin-bottom: 24px; font-size: 0.88rem; color: #555;
   display: flex; align-items: center; gap: 8px;
 }
-
-/* Day header */
 .day-heading {
   font-size: 1.3rem; font-weight: 700; color: #1a1a1a;
-  padding: 14px 0 10px; border-bottom: 2px solid #6a00ff;
-  margin-bottom: 20px;
+  padding: 14px 0 10px; border-bottom: 2px solid #6a00ff; margin-bottom: 20px;
 }
 </style>
 
 </head>
 <body>
     <div id="header-placeholder">Header loading...</div>
-
-    <section class="page-header">
-        <div class="container">
-            <h1>Program Overview</h1>
-        </div>
-    </section>
-
-    <section class="page-content program-page">
-        <div class="container">
-            <div class="timezone-note">
-                <i class="fas fa-info-circle"></i>
-                All times are in <strong>UAE time (GST, UTC+4)</strong>.
-            </div>
-
-            <div class="day-tabs">
-                <button class="day-tab-btn" data-target="day-2026-06-29">Monday<br><span>29 Jun</span></button>
+    <section class="page-header"><div class="container"><h1>Program Overview</h1></div></section>
+    <section class="page-content program-page"><div class="container">
+        <div class="timezone-note"><i class="fas fa-info-circle"></i> All times are in <strong>UAE time (GST, UTC+4)</strong>.</div>
+        <div class="day-tabs"><button class="day-tab-btn" data-target="day-2026-06-29">Monday<br><span>29 Jun</span></button>
 <button class="day-tab-btn" data-target="day-2026-06-30">Tuesday<br><span>30 Jun</span></button>
 <button class="day-tab-btn" data-target="day-2026-07-01">Wednesday<br><span>1 Jul</span></button>
 <button class="day-tab-btn" data-target="day-2026-07-02">Thursday<br><span>2 Jul</span></button>
 <button class="day-tab-btn" data-target="day-2026-07-03">Friday<br><span>3 Jul</span></button>
-
-            </div>
-
-            <div class="day-panel" id="day-2026-06-29">
+</div>
+        <div class="day-panel" id="day-2026-06-29">
   <h2 class="day-heading">Monday, June 29, 2026</h2>
   <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>10:00 - 13:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>10:00 - 13:30</div>
   <div class="session-grid"><div class="session-card track-tutorial">
   <div class="session-track-badge">Tutorial</div>
   <div class="session-name">Temporal Information Retrieval And Question Answering in the Age of LLMs</div>
@@ -246,35 +218,35 @@
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://llmandagents4recsys.github.io/" target="_blank" class="session-ext-link">(LARS) part 1 - LLM &amp; Agents for Recommendation Systems <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(LARS) part 1 - LLM &amp; Agents for Recommendation Systems</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://samsunginternet.github.io/webads26/" target="_blank" class="session-ext-link">(WebAds) part 1 - Emerging Trends in Web Advertising <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(WebAds) part 1 - Emerging Trends in Web Advertising</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://zabapad.github.io" target="_blank" class="session-ext-link">(ZABAPAD) part 1 - Zero-knowledge Proof and Blockchain for Web 4.0: Advancing the Post-quantum and Decentralized Era <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(ZABAPAD) part 1 - Zero-knowledge Proof and Blockchain for Web 4.0: Advancing the Post-quantum and Decentralized Era</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://glow-workshop.github.io/www2026/" target="_blank" class="session-ext-link">(GLOW) - Graph-enhanced LLMs for Trustworthy Web Data Management <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(GLOW) - Graph-enhanced LLMs for Trustworthy Web Data Management</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://ttthhl.github.io/www2026-workshop/" target="_blank" class="session-ext-link">(TML) - International Workshop on Trustworthy Multimodal Learning for Social Media Analysis <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(TML) - International Workshop on Trustworthy Multimodal Learning for Social Media Analysis</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://webandthecity.home.blog/" target="_blank" class="session-ext-link">(WebAndTheCity) - 12th International Smart City Workshop – Data-Driven Smart Cities <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(WebAndTheCity) - 12th International Smart City Workshop – Data-Driven Smart Cities</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://webst2026.netlify.app/" target="_blank" class="session-ext-link">(WebST) - The 2nd International Workshop on Spatio-Temporal Data Mining from the Web <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(WebST) - The 2nd International Workshop on Spatio-Temporal Data Mining from the Web</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://rafiqulislamcse24.wixsite.com/aaimvt-26" target="_blank" class="session-ext-link">(AAIMVT) - 1st Workshop on Applied AI and Multimodal Visualization Technologies <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(AAIMVT) - 1st Workshop on Applied AI and Multimodal Visualization Technologies</div>
 </div>
 <div class="session-card track-web4all">
   <div class="session-track-badge">Web4All</div>
@@ -283,11 +255,11 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>13:00 - 14:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>13:00 - 14:00</div>
   <div class="slot-special-block slot-break">Break</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>14:00- 17:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>14:00- 17:30</div>
   <div class="session-grid"><div class="session-card track-tutorial">
   <div class="session-track-badge">Tutorial</div>
   <div class="session-name">Quantum-Safe, Efficient, and AI-Enhanced Blockchains for the Web: A Cooperative Tutorial on Quantum Computing, Blockchain Applications, and Data Standards</div>
@@ -302,31 +274,31 @@
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://llmandagents4recsys.github.io/" target="_blank" class="session-ext-link">(LARS) part 2 - LLM &amp; Agents for Recommendation Systems <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(LARS) part 2 - LLM &amp; Agents for Recommendation Systems</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://samsunginternet.github.io/webads26/" target="_blank" class="session-ext-link">(WebAds) part 2 - Emerging Trends in Web Advertising <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(WebAds) part 2 - Emerging Trends in Web Advertising</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://zabapad.github.io" target="_blank" class="session-ext-link">(ZABAPAD) part 2 - Zero-knowledge Proof and Blockchain for Web 4.0: Advancing the Post-quantum and Decentralized Era <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(ZABAPAD) part 2 - Zero-knowledge Proof and Blockchain for Web 4.0: Advancing the Post-quantum and Decentralized Era</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://semtech4stld.github.io/" target="_blank" class="session-ext-link">(SemTech) - 4th International Workshop on AI and Semantic Technologies for the Scientific, Technical, and Legal Web <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(SemTech) - 4th International Workshop on AI and Semantic Technologies for the Scientific, Technical, and Legal Web</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://prompteng-ws.github.io/2026/" target="_blank" class="session-ext-link">(PromptEng) - Third International Workshop on Prompt Engineering for Pre-Trained Language Models <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(PromptEng) - Third International Workshop on Prompt Engineering for Pre-Trained Language Models</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://beyondfacts2026.wordpress.com/" target="_blank" class="session-ext-link">(BeyondFacts&#x27;26) - 6th International Workshop on Computational Methods for Online Discourse Analysis <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(BeyondFacts&#x27;26) - 6th International Workshop on Computational Methods for Online Discourse Analysis</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://sites.google.com/view/r2cass/home" target="_blank" class="session-ext-link">(R2CASS) - The 2nd International Workshop on Social Science Meets Web Data: Reproducible and Reusable Computational Approaches <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(R2CASS) - The 2nd International Workshop on Social Science Meets Web Data: Reproducible and Reusable Computational Approaches</div>
 </div>
 <div class="session-card track-web4all">
   <div class="session-track-badge">Web4All</div>
@@ -339,7 +311,7 @@
 <div class="day-panel" id="day-2026-06-30">
   <h2 class="day-heading">Tuesday, June 30, 2026</h2>
   <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>10:00 - 13:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>10:00 - 13:30</div>
   <div class="session-grid"><div class="session-card track-tutorial">
   <div class="session-track-badge">Tutorial</div>
   <div class="session-name">Next-Gen Code Development with Collaborative AI Agents</div>
@@ -354,35 +326,35 @@
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://hcrec.github.io/" target="_blank" class="session-ext-link">(HCRS) - The 2nd Workshop on Human-Centered Recommender Systems <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(HCRS) - The 2nd Workshop on Human-Centered Recommender Systems</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://dhow-workshop.github.io/2026/" target="_blank" class="session-ext-link">(DHOW-MiLLA) part 1 - Joint Workshop on Diffusion of Harmful Content on Online Web and Countering Misinformation in the Age of LLMs and Agents <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(DHOW-MiLLA) part 1 - Joint Workshop on Diffusion of Harmful Content on Online Web and Countering Misinformation in the Age of LLMs and Agents</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://faaw.univ-tours.fr/" target="_blank" class="session-ext-link">(FAAW) part 1 - International Workshop on Foundations and Architectures for the Agentic Web <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(FAAW) part 1 - International Workshop on Foundations and Architectures for the Agentic Web</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://temporalweb.net/" target="_blank" class="session-ext-link">(TempWeb) part 1 - The 16th Temporal Web Analytics Workshop <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(TempWeb) part 1 - The 16th Temporal Web Analytics Workshop</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://time.griffith.edu.au/workshop/time2026/" target="_blank" class="session-ext-link">(TIME) part 1 - 2nd International Workshop on Transformative Insights in Multi-faceted Evaluation <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(TIME) part 1 - 2nd International Workshop on Transformative Insights in Multi-faceted Evaluation</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://altars2026.dei.unipd.it/" target="_blank" class="session-ext-link">(ALTARS 2026) - 4th Workshop on Augmented Intelligence in Technology-Assisted Review Systems <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(ALTARS 2026) - 4th Workshop on Augmented Intelligence in Technology-Assisted Review Systems</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://sites.google.com/view/aiofai-2026/home" target="_blank" class="session-ext-link">(AiOfAi) - The Workshop on Adverse Impacts and Collateral Effects of Artificial Intelligence Technologies <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(AiOfAi) - The Workshop on Adverse Impacts and Collateral Effects of Artificial Intelligence Technologies</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://www-tfm-causal.github.io/www2026-workshop/" target="_blank" class="session-ext-link">(TrustFM) - Trustworthy Foundation Models for Web Intelligence: Causal Perspectives and Challenges <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(TrustFM) - Trustworthy Foundation Models for Web Intelligence: Causal Perspectives and Challenges</div>
 </div>
 <div class="session-card track-phd">
   <div class="session-track-badge">PhD Symposium</div>
@@ -395,11 +367,11 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>13:00 - 14:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>13:00 - 14:00</div>
   <div class="slot-special-block slot-break">Break</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>14:00 - 17:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>14:00 - 17:30</div>
   <div class="session-grid"><div class="session-card track-tutorial">
   <div class="session-track-badge">Tutorial</div>
   <div class="session-name">LLM-Enhanced Web-Centric Spatio-Temporal Intelligence: Methods, Applications, and Frontier Research</div>
@@ -418,27 +390,27 @@
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://dhow-workshop.github.io/2026/" target="_blank" class="session-ext-link">(DHOW-MiLLA) part 2 - Joint Workshop on Diffusion of Harmful Content on Online Web and Countering Misinformation in the Age of LLMs and Agents <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(DHOW-MiLLA) part 2 - Joint Workshop on Diffusion of Harmful Content on Online Web and Countering Misinformation in the Age of LLMs and Agents</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://faaw.univ-tours.fr/" target="_blank" class="session-ext-link">(FAAW) part 2 - International Workshop on Foundations and Architectures for the Agentic Web <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(FAAW) part 2 - International Workshop on Foundations and Architectures for the Agentic Web</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://temporalweb.net/" target="_blank" class="session-ext-link">(TempWeb) part 2 - The 16th Temporal Web Analytics Workshop <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(TempWeb) part 2 - The 16th Temporal Web Analytics Workshop</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://time.griffith.edu.au/workshop/time2026/" target="_blank" class="session-ext-link">(TIME) part 2 - 2nd International Workshop on Transformative Insights in Multi-faceted Evaluation <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(TIME) part 2 - 2nd International Workshop on Transformative Insights in Multi-faceted Evaluation</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://federated-learning.org/fl@fm-www-2026/" target="_blank" class="session-ext-link">(FL@FM) - International Workshop on Federated Foundation Models for the Web 2026 <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(FL@FM) - International Workshop on Federated Foundation Models for the Web 2026</div>
 </div>
 <div class="session-card track-workshop">
   <div class="session-track-badge">Workshop</div>
-  <div class="session-name"><a href="https://sites.google.com/view/mm4sg-webconf26" target="_blank" class="session-ext-link">(MM4SG) - Fourth International Workshop on Multimodal Content Analysis for Social Good <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="session-name">(MM4SG) - Fourth International Workshop on Multimodal Content Analysis for Social Good</div>
 </div>
 <div class="session-card track-phd">
   <div class="session-track-badge">PhD Symposium</div>
@@ -455,19 +427,19 @@
 <div class="day-panel" id="day-2026-07-01">
   <h2 class="day-heading">Wednesday, July 1, 2026</h2>
   <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>10:00 - 10:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>10:00 - 10:30</div>
   <div class="slot-special-block slot-opening">Conference Opening</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>10:30 - 11:30</div>
-  <div class="slot-special-block slot-keynote">Keynote #1: Katrina Liggett</div>
+  <div class="time-label"><i class="fas fa-clock"></i>10:30 - 11:30</div>
+  <div class="slot-special-block slot-keynote"><div class="keynote-speaker-name">Keynote #1: Katrina Liggett</div><div class="keynote-talk-title">Data Degrades with Use</div></div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>11:30 - 12:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>11:30 - 12:00</div>
   <div class="slot-special-block slot-break">Break</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>12:00 - 13:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>12:00 - 13:30</div>
   <div class="session-grid"><div class="session-card track-econ">
   <div class="session-track-badge">Economics</div>
   <div class="session-name">Social Dynamics, Voting, and Consensus</div>
@@ -523,19 +495,72 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>13:30 - 14:30</div>
-  <div class="slot-special-block slot-posters">Posters and Demos Session 1</div>
+  <div class="time-label"><i class="fas fa-clock"></i>13:30 - 14:30</div>
+  <div class="slot-special-block slot-posters poster-session-header">Posters and Demos Session 1</div>
+<div class="session-grid poster-sub-grid"><div class="session-card track-demos">
+  <div class="session-track-badge">Demos</div>
+  <div class="session-name">Demos</div>
+</div>
+<div class="session-card track-short">
+  <div class="session-track-badge">Short Papers</div>
+  <div class="session-name">Short Papers</div>
+</div>
+<div class="session-card track-econ">
+  <div class="session-track-badge">Economics</div>
+  <div class="session-name">Economics</div>
+</div>
+<div class="session-card track-graph">
+  <div class="session-track-badge">Graph Neural Networks</div>
+  <div class="session-name">Graph Neural Networks</div>
+</div>
+<div class="session-card track-search">
+  <div class="session-track-badge">Search &amp; Retrieval</div>
+  <div class="session-name">Search &amp; Retrieval</div>
+</div>
+<div class="session-card track-semantics">
+  <div class="session-track-badge">Semantic Web</div>
+  <div class="session-name">Semantic Web</div>
+</div>
+<div class="session-card track-security">
+  <div class="session-track-badge">Security &amp; Privacy</div>
+  <div class="session-name">Security &amp; Privacy</div>
+</div>
+<div class="session-card track-social">
+  <div class="session-track-badge">Social Web</div>
+  <div class="session-name">Social Web</div>
+</div>
+<div class="session-card track-systems">
+  <div class="session-track-badge">Web Systems</div>
+  <div class="session-name">Web Systems</div>
+</div>
+<div class="session-card track-recsys">
+  <div class="session-track-badge">Recommender Systems</div>
+  <div class="session-name">Recommender Systems</div>
+</div>
+<div class="session-card track-mining">
+  <div class="session-track-badge">Data Mining</div>
+  <div class="session-name">Data Mining</div>
+</div>
+<div class="session-card track-industry">
+  <div class="session-track-badge">Industry Track</div>
+  <div class="session-name">Industry Track</div>
+</div>
+<div class="session-card track-web4good">
+  <div class="session-track-badge">Web4Good</div>
+  <div class="session-name">Web4Good</div>
+</div>
+</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>14:30 - 15:30</div>
-  <div class="slot-special-block slot-keynote">Keynote #2: Mounia Lalmas</div>
+  <div class="time-label"><i class="fas fa-clock"></i>14:30 - 15:30</div>
+  <div class="slot-special-block slot-keynote"><div class="keynote-speaker-name">Keynote #2: Mounia Lalmas</div><div class="keynote-talk-title">Building AI-Driven Web Experiences at Scale</div></div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>15:30 - 16:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>15:30 - 16:00</div>
   <div class="slot-special-block slot-break">Break</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>16:00 - 17:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>16:00 - 17:30</div>
   <div class="session-grid"><div class="session-card track-econ">
   <div class="session-track-badge">Economics</div>
   <div class="session-name">Auto-bidding and Budget Allocation in Online Advertising</div>
@@ -591,23 +616,76 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>17:30 - 18:30</div>
-  <div class="slot-special-block slot-posters">Posters and Demos Session 2</div>
+  <div class="time-label"><i class="fas fa-clock"></i>17:30 - 18:30</div>
+  <div class="slot-special-block slot-posters poster-session-header">Posters and Demos Session 2</div>
+<div class="session-grid poster-sub-grid"><div class="session-card track-demos">
+  <div class="session-track-badge">Demos</div>
+  <div class="session-name">Demos</div>
+</div>
+<div class="session-card track-short">
+  <div class="session-track-badge">Short Papers</div>
+  <div class="session-name">Short Papers</div>
+</div>
+<div class="session-card track-econ">
+  <div class="session-track-badge">Economics</div>
+  <div class="session-name">Economics</div>
+</div>
+<div class="session-card track-graph">
+  <div class="session-track-badge">Graph Neural Networks</div>
+  <div class="session-name">Graph Neural Networks</div>
+</div>
+<div class="session-card track-search">
+  <div class="session-track-badge">Search &amp; Retrieval</div>
+  <div class="session-name">Search &amp; Retrieval</div>
+</div>
+<div class="session-card track-semantics">
+  <div class="session-track-badge">Semantic Web</div>
+  <div class="session-name">Semantic Web</div>
+</div>
+<div class="session-card track-security">
+  <div class="session-track-badge">Security &amp; Privacy</div>
+  <div class="session-name">Security &amp; Privacy</div>
+</div>
+<div class="session-card track-social">
+  <div class="session-track-badge">Social Web</div>
+  <div class="session-name">Social Web</div>
+</div>
+<div class="session-card track-systems">
+  <div class="session-track-badge">Web Systems</div>
+  <div class="session-name">Web Systems</div>
+</div>
+<div class="session-card track-recsys">
+  <div class="session-track-badge">Recommender Systems</div>
+  <div class="session-name">Recommender Systems</div>
+</div>
+<div class="session-card track-mining">
+  <div class="session-track-badge">Data Mining</div>
+  <div class="session-name">Data Mining</div>
+</div>
+<div class="session-card track-industry">
+  <div class="session-track-badge">Industry Track</div>
+  <div class="session-name">Industry Track</div>
+</div>
+<div class="session-card track-web4good">
+  <div class="session-track-badge">Web4Good</div>
+  <div class="session-name">Web4Good</div>
+</div>
+</div>
 </div>
 
 </div>
 <div class="day-panel" id="day-2026-07-02">
   <h2 class="day-heading">Thursday, July 2, 2026</h2>
   <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>10:00 - 11:00</div>
-  <div class="slot-special-block slot-keynote">Keynote #3: Alistair Moffat</div>
+  <div class="time-label"><i class="fas fa-clock"></i>10:00 - 11:00</div>
+  <div class="slot-special-block slot-keynote"><div class="keynote-speaker-name">Keynote #3: Alistair Moffat</div><div class="keynote-talk-title">(Everything You Never Knew You Needed To Know About) Rank-Biased Measurement For Web Search</div></div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>11:00 - 11:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>11:00 - 11:30</div>
   <div class="slot-special-block slot-break">Break</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>11:30 - 13:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>11:30 - 13:00</div>
   <div class="session-grid"><div class="session-card track-econ">
   <div class="session-track-badge">Economics</div>
   <div class="session-name">Economics of Generative AI</div>
@@ -663,19 +741,72 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>13:00 - 14:00</div>
-  <div class="slot-special-block slot-posters">Posters and Demos Session 3</div>
+  <div class="time-label"><i class="fas fa-clock"></i>13:00 - 14:00</div>
+  <div class="slot-special-block slot-posters poster-session-header">Posters and Demos Session 3</div>
+<div class="session-grid poster-sub-grid"><div class="session-card track-demos">
+  <div class="session-track-badge">Demos</div>
+  <div class="session-name">Demos</div>
+</div>
+<div class="session-card track-short">
+  <div class="session-track-badge">Short Papers</div>
+  <div class="session-name">Short Papers</div>
+</div>
+<div class="session-card track-econ">
+  <div class="session-track-badge">Economics</div>
+  <div class="session-name">Economics</div>
+</div>
+<div class="session-card track-graph">
+  <div class="session-track-badge">Graph Neural Networks</div>
+  <div class="session-name">Graph Neural Networks</div>
+</div>
+<div class="session-card track-search">
+  <div class="session-track-badge">Search &amp; Retrieval</div>
+  <div class="session-name">Search &amp; Retrieval</div>
+</div>
+<div class="session-card track-semantics">
+  <div class="session-track-badge">Semantic Web</div>
+  <div class="session-name">Semantic Web</div>
+</div>
+<div class="session-card track-security">
+  <div class="session-track-badge">Security &amp; Privacy</div>
+  <div class="session-name">Security &amp; Privacy</div>
+</div>
+<div class="session-card track-social">
+  <div class="session-track-badge">Social Web</div>
+  <div class="session-name">Social Web</div>
+</div>
+<div class="session-card track-systems">
+  <div class="session-track-badge">Web Systems</div>
+  <div class="session-name">Web Systems</div>
+</div>
+<div class="session-card track-recsys">
+  <div class="session-track-badge">Recommender Systems</div>
+  <div class="session-name">Recommender Systems</div>
+</div>
+<div class="session-card track-mining">
+  <div class="session-track-badge">Data Mining</div>
+  <div class="session-name">Data Mining</div>
+</div>
+<div class="session-card track-industry">
+  <div class="session-track-badge">Industry Track</div>
+  <div class="session-name">Industry Track</div>
+</div>
+<div class="session-card track-web4good">
+  <div class="session-track-badge">Web4Good</div>
+  <div class="session-name">Web4Good</div>
+</div>
+</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>14:00 - 15:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>14:00 - 15:00</div>
   <div class="slot-special-block slot-plenary">Plenary panel chaired by ACM President</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>15:00 - 15:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>15:00 - 15:30</div>
   <div class="slot-special-block slot-break">Break</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>15:30 - 17:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>15:30 - 17:00</div>
   <div class="session-grid"><div class="session-card track-respweb">
   <div class="session-track-badge">Responsible Web</div>
   <div class="session-name">Bias Detection, Auditing, and Monitoring</div>
@@ -731,23 +862,76 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>17:00 - 18:00</div>
-  <div class="slot-special-block slot-posters">Posters and Demos Session 4</div>
+  <div class="time-label"><i class="fas fa-clock"></i>17:00 - 18:00</div>
+  <div class="slot-special-block slot-posters poster-session-header">Posters and Demos Session 4</div>
+<div class="session-grid poster-sub-grid"><div class="session-card track-demos">
+  <div class="session-track-badge">Demos</div>
+  <div class="session-name">Demos</div>
+</div>
+<div class="session-card track-short">
+  <div class="session-track-badge">Short Papers</div>
+  <div class="session-name">Short Papers</div>
+</div>
+<div class="session-card track-graph">
+  <div class="session-track-badge">Graph Neural Networks</div>
+  <div class="session-name">Graph Neural Networks</div>
+</div>
+<div class="session-card track-respweb">
+  <div class="session-track-badge">Responsible Web</div>
+  <div class="session-name">Responsible Web</div>
+</div>
+<div class="session-card track-search">
+  <div class="session-track-badge">Search &amp; Retrieval</div>
+  <div class="session-name">Search &amp; Retrieval</div>
+</div>
+<div class="session-card track-semantics">
+  <div class="session-track-badge">Semantic Web</div>
+  <div class="session-name">Semantic Web</div>
+</div>
+<div class="session-card track-security">
+  <div class="session-track-badge">Security &amp; Privacy</div>
+  <div class="session-name">Security &amp; Privacy</div>
+</div>
+<div class="session-card track-social">
+  <div class="session-track-badge">Social Web</div>
+  <div class="session-name">Social Web</div>
+</div>
+<div class="session-card track-systems">
+  <div class="session-track-badge">Web Systems</div>
+  <div class="session-name">Web Systems</div>
+</div>
+<div class="session-card track-recsys">
+  <div class="session-track-badge">Recommender Systems</div>
+  <div class="session-name">Recommender Systems</div>
+</div>
+<div class="session-card track-mining">
+  <div class="session-track-badge">Data Mining</div>
+  <div class="session-name">Data Mining</div>
+</div>
+<div class="session-card track-industry">
+  <div class="session-track-badge">Industry Track</div>
+  <div class="session-name">Industry Track</div>
+</div>
+<div class="session-card track-web4good">
+  <div class="session-track-badge">Web4Good</div>
+  <div class="session-name">Web4Good</div>
+</div>
+</div>
 </div>
 
 </div>
 <div class="day-panel" id="day-2026-07-03">
   <h2 class="day-heading">Friday, July 3, 2026</h2>
   <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>10:00 - 11:00</div>
-  <div class="slot-special-block slot-keynote">Keynote talk #4: Pascale Fung</div>
+  <div class="time-label"><i class="fas fa-clock"></i>10:00 - 11:00</div>
+  <div class="slot-special-block slot-keynote"><div class="keynote-speaker-name">Keynote talk #4: Pascale Fung</div><div class="keynote-talk-title">Towards AI That Understands the Human World</div></div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>11:00 - 11:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>11:00 - 11:30</div>
   <div class="slot-special-block slot-break">Break</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>11:30 - 13:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>11:30 - 13:00</div>
   <div class="session-grid"><div class="session-card track-respweb">
   <div class="session-track-badge">Responsible Web</div>
   <div class="session-name">Privacy, Consent, and User Control</div>
@@ -803,11 +987,60 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>13:00 - 14:00</div>
-  <div class="slot-special-block slot-posters">Posters and Demos Session 5</div>
+  <div class="time-label"><i class="fas fa-clock"></i>13:00 - 14:00</div>
+  <div class="slot-special-block slot-posters poster-session-header">Posters and Demos Session 5</div>
+<div class="session-grid poster-sub-grid"><div class="session-card track-demos">
+  <div class="session-track-badge">Demos</div>
+  <div class="session-name">Demos</div>
+</div>
+<div class="session-card track-short">
+  <div class="session-track-badge">Short Papers</div>
+  <div class="session-name">Short Papers</div>
+</div>
+<div class="session-card track-graph">
+  <div class="session-track-badge">Graph Neural Networks</div>
+  <div class="session-name">Graph Neural Networks</div>
+</div>
+<div class="session-card track-respweb">
+  <div class="session-track-badge">Responsible Web</div>
+  <div class="session-name">Responsible Web</div>
+</div>
+<div class="session-card track-search">
+  <div class="session-track-badge">Search &amp; Retrieval</div>
+  <div class="session-name">Search &amp; Retrieval</div>
+</div>
+<div class="session-card track-semantics">
+  <div class="session-track-badge">Semantic Web</div>
+  <div class="session-name">Semantic Web</div>
+</div>
+<div class="session-card track-security">
+  <div class="session-track-badge">Security &amp; Privacy</div>
+  <div class="session-name">Security &amp; Privacy</div>
+</div>
+<div class="session-card track-systems">
+  <div class="session-track-badge">Web Systems</div>
+  <div class="session-name">Web Systems</div>
+</div>
+<div class="session-card track-recsys">
+  <div class="session-track-badge">Recommender Systems</div>
+  <div class="session-name">Recommender Systems</div>
+</div>
+<div class="session-card track-mining">
+  <div class="session-track-badge">Data Mining</div>
+  <div class="session-name">Data Mining</div>
+</div>
+<div class="session-card track-industry">
+  <div class="session-track-badge">Industry Track</div>
+  <div class="session-name">Industry Track</div>
+</div>
+<div class="session-card track-web4good">
+  <div class="session-track-badge">Web4Good</div>
+  <div class="session-name">Web4Good</div>
+</div>
+</div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>14:00 - 15:30</div>
+  <div class="time-label"><i class="fas fa-clock"></i>14:00 - 15:30</div>
   <div class="session-grid"><div class="session-card track-respweb">
   <div class="session-track-badge">Responsible Web</div>
   <div class="session-name">Mitigating Online Harms and Misinformation</div>
@@ -867,22 +1100,19 @@
 </div>
 </div>
 <div class="time-slot">
-  <div class="time-label"><i class="fas fa-clock" style="opacity:.7;margin-right:5px;"></i>15:30 - 16:00</div>
+  <div class="time-label"><i class="fas fa-clock"></i>15:30 - 16:00</div>
   <div class="slot-special-block slot-closing">Town Hall &amp; Closing Ceremony</div>
 </div>
 
 </div>
 
-        </div>
-    </section>
-
+    </div></section>
     <div id="footer-placeholder"></div>
     
     <script src="../js/header-loader.js"></script>
     <script src="../js/footer-loader.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Day tab switching
         document.querySelectorAll('.day-tab-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var target = this.dataset.target;
@@ -892,7 +1122,6 @@
                 document.getElementById(target).classList.add('active');
             });
         });
-        // Activate first tab
         var firstBtn = document.querySelector('.day-tab-btn');
         if (firstBtn) firstBtn.click();
     });
