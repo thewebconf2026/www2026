@@ -4,9 +4,10 @@ Generate program/overview.html and program/full-schedule.html
 from the Excel Program sheet.
 """
 import openpyxl
-from datetime import datetime
+from datetime import datetime, timedelta
 import html as html_lib
 import re
+from urllib.parse import quote
 
 # ─────────────────────────────────────────────
 # 1. Static content — Keynote / Workshop / Tutorial details
@@ -349,6 +350,19 @@ def get_tutorial_details(title):
     return TUTORIAL_DETAILS.get(title.strip().lower())
 
 
+def should_skip_poster_block(block):
+    return bool(re.search(r'\bYicheng Di\b', block or ''))
+
+
+MISSING_POSTER_PAPERS = {
+    'ShortPapers5': [{
+        'title': 'Linguistic Signatures for Enhanced Emotion Detection',
+        'authors': 'Florian Lecourt, Madalina Croitoru and Konstantin Todorov',
+        'acm_url': None,
+    }],
+}
+
+
 # ─────────────────────────────────────────────
 # 2. Parse Excel
 # ─────────────────────────────────────────────
@@ -520,6 +534,8 @@ while i <= last_row:
                         block = block.strip()
                         if not block:
                             continue
+                        if should_skip_poster_block(block):
+                            continue
                         blines = block.split('\n')
                         title_p = blines[0].strip()
                         if re.match(r'WITHDRAWN', title_p, re.IGNORECASE):
@@ -530,6 +546,9 @@ while i <= last_row:
                             'authors': authors_p,
                             'acm_url': None
                         })
+                for missing_paper in reversed(MISSING_POSTER_PAPERS.get(code_val, [])):
+                    if not any(p['title'] == missing_paper['title'] for p in papers):
+                        papers.insert(0, missing_paper)
                 sub_sessions.append({
                     'col_idx': j,
                     'code': code_val,
@@ -651,6 +670,55 @@ def item_label(code, count):
     return f'{count} {singular if count == 1 else plural}'
 
 
+def parse_slot_datetimes(day, time_str):
+    matches = re.findall(r'(\d{1,2}):(\d{2})', str(time_str or ''))
+    if len(matches) < 2:
+        start = day['date'].replace(hour=9, minute=0, second=0, microsecond=0)
+        return start, start + timedelta(hours=1)
+    (sh, sm), (eh, em) = matches[0], matches[1]
+    start = day['date'].replace(hour=int(sh), minute=int(sm), second=0, microsecond=0)
+    end = day['date'].replace(hour=int(eh), minute=int(em), second=0, microsecond=0)
+    if end <= start:
+        end += timedelta(days=1)
+    return start, end
+
+
+def ics_escape(value):
+    return str(value or '').replace('\\', '\\\\').replace(';', '\\;').replace(',', '\\,').replace('\n', '\\n')
+
+
+def safe_filename(value):
+    slug = re.sub(r'[^A-Za-z0-9]+', '-', str(value or 'session')).strip('-').lower()
+    return (slug[:70] or 'session') + '.ics'
+
+
+def calendar_link(day, time_str, title, description='', slot_idx=0, item_idx=0):
+    start, end = parse_slot_datetimes(day, time_str)
+    uid_seed = f'www2026-{day["date"].strftime("%Y%m%d")}-{slot_idx}-{item_idx}'
+    lines = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//The Web Conference 2026//Program//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        f'UID:{uid_seed}@thewebconf.org',
+        'DTSTAMP:20260527T000000Z',
+        f'DTSTART;TZID=Asia/Dubai:{start.strftime("%Y%m%dT%H%M%S")}',
+        f'DTEND;TZID=Asia/Dubai:{end.strftime("%Y%m%dT%H%M%S")}',
+        f'SUMMARY:{ics_escape(title)}',
+        f'DESCRIPTION:{ics_escape(description)}',
+        'LOCATION:Dubai World Trade Centre, Dubai, UAE',
+        'END:VEVENT',
+        'END:VCALENDAR',
+    ]
+    href = 'data:text/calendar;charset=utf-8,' + quote('\r\n'.join(lines))
+    return (
+        f'<a class="calendar-link" href="{href}" download="{esc(safe_filename(title))}">'
+        f'<i class="far fa-calendar-plus"></i><span>Calendar</span></a>'
+    )
+
+
 def render_session_card_overview(sess):
     code = sess['code']
     name = sess['name'] or track_label(code)
@@ -666,7 +734,7 @@ def render_session_card_overview(sess):
 </div>'''
 
 
-def render_session_card_full(sess, slot_idx, sess_idx):
+def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     code = sess['code']
     name = sess['name'] or track_label(code)
     color_cls = track_color_class(code)
@@ -684,6 +752,7 @@ def render_session_card_full(sess, slot_idx, sess_idx):
 
     papers_section = ''
     header_extra = ''
+    detail_bits = []
 
     if is_tutorial or is_workshop:
         details = get_workshop_details(name) if is_workshop else get_tutorial_details(name)
@@ -698,12 +767,14 @@ def render_session_card_full(sess, slot_idx, sess_idx):
                     detail_content += f'<p class="detail-link"><i class="fas fa-globe"></i> <a href="{esc(ws_url)}" target="_blank">{esc(ws_url)}</a></p>'
                 if details.get('abstract'):
                     detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
+                detail_bits.append(details.get('full_name', name))
             else:
                 detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
                 if details.get('presenters'):
                     detail_content += f'<p class="detail-organizers"><i class="fas fa-chalkboard-teacher"></i> <strong>Presenters:</strong> {esc(details["presenters"])}</p>'
                 if details.get('abstract'):
                     detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
+                detail_bits.append(details.get('abstract', ''))
         else:
             detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
             if papers and papers[0].get('authors'):
@@ -729,12 +800,23 @@ def render_session_card_full(sess, slot_idx, sess_idx):
         paper_label = item_label(code, len(papers))
         papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{papers_html}</div></div>'
         header_extra = f'<button class="papers-toggle"{toggle}><span class="papers-count">{paper_label}</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
+        detail_bits.append(paper_label)
+
+    header_extra += calendar_link(
+        day,
+        slot['time'],
+        name,
+        f'The Web Conference 2026: {tlabel}. ' + ' '.join(b for b in detail_bits if b),
+        slot_idx,
+        sess_idx,
+    )
+    actions_html = f'<div class="session-actions">{header_extra}</div>'
 
     return f'''<div class="session-card {color_cls}">
   <div class="session-card-header">
     <div class="session-track-badge">{esc(tlabel)}</div>
     <div class="session-name">{title_html}</div>
-    {header_extra}
+    {actions_html}
   </div>
   {papers_section}
 </div>'''
@@ -751,7 +833,7 @@ def render_keynote_block_overview(event, slot_idx):
     return f'<div class="slot-special-block {sc}">{esc(event)}</div>'
 
 
-def render_keynote_block_full(event, slot_idx):
+def render_keynote_block_full(event, day, slot, slot_idx):
     sc = special_class(event)
     kd = keynote_lookup(event)
     if not kd:
@@ -762,6 +844,15 @@ def render_keynote_block_full(event, slot_idx):
         f'<p class="keynote-detail-abstract"><strong>Abstract:</strong> {esc(kd["abstract"])}</p>'
         f'<p class="keynote-detail-bio"><strong>Bio:</strong> {esc(kd["bio"])}</p>'
     )
+    cal_link = calendar_link(day, slot['time'], event, kd['title'], slot_idx, 0)
+    action_html = (
+        f'<div class="event-actions">'
+        f'<button class="papers-toggle keynote-details-btn" data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}">'
+        f'<span class="papers-count">details</span><i class="fas fa-chevron-down toggle-icon"></i>'
+        f'</button>'
+        f'{cal_link}'
+        f'</div>'
+    )
     return (
         f'<div class="slot-special-block {sc}">'
         f'<div class="keynote-header-row">'
@@ -769,26 +860,40 @@ def render_keynote_block_full(event, slot_idx):
         f'<div class="keynote-speaker-name">{esc(event)}</div>'
         f'<div class="keynote-talk-title">{esc(kd["title"])}</div>'
         f'</div>'
-        f'<button class="papers-toggle keynote-details-btn" data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}">'
-        f'<span class="papers-count">details</span><i class="fas fa-chevron-down toggle-icon"></i>'
-        f'</button>'
+        f'{action_html}'
         f'</div>'
         f'<div class="collapse" id="{collapse_id}"><div class="keynote-expand-content">{detail_html}</div></div>'
         f'</div>'
     )
 
 
-def render_poster_session(slot, is_full_schedule, slot_idx):
+def render_special_block_full(event, day, slot, slot_idx):
+    if special_class(event) == 'slot-break':
+        return f'<div class="slot-special-block {special_class(event)}">{esc(event)}</div>'
+    return (
+        f'<div class="slot-special-block {special_class(event)}">'
+        f'<div class="special-event-row"><span>{esc(event)}</span>{calendar_link(day, slot["time"], event, "The Web Conference 2026", slot_idx, 0)}</div>'
+        f'</div>'
+    )
+
+
+def render_poster_session(slot, is_full_schedule, slot_idx, day=None):
     event_name = slot['event']
     sc = special_class(event_name)
     sub_sessions = slot.get('sessions') or []
-    header_block = f'<div class="slot-special-block {sc} poster-session-header">{esc(event_name)}</div>'
+    header_content = esc(event_name)
+    if is_full_schedule and day is not None:
+        header_content = (
+            f'<div class="special-event-row"><span>{esc(event_name)}</span>'
+            f'{calendar_link(day, slot["time"], event_name, "The Web Conference 2026 poster and demo session", slot_idx, 0)}</div>'
+        )
+    header_block = f'<div class="slot-special-block {sc} poster-session-header">{header_content}</div>'
     if not sub_sessions:
         return header_block
     cards = ''
     for si, sess in enumerate(sub_sessions):
         if is_full_schedule:
-            cards += render_session_card_full(sess, slot_idx, si) + '\n'
+            cards += render_session_card_full(sess, day, slot, slot_idx, si + 1) + '\n'
         else:
             cards += render_session_card_overview(sess) + '\n'
     return f'{header_block}\n<div class="session-grid poster-sub-grid">{cards}</div>'
@@ -809,8 +914,9 @@ COMMON_HEAD_LINKS = '''
 PROGRAM_CSS = '''<style>
 .program-page { padding: 30px 0 60px; }
 .day-tabs {
-  display: flex; flex-wrap: wrap; gap: 6px;
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px;
   margin-bottom: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 0;
+  background: white;
 }
 .day-tab-btn {
   background: #f4f4f4; border: none; border-radius: 6px 6px 0 0;
@@ -820,6 +926,11 @@ PROGRAM_CSS = '''<style>
 }
 .day-tab-btn:hover { background: #ede5ff; color: #6a00ff; }
 .day-tab-btn.active { background: white; color: #6a00ff; border-bottom: 3px solid #6a00ff; }
+.day-tab-btn:focus-visible,
+.papers-toggle:focus-visible,
+.calendar-link:focus-visible {
+  outline: 3px solid rgba(106,0,255,.22); outline-offset: 2px;
+}
 .day-tab-btn span { font-size: 0.8rem; font-weight: 400; display: block; }
 .day-panel { display: none; }
 .day-panel.active { display: block; }
@@ -846,19 +957,36 @@ PROGRAM_CSS = '''<style>
 .keynote-header-row {
   display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
 }
+.keynote-header-row > div:first-child { flex: 1; min-width: 0; }
+.special-event-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.event-actions,
+.session-actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+}
+.event-actions { justify-content: flex-end; flex-shrink: 0; }
 .keynote-speaker-name { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; }
 .keynote-talk-title   { font-size: 0.88rem; font-weight: 500; color: #555; margin-top: 3px; font-style: italic; }
 .keynote-details-btn  { flex-shrink: 0; }
+.calendar-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  align-self: flex-start; flex-shrink: 0; border: 1px solid #d9d9d9; border-radius: 5px;
+  padding: 5px 8px; background: #fff; color: #444; font-size: 0.74rem; font-weight: 600;
+  line-height: 1; text-decoration: none; transition: background .2s, border-color .2s, color .2s;
+}
+.calendar-link:hover { background: #f5f0ff; border-color: #c8b5ff; color: #5c22d6; text-decoration: none; }
+.calendar-link i { font-size: 0.78rem; }
 .keynote-expand-content {
   margin-top: 12px; padding-top: 12px; border-top: 1px solid #e8e0ff;
-  font-size: 0.84rem; color: #333; line-height: 1.6;
+  font-size: 0.84rem; color: #333; line-height: 1.6; font-weight: 400;
 }
 .keynote-detail-title { margin: 0 0 8px; font-style: italic; color: #555; }
 .keynote-detail-abstract { margin: 8px 0; }
 .keynote-detail-bio { margin: 8px 0 0; }
 .keynote-expand-content strong { color: #1a1a1a; }
 /* Poster sessions */
-.poster-session-header { margin-bottom: 10px; }
+.poster-session-header { margin-bottom: 10px; background: #f8fbff; }
 .poster-sub-grid { margin-top: 8px; }
 /* Workshop/tutorial detail panel */
 .detail-full-name { margin: 0 0 6px; }
@@ -872,18 +1000,21 @@ PROGRAM_CSS = '''<style>
 .detail-abstract strong { color: #1a1a1a; }
 /* Session grid */
 .session-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
 }
 @media (max-width: 768px) {
   .session-grid { grid-template-columns: 1fr 1fr; }
+  .day-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .day-tab-btn { padding: 8px 12px; font-size: 0.82rem; }
   .slot-special-block { font-size: 0.88rem; padding: 11px 14px; }
   .day-heading { font-size: 1.1rem; }
   .keynote-header-row { flex-direction: column; gap: 8px; }
+  .event-actions { justify-content: flex-start; }
+  .special-event-row { align-items: flex-start; }
 }
 @media (max-width: 480px) {
   .session-grid { grid-template-columns: 1fr; }
-  .day-tabs { gap: 4px; }
+  .day-tabs { grid-template-columns: 1fr; gap: 4px; }
   .day-tab-btn { padding: 7px 9px; font-size: 0.78rem; }
   .time-label { font-size: 0.78rem; }
   .program-page { padding: 16px 0 40px; }
@@ -893,10 +1024,10 @@ PROGRAM_CSS = '''<style>
   border-radius: 8px; padding: 12px 14px;
   background: white; border: 1px solid #e0e0e0;
   box-shadow: 0 1px 4px rgba(0,0,0,.06);
-  transition: box-shadow .2s, transform .1s;
+  transition: border-color .2s, box-shadow .2s, transform .1s;
   display: flex; flex-direction: column; gap: 6px;
 }
-.session-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.13); transform: translateY(-1px); }
+.session-card:hover { border-color: #d2c4ff; box-shadow: 0 4px 14px rgba(0,0,0,.13); transform: translateY(-1px); }
 .session-card-header { display: flex; flex-direction: column; gap: 6px; }
 .session-track-badge {
   font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
@@ -962,7 +1093,10 @@ PROGRAM_CSS = '''<style>
 .papers-count { font-weight: 600; }
 .toggle-icon { transition: transform .2s; font-size: 0.7rem; }
 /* Papers list */
-.papers-container { margin-top: 8px; border-top: 1px solid #f0e8ff; padding-top: 8px; }
+.papers-container {
+  margin-top: 8px; border-top: 1px solid #f0e8ff; padding: 10px 0 0;
+  background: linear-gradient(#fcfbff, #fff 55%);
+}
 .paper-list { list-style: none; margin: 0; padding: 0; }
 .paper-item { padding: 7px 0; border-bottom: 1px solid #f5f5f5; display: flex; flex-direction: column; gap: 2px; }
 .paper-item:last-child { border-bottom: none; }
@@ -1098,12 +1232,12 @@ def build_full_schedule():
             time_html = f'<div class="time-label"><i class="fas fa-clock"></i>{esc(slot["time"])}</div>'
             if slot['special']:
                 event = slot['event']
-                block = render_keynote_block_full(event, sidx) if keynote_lookup(event) else f'<div class="slot-special-block {special_class(event)}">{esc(event)}</div>'
+                block = render_keynote_block_full(event, day, slot, sidx) if keynote_lookup(event) else render_special_block_full(event, day, slot, sidx)
                 slots_html += f'<div class="time-slot">\n  {time_html}\n  {block}\n</div>\n'
             elif slot['poster']:
-                slots_html += f'<div class="time-slot">\n  {time_html}\n  {render_poster_session(slot, True, sidx)}\n</div>\n'
+                slots_html += f'<div class="time-slot">\n  {time_html}\n  {render_poster_session(slot, True, sidx, day)}\n</div>\n'
             else:
-                cards = ''.join(render_session_card_full(s, sidx, si2) + '\n' for si2, s in enumerate(slot['sessions'] or []))
+                cards = ''.join(render_session_card_full(s, day, slot, sidx, si2) + '\n' for si2, s in enumerate(slot['sessions'] or []))
                 slots_html += f'<div class="time-slot">\n  {time_html}\n  <div class="session-grid">{cards}</div>\n</div>\n'
         panels_html += f'<div class="day-panel" id="{did}">\n  <h2 class="day-heading">{esc(format_day_heading(day))}</h2>\n  {slots_html}\n</div>\n'
 

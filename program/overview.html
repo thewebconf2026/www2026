@@ -14,8 +14,9 @@
     <style>
 .program-page { padding: 30px 0 60px; }
 .day-tabs {
-  display: flex; flex-wrap: wrap; gap: 6px;
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px;
   margin-bottom: 30px; border-bottom: 2px solid #e0e0e0; padding-bottom: 0;
+  background: white;
 }
 .day-tab-btn {
   background: #f4f4f4; border: none; border-radius: 6px 6px 0 0;
@@ -25,6 +26,11 @@
 }
 .day-tab-btn:hover { background: #ede5ff; color: #6a00ff; }
 .day-tab-btn.active { background: white; color: #6a00ff; border-bottom: 3px solid #6a00ff; }
+.day-tab-btn:focus-visible,
+.papers-toggle:focus-visible,
+.calendar-link:focus-visible {
+  outline: 3px solid rgba(106,0,255,.22); outline-offset: 2px;
+}
 .day-tab-btn span { font-size: 0.8rem; font-weight: 400; display: block; }
 .day-panel { display: none; }
 .day-panel.active { display: block; }
@@ -51,19 +57,36 @@
 .keynote-header-row {
   display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
 }
+.keynote-header-row > div:first-child { flex: 1; min-width: 0; }
+.special-event-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.event-actions,
+.session-actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+}
+.event-actions { justify-content: flex-end; flex-shrink: 0; }
 .keynote-speaker-name { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; }
 .keynote-talk-title   { font-size: 0.88rem; font-weight: 500; color: #555; margin-top: 3px; font-style: italic; }
 .keynote-details-btn  { flex-shrink: 0; }
+.calendar-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  align-self: flex-start; flex-shrink: 0; border: 1px solid #d9d9d9; border-radius: 5px;
+  padding: 5px 8px; background: #fff; color: #444; font-size: 0.74rem; font-weight: 600;
+  line-height: 1; text-decoration: none; transition: background .2s, border-color .2s, color .2s;
+}
+.calendar-link:hover { background: #f5f0ff; border-color: #c8b5ff; color: #5c22d6; text-decoration: none; }
+.calendar-link i { font-size: 0.78rem; }
 .keynote-expand-content {
   margin-top: 12px; padding-top: 12px; border-top: 1px solid #e8e0ff;
-  font-size: 0.84rem; color: #333; line-height: 1.6;
+  font-size: 0.84rem; color: #333; line-height: 1.6; font-weight: 400;
 }
 .keynote-detail-title { margin: 0 0 8px; font-style: italic; color: #555; }
 .keynote-detail-abstract { margin: 8px 0; }
 .keynote-detail-bio { margin: 8px 0 0; }
 .keynote-expand-content strong { color: #1a1a1a; }
 /* Poster sessions */
-.poster-session-header { margin-bottom: 10px; }
+.poster-session-header { margin-bottom: 10px; background: #f8fbff; }
 .poster-sub-grid { margin-top: 8px; }
 /* Workshop/tutorial detail panel */
 .detail-full-name { margin: 0 0 6px; }
@@ -77,18 +100,21 @@
 .detail-abstract strong { color: #1a1a1a; }
 /* Session grid */
 .session-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
 }
 @media (max-width: 768px) {
   .session-grid { grid-template-columns: 1fr 1fr; }
+  .day-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .day-tab-btn { padding: 8px 12px; font-size: 0.82rem; }
   .slot-special-block { font-size: 0.88rem; padding: 11px 14px; }
   .day-heading { font-size: 1.1rem; }
   .keynote-header-row { flex-direction: column; gap: 8px; }
+  .event-actions { justify-content: flex-start; }
+  .special-event-row { align-items: flex-start; }
 }
 @media (max-width: 480px) {
   .session-grid { grid-template-columns: 1fr; }
-  .day-tabs { gap: 4px; }
+  .day-tabs { grid-template-columns: 1fr; gap: 4px; }
   .day-tab-btn { padding: 7px 9px; font-size: 0.78rem; }
   .time-label { font-size: 0.78rem; }
   .program-page { padding: 16px 0 40px; }
@@ -98,10 +124,10 @@
   border-radius: 8px; padding: 12px 14px;
   background: white; border: 1px solid #e0e0e0;
   box-shadow: 0 1px 4px rgba(0,0,0,.06);
-  transition: box-shadow .2s, transform .1s;
+  transition: border-color .2s, box-shadow .2s, transform .1s;
   display: flex; flex-direction: column; gap: 6px;
 }
-.session-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.13); transform: translateY(-1px); }
+.session-card:hover { border-color: #d2c4ff; box-shadow: 0 4px 14px rgba(0,0,0,.13); transform: translateY(-1px); }
 .session-card-header { display: flex; flex-direction: column; gap: 6px; }
 .session-track-badge {
   font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
@@ -167,7 +193,10 @@
 .papers-count { font-weight: 600; }
 .toggle-icon { transition: transform .2s; font-size: 0.7rem; }
 /* Papers list */
-.papers-container { margin-top: 8px; border-top: 1px solid #f0e8ff; padding-top: 8px; }
+.papers-container {
+  margin-top: 8px; border-top: 1px solid #f0e8ff; padding: 10px 0 0;
+  background: linear-gradient(#fcfbff, #fff 55%);
+}
 .paper-list { list-style: none; margin: 0; padding: 0; }
 .paper-item { padding: 7px 0; border-bottom: 1px solid #f5f5f5; display: flex; flex-direction: column; gap: 2px; }
 .paper-item:last-child { border-bottom: none; }
