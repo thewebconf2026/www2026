@@ -713,10 +713,55 @@ def calendar_link(day, time_str, title, description='', slot_idx=0, item_idx=0):
         'END:VCALENDAR',
     ]
     href = 'data:text/calendar;charset=utf-8,' + quote('\r\n'.join(lines))
+    filename = safe_filename(f'{title}-{start.strftime("%Y%m%d-%H%M")}-{item_idx}')
     return (
-        f'<a class="calendar-link" href="{href}" download="{esc(safe_filename(title))}">'
+        f'<a class="calendar-link" href="{href}" download="{esc(filename)}">'
         f'<i class="far fa-calendar-plus"></i><span>Calendar</span></a>'
     )
+
+
+def paper_details_text(papers):
+    lines = []
+    for p in papers:
+        title = p.get('title', '')
+        authors = p.get('authors', '')
+        if title and authors:
+            lines.append(f'- {title} - {authors}')
+        elif title:
+            lines.append(f'- {title}')
+    return '\n'.join(lines)
+
+
+def calendar_items_heading(code):
+    code = str(code)
+    if 'Poster' in code:
+        return 'Posters'
+    if code.startswith('Demo'):
+        return 'Demos'
+    if code.startswith('ShortP'):
+        return 'Short papers'
+    return 'Papers/items'
+
+
+def session_calendar_description(code, tlabel, name, papers, details=None, url=''):
+    parts = [f'The Web Conference 2026: {tlabel}.']
+    if details:
+        if details.get('full_name') and details.get('full_name') != name:
+            parts.append(f'\nTitle: {details["full_name"]}')
+        if details.get('organizers'):
+            parts.append(f'\nOrganizers: {details["organizers"]}')
+        if details.get('presenters'):
+            parts.append(f'\nPresenters: {details["presenters"]}')
+        detail_url = details.get('url') or url
+        if detail_url:
+            parts.append(f'\nWebsite: {detail_url}')
+        if details.get('abstract'):
+            parts.append(f'\nAbstract: {details["abstract"]}')
+    elif papers:
+        parts.append(f'\n{calendar_items_heading(code)}:\n{paper_details_text(papers)}')
+    elif url:
+        parts.append(f'\nWebsite: {url}')
+    return ''.join(parts)
 
 
 def render_session_card_overview(sess):
@@ -752,10 +797,11 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
 
     papers_section = ''
     header_extra = ''
-    detail_bits = []
+    calendar_details = None
 
     if is_tutorial or is_workshop:
         details = get_workshop_details(name) if is_workshop else get_tutorial_details(name)
+        calendar_details = details
         detail_content = ''
         if details:
             if is_workshop:
@@ -767,21 +813,22 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
                     detail_content += f'<p class="detail-link"><i class="fas fa-globe"></i> <a href="{esc(ws_url)}" target="_blank">{esc(ws_url)}</a></p>'
                 if details.get('abstract'):
                     detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
-                detail_bits.append(details.get('full_name', name))
             else:
                 detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
                 if details.get('presenters'):
                     detail_content += f'<p class="detail-organizers"><i class="fas fa-chalkboard-teacher"></i> <strong>Presenters:</strong> {esc(details["presenters"])}</p>'
                 if details.get('abstract'):
                     detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
-                detail_bits.append(details.get('abstract', ''))
         else:
             detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
+            calendar_details = {'full_name': name}
             if papers and papers[0].get('authors'):
                 label = 'Presenters' if is_tutorial else 'Organizers'
                 detail_content += f'<p class="detail-organizers"><strong>{label}:</strong> {esc(papers[0]["authors"])}</p>'
+                calendar_details[label.lower()] = papers[0]['authors']
             if url:
                 detail_content += f'<p class="detail-link"><i class="fas fa-globe"></i> <a href="{esc(url)}" target="_blank">{esc(url)}</a></p>'
+                calendar_details['url'] = url
 
         toggle = f' data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}"'
         papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{detail_content}</div></div>'
@@ -800,13 +847,12 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
         paper_label = item_label(code, len(papers))
         papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{papers_html}</div></div>'
         header_extra = f'<button class="papers-toggle"{toggle}><span class="papers-count">{paper_label}</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
-        detail_bits.append(paper_label)
 
     header_extra += calendar_link(
         day,
         slot['time'],
         name,
-        f'The Web Conference 2026: {tlabel}. ' + ' '.join(b for b in detail_bits if b),
+        session_calendar_description(code, tlabel, name, papers, calendar_details, url),
         slot_idx,
         sess_idx,
     )
@@ -844,7 +890,13 @@ def render_keynote_block_full(event, day, slot, slot_idx):
         f'<p class="keynote-detail-abstract"><strong>Abstract:</strong> {esc(kd["abstract"])}</p>'
         f'<p class="keynote-detail-bio"><strong>Bio:</strong> {esc(kd["bio"])}</p>'
     )
-    cal_link = calendar_link(day, slot['time'], event, kd['title'], slot_idx, 0)
+    cal_description = (
+        f'The Web Conference 2026 keynote.\n'
+        f'Talk Title: {kd["title"]}\n'
+        f'Abstract: {kd["abstract"]}\n'
+        f'Bio: {kd["bio"]}'
+    )
+    cal_link = calendar_link(day, slot['time'], event, cal_description, slot_idx, 0)
     action_html = (
         f'<div class="event-actions">'
         f'<button class="papers-toggle keynote-details-btn" data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}">'
@@ -971,8 +1023,9 @@ PROGRAM_CSS = '''<style>
 .keynote-details-btn  { flex-shrink: 0; }
 .calendar-link {
   display: inline-flex; align-items: center; justify-content: center; gap: 5px;
-  align-self: flex-start; flex-shrink: 0; border: 1px solid #d9d9d9; border-radius: 5px;
-  padding: 5px 8px; background: #fff; color: #444; font-size: 0.74rem; font-weight: 600;
+  height: 28px; box-sizing: border-box; align-self: flex-start; flex-shrink: 0;
+  border: 1px solid #d9d9d9; border-radius: 5px; padding: 0 8px;
+  background: #fff; color: #444; font-size: 0.74rem; font-weight: 600;
   line-height: 1; text-decoration: none; transition: background .2s, border-color .2s, color .2s;
 }
 .calendar-link:hover { background: #f5f0ff; border-color: #c8b5ff; color: #5c22d6; text-decoration: none; }
@@ -1083,10 +1136,10 @@ PROGRAM_CSS = '''<style>
 .track-other     { border-left:3px solid #9e9e9e; }
 /* Papers toggle button */
 .papers-toggle {
-  display: flex; align-items: center; gap: 6px;
-  background: none; border: 1px solid #e0e0e0; border-radius: 4px;
-  padding: 4px 10px; cursor: pointer; font-size: 0.78rem; color: #555;
-  transition: all .2s; align-self: flex-start; margin-top: 4px;
+  appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  height: 28px; box-sizing: border-box; background: none; border: 1px solid #e0e0e0; border-radius: 5px;
+  padding: 0 10px; cursor: pointer; font-size: 0.78rem; color: #555; line-height: 1;
+  transition: all .2s; align-self: flex-start; margin: 0;
 }
 .papers-toggle:hover { background: #f5f0ff; color: #6a00ff; border-color: #6a00ff; }
 .papers-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(180deg); }

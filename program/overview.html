@@ -71,8 +71,9 @@
 .keynote-details-btn  { flex-shrink: 0; }
 .calendar-link {
   display: inline-flex; align-items: center; justify-content: center; gap: 5px;
-  align-self: flex-start; flex-shrink: 0; border: 1px solid #d9d9d9; border-radius: 5px;
-  padding: 5px 8px; background: #fff; color: #444; font-size: 0.74rem; font-weight: 600;
+  height: 28px; box-sizing: border-box; align-self: flex-start; flex-shrink: 0;
+  border: 1px solid #d9d9d9; border-radius: 5px; padding: 0 8px;
+  background: #fff; color: #444; font-size: 0.74rem; font-weight: 600;
   line-height: 1; text-decoration: none; transition: background .2s, border-color .2s, color .2s;
 }
 .calendar-link:hover { background: #f5f0ff; border-color: #c8b5ff; color: #5c22d6; text-decoration: none; }
@@ -183,10 +184,10 @@
 .track-other     { border-left:3px solid #9e9e9e; }
 /* Papers toggle button */
 .papers-toggle {
-  display: flex; align-items: center; gap: 6px;
-  background: none; border: 1px solid #e0e0e0; border-radius: 4px;
-  padding: 4px 10px; cursor: pointer; font-size: 0.78rem; color: #555;
-  transition: all .2s; align-self: flex-start; margin-top: 4px;
+  appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  height: 28px; box-sizing: border-box; background: none; border: 1px solid #e0e0e0; border-radius: 5px;
+  padding: 0 10px; cursor: pointer; font-size: 0.78rem; color: #555; line-height: 1;
+  transition: all .2s; align-self: flex-start; margin: 0;
 }
 .papers-toggle:hover { background: #f5f0ff; color: #6a00ff; border-color: #6a00ff; }
 .papers-toggle[aria-expanded="true"] .toggle-icon { transform: rotate(180deg); }
