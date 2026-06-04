@@ -7,6 +7,7 @@ import openpyxl
 from datetime import datetime, timedelta
 import html as html_lib
 import re
+import unicodedata
 from urllib.parse import quote
 
 # ─────────────────────────────────────────────
@@ -354,6 +355,46 @@ def should_skip_poster_block(block):
     return bool(re.search(r'\bYicheng Di\b', block or ''))
 
 
+def normalize_title(text):
+    if not text:
+        return ''
+    normalized = html_lib.unescape(str(text))
+    normalized = unicodedata.normalize('NFKC', normalized)
+    normalized = normalized.replace('\xa0', ' ')
+    normalized = normalized.translate(str.maketrans({
+        '\u2018': "'",
+        '\u2019': "'",
+        '\u201c': '"',
+        '\u201d': '"',
+        '\u2013': '-',
+        '\u2014': '-',
+        '\u2011': '-',
+        '\u2212': '-',
+    }))
+    normalized = re.sub(r'[\u200b\u200c\u200d\u2060\ufeff]', '', normalized)
+    normalized = re.sub(r'\s+', ' ', normalized).strip().lower()
+    return normalized
+
+
+def build_title_url_map(workbook):
+    title_url_map = {}
+    for sheet_name in ('Mapping to URL Main Proceedings', 'Mapping to URL Comp Proceedings'):
+        if sheet_name not in workbook.sheetnames:
+            continue
+        ws_map = workbook[sheet_name]
+        for row in ws_map.iter_rows(min_row=2, values_only=True):
+            if not row or len(row) < 3:
+                continue
+            title = row[1]
+            url = row[2]
+            if not title or not url:
+                continue
+            normalized_title = normalize_title(title)
+            if normalized_title and normalized_title not in title_url_map:
+                title_url_map[normalized_title] = str(url).strip()
+    return title_url_map
+
+
 MISSING_POSTER_PAPERS = {
     'ShortPapers5': [{
         'title': 'Linguistic Signatures for Enhanced Emotion Detection',
@@ -371,6 +412,7 @@ wb = openpyxl.load_workbook(
     'program/Detailed WebConf 2026 Program.xlsx', data_only=True
 )
 ws = wb['Program']
+TITLE_URL_MAP = build_title_url_map(wb)
 
 all_rows = [list(row) for row in ws.iter_rows(values_only=True)]
 
@@ -449,6 +491,31 @@ def track_color_class(code):
     return 'track-other'
 
 
+def workshop_listing_header(title, session_name):
+    normalized_title = normalize_title(title)
+    details = get_workshop_details(session_name)
+    if details:
+        full_name = details.get('full_name')
+        if full_name and normalize_title(full_name) in normalized_title:
+            return True
+    if session_name:
+        code_match = re.match(r'\(([^)]+)\)', session_name.strip())
+        if code_match and normalize_title(code_match.group(1)) in normalized_title:
+            return True
+    return False
+
+
+def attach_paper_urls(program):
+    for day in program:
+        for slot in day.get('slots', []):
+            for sess in slot.get('sessions') or []:
+                for paper_key in ('papers', 'proceedings_papers'):
+                    for paper in sess.get(paper_key, []):
+                        normalized_title = normalize_title(paper.get('title'))
+                        if normalized_title in TITLE_URL_MAP:
+                            paper['acm_url'] = TITLE_URL_MAP[normalized_title]
+
+
 program = []
 current_day = None
 i = 0
@@ -497,6 +564,7 @@ while i <= last_row:
                     'code': c['code'],
                     'name': None,
                     'papers': [],
+                    'proceedings_papers': [],
                     'url': None,
                 })
 
@@ -554,6 +622,7 @@ while i <= last_row:
                     'code': code_val,
                     'name': track_label(code_val),
                     'papers': papers,
+                    'proceedings_papers': [],
                     'url': None,
                 })
             slot['sessions'] = sub_sessions
@@ -604,20 +673,28 @@ while i <= last_row:
                 dr1 = detail_rows[1]
                 for j, text in dr1.items():
                     if j in sessions_by_col:
+                        session = sessions_by_col[j]
+                        is_workshop = session['code'].startswith('wk')
                         blocks = re.split(r'\n\s*\n', text.strip())
-                        for block in blocks:
+                        for index, block in enumerate(blocks):
                             block = block.strip()
                             if not block:
                                 continue
                             blines = block.split('\n')
                             title = blines[0].strip()
+                            if is_workshop and index == 0 and workshop_listing_header(title, session.get('name')):
+                                continue
                             authors = ' '.join(l.strip() for l in blines[1:] if l.strip())
-                            sessions_by_col[j]['papers'].append({
+                            target_key = 'proceedings_papers' if is_workshop else 'papers'
+                            session[target_key].append({
                                 'title': title, 'authors': authors, 'acm_url': None
                             })
         continue
 
     i += 1
+
+
+attach_paper_urls(program)
 
 
 # ─────────────────────────────────────────────
@@ -626,6 +703,25 @@ while i <= last_row:
 
 def esc(s):
     return html_lib.escape(str(s)) if s else ''
+
+
+def render_paper_link(paper):
+    acm_url = paper.get('acm_url')
+    href = esc(acm_url) if acm_url else '#'
+    target_attrs = ' target="_blank" rel="noopener noreferrer"' if acm_url else ''
+    data_acm = esc(acm_url) if acm_url else ''
+    return f'<a href="{href}" class="paper-title acm-link-placeholder" data-acm="{data_acm}"{target_attrs}>{esc(paper["title"])}</a>'
+
+
+def render_paper_list_html(papers):
+    items = []
+    for paper in papers:
+        title_link = render_paper_link(paper)
+        if paper.get('authors'):
+            items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span><span class="paper-authors">{esc(paper["authors"])}</span></li>')
+        else:
+            items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span></li>')
+    return '<ul class="paper-list">' + ''.join(items) + '</ul>'
 
 def day_id(day):
     return day['date'].strftime('day-%Y-%m-%d')
@@ -785,8 +881,10 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     color_cls = track_color_class(code)
     tlabel = track_label(code)
     papers = sess['papers']
+    proceedings_papers = sess.get('proceedings_papers') or []
     url = sess.get('url')
     collapse_id = f"collapse-{slot_idx}-{sess_idx}"
+    proceedings_collapse_id = f"collapse-acm-{slot_idx}-{sess_idx}"
 
     is_tutorial = code.startswith('tut')
     is_workshop = code.startswith('wk')
@@ -833,16 +931,14 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
         toggle = f' data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}"'
         papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{detail_content}</div></div>'
         header_extra = f'<button class="papers-toggle"{toggle}><span class="papers-count">details</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
+        if is_workshop and proceedings_papers:
+            proceedings_toggle = f' data-bs-toggle="collapse" data-bs-target="#{proceedings_collapse_id}" aria-expanded="false" aria-controls="{proceedings_collapse_id}"'
+            proceedings_html = render_paper_list_html(proceedings_papers)
+            papers_section += f'<div class="collapse" id="{proceedings_collapse_id}"><div class="papers-container">{proceedings_html}</div></div>'
+            header_extra += f'<button class="papers-toggle"{proceedings_toggle}><span class="papers-count">Papers in ACM DL</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
 
     elif papers:
-        items = []
-        for p in papers:
-            title_link = f'<a href="#" class="paper-title acm-link-placeholder" data-acm="">{esc(p["title"])}</a>'
-            if p.get('authors'):
-                items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span><span class="paper-authors">{esc(p["authors"])}</span></li>')
-            else:
-                items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span></li>')
-        papers_html = '<ul class="paper-list">' + ''.join(items) + '</ul>'
+        papers_html = render_paper_list_html(papers)
         toggle = f' data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}"'
         paper_label = item_label(code, len(papers))
         papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{papers_html}</div></div>'

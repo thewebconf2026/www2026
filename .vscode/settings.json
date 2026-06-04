@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^source \\.venv/bin/activate && python - <<'PY'\nimport openpyxl\nwb = openpyxl\\.load_workbook\\('program/Detailed WebConf 2026 Program\\.xlsx', data_only=False\\)\nprint\\('SHEETS:', wb\\.sheetnames\\)\nfor ws in wb\\.worksheets:\n    print\\(ws\\.title, 'state=', ws\\.sheet_state\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
