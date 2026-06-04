@@ -1,40 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calls - The Web Conference 2026</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/tab-menu.css">
-    <link rel="stylesheet" href="css/dropdown-menu.css">
-    <link rel="stylesheet" href="css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-        <!-- Header will be loaded here by JavaScript -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tab-menu.css" />
+    <link rel="stylesheet" href="css/dropdown-menu.css" />
+    <link rel="stylesheet" href="css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .important-dates-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
-
+    <!-- 
     <div class="page-header">
         <div class="container">
             <h1>Calls for Submissions</h1>
         </div>
-    </div>
+    </div> -->
 
     <div class="page-content">
-        <div class="container">
-            <section class="call-section">
-                <h2>Call for Papers</h2>
-                <ul class="important-dates-list" id="research-track-dates">
-                    <!-- Dates will be loaded dynamically from data/important-dates.json -->
-                    <li><strong>Abstract deadline:</strong> <span data-date="research_track.abstract_deadline">September 30, 2025</span></li>
-                    <li><strong>Full paper deadline:</strong> <span data-date="research_track.full_paper_deadline">October 7, 2025</span></li>
-                    <li><strong>Rebuttal period:</strong> <span data-date="research_track.rebuttal_period">November 24 – December 1, 2025</span></li>
-                    <li><strong>Notification of acceptance:</strong> <span data-date="research_track.notification">January 13, 2026</span></li>
-                    <li><strong>Camera ready:</strong> <span data-date="research_track.camera_ready">January 25, 2026</span></li>
-                    <li><strong>Conference:</strong> <span data-date="conference.conference_period">June 29 – July 3, 2026</span></li>
-            </section>
-        </div>
+      <div class="container">
+        <h2 class="month-header">Call for Papers</h2>
+        <table class="dates-table">
+          <tr>
+            <td><b>Abstract deadline</b></td>
+            <td>September 30, 2025</td>
+          </tr>
+          <tr>
+            <td><b>Full paper deadline</b></td>
+            <td>October 7, 2025</td>
+          </tr>
+          <tr>
+            <td><b>Rebuttal period</b></td>
+            <td>November 24 – December 1, 2025</td>
+          </tr>
+          <tr>
+            <td><b>Notification of acceptance</b></td>
+            <td>January 13, 2026</td>
+          </tr>
+          <tr>
+            <td><b>Camera ready</b></td>
+            <td>January 25, 2026</td>
+          </tr>
+          <tr>
+            <td><b>Conference</b></td>
+            <td>June 29 – July 3, 2026</td>
+          </tr>
+        </table>
+        <!-- <section class="call-section"> -->
+
+        <!-- Dates will be loaded dynamically from data/important-dates.json -->
+      </div>
     </div>
 
     <div id="footer-placeholder"></div>
@@ -44,5 +73,5 @@
     <script src="js/header-loader.js"></script>
     <script src="js/dates-loader.js"></script>
     <script src="js/footer-loader.js"></script>
-    </body>
+  </body>
 </html>
