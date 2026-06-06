@@ -930,7 +930,7 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
 
         toggle = f' data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}"'
         papers_section = f'<div class="collapse" id="{collapse_id}"><div class="papers-container">{detail_content}</div></div>'
-        header_extra = f'<button class="papers-toggle"{toggle}><span class="papers-count">details</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
+        header_extra = f'<button class="papers-toggle"{toggle}><span class="papers-count">Details</span><i class="fas fa-chevron-down toggle-icon"></i></button>'
         if is_workshop and proceedings_papers:
             proceedings_toggle = f' data-bs-toggle="collapse" data-bs-target="#{proceedings_collapse_id}" aria-expanded="false" aria-controls="{proceedings_collapse_id}"'
             proceedings_html = render_paper_list_html(proceedings_papers)
@@ -996,7 +996,7 @@ def render_keynote_block_full(event, day, slot, slot_idx):
     action_html = (
         f'<div class="event-actions">'
         f'<button class="papers-toggle keynote-details-btn" data-bs-toggle="collapse" data-bs-target="#{collapse_id}" aria-expanded="false" aria-controls="{collapse_id}">'
-        f'<span class="papers-count">details</span><i class="fas fa-chevron-down toggle-icon"></i>'
+        f'<span class="papers-count">Details</span><i class="fas fa-chevron-down toggle-icon"></i>'
         f'</button>'
         f'{cal_link}'
         f'</div>'
