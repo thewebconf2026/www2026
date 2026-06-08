@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration – The Web Conference 2026</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/tab-menu.css">
-    <link rel="stylesheet" href="../css/dropdown-menu.css">
-    <link rel="stylesheet" href="../css/header-layout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/tab-menu.css" />
+    <link rel="stylesheet" href="../css/dropdown-menu.css" />
+    <link rel="stylesheet" href="../css/header-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
       table {
         width: 100%;
@@ -19,11 +22,12 @@
         border: 1px solid #ddd;
         border-radius: 12px;
       }
-      h1, h2 {
-  border-bottom: 1px solid #4d4d4d;
-  padding-bottom: 8px;             /* 文字和线的距离 */
-  margin-bottom: 18px;             /* 标题和下面内容的距离 */
-}
+      h1,
+      h2 {
+        border-bottom: 1px solid #4d4d4d;
+        padding-bottom: 8px; /* 文字和线的距离 */
+        margin-bottom: 18px; /* 标题和下面内容的距离 */
+      }
       caption {
         text-align: left;
         font-weight: 700;
@@ -43,31 +47,32 @@
         border-top: 1px solid #ddd;
         vertical-align: top;
       }
-      td.num, th.num {
+      td.num,
+      th.num {
         text-align: right;
         font-variant-numeric: tabular-nums;
       }
       .accordion.active {
-  color: #6a00ff; /* 展开状态保持颜色 */
-}
-.accordion:hover {
-  color: #6a00ff; /* 鼠标放上去时变蓝 */
-}
+        color: #6a00ff; /* 展开状态保持颜色 */
+      }
+      .accordion:hover {
+        color: #6a00ff; /* 鼠标放上去时变蓝 */
+      }
       a {
         color: #6a00ff;
       }
       a:hover {
         color: #00e5ff;
       }
-.accordion::after {
-  content: '\25BC'; /* 下箭头 */
-  font-size: 14px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s;
-}
+      .accordion::after {
+        content: "\25BC"; /* 下箭头 */
+        font-size: 14px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s;
+      }
       .notice {
         background: #f7f7f7;
         border: 1px solid #ddd;
@@ -81,235 +86,370 @@
         margin-bottom: 4px;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
     <section class="page-content">
-        <div class="container">
-            <h1>Registration</h1>
+      <div class="container">
+        <h1>Registration</h1>
 
-Please carefully read the instructions below before proceeding to the <a href="https://sprintexpo.eventsair.com/acmweb2026/confregistration/Site/Register" target="_blank">registration site</a>.
-            <div class="notice">
-              <strong>Important:</strong>
-              <p>The Web Conference has been postponed to June 29 - July 3, 2026. The decision on whether the conference will be held in person or virtually will be made in May and announced on the conference website.</p>
-              <!-- <strong>Please note that the registration site is not yet open.</strong> -->
-              <!-- <strong>The <a href="https://sprintexpo.eventsair.com/acmweb2026/confregistration " target="_blank">registration site</a> is now open.</strong> -->
-                           <p>  Authors are reminded that they need to register by <b>March 30, 2026</b>, using the code indicated in the <a href="https://www2026.thewebconf.org/accepted.html"><b>Accepted menu</b></a>.
-  Papers without a valid accompanying registration and without an author presenting the paper in the allocated session may be excluded from the proceedings. Please refer to the<a href="https://www2026.thewebconf.org/attending/registration.html#authors-accepted"><b> Authors of Accepted Papers</b></a> section below for details.
+        Please carefully read the instructions below before proceeding to the
+        <a
+          href="https://sprintexpo.eventsair.com/acmweb2026/confregistration/Site/Register"
+          target="_blank"
+          >registration site</a
+        >.
+        <div class="notice">
+          <strong>Important:</strong>
+          <p>
+            The Web Conference has been postponed to June 29 - July 3, 2026. The
+            decision on whether the conference will be held in person or
+            virtually will be made in May and announced on the conference
+            website.
+          </p>
+          <!-- <strong>Please note that the registration site is not yet open.</strong> -->
+          <!-- <strong>The <a href="https://sprintexpo.eventsair.com/acmweb2026/confregistration " target="_blank">registration site</a> is now open.</strong> -->
+          <p>
+            Authors are reminded that they need to register by
+            <b>March 30, 2026</b>, using the code indicated in the
+            <a href="https://www2026.thewebconf.org/accepted.html"
+              ><b>Accepted menu</b></a
+            >. Papers without a valid accompanying registration and without an
+            author presenting the paper in the allocated session may be excluded
+            from the proceedings. Please refer to the<a
+              href="https://www2026.thewebconf.org/attending/registration-virtual.html"
+              ><b> Authors of Accepted Papers</b></a
+            >
+            section below for details.
 
-              <!-- <p>We apologize for the delay and are pleased to share the official registration fees below to help attendees who require institutional approval, plan and obtain authorization in advance of the site opening.</p> -->
-            </div>
-
-            <!-- <p><strong>Important:</strong> Authors must register by the deadline of <strong>February 24, 2026</strong>. Papers without a valid accompanying registration and without an author presenting in person the paper in the allocated session may be excluded from the proceedings. Check details in the <a href="#authors-accepted"><b>Authors of Accepted Papers</b></a> section below.</p> -->
-
-            <p>For any questions wrt registrations, please contact <a href="mailto:webconf2026@wearemci.com">webconf2026@wearemci.com</a>.</p>
-            <!-- <p>For any questions, please contact <a href="mailto:registration-www2026@acm.org">registration-www2026@acm.org</a>.</p> -->
-
-            <h2>Registration Fees</h2>
-            <p style="color: #555;">All fees are in USD or AED inclusive of all taxes as detailed below.</p>
-
-            <h3>Early Bird (Closes April 30, 2026, UAE Time)</h3>
-            <!-- <p style="color: #ff0000;">The dates below will be updated once the new dates of the conference are finalized.</p> -->
-            <table>
-              <!-- <caption>Early Bird Fees</caption> -->
-              <thead>
-                <tr>
-                  <th rowspan="2">Registration Type</th>
-                  <th colspan="2">Passport (5 days)</th>
-                  <th colspan="2">Main Conference and Demos (Day 3-5)</th>
-                  <th colspan="2">Workshops, Tutorials, PhD Symposium, Web4All (Days 1-2)</th>
-                </tr>
-                <tr>
-                  <th class="num">USD</th><th class="num">AED</th>
-                  <th class="num">USD</th><th class="num">AED</th>
-                  <th class="num">USD</th><th class="num">AED</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ACM member</td>
-                  <td class="num">1450</td><td class="num">5325</td>
-                  <td class="num">1100</td><td class="num">4040</td>
-                  <td class="num">600</td><td class="num">2204</td>
-                </tr>
-                <tr>
-                  <td>Non-member</td>
-                  <td class="num">1600</td><td class="num">5876</td>
-                  <td class="num">1200</td><td class="num">4407</td>
-                  <td class="num">650</td><td class="num">2387</td>
-                </tr>
-                <tr>
-                  <td>Student member</td>
-                  <td class="num">950</td><td class="num">3489</td>
-                  <td class="num">750</td><td class="num">2754</td>
-                  <td class="num">500</td><td class="num">1836</td>
-                </tr>
-                <tr>
-                  <td>Student non-member</td>
-                  <td class="num">1100</td><td class="num">4040</td>
-                  <td class="num">850</td><td class="num">3122</td>
-                  <td class="num">500</td><td class="num">1836</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h3>Standard (Opens May 1, 2026, Closes May 31, 2026, UAE Time)</h3>
-            <table>
-              <!-- <caption>Standard Fees</caption> -->
-              <thead>
-                <tr>
-                  <th rowspan="2">Registration Type</th>
-                  <th colspan="2">Passport (5 days)</th>
-                  <th colspan="2">Main Conference and Demos (Day 3-5)</th>
-                  <th colspan="2">Workshops, Tutorials, PhD Symposium, Web4All (Days 1-2)</th>
-                </tr>
-                <tr>
-                  <th class="num">USD</th><th class="num">AED</th>
-                  <th class="num">USD</th><th class="num">AED</th>
-                  <th class="num">USD</th><th class="num">AED</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ACM member</td>
-                  <td class="num">1550</td><td class="num">5692</td>
-                  <td class="num">1200</td><td class="num">4407</td>
-                  <td class="num">650</td><td class="num">2387</td>
-                </tr>
-                <tr>
-                  <td>Non-member</td>
-                  <td class="num">1700</td><td class="num">6243</td>
-                  <td class="num">1300</td><td class="num">4774</td>
-                  <td class="num">700</td><td class="num">2571</td>
-                </tr>
-                <tr>
-                  <td>Student member</td>
-                  <td class="num">1050</td><td class="num">3856</td>
-                  <td class="num">800</td><td class="num">2938</td>
-                  <td class="num">550</td><td class="num">2020</td>
-                </tr>
-                <tr>
-                  <td>Student non-member</td>
-                  <td class="num">1200</td><td class="num">4407</td>
-                  <td class="num">900</td><td class="num">3305</td>
-                  <td class="num">550</td><td class="num">2020</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h3>Late/ Onsite (Opens June 1, 2026, July 3, 2026, UAE Time)</h3>
-            <table>
-              <!-- <caption>Late / Onsite Fees</caption> -->
-              <thead>
-                <tr>
-                  <th rowspan="2">Registration Type</th>
-                  <th colspan="2">Passport (5 days)</th>
-                  <th colspan="2">Main Conference and Demos (Day 3-5)</th>
-                  <th colspan="2">Workshops, Tutorials, PhD Symposium, Web4All (Days 1-2)</th>
-                </tr>
-                <tr>
-                  <th class="num">USD</th><th class="num">AED</th>
-                  <th class="num">USD</th><th class="num">AED</th>
-                  <th class="num">USD</th><th class="num">AED</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ACM member</td>
-                  <td class="num">1700</td><td class="num">6243</td>
-                  <td class="num">1400</td><td class="num">5142</td>
-                  <td class="num">700</td><td class="num">2571</td>
-                </tr>
-                <tr>
-                  <td>Non-member</td>
-                  <td class="num">1900</td><td class="num">6978</td>
-                  <td class="num">1500</td><td class="num">5509</td>
-                  <td class="num">750</td><td class="num">2754</td>
-                </tr>
-                <tr>
-                  <td>Student member</td>
-                  <td class="num">1250</td><td class="num">4591</td>
-                  <td class="num">850</td><td class="num">3122</td>
-                  <td class="num">600</td><td class="num">2204</td>
-                </tr>
-                <tr>
-                  <td>Student non-member</td>
-                  <td class="num">1350</td><td class="num">4958</td>
-                  <td class="num">950</td><td class="num">3489</td>
-                  <td class="num">600</td><td class="num">2204</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h2>Inclusions</h2>
-
-            <h3>Workshops, Tutorials, Web4All (Days 1 to 2)</h3>
-            <p>Includes: access to presentations Days 1 and 2; access to the conference proceedings via the ACM Digital Library; coffee breaks and lunches for the 2 days.</p>
-
-            <h3>Main Conference (Days 3 to 5)</h3>
-            <p>Includes: access to conference presentations for Days 3 , 4 and 5; access to the conference proceedings via the ACM Digital Library; attendance at the Welcome Reception, coffee breaks and lunches for the 3 days and the conference banquet. Please note that additional banquet tickets are available for purchase.</p>
-
-            <h3>Passport (All 5 Days)</h3>
-            <p>Includes: all elements of the two categories above. </p>
-
-            <p style="color: #555;">The Conference Committee reserves the right to add or remove functions and activities.</p>
-
-            <h2 id="authors-accepted">Authors of Accepted Papers</h2>
-            <p>As an author, during registration, you will be asked to enter the unique paper ID that was provided to you by Sheridan Publishing when you uploaded your camera-ready copy. This ID can also be found under the relevant track in the <a href="https://www2026.thewebconf.org/accepted.html">Accepted</a> page of the conference website.</p>
-            <ul>
-              <li>Each paper in the main Research, Industry, Short Papers, Web4Good, Demos and History of the Web tracks will be presented during Day 3 to Day 5, and as such, should be associated with a Main Conference or Passport regular rate (non-student) registration. </li>
-              <li>Each workshop paper presented during Day 1 or Day 2 should be associated with a Workshop/Tutorials/PhD Symposium/Web4All  or Passport regular rate (non-student) registration. </li>
-              <li>A Passport Registration (5-Days) can cover at most 1 paper in Day 1 to Day 2 and 1 paper in Day 3 to Day 5.</li>
-            </ul>
-            <!-- <p>During registration, you will be asked to enter the unique paper ID that was provided to you by Sheridan Publishing when you uploaded your camera-ready copy.</p> -->
-            <p>If you have authored multiple papers, do not enter multiple papers in any paper or workshop paper id field, as you will need a dedicated registration for each paper according to the guidelines above, namely: 1 main Conference/Passport registration for a main Conference paper, 1 Workshop registration for a Workshop paper, 1 Passport registration for 1 main Conference + 1 Workshop paper.</p>
-
-            <h2>Eligibility for Special Rates</h2>
-            <p>To be eligible for Student Registration rates, attendees must be enrolled students undertaking full-time study, and be able to provide evidence of that status.</p>
-            <p>To be eligible for ACM Member Registration rates, attendees must be current members of ACM or SIGWEB, and be able to provide evidence of that status.</p>
-
-            <h2>Cancellation Policy</h2>
-            <p><strong>Author registration is non-refundable.</strong></p>
-            <p>For other categories, 100% refund will be given for cancellation requests submitted before March 31, 2026, 11:59 PM Dubai Time (GMT + 4).</p>
-            <p>All cancellation requests must be submitted via email to <a href="mailto:webconf2026@wearemci.com">webconf2026@wearemci.com</a>.</p>
-            <p>Refunds will be processed after the conference.</p>
+            <!-- <p>We apologize for the delay and are pleased to share the official registration fees below to help attendees who require institutional approval, plan and obtain authorization in advance of the site opening.</p> -->
+          </p>
         </div>
+
+        <!-- <p><strong>Important:</strong> Authors must register by the deadline of <strong>February 24, 2026</strong>. Papers without a valid accompanying registration and without an author presenting in person the paper in the allocated session may be excluded from the proceedings. Check details in the <a href="#authors-accepted"><b>Authors of Accepted Papers</b></a> section below.</p> -->
+
+        <p>
+          For any questions wrt registrations, please contact
+          <a href="mailto:webconf2026@wearemci.com">webconf2026@wearemci.com</a
+          >.
+        </p>
+        <!-- <p>For any questions, please contact <a href="mailto:registration-www2026@acm.org">registration-www2026@acm.org</a>.</p> -->
+
+        <h2>Registration Fees</h2>
+        <p style="color: #555">
+          All fees are in USD or AED inclusive of all taxes as detailed below.
+        </p>
+
+        <h3>Early Bird (Closes April 30, 2026, UAE Time)</h3>
+        <!-- <p style="color: #ff0000;">The dates below will be updated once the new dates of the conference are finalized.</p> -->
+        <table>
+          <!-- <caption>Early Bird Fees</caption> -->
+          <thead>
+            <tr>
+              <th rowspan="2">Registration Type</th>
+              <th colspan="2">Passport (5 days)</th>
+              <th colspan="2">Main Conference and Demos (Day 3-5)</th>
+              <th colspan="2">
+                Workshops, Tutorials, PhD Symposium, Web4All (Days 1-2)
+              </th>
+            </tr>
+            <tr>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ACM member</td>
+              <td class="num">1450</td>
+              <td class="num">5325</td>
+              <td class="num">1100</td>
+              <td class="num">4040</td>
+              <td class="num">600</td>
+              <td class="num">2204</td>
+            </tr>
+            <tr>
+              <td>Non-member</td>
+              <td class="num">1600</td>
+              <td class="num">5876</td>
+              <td class="num">1200</td>
+              <td class="num">4407</td>
+              <td class="num">650</td>
+              <td class="num">2387</td>
+            </tr>
+            <tr>
+              <td>Student member</td>
+              <td class="num">950</td>
+              <td class="num">3489</td>
+              <td class="num">750</td>
+              <td class="num">2754</td>
+              <td class="num">500</td>
+              <td class="num">1836</td>
+            </tr>
+            <tr>
+              <td>Student non-member</td>
+              <td class="num">1100</td>
+              <td class="num">4040</td>
+              <td class="num">850</td>
+              <td class="num">3122</td>
+              <td class="num">500</td>
+              <td class="num">1836</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Standard (Opens May 1, 2026, Closes May 31, 2026, UAE Time)</h3>
+        <table>
+          <!-- <caption>Standard Fees</caption> -->
+          <thead>
+            <tr>
+              <th rowspan="2">Registration Type</th>
+              <th colspan="2">Passport (5 days)</th>
+              <th colspan="2">Main Conference and Demos (Day 3-5)</th>
+              <th colspan="2">
+                Workshops, Tutorials, PhD Symposium, Web4All (Days 1-2)
+              </th>
+            </tr>
+            <tr>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ACM member</td>
+              <td class="num">1550</td>
+              <td class="num">5692</td>
+              <td class="num">1200</td>
+              <td class="num">4407</td>
+              <td class="num">650</td>
+              <td class="num">2387</td>
+            </tr>
+            <tr>
+              <td>Non-member</td>
+              <td class="num">1700</td>
+              <td class="num">6243</td>
+              <td class="num">1300</td>
+              <td class="num">4774</td>
+              <td class="num">700</td>
+              <td class="num">2571</td>
+            </tr>
+            <tr>
+              <td>Student member</td>
+              <td class="num">1050</td>
+              <td class="num">3856</td>
+              <td class="num">800</td>
+              <td class="num">2938</td>
+              <td class="num">550</td>
+              <td class="num">2020</td>
+            </tr>
+            <tr>
+              <td>Student non-member</td>
+              <td class="num">1200</td>
+              <td class="num">4407</td>
+              <td class="num">900</td>
+              <td class="num">3305</td>
+              <td class="num">550</td>
+              <td class="num">2020</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Late/ Onsite (Opens June 1, 2026, July 3, 2026, UAE Time)</h3>
+        <table>
+          <!-- <caption>Late / Onsite Fees</caption> -->
+          <thead>
+            <tr>
+              <th rowspan="2">Registration Type</th>
+              <th colspan="2">Passport (5 days)</th>
+              <th colspan="2">Main Conference and Demos (Day 3-5)</th>
+              <th colspan="2">
+                Workshops, Tutorials, PhD Symposium, Web4All (Days 1-2)
+              </th>
+            </tr>
+            <tr>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+              <th class="num">USD</th>
+              <th class="num">AED</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ACM member</td>
+              <td class="num">1700</td>
+              <td class="num">6243</td>
+              <td class="num">1400</td>
+              <td class="num">5142</td>
+              <td class="num">700</td>
+              <td class="num">2571</td>
+            </tr>
+            <tr>
+              <td>Non-member</td>
+              <td class="num">1900</td>
+              <td class="num">6978</td>
+              <td class="num">1500</td>
+              <td class="num">5509</td>
+              <td class="num">750</td>
+              <td class="num">2754</td>
+            </tr>
+            <tr>
+              <td>Student member</td>
+              <td class="num">1250</td>
+              <td class="num">4591</td>
+              <td class="num">850</td>
+              <td class="num">3122</td>
+              <td class="num">600</td>
+              <td class="num">2204</td>
+            </tr>
+            <tr>
+              <td>Student non-member</td>
+              <td class="num">1350</td>
+              <td class="num">4958</td>
+              <td class="num">950</td>
+              <td class="num">3489</td>
+              <td class="num">600</td>
+              <td class="num">2204</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Inclusions</h2>
+
+        <h3>Workshops, Tutorials, Web4All (Days 1 to 2)</h3>
+        <p>
+          Includes: access to presentations Days 1 and 2; access to the
+          conference proceedings via the ACM Digital Library; coffee breaks and
+          lunches for the 2 days.
+        </p>
+
+        <h3>Main Conference (Days 3 to 5)</h3>
+        <p>
+          Includes: access to conference presentations for Days 3 , 4 and 5;
+          access to the conference proceedings via the ACM Digital Library;
+          attendance at the Welcome Reception, coffee breaks and lunches for the
+          3 days and the conference banquet. Please note that additional banquet
+          tickets are available for purchase.
+        </p>
+
+        <h3>Passport (All 5 Days)</h3>
+        <p>Includes: all elements of the two categories above.</p>
+
+        <p style="color: #555">
+          The Conference Committee reserves the right to add or remove functions
+          and activities.
+        </p>
+
+        <h2 id="authors-accepted">Authors of Accepted Papers</h2>
+        <p>
+          As an author, during registration, you will be asked to enter the
+          unique paper ID that was provided to you by Sheridan Publishing when
+          you uploaded your camera-ready copy. This ID can also be found under
+          the relevant track in the
+          <a href="https://www2026.thewebconf.org/accepted.html">Accepted</a>
+          page of the conference website.
+        </p>
+        <ul>
+          <li>
+            Each paper in the main Research, Industry, Short Papers, Web4Good,
+            Demos and History of the Web tracks will be presented during Day 3
+            to Day 5, and as such, should be associated with a Main Conference
+            or Passport regular rate (non-student) registration.
+          </li>
+          <li>
+            Each workshop paper presented during Day 1 or Day 2 should be
+            associated with a Workshop/Tutorials/PhD Symposium/Web4All or
+            Passport regular rate (non-student) registration.
+          </li>
+          <li>
+            A Passport Registration (5-Days) can cover at most 1 paper in Day 1
+            to Day 2 and 1 paper in Day 3 to Day 5.
+          </li>
+        </ul>
+        <!-- <p>During registration, you will be asked to enter the unique paper ID that was provided to you by Sheridan Publishing when you uploaded your camera-ready copy.</p> -->
+        <p>
+          If you have authored multiple papers, do not enter multiple papers in
+          any paper or workshop paper id field, as you will need a dedicated
+          registration for each paper according to the guidelines above, namely:
+          1 main Conference/Passport registration for a main Conference paper, 1
+          Workshop registration for a Workshop paper, 1 Passport registration
+          for 1 main Conference + 1 Workshop paper.
+        </p>
+
+        <h2>Eligibility for Special Rates</h2>
+        <p>
+          To be eligible for Student Registration rates, attendees must be
+          enrolled students undertaking full-time study, and be able to provide
+          evidence of that status.
+        </p>
+        <p>
+          To be eligible for ACM Member Registration rates, attendees must be
+          current members of ACM or SIGWEB, and be able to provide evidence of
+          that status.
+        </p>
+
+        <h2>Cancellation Policy</h2>
+        <p><strong>Author registration is non-refundable.</strong></p>
+        <p>
+          For other categories, 100% refund will be given for cancellation
+          requests submitted before March 31, 2026, 11:59 PM Dubai Time (GMT +
+          4).
+        </p>
+        <p>
+          All cancellation requests must be submitted via email to
+          <a href="mailto:webconf2026@wearemci.com">webconf2026@wearemci.com</a
+          >.
+        </p>
+        <p>Refunds will be processed after the conference.</p>
+      </div>
     </section>
 
     <div id="footer-placeholder"></div>
 
     <script src="../js/main.js"></script>
     <script>
-        // Add dropdown toggle functionality for mobile
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const tabMenu = document.querySelector('.tab-menu');
-            
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    tabMenu.classList.toggle('active');
-                });
-            }
-            
-            // For mobile: toggle dropdown on tap
-            if (window.innerWidth <= 768) {
-                const dropdownLinks = document.querySelectorAll('.tab-menu a.has-dropdown');
-                
-                dropdownLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            this.parentNode.classList.toggle('active');
-                        }
-                    });
-                });
-            }
-        });
+      // Add dropdown toggle functionality for mobile
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+        const tabMenu = document.querySelector(".tab-menu");
+
+        if (mobileMenuToggle) {
+          mobileMenuToggle.addEventListener("click", function () {
+            tabMenu.classList.toggle("active");
+          });
+        }
+
+        // For mobile: toggle dropdown on tap
+        if (window.innerWidth <= 768) {
+          const dropdownLinks = document.querySelectorAll(
+            ".tab-menu a.has-dropdown",
+          );
+
+          dropdownLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentNode.classList.toggle("active");
+              }
+            });
+          });
+        }
+      });
     </script>
 
     <script src="../js/header-loader.js"></script>
     <script src="../js/footer-loader.js"></script>
-    </body>
+  </body>
 </html>
