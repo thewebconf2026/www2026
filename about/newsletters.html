@@ -241,6 +241,54 @@
             let newsletters = [];
             let currentNewsletter = null;
 
+            const getNewsletterNumber = (title) => {
+              const match = title.match(/#(\d+)/);
+              return match ? Number.parseInt(match[1], 10) : Number.MAX_SAFE_INTEGER;
+            };
+
+            const formatNewsletterLine = (line) => {
+              let processedLine = line.replace(/<br>/g, "");
+              const markdownLinks = [];
+
+              processedLine = processedLine.replace(
+                /\[([^\]]+)\]\(([^)]+)\)/g,
+                (match, text, url) => {
+                  const placeholder = `__NEWSLETTER_LINK_${markdownLinks.length}__`;
+                  markdownLinks.push(
+                    `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`
+                  );
+                  return placeholder;
+                }
+              );
+
+              processedLine = processedLine.replace(
+                /(https?:\/\/[^\s<\)]+)/g,
+                (match, url) =>
+                  `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
+              );
+
+              processedLine = processedLine.replace(
+                /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,
+                (match, email) => `<a href="mailto:${email}">${email}</a>`
+              );
+
+              processedLine = processedLine.replace(
+                /\*\*(.*?)\*\*/g,
+                "<strong>$1</strong>"
+              );
+              processedLine = processedLine.replace(/\*(.*?)\*/g, "<em>$1</em>");
+              processedLine = processedLine.replace(/`([^`]+)`/g, "<code>$1</code>");
+
+              markdownLinks.forEach((link, index) => {
+                processedLine = processedLine.replace(
+                  `__NEWSLETTER_LINK_${index}__`,
+                  link
+                );
+              });
+
+              return processedLine;
+            };
+
             lines.forEach((line) => {
               if (line.startsWith("# ")) {
                 if (currentNewsletter) {
@@ -259,6 +307,11 @@
               newsletters.push(currentNewsletter);
             }
 
+            newsletters.sort(
+              (left, right) =>
+                getNewsletterNumber(left.title) - getNewsletterNumber(right.title)
+            );
+
             newsletters.forEach((newsletter, index) => {
               const div = document.createElement("div");
               div.className = "newsletter-item";
@@ -275,38 +328,7 @@
                 if (line.startsWith("## ")) {
                   contentHtml += `<h3>${line.substring(3).trim()}</h3>`;
                 } else if (line.trim() !== "") {
-                  let processedLine = line;
-                  processedLine = processedLine.replace(/<br>/g, "");
-                  processedLine = processedLine.replace(
-                    /\*\*(.*?)\*\*/g,
-                    "<strong>$1</strong>"
-                  );
-                  processedLine = processedLine.replace(
-                    /\*(.*?)\*/g,
-                    "<em>$1</em>"
-                  );
-                  processedLine = processedLine.replace(
-                    /`([^`]+)`/g,
-                    "<code>$1</code>"
-                  );
-
-                  processedLine = processedLine.replace(
-                    /\[([^\]]+)\]\(([^)]+)\)/g,
-                    (match, text, url) =>
-                      `<a href="${url}" target="_blank">${text}</a>`
-                  );
-
-                  processedLine = processedLine.replace(
-                    /(https?:\/\/[^\s\)]+)/g,
-                    (match, url) =>
-                      `<a href="${url}" target="_blank">${url}</a>`
-                  );
-
-                  processedLine = processedLine.replace(
-                    /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,
-                    (match, email) => `<a href="mailto:${email}">${email}</a>`
-                  );
-
+                  const processedLine = formatNewsletterLine(line);
                   contentHtml += `<p>${processedLine}</p>`;
                 }
               });

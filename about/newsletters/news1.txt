@@ -81,3 +81,34 @@ The General Chairs
 
 
 Hakim Hacid (TII, UAE) and Yoelle Maarek (TII, Israel)
+
+
+# Newsletter #3 - Conference Transition to a Virtual Event
+
+## Going virtual
+
+The ACM Web Conference 2026 will be held virtually from 29 June to 3 July 2026. While we had been looking forward to welcoming participants to Dubai, UAE, the conference will now take place online. This virtual format will broaden accessibility and enable global participation in this premier forum for research and innovation shaping the future of the Web.
+
+In light of the transition to a virtual format, **registration fees have been significantly reduced!** If you have not yet registered, we encourage you to do so via the [Conference Registration page](https://www2026.thewebconf.org/attending/registration-virtual.html).
+
+## Program released
+
+We are pleased to announce that the [full program](https://www2026.thewebconf.org/program/overview.html) of The ACM Web Conference 2026 is now available! The conference will feature research sessions, posters and demonstrations, a PhD symposium for junior scholars, workshops, tutorials, and an industry track for practitioners. Attendees can look forward to engaging keynote speakers, panel discussions, special tracks, and the co-located Web4All conference.
+
+## Conference proceedings
+
+The Main Proceedings and Companion Proceedings have been published in the ACM Digital Library. The [Main Proceedings](https://dl.acm.org/doi/proceedings/10.1145/3774904) feature research papers, short papers, industry papers, and Web4Good papers. The [Companion Proceedings](https://dl.acm.org/doi/proceedings/10.1145/3774905) feature tutorial abstracts, demonstrations, History of the Web content, and selected workshop papers.
+
+## Registration and refunds
+
+Registration fees for the virtual conference have been revised. Please visit the [Registration page](https://www2026.thewebconf.org/attending/registration-virtual.html) for updated fee information and details on the refund policy for those who had previously registered for the in-person event.
+
+## E-posters
+
+Authors may begin preparing their e-posters using the provided [template](https://docs.google.com/presentation/d/1ojb7Xc1l9kOO2LY7xLCBSVxmD4LpaRcG/edit?usp=sharing&ouid=115965792837731019535&rtpof=true&sd=true). **E-posters and supplementary materials must be submitted by June 25** to be included on the virtual platform. Registered authors will receive submission instructions via email from our Professional Conference Organizer (PCO), MCI. Please consult the [e-poster page](https://www2026.thewebconf.org/accepted/e-posters.html) for detailed guidelines and submission requirements, and remember that presenting your poster virtually during your designated session is mandatory.
+
+We look forward to welcoming you virtually on June 29th.
+
+The General Chairs
+
+Hakim Hacid (TII, UAE) and Yoelle Maarek (TII, Israel)
