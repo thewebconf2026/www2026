@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,23 +12,84 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <style>
+      .sponsor-tier {
+        margin: 40px 0;
+        text-align: center; 
+      }
+
+      .sponsor-tier h2 {
+        margin-bottom: 20px;
+      }
+
+      .sponsor-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .sponsor-logo {
+        max-width: 220px;
+        max-height: 120px;
+        object-fit: contain;
+      }
+    </style>
   </head>
+
   <body>
     <!-- Header will be loaded here by JavaScript -->
     <div id="header-placeholder"></div>
 
-    <div class="page-header">
-      <div class="container">
-        <h1>Sponsors and supporters</h1>
-      </div>
-    </div>
+    <!-- <div class="page-header"></div> -->
 
     <div class="page-content">
       <div class="container">
-        <section class="coming-soon-section">
-          <h2>Coming Soon...</h2>
-          <!-- <p>The list of accepted papers for The Web Conference 2026 will be announced after the review process is complete. Please check back later for updates.</p> -->
-        </section>
+        <h1>Sponsors</h1>
+
+        <div class="sponsor-tier">
+          <h2>Diamond Sponsor</h2>
+          <img
+            src="./logos/Technology_Innovation_Institute_Logo.jpg"
+            alt="TII Logo"
+            class="sponsor-logo"
+            style="background-color: blueviolet"
+          />
+        </div>
+
+        <div class="sponsor-tier">
+          <h2>Silver Sponsors</h2>
+          <div class="sponsor-logos">
+            <img
+              src="./logos/Fujitsu-Logo.svg"
+              alt="Fujitsu Logo"
+              class="sponsor-logo"
+              width="50%"
+              style="padding-top: 1.2rem; padding-right: 3.2rem"
+            />
+            <img
+              src="./logos/Baidu.svg.png"
+              alt="Baidu Logo"
+              class="sponsor-logo"
+            />
+            <img
+              src="./logos/google.png"
+              alt="Google Logo"
+              class="sponsor-logo"
+              style="padding-top: 1.4rem; padding-left: 2rem"
+            />
+          </div>
+        </div>
+
+        <div class="sponsor-tier">
+          <h2>Bronze Sponsor</h2>
+          <img
+            src="./logos/Elsevier.svg"
+            alt="Elsevier Logo"
+            class="sponsor-logo"
+          />
+        </div>
       </div>
     </div>
 
@@ -37,6 +98,6 @@
     <script src="../js/main.js"></script>
 
     <script src="../js/header-loader.js"></script>
-      <script src="../js/footer-loader.js"></script>
-    </body>
+    <script src="../js/footer-loader.js"></script>
+  </body>
 </html>
