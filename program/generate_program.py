@@ -416,6 +416,25 @@ TITLE_URL_MAP = build_title_url_map(wb)
 
 all_rows = [list(row) for row in ws.iter_rows(values_only=True)]
 
+
+def normalize_hall_label(value):
+    if value is None:
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+    hall_num = re.search(r'\d+', text)
+    if hall_num:
+        return f'Hall {hall_num.group(0)}'
+    return re.sub(r'\bRooms?\b', 'Hall', text, flags=re.IGNORECASE)
+
+
+HALL_LABELS = {}
+for col_idx in range(1, min(27, len(all_rows[1]))):
+    hall_label = normalize_hall_label(all_rows[1][col_idx])
+    if hall_label:
+        HALL_LABELS[col_idx] = hall_label
+
 last_row = 0
 for i, row in enumerate(all_rows):
     if any(v is not None for v in row):
@@ -562,6 +581,7 @@ while i <= last_row:
                 slot['sessions'].append({
                     'col_idx': c['col_idx'],
                     'code': c['code'],
+                    'hall': HALL_LABELS.get(c['col_idx']),
                     'name': None,
                     'papers': [],
                     'proceedings_papers': [],
@@ -723,6 +743,17 @@ def render_paper_list_html(papers):
             items.append(f'<li class="paper-item"><span class="paper-title-wrap">{title_link}</span></li>')
     return '<ul class="paper-list">' + ''.join(items) + '</ul>'
 
+
+def render_hall_label(sess):
+    hall = sess.get('hall')
+    if not hall:
+        return ''
+    code = str(sess.get('code') or '')
+    if code.startswith('Demo') or 'Poster' in code:
+        return ''
+    return f'<div class="session-hall">{esc(str(hall).upper())}</div>'
+
+
 def day_id(day):
     return day['date'].strftime('day-%Y-%m-%d')
 
@@ -866,11 +897,13 @@ def render_session_card_overview(sess):
     color_cls = track_color_class(code)
     tlabel = track_label(code)
     url = sess.get('url')
+    hall_html = render_hall_label(sess)
     title_html = esc(name)
     if url and not code.startswith('tut') and not code.startswith('wk'):
         title_html = f'<a href="{esc(url)}" target="_blank" class="session-ext-link">{esc(name)} <i class="fas fa-external-link-alt"></i></a>'
     return f'''<div class="session-card {color_cls}">
   <div class="session-track-badge">{esc(tlabel)}</div>
+  {hall_html}
   <div class="session-name">{title_html}</div>
 </div>'''
 
@@ -883,6 +916,7 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     papers = sess['papers']
     proceedings_papers = sess.get('proceedings_papers') or []
     url = sess.get('url')
+    hall_html = render_hall_label(sess)
     collapse_id = f"collapse-{slot_idx}-{sess_idx}"
     proceedings_collapse_id = f"collapse-acm-{slot_idx}-{sess_idx}"
 
@@ -957,6 +991,7 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     return f'''<div class="session-card {color_cls}">
   <div class="session-card-header">
     <div class="session-track-badge">{esc(tlabel)}</div>
+    {hall_html}
     <div class="session-name">{title_html}</div>
     {actions_html}
   </div>
@@ -1184,6 +1219,10 @@ PROGRAM_CSS = '''<style>
   display: inline-block; align-self: flex-start;
 }
 .session-name { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; line-height: 1.4; }
+.session-hall {
+  font-size: 1.02rem; font-weight: 900; text-transform: uppercase; letter-spacing: .7px;
+  color: #111; line-height: 1.1;
+}
 .session-ext-link { color: inherit; text-decoration: none; }
 .session-ext-link:hover { text-decoration: underline; }
 .session-ext-link .fas { font-size: 0.7rem; opacity: 0.7; }
