@@ -17,54 +17,22 @@
       <strong>Attention all registered attendees:</strong> You are all welcome
       to log in to the conference
       <a
-        href="https://aus01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.mciuaeevents.com%2Fevent%2Fthe-acm-web-conference-2026%2Fvirtual%2Flogin&amp;data=05%7C02%7Cecho.zhou%40deakin.edu.au%7C5afc27fd4007436a417408ded514ea9c%7Cd02378ec168846d585401c28b5f470f6%7C0%7C0%7C639182483016473246%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=MD3JSDyl6lNHi34jS4d1UtsMtSWBv1tQwUVKN81AKzY%3D&amp;reserved=0"
+        href="https://www.mciuaeevents.com/event/the-acm-web-conference-2026/virtual/login"
         >platform</a
       >
       using the Passcode you received in an email from MCI (<a
         href="mailto:webconf2026@wearemci.com"
         >webconf2026@wearemci.com</a
       >), titled "ACM Web Conference - Platform Access &amp; Joining
-      Instructions". We are looking forward to meeting you all virtually on our
-      platform!
+      Instructions".
     </p>
     <p>
       <strong>Attention All Presenters:</strong> Presentation instructions will
-      be sent only to the registered author associated with the paper.
-      <strong
-        >The registration exchange process must be completed by June 24, end of
-        day (UAE time).</strong
-      >
+      be sent only to the registered author associated with the paper. If you
+      are a coauthor presenting and do not see the Presenter button when
+      joining, not to worry, you can ask the Session chair to make you presenter
+      during your session.
     </p>
-    <details class="notice-details">
-      <summary>Show details</summary>
-      <p>
-        If a different co-author will be presenting, the registered author must
-        inform MCI by email (<a href="mailto:Webconf2026@wearemci.com"
-          >Webconf2026@wearemci.com</a
-        >), providing the co-author's name, email address, and paper ID, and CC
-        both the respective Track Chairs and the other co-authors. If the
-        presenting co-author is not registered, the registered author may
-        request a registration transfer by providing the same information.
-        Please note that, once the transfer is completed, the original
-        registered author will lose access to the virtual platform.
-      </p>
-      <p><strong>Also note:</strong></p>
-      <ol>
-        <li>
-          Instructions to eposters presenters have already been sent to the
-          registered author - for any change of presenter see above.
-        </li>
-        <li>
-          Instructions to eposters authors, oral presenters (including tutorials
-          and workshops) on how to connect to the virtual platform will be sent
-          by June 24.
-        </li>
-        <li>
-          Instructions to regular attendees on how to connect to the virtual
-          platform will be sent on June 25.
-        </li>
-      </ol>
-    </details>
   </div>
 </div>
 
@@ -389,16 +357,15 @@
     }
   }
 
-  // Initialize notice banner state from localStorage on page load
+  // Keep the notice banner open by default.
   function initializeNoticeBanner() {
     const content = document.getElementById("notice-content");
     const toggle = document.getElementById("notice-toggle");
-    const isCollapsed =
-      localStorage.getItem("notice-banner-collapsed") === "true";
 
-    if (isCollapsed && content && toggle) {
-      content.classList.add("collapsed");
-      toggle.classList.add("collapsed");
+    if (content && toggle) {
+      content.classList.remove("collapsed");
+      toggle.classList.remove("collapsed");
+      localStorage.removeItem("notice-banner-collapsed");
     }
   }
 
