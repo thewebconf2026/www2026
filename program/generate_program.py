@@ -483,6 +483,41 @@ def track_label(code):
     return c
 
 
+NUMBERED_TRACK_LABELS = {
+    'Econ': 'Econ',
+    'Graph': 'Graph',
+    'Search': 'Search',
+    'Semantics': 'Semantics',
+    'Social': 'Social',
+    'Systems': 'Systems',
+    'Security': 'Security',
+    'Mining': 'Mining',
+    'RecSys': 'RecSys',
+    'Industry': 'Industry',
+    'History': 'History',
+    'Web4Good': 'Web4Good',
+    'RespWeb': 'RespWeb',
+}
+
+
+def numbered_track_label(code):
+    if code is None:
+        return ''
+    c = str(code).strip()
+    match = re.match(r'^(.+?)(\d+)$', c)
+    if not match:
+        return ''
+    prefix, number = match.groups()
+    label = NUMBERED_TRACK_LABELS.get(prefix)
+    if not label:
+        return ''
+    return f'{label} {number.lstrip("0") or "0"}'
+
+
+def session_badge_label(code):
+    return numbered_track_label(code) or track_label(code)
+
+
 def track_color_class(code):
     if code is None:
         return 'track-other'
@@ -895,7 +930,7 @@ def render_session_card_overview(sess):
     code = sess['code']
     name = sess['name'] or track_label(code)
     color_cls = track_color_class(code)
-    tlabel = track_label(code)
+    tlabel = session_badge_label(code)
     url = sess.get('url')
     hall_html = render_hall_label(sess)
     title_html = esc(name)
@@ -912,7 +947,7 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     code = sess['code']
     name = sess['name'] or track_label(code)
     color_cls = track_color_class(code)
-    tlabel = track_label(code)
+    tlabel = session_badge_label(code)
     papers = sess['papers']
     proceedings_papers = sess.get('proceedings_papers') or []
     url = sess.get('url')
