@@ -779,6 +779,58 @@ def render_paper_list_html(papers):
     return '<ul class="paper-list">' + ''.join(items) + '</ul>'
 
 
+def split_session_display(value):
+    lines = [line.strip() for line in str(value or '').splitlines() if line.strip()]
+    if not lines:
+        return '', [], []
+
+    title = lines[0]
+    people = []
+    urls = []
+    for line in lines[1:]:
+        found_urls = re.findall(r'https?://\S+', line)
+        urls.extend(found_urls)
+        line_without_urls = re.sub(r'https?://\S+', '', line).strip()
+        if line_without_urls:
+            people.append(line_without_urls)
+
+    if re.match(r'https?://\S+$', title):
+        urls.insert(0, title)
+        title = ''
+
+    return title, people, urls
+
+
+def render_session_display(sess, link_title=False):
+    code = sess['code']
+    name = sess['name'] or track_label(code)
+    title, people, urls = split_session_display(name)
+    url = sess.get('url')
+
+    parts = []
+    if title:
+        title_html = esc(title)
+        if link_title and url:
+            title_html = f'<a href="{esc(url)}" target="_blank" class="session-ext-link">{title_html} <i class="fas fa-external-link-alt"></i></a>'
+        parts.append(f'<div class="session-name">{title_html}</div>')
+
+    for line in people:
+        parts.append(f'<div class="session-meta">{esc(line)}</div>')
+
+    display_urls = urls[:]
+    if url and not display_urls and not title:
+        display_urls.append(url)
+    for link in display_urls:
+        parts.append(
+            f'<div class="session-url"><a href="{esc(link)}" target="_blank" rel="noopener noreferrer">{esc(link)}</a></div>'
+        )
+
+    if not parts:
+        parts.append(f'<div class="session-name">{esc(name)}</div>')
+
+    return '\n  '.join(parts)
+
+
 def render_hall_label(sess):
     hall = sess.get('hall')
     if not hall:
@@ -928,18 +980,18 @@ def session_calendar_description(code, tlabel, name, papers, details=None, url='
 
 def render_session_card_overview(sess):
     code = sess['code']
-    name = sess['name'] or track_label(code)
     color_cls = track_color_class(code)
     tlabel = session_badge_label(code)
     url = sess.get('url')
     hall_html = render_hall_label(sess)
-    title_html = esc(name)
-    if url and not code.startswith('tut') and not code.startswith('wk'):
-        title_html = f'<a href="{esc(url)}" target="_blank" class="session-ext-link">{esc(name)} <i class="fas fa-external-link-alt"></i></a>'
+    title_html = render_session_display(
+        sess,
+        link_title=url and not code.startswith('tut') and not code.startswith('wk'),
+    )
     return f'''<div class="session-card {color_cls}">
   <div class="session-track-badge">{esc(tlabel)}</div>
   {hall_html}
-  <div class="session-name">{title_html}</div>
+  {title_html}
 </div>'''
 
 
@@ -958,9 +1010,10 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     is_tutorial = code.startswith('tut')
     is_workshop = code.startswith('wk')
 
-    title_html = esc(name)
-    if url and not is_tutorial and not is_workshop:
-        title_html = f'<a href="{esc(url)}" target="_blank" class="session-ext-link">{esc(name)} <i class="fas fa-external-link-alt"></i></a>'
+    title_html = render_session_display(
+        sess,
+        link_title=url and not is_tutorial and not is_workshop,
+    )
 
     papers_section = ''
     header_extra = ''
@@ -981,15 +1034,28 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
                 if details.get('abstract'):
                     detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
             else:
-                detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
+                title, people, urls = split_session_display(name)
+                detail_content += f'<p class="detail-full-name"><strong>{esc(title or name)}</strong></p>'
+                if people and not details.get('presenters'):
+                    detail_content += f'<p class="detail-organizers"><i class="fas fa-chalkboard-teacher"></i> <strong>Presenters:</strong> {esc("; ".join(people))}</p>'
+                for detail_url in urls:
+                    detail_content += f'<p class="detail-link"><i class="fas fa-globe"></i> <a href="{esc(detail_url)}" target="_blank">{esc(detail_url)}</a></p>'
                 if details.get('presenters'):
                     detail_content += f'<p class="detail-organizers"><i class="fas fa-chalkboard-teacher"></i> <strong>Presenters:</strong> {esc(details["presenters"])}</p>'
                 if details.get('abstract'):
                     detail_content += f'<p class="detail-abstract"><strong>About:</strong> {esc(details["abstract"])}</p>'
         else:
-            detail_content += f'<p class="detail-full-name"><strong>{esc(name)}</strong></p>'
-            calendar_details = {'full_name': name}
-            if papers and papers[0].get('authors'):
+            title, people, urls = split_session_display(name)
+            detail_content += f'<p class="detail-full-name"><strong>{esc(title or name)}</strong></p>'
+            calendar_details = {'full_name': title or name}
+            if people:
+                label = 'Presenters' if is_tutorial else 'Organizers'
+                detail_content += f'<p class="detail-organizers"><strong>{label}:</strong> {esc("; ".join(people))}</p>'
+                calendar_details[label.lower()] = '; '.join(people)
+            for detail_url in urls:
+                detail_content += f'<p class="detail-link"><i class="fas fa-globe"></i> <a href="{esc(detail_url)}" target="_blank">{esc(detail_url)}</a></p>'
+                calendar_details['url'] = detail_url
+            if papers and papers[0].get('authors') and not people:
                 label = 'Presenters' if is_tutorial else 'Organizers'
                 detail_content += f'<p class="detail-organizers"><strong>{label}:</strong> {esc(papers[0]["authors"])}</p>'
                 calendar_details[label.lower()] = papers[0]['authors']
@@ -1027,7 +1093,7 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
   <div class="session-card-header">
     <div class="session-track-badge">{esc(tlabel)}</div>
     {hall_html}
-    <div class="session-name">{title_html}</div>
+    {title_html}
     {actions_html}
   </div>
   {papers_section}
@@ -1254,6 +1320,12 @@ PROGRAM_CSS = '''<style>
   display: inline-block; align-self: flex-start;
 }
 .session-name { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; line-height: 1.4; }
+.session-meta,
+.session-url {
+  font-size: 0.8rem; font-weight: 400; color: #555; line-height: 1.35;
+}
+.session-url a { color: #1565c0; font-weight: 400; word-break: break-all; }
+.session-url a:hover { text-decoration: underline; }
 .session-hall {
   font-size: 1.02rem; font-weight: 900; text-transform: uppercase; letter-spacing: .7px;
   color: #111; line-height: 1.1;
