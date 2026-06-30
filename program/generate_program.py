@@ -487,6 +487,7 @@ for col_idx in range(1, min(27, len(all_rows[1]))):
 
 PLENARY_HALL_PATTERNS = (
     'conference opening',
+    'keynote: katrina liggett',
     'keynote: mounia lalmas',
     'keynote: alistair moffat',
     'plenary panel',
@@ -546,6 +547,14 @@ def track_label(code):
         if c.startswith(prefix):
             return label
     return c
+
+
+ADMIN_DETAIL_RE = re.compile(r'^\s*(session\s+chairs?|presenters?|award\s+chairs?|gcs)\s*:', re.IGNORECASE)
+
+
+def is_admin_detail_text(text):
+    first_line = str(text).strip().split('\n', 1)[0].strip()
+    return bool(ADMIN_DETAIL_RE.match(first_line))
 
 
 NUMBERED_TRACK_LABELS = {
@@ -764,6 +773,8 @@ while i <= last_row:
                                     continue
                                 blines = block.split('\n')
                                 title = blines[0].strip()
+                                if is_admin_detail_text(title):
+                                    continue
                                 authors = ' '.join(l.strip() for l in blines[1:] if l.strip())
                                 sessions_by_col[j]['papers'].append({
                                     'title': title, 'authors': authors, 'acm_url': None
@@ -773,6 +784,8 @@ while i <= last_row:
                             first = lines[0].strip()
                             if re.match(r'https?://', first) and len(lines) == 1:
                                 sessions_by_col[j]['url'] = first
+                            elif is_admin_detail_text(first):
+                                continue
                             else:
                                 sessions_by_col[j]['name'] = first
                                 rest = '\n'.join(lines[1:]).strip()
@@ -790,18 +803,26 @@ while i <= last_row:
                     if j in sessions_by_col:
                         sessions_by_col[j]['name'] = text.strip()
 
-                dr1 = detail_rows[1]
-                for j, text in dr1.items():
-                    if j in sessions_by_col:
-                        session = sessions_by_col[j]
+                for j, session in sessions_by_col.items():
+                    detail_texts = [
+                        dr[j]
+                        for dr in detail_rows[1:]
+                        if j in dr and not is_admin_detail_text(dr[j])
+                    ]
+                    if detail_texts:
                         is_workshop = session['code'].startswith('wk')
-                        blocks = re.split(r'\n\s*\n', text.strip())
+                        blocks = re.split(
+                            r'\n\s*\n',
+                            '\n\n'.join(text.strip() for text in detail_texts if text.strip())
+                        )
                         for index, block in enumerate(blocks):
                             block = block.strip()
                             if not block:
                                 continue
                             blines = block.split('\n')
                             title = blines[0].strip()
+                            if is_admin_detail_text(title):
+                                continue
                             if is_workshop and index == 0 and workshop_listing_header(title, session.get('name')):
                                 continue
                             authors = ' '.join(l.strip() for l in blines[1:] if l.strip())
