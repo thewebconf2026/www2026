@@ -484,6 +484,22 @@ for col_idx in range(1, min(27, len(all_rows[1]))):
     if hall_label:
         HALL_LABELS[col_idx] = hall_label
 
+
+PLENARY_HALL_PATTERNS = (
+    'conference opening',
+    'keynote: mounia lalmas',
+    'keynote: alistair moffat',
+    'plenary panel',
+    'keynote: pascale fung',
+    'best paper candidates',
+    'town hall',
+)
+
+
+def is_plenary_hall_session(value):
+    normalized = normalize_lookup_key(value)
+    return any(normalized.startswith(pattern) for pattern in PLENARY_HALL_PATTERNS)
+
 last_row = 0
 for i, row in enumerate(all_rows):
     if any(v is not None for v in row):
@@ -881,6 +897,8 @@ def render_session_display(sess, link_title=False):
 
 
 def render_hall_label(sess):
+    if is_plenary_hall_session(sess.get('code')) or is_plenary_hall_session(sess.get('name')):
+        return '<div class="session-hall">PLENARY HALL</div>'
     hall = sess.get('hall')
     if not hall:
         return ''
@@ -888,6 +906,12 @@ def render_hall_label(sess):
     if code.startswith('Demo') or 'Poster' in code:
         return ''
     return f'<div class="session-hall">{esc(str(hall).upper())}</div>'
+
+
+def render_event_hall_label(event):
+    if not is_plenary_hall_session(event):
+        return ''
+    return '<div class="session-hall event-hall">PLENARY HALL</div>'
 
 
 def day_id(day):
@@ -1200,20 +1224,23 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
 def render_keynote_block_overview(event, slot_idx):
     sc = special_class(event)
     kd = keynote_lookup(event)
+    hall_html = render_event_hall_label(event)
     if kd:
         return (f'<div class="slot-special-block {sc}">'
                 f'<div class="keynote-speaker-name">{esc(event)}</div>'
+                f'{hall_html}'
                 f'<div class="keynote-talk-title">{esc(kd["title"])}</div>'
                 f'</div>')
-    return f'<div class="slot-special-block {sc}">{esc(event)}</div>'
+    return f'<div class="slot-special-block {sc}">{esc(event)}{hall_html}</div>'
 
 
 def render_keynote_block_full(event, day, slot, slot_idx):
     sc = special_class(event)
     kd = keynote_lookup(event)
     if not kd:
-        return f'<div class="slot-special-block {sc}">{esc(event)}</div>'
+        return f'<div class="slot-special-block {sc}">{esc(event)}{render_event_hall_label(event)}</div>'
     collapse_id = f"keynote-detail-{slot_idx}"
+    hall_html = render_event_hall_label(event)
     chair_info = lookup_session_chair_info(event) if is_session_chair_day(day) else []
     chair_html = render_session_chair_lines(chair_info, 'event-chair-line')
     detail_html = (
@@ -1242,6 +1269,7 @@ def render_keynote_block_full(event, day, slot, slot_idx):
         f'<div class="keynote-header-row">'
         f'<div>'
         f'<div class="keynote-speaker-name">{esc(event)}</div>'
+        f'{hall_html}'
         f'<div class="keynote-talk-title">{esc(kd["title"])}</div>'
         f'{chair_html}'
         f'</div>'
@@ -1257,10 +1285,12 @@ def render_special_block_full(event, day, slot, slot_idx):
         return f'<div class="slot-special-block {special_class(event)}">{esc(event)}</div>'
     chair_info = lookup_session_chair_info(event) if is_session_chair_day(day) else []
     chair_html = render_session_chair_lines(chair_info, 'event-chair-line')
+    hall_html = render_event_hall_label(event)
     description = 'The Web Conference 2026' + session_chair_text(chair_info)
     return (
         f'<div class="slot-special-block {special_class(event)}">'
         f'<div class="special-event-row"><span>{esc(event)}</span>{calendar_link(day, slot["time"], event, description, slot_idx, 0)}</div>'
+        f'{hall_html}'
         f'{chair_html}'
         f'</div>'
     )
@@ -1445,6 +1475,7 @@ PROGRAM_CSS = '''<style>
   font-size: 1.02rem; font-weight: 900; text-transform: uppercase; letter-spacing: .7px;
   color: #111; line-height: 1.1;
 }
+.event-hall { margin-top: 4px; }
 .session-ext-link { color: inherit; text-decoration: none; }
 .session-ext-link:hover { text-decoration: underline; }
 .session-ext-link .fas { font-size: 0.7rem; opacity: 0.7; }
@@ -1593,7 +1624,7 @@ def build_overview():
             time_html = f'<div class="time-label"><i class="fas fa-clock"></i>{esc(slot["time"])}</div>'
             if slot['special']:
                 event = slot['event']
-                block = render_keynote_block_overview(event, sidx) if keynote_lookup(event) else f'<div class="slot-special-block {special_class(event)}">{esc(event)}</div>'
+                block = render_keynote_block_overview(event, sidx) if keynote_lookup(event) else f'<div class="slot-special-block {special_class(event)}">{esc(event)}{render_event_hall_label(event)}</div>'
                 slots_html += f'<div class="time-slot">\n  {time_html}\n  {block}\n</div>\n'
             elif slot['poster']:
                 slots_html += f'<div class="time-slot">\n  {time_html}\n  {render_poster_session(slot, False, sidx)}\n</div>\n'
