@@ -1,0 +1,105 @@
+Conference Opening,GCs,"Hakim Hacid, Yoelle Maarek","hakim.hacid@gmail.com, yoelle@yahoo.com"
+Conference Opening Presenters,Presenters,"Francesco Bonchi, Ido Guy, Emine Yilmaz, Chin-Wan Chung, Dame Wendy Hall, Jian Tang","francesco.bonchi@intesasanpaolo.com, idoguy@gmail.com, emine.yilmaz@ucl.ac.uk, chung_cw@kaist.ac.kr, wh@ecs.soton.ac.uk, tangjianpku@gmail.com"
+,,,
+"Keynote: Katrina Liggett, The Hebrew University of Jerusalem, Israel",,Liane Lewin-Eytan,liane.leytan@gmail.com
+"Keynote: Mounia Lalmas, Spotify, UK",,Hakim Hacid,hakim.hacid@gmail.com
+"Keynote: Alistair Moffat, University of Melbourne, Australia",,Ricardo-Baeza-Yates,ricardo.baeza@upf.edu
+"Keynote: Pascale Fung, AMI Labs & The Hong Kong University",,Yoelle Maarek,yoelle@yahoo.com
+"Plenary Panel: Yannis Ioannidis, ACM President",,"Hakim Hacid, Yoelle Maarek","hakim.hacid@gmail.com, yoelle@yahoo.com"
+"Plenary Panel: Yannis Ioannidis, ACM President Presenters",," Philipp Christmann,Taylor Lynn Curtis, Giorgio Maria Di Nunzio, Dame Wendy Hall , Mounia Lalmas","philipp.christmann@cispa.de, taylor.curtis@mila.quebec, giorgiomaria.dinunzio@unipd.it, wh@ecs.soton.ac.uk, mounia@acm.org"
+,,,
+Town Hall & Closing Ceremony,Session Chairs,"Hakim Hacid, Yoelle Maarek","hakim.hacid@gmail.com, yoelle@yahoo.com"
+Town Hall & Closing Ceremony Presenters,Presenters,"Mounia Lalmas. Liane Lewin-Eytan, Dick Bulterman, Chin-Wan Chung, Charles Clarke, Owen Conlan, Laurent Flory, Cathal Gurrin, Wendy Hall, Irwin King, Hady Lauw, Davood Rafiei, Raphael Troncy","mounia@acm.org, liane.leytan@gmail.com, dick.bulterman@gmail.com, chung_cw@kaist.ac.kr, claclark@gmail.com, Owen.Conlan@tcd.ie, laurent.flory@cnlesr.fr, cathal.gurrin@dcu.ie, wh@ecs.soton.ac.uk, king@cse.cuhk.edu.hk, hadywlauw@smu.edu.sg, drafiei@ualberta.ca, raphael.troncy@eurecom.fr, "
+,,,
+History1,,"Dame Wendy Hall, Oshani Seneviratne","wh@ecs.soton.ac.uk, senevo@rpi.edu"
+History2,,"Dame Wendy Hall, Oshani Seneviratne","wh@ecs.soton.ac.uk, senevo@rpi.edu"
+,,,
+Best paper candidates,Award Chairs,"Mounia Lalmas, Liane Lewin-Eytan","mounia@acm.org, liane.leytan@gmail.com"
+,,,
+Web4Good1,"Trustworthy, Fair & Safe Web AI",Roy Ka-Wei Lee,roy_lee@sutd.edu.sg
+Web4Good2,AI for Social Good: Health & Vulnerable Populations,Daniela Paolotti,daniela.paolotti@isi.it
+Web4Good3,Sustainable & Energy-Efficient Web/AI Systems,Shah Nawaz,shah.nawaz@jku.at
+Web4Good4,Intelligent Web Systems & Societal Dynamics,Mehwish Nasim,mehwish.nasim@uwa.edu.au
+,,,
+Industry1,Financial Intelligence & Market Simulation,Christian Bizer,christian.bizer@uni-mannheim.de
+Industry2,Generative & Next-Gen Recommendation Architectures,Roy Ka-Wei Lee,roy_lee@sutd.edu.sg
+Industry3,Core Recommendation & CTR Optimization,Maolin Wang,Morin.wang@cityu.edu.hk
+Industry4,"LLM Efficiency, Reasoning & System Logs",Elad Yom-Tov,elad.yom-tov@biu.ac.il
+Industry5,"Logistics, Travel & Geospatial Services",Heng Chang,changh17@tsinghua.org.cn
+Industry6,E-Commerce Search & Semantic Relevance,Yufei Cui,yufei.cui@huawei.com
+Industry7,"Content Platforms, Video & Moderation",Xixuan Hao,xhao390@connect.hkust-gz.edu.cn
+Industry8,"Automation, Security & Knowledge Management",Ningren Han,peterhan@google.com
+,,,
+Econ1,"Social Dynamics, Voting, and Consensus",Ana-Andreea Stoica,ana-andreea.stoica@tuebingen.mpg.de
+Econ2,Auto-bidding and Budget Allocation in Online Advertising,Ana-Andreea Stoica,ana-andreea.stoica@tuebingen.mpg.de
+Econ3,Economics of Generative AI,Ido Guy,gid@bgu.ac.il
+,,,
+Graph1,Graph Foundation Models 1,Maolin Wang,morin.wang@cityu.edu.hk
+Graph2,Attacks & Explainability,Hyunjin Hwang,hyunjinhwang@kaist.ac.kr
+Graph3,Graph Neural Networks 1,Tiehua Zhang,tiehuaz@tongji.edu.cn
+Graph4,Contrastive Learning 1,Anchen Li,anchen.li@aalto.fi
+Graph5,Contrastive Learning 2,LI Ni,nili@ahu.edu.cn
+Graph6,Graph Neural Networks 2,Yaming Yang,yym@xidian.edu.cn
+Graph7,Anomaly Detection,Kijung Shin,kijungs@kaist.ac.kr
+Graph8,Dynamics and Temporal,Kyungho Kim,kkyungho@kaist.ac.kr
+Graph9,Graph Foundation Models 2,Haonan Yuan,yuanhn@buaa.edu.cn
+Graph10,Graphs - Miscellanea,Sunwoo Kim,kswoo97@kaist.ac.kr
+,,,
+RespWeb1,"Bias Detection, Auditing, and Monitoring",Svetlana Churina,churinas@nus.edu.sg
+RespWeb2,"Privacy, Consent, and User Control",Basma Boussaha,Basma.Boussaha@tii.ae
+RespWeb3,Mitigating Online Harms and Misinformation,Ana-Andreea Stoica ,ana-andreea.stoica@tuebingen.mpg.de
+,,,
+Search1,Zero-Shot & Graph RAG,Liane Lewin-Eytan,liane.leytan@gmail.com
+Search2,Agents & Reasoning,Ead Yom-Tov,elad.yom-tov@biu.ac.il
+Search3,Question Answering & Knowledge Graphs,David Carmel,david.carmel@gmail.com
+Search4,Efficient & Multimodal Retrieval,Haoyu Han,hanhaoy1@msu.edu
+Search5,Long-Context & Document Understanding,Hao Liang,hao.liang@stu.pku.edu.cn
+Search6,Adaptive & Dynamic Retrieval,Jin Cheng,jenniecheng2@gmail.com
+,,,
+Security1,Security and Network Intrusion,Eleana Kafeza,eleana.kafeza@tii.ae
+Security2,Privacy Awareness,Mingfei Zhang,mingfei.zh@mail.sdu.edu.cn
+Security3,Fingerprinting,Xinxin Xing,xxxshixiannva@gmail.com
+Security4,Security & Privacy for Federated Systems,Huaxin Xu,huaxin.xu@wit.edu.cn
+Security5,Security & Privacy for LLM I,Xiaoyan Zhao,xiaoyanzhao.ai@gmail.com
+Security6,Security & Privacy for LLM II,Min Gao,mgao21@m.fudan.edu.cn
+Security7,Web Platform and Device Vulnerability,Ido Guy,gid@bgu.ac.il
+Security8,Attacks and Intrusion,Renda Han,rd.h@computer.org
+,,,
+Semantics1,Multimodal Semantic Understanding,Leslie F Sikos,l.sikos@ecu.edu.au
+Semantics2,Semantic Representation Learning,Xinshu Li,xinshu.li@rmit.edu.au
+Semantics3,Logical Reasoning & Graph Understanding,Ziyu Lyu,lvzy7@mail.sysu.edu.cn
+Semantics4,Knowledge Editing & Maintenance,Xiao Han,hahahenha@gmail.com
+Semantics5,Continual & Dynamic Knowledge,Luis Galárraga,luis.galarraga@inria.fr
+Semantics6,Knowledge Integration & Transfer,Yufan (Tina) Kang,tina.kang@monash.edu
+Semantics7,Multimodal Knowledge Graphs,Dongyu Zhang,zhangdongyu@dlut.edu.cn
+Semantics8,Temporal Reasoning & Planning,Meng-Fen Chiang,meng.chiang@nycu.edu.tw
+,,,
+Social1,Opinion Dynamics and Misinformation,Mark Spaniol,marc.spaniol@unicaen.fr
+Social2,Information Diffusion and Influence,Hao Huang,haohuang@whu.edu.cn
+Social3,"Trust, Safety, and Content Moderation",Tangila Islam Tanni,TangilaIslam.Tanni@ucf.edu
+Social4,Social Events and User-Centric Analysis,Zitai Qiu,zitai.qiu@hdr.mq.edu.au
+,,,
+Systems1,Client-Adaptive Federated Learning,Longzhu He ,helongzhu@bupt.edu.cn
+Systems2,Efficient and Privacy-Aware Federated Learning,Yang Chen,chenyang@fudan.edu.cn
+Systems3,Cloud–Edge AI Systems,Xiaoli Liu ,xiaoli.liu@helsinki.fi
+Systems4,AI Systems for Time Series and Vision,Dr. Tieke He ,hetieke@nju.edu.cn
+Systems5,Real-Time Web and Mobile Systems,Xianghang Mi ,scott.mi@monash.edu
+Systems6,Smart Urban and IoT Systems,Yang Chen (Fudan University),chenyang@fudan.edu.cn
+,,,
+RecSys1,Multi-Behavior User Modeling,Xiangjun Zai,xiangjun.zai@student.unsw.edu.au
+RecSys2,Cross-Domain Recommendation,Kangzheng Liu,frankluis@hust.edu.cn
+RecSys3,Graph-Based Collaborative Filtering,Weigang Lu,weiganglu314@gmail.com
+RecSys4,Advanced Sequential Recommendation,Zhu Sun,zhu_sun@sutd.edu.sg
+RecSys5,Long-Term Preferences & Continual Personalization,Oren Somekh,orensomekh@yahoo.com
+RecSys6,Generative & Collaborative Alignment,Jing Du,jing.du2@unsw.edu.au
+RecSys7,Causal & Counterfactual Recommendation,Oren Somekh,orensomekh@yahoo.com
+RecSys8,Intent Modeling & CTR Prediction,Xingyu Tan,xingyu.tan@unsw.edu.au
+RecSys9,Multimodal Recommendation Methods,Xingyu Tan,xingyu.tan@unsw.edu.au
+RecSys10,LLM-Based Reasoning and Agents for Recommender Systems,Xinyu Lin,xylin1028@gmail.com
+,,,
+Mining1,Sequence and Temporal Pattern Mining,Zijian Zhang,zhangzijian@jlu.edu.cn
+Mining2,Multimodal Web Content Representation and Understanding,Akshar Prabhu Desai,akshar.iitb@gmail.com
+Mining3,"Misinformation, Content Authenticity, and Social Mining",Akshar Prabhu Desai,akshar.iitb@gmail.com
+Mining4,"Robustness, Anomaly Detection, and Web Data Quality",Marialena Kyriakidi,marialena@google.com
+Mining5,"Learning, Representation, and Model Augmentation for Web Data",Yuanyuan Xu,yuanyuan.xu@unsw.edu.au
+Mining6,"Web Traffic, Logs, and Agent-Based Analytics",Zijian Zhang,zhangzijian@jlu.edu.cn

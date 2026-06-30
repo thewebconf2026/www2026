@@ -4,6 +4,7 @@ Generate program/overview.html and program/full-schedule.html
 from the Excel Program sheet.
 """
 import openpyxl
+import csv
 from datetime import datetime, timedelta
 import html as html_lib
 import re
@@ -415,6 +416,54 @@ ws = wb['Program']
 TITLE_URL_MAP = build_title_url_map(wb)
 
 all_rows = [list(row) for row in ws.iter_rows(values_only=True)]
+
+
+SESSION_CHAIR_CSV = 'program/Detailed WebConf 2026 Program - Session Chairs.csv'
+SESSION_CHAIR_ROLE_LABELS = {
+    'gcs': 'GCs',
+    'presenters': 'Presenters',
+    'session chairs': 'Session chair(s)',
+    'award chairs': 'Award chair(s)',
+}
+
+
+def normalize_lookup_key(value):
+    text = html_lib.unescape(str(value or '').strip())
+    text = re.sub(r'\s+', ' ', text)
+    return text.lower()
+
+
+def session_chair_label(role):
+    role_key = normalize_lookup_key(role)
+    return SESSION_CHAIR_ROLE_LABELS.get(role_key, 'Session chair(s)')
+
+
+def load_session_chair_info(path):
+    info = {}
+    try:
+        with open(path, newline='', encoding='utf-8-sig') as f:
+            rows = csv.reader(f)
+            for row in rows:
+                row = [cell.strip() for cell in row]
+                if len(row) < 3 or not row[0] or not row[2]:
+                    continue
+                key = row[0]
+                role = row[1] if len(row) > 1 else ''
+                names = row[2]
+                if normalize_lookup_key(key).endswith(' presenters'):
+                    key = re.sub(r'\s+Presenters$', '', key, flags=re.IGNORECASE)
+                    role = 'Presenters'
+                label = session_chair_label(role)
+                info.setdefault(normalize_lookup_key(key), []).append({
+                    'label': label,
+                    'names': names,
+                })
+    except FileNotFoundError:
+        pass
+    return info
+
+
+SESSION_CHAIR_INFO = load_session_chair_info(SESSION_CHAIR_CSV)
 
 
 def normalize_hall_label(value):
@@ -957,7 +1006,46 @@ def calendar_items_heading(code):
     return 'Papers/items'
 
 
-def session_calendar_description(code, tlabel, name, papers, details=None, url=''):
+def is_session_chair_day(day):
+    return day and datetime(2026, 7, 1).date() <= day['date'].date() <= datetime(2026, 7, 3).date()
+
+
+def lookup_session_chair_info(*keys):
+    seen = set()
+    found = []
+    for key in keys:
+        normalized = normalize_lookup_key(key)
+        lookup_keys = [normalized]
+        if normalized.startswith('plenary panel'):
+            lookup_keys.extend(
+                candidate
+                for candidate in SESSION_CHAIR_INFO
+                if candidate.startswith('plenary panel')
+            )
+        for lookup_key in lookup_keys:
+            for item in SESSION_CHAIR_INFO.get(lookup_key, []):
+                marker = (item['label'], item['names'])
+                if marker in seen:
+                    continue
+                seen.add(marker)
+                found.append(item)
+    return found
+
+
+def render_session_chair_lines(items, css_class='session-chair-line'):
+    if not items:
+        return ''
+    return ''.join(
+        f'<div class="{css_class}"><strong>{esc(item["label"])}:</strong> {esc(item["names"])}</div>'
+        for item in items
+    )
+
+
+def session_chair_text(items):
+    return ''.join(f'\n{item["label"]}: {item["names"]}' for item in items)
+
+
+def session_calendar_description(code, tlabel, name, papers, details=None, url='', chair_info=None):
     parts = [f'The Web Conference 2026: {tlabel}.']
     if details:
         if details.get('full_name') and details.get('full_name') != name:
@@ -975,6 +1063,8 @@ def session_calendar_description(code, tlabel, name, papers, details=None, url='
         parts.append(f'\n{calendar_items_heading(code)}:\n{paper_details_text(papers)}')
     elif url:
         parts.append(f'\nWebsite: {url}')
+    if chair_info:
+        parts.append(session_chair_text(chair_info))
     return ''.join(parts)
 
 
@@ -1004,6 +1094,12 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     proceedings_papers = sess.get('proceedings_papers') or []
     url = sess.get('url')
     hall_html = render_hall_label(sess)
+    chair_info = (
+        lookup_session_chair_info(code, name)
+        if is_session_chair_day(day)
+        else []
+    )
+    chair_html = render_session_chair_lines(chair_info)
     collapse_id = f"collapse-{slot_idx}-{sess_idx}"
     proceedings_collapse_id = f"collapse-acm-{slot_idx}-{sess_idx}"
 
@@ -1083,7 +1179,7 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
         day,
         slot['time'],
         name,
-        session_calendar_description(code, tlabel, name, papers, calendar_details, url),
+        session_calendar_description(code, tlabel, name, papers, calendar_details, url, chair_info),
         slot_idx,
         sess_idx,
     )
@@ -1094,6 +1190,7 @@ def render_session_card_full(sess, day, slot, slot_idx, sess_idx):
     <div class="session-track-badge">{esc(tlabel)}</div>
     {hall_html}
     {title_html}
+    {chair_html}
     {actions_html}
   </div>
   {papers_section}
@@ -1117,6 +1214,8 @@ def render_keynote_block_full(event, day, slot, slot_idx):
     if not kd:
         return f'<div class="slot-special-block {sc}">{esc(event)}</div>'
     collapse_id = f"keynote-detail-{slot_idx}"
+    chair_info = lookup_session_chair_info(event) if is_session_chair_day(day) else []
+    chair_html = render_session_chair_lines(chair_info, 'event-chair-line')
     detail_html = (
         f'<p class="keynote-detail-title"><strong>Talk Title:</strong> {esc(kd["title"])}</p>'
         f'<p class="keynote-detail-abstract"><strong>Abstract:</strong> {esc(kd["abstract"])}</p>'
@@ -1127,6 +1226,7 @@ def render_keynote_block_full(event, day, slot, slot_idx):
         f'Talk Title: {kd["title"]}\n'
         f'Abstract: {kd["abstract"]}\n'
         f'Bio: {kd["bio"]}'
+        f'{session_chair_text(chair_info)}'
     )
     cal_link = calendar_link(day, slot['time'], event, cal_description, slot_idx, 0)
     action_html = (
@@ -1143,6 +1243,7 @@ def render_keynote_block_full(event, day, slot, slot_idx):
         f'<div>'
         f'<div class="keynote-speaker-name">{esc(event)}</div>'
         f'<div class="keynote-talk-title">{esc(kd["title"])}</div>'
+        f'{chair_html}'
         f'</div>'
         f'{action_html}'
         f'</div>'
@@ -1154,9 +1255,13 @@ def render_keynote_block_full(event, day, slot, slot_idx):
 def render_special_block_full(event, day, slot, slot_idx):
     if special_class(event) == 'slot-break':
         return f'<div class="slot-special-block {special_class(event)}">{esc(event)}</div>'
+    chair_info = lookup_session_chair_info(event) if is_session_chair_day(day) else []
+    chair_html = render_session_chair_lines(chair_info, 'event-chair-line')
+    description = 'The Web Conference 2026' + session_chair_text(chair_info)
     return (
         f'<div class="slot-special-block {special_class(event)}">'
-        f'<div class="special-event-row"><span>{esc(event)}</span>{calendar_link(day, slot["time"], event, "The Web Conference 2026", slot_idx, 0)}</div>'
+        f'<div class="special-event-row"><span>{esc(event)}</span>{calendar_link(day, slot["time"], event, description, slot_idx, 0)}</div>'
+        f'{chair_html}'
         f'</div>'
     )
 
@@ -1167,9 +1272,13 @@ def render_poster_session(slot, is_full_schedule, slot_idx, day=None):
     sub_sessions = slot.get('sessions') or []
     header_content = esc(event_name)
     if is_full_schedule and day is not None:
+        chair_info = lookup_session_chair_info(event_name) if is_session_chair_day(day) else []
+        chair_html = render_session_chair_lines(chair_info, 'event-chair-line')
+        description = 'The Web Conference 2026 poster and demo session' + session_chair_text(chair_info)
         header_content = (
             f'<div class="special-event-row"><span>{esc(event_name)}</span>'
-            f'{calendar_link(day, slot["time"], event_name, "The Web Conference 2026 poster and demo session", slot_idx, 0)}</div>'
+            f'{calendar_link(day, slot["time"], event_name, description, slot_idx, 0)}</div>'
+            f'{chair_html}'
         )
     header_block = f'<div class="slot-special-block {sc} poster-session-header">{header_content}</div>'
     if not sub_sessions:
@@ -1252,6 +1361,9 @@ PROGRAM_CSS = '''<style>
 .event-actions { justify-content: flex-end; flex-shrink: 0; }
 .keynote-speaker-name { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; }
 .keynote-talk-title   { font-size: 0.88rem; font-weight: 500; color: #555; margin-top: 3px; font-style: italic; }
+.event-chair-line {
+  font-size: 0.82rem; font-weight: 400; color: #444; margin-top: 4px; line-height: 1.35;
+}
 .keynote-details-btn  { flex-shrink: 0; }
 .calendar-link {
   display: inline-flex; align-items: center; justify-content: center; gap: 5px;
@@ -1321,9 +1433,12 @@ PROGRAM_CSS = '''<style>
 }
 .session-name { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; line-height: 1.4; }
 .session-meta,
-.session-url {
+.session-url,
+.session-chair-line {
   font-size: 0.8rem; font-weight: 400; color: #555; line-height: 1.35;
 }
+.session-chair-line strong,
+.event-chair-line strong { color: #333; }
 .session-url a { color: #1565c0; font-weight: 400; word-break: break-all; }
 .session-url a:hover { text-decoration: underline; }
 .session-hall {
